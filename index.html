@@ -1,12 +1,168 @@
-<map name="GraffleExport">
-	<area shape=rect coords="270,329,373,396" href="http://fiji.sc/wiki/index.php/Imglib">
-	<area shape=rect coords="152,329,255,396" href="http://fiji.sc/wiki/index.php/Imglib">
-	<area shape=rect coords="185,211,595,283" href="http://fiji.sc/wiki/index.php/Imglib">
-	<area shape=rect coords="603,232,867,397" href="http://www.loci.wisc.edu/software/bio-formats">
-	<area shape=rect coords="472,732,718,838" href="https://www.openmicroscopy.org">
-	<area shape=rect coords="237,826,448,935" href="http://icy.bioimageanalysis.org/">
-	<area shape=rect coords="389,450,543,604" href="http://imagejdev.org/">
-	<area shape=rect coords="661,512,886,614" href="http://knime.org/">
-	<area shape=rect coords="47,47,944,1015" href="http://fiji.sc/">
-</map>
-<img border=0 src="index.png" usemap="#GraffleExport">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Jinja2 v2.6 documentation</title>
+    <link rel="stylesheet" href="_static/jinja.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="None" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Jinja2 v2.6 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-scijava">
+<h1>Welcome to SciJava<a class="headerlink" href="#welcome-to-scijava" title="Permalink to this headline">¶</a></h1>
+<p>SciJava aims to provide an overview of available Java libraries for scientific
+computing. The packages listed are provided by individual projects each of which
+is committed to co-operating with the other projects, reusing libraries and
+integrating clients for a seamless workflow.</p>
+<p>The focus at the moment is geared towards image processing, having begun during
+the <a class="reference external" href="http://imagejdev.org/hackathons/2011-dresden">2011 Fiji Hackathon</a> in Dresden, but other projects are welcome to get
+involved.</p>
+<p><strong>Features:</strong></p>
+<ul class="simple">
+<li>Image processing</li>
+<li>Image visualization and annotation</li>
+<li>Worflow execution and machine learning</li>
+</ul>
+<div class="section" id="scijava-overview">
+<h2>SciJava Overview<a class="headerlink" href="#scijava-overview" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<span id="document-projects"></span><div class="section" id="projects">
+<h3>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="30%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Project</th>
+<th class="head">Depends on</th>
+<th class="head">Can interoperate with:</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a></td>
+<td><a class="reference external" href="http://fiji.sc/wiki/index.php/Imglib">ImgLib</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td><a class="reference external" href="http://fiji.sc/">Fiji</a></td>
+<td><a class="reference external" href="http://imagejdev.org/">ImageJDev</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td><a class="reference external" href="http://icy.bioimageanalysis.org/">Icy</a></td>
+<td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td><a class="reference external" href="http://imagejdev.org/">ImageJDev</a></td>
+<td><a class="reference external" href="http://fiji.sc/wiki/index.php/Imglib">ImgLib</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td><a class="reference external" href="http://fiji.sc/wiki/index.php/Imglib">ImgLib</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td><a class="reference external" href="http://knime.org/">Knime</a></td>
+<td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a>,`OME`_</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td><a class="reference external" href="https://www.openmicroscopy.org">OME</a></td>
+<td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<span id="document-faq"></span><div class="section" id="frequently-asked-questions">
+<h3>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h3>
+<p>This page answers some of the often asked questions about the included libraries.</p>
+<div class="section" id="why-are-there-so-many-different-projects">
+<h4>Why are there so many different projects<a class="headerlink" href="#why-are-there-so-many-different-projects" title="Permalink to this headline">¶</a></h4>
+<p>Each project has separate funding from various sources in a multitude of countries. But we&#8217;re continuously finding ways to work more closely together.</p>
+</div>
+<div class="section" id="what-should-i-start-using-first">
+<h4>What should I start using first?<a class="headerlink" href="#what-should-i-start-using-first" title="Permalink to this headline">¶</a></h4>
+<p>...</p>
+</div>
+</div>
+</div>
+<p>If you can&#8217;t find the information you&#8217;re looking for, have a look at the
+index or try to find it using the search function:</p>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper"><p class="logo"><a href="#">
+  <img class="logo" src="_static/scijava.jpg" width="200px" alt="Logo"/>
+</a></p><h3>About SciJava</h3>
+<p>
+SciJava is a collaboration of projects providing software for scientific computing.
+</p>
+<h3>Useful Links</h3>
+<ul>
+  <li><a href="http://github.com/scijava">scijava @ github</a></li>
+  <li><a href="./_static/graphic/index.html">Wacky graphic</a></li>
+</ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2008, Armin Ronacher.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    </div>
+  </body>
+</html>
