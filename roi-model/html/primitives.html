@@ -1,0 +1,1283 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Geometric shape primitives &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Affine transforms" href="affine.html" />
+    <link rel="prev" title="ROI Discussion" href="initial.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="affine.html" title="Affine transforms"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="initial.html" title="ROI Discussion"
+             accesskey="P">previous</a> |</li>
+        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="geometric-shape-primitives">
+<h1>Geometric shape primitives<a class="headerlink" href="#geometric-shape-primitives" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This section specifies how shapes are described in the model.  For
+some shapes, there are several alternative ways of specifying them;
+which are worth supporting needs further dicussion.  One point to
+consider is that the different ways preserve the intent behind the
+original measurement and what is in the original metadata where this
+makes sense, even if this does mean some redundancy; this won&#8217;t impact
+on the actual drawing/analysis code, which can deal with each shape in
+a canonical form.  Additionally, while some shapes have been included
+here for completeness, it&#8217;s quite possible that not all are needed,
+particularly in all dimensions.</p>
+<p>If anyone wants to check the maths behind the geometry, that would be
+much appreciated, because I&#8217;m firstly not an expert in this area, and
+it&#8217;s also quite possible I&#8217;ve made some typos.  The naming of the
+shapes is probably also wanting some improvement.</p>
+</div>
+<div class="section" id="basic-primitives">
+<h2>Basic primitives<a class="headerlink" href="#basic-primitives" title="Permalink to this headline">¶</a></h2>
+<p>Basic primitives describing vertices and vectors:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="52%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Primitive</th>
+<th class="head">Representation</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Vertex1D</td>
+<td>double</td>
+<td>Vertex in 1D</td>
+</tr>
+<tr class="row-odd"><td>Vertex2D</td>
+<td>double, double</td>
+<td>Vertex in 2D</td>
+</tr>
+<tr class="row-even"><td>Vertex3D</td>
+<td>double, double, double</td>
+<td>Vertex in 3D</td>
+</tr>
+<tr class="row-odd"><td>Vector1D</td>
+<td>double</td>
+<td>Vector in 1D</td>
+</tr>
+<tr class="row-even"><td>Vector2D</td>
+<td>double, double</td>
+<td>Vector in 2D</td>
+</tr>
+<tr class="row-odd"><td>Vector3D</td>
+<td>double, double, double</td>
+<td>Vector in 3D</td>
+</tr>
+</tbody>
+</table>
+<p>All shape primitives are described in terms of the above basic
+primitives.  This means that all shape descriptions are serialisable
+as a list of double precision floating point values.</p>
+<p>All 2D shape primitives could be oriented in 3D or using a unit
+Vector3D, which would allow all 2D shapes to be used as surfaces in
+3D.  They would additionally require a depth in order to be meaningful
+(or assume a depth of one z slice).</p>
+</div>
+<div class="section" id="points">
+<span id="index-1"></span><h2>Points<a class="headerlink" href="#points" title="Permalink to this headline">¶</a></h2>
+<p>A point is a single point in space.</p>
+<div class="section" id="point2d">
+<span id="index-2"></span><h3>Point2D<a class="headerlink" href="#point2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="point3d">
+<span id="index-3"></span><h3>Point3D<a class="headerlink" href="#point3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="lines">
+<span id="index-4"></span><h2>Lines<a class="headerlink" href="#lines" title="Permalink to this headline">¶</a></h2>
+<p>A line is a single straight edge drawn between two points.</p>
+<div class="section" id="line2d">
+<span id="index-5"></span><h3>Line2D<a class="headerlink" href="#line2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="35%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line3d">
+<span id="index-6"></span><h3>Line3D<a class="headerlink" href="#line3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="35%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="distances">
+<span id="index-7"></span><h2>Distances<a class="headerlink" href="#distances" title="Permalink to this headline">¶</a></h2>
+<p>A distance is a vector describing the distance travelled from a starting point.</p>
+<div class="section" id="distance2d">
+<span id="index-8"></span><h3>Distance2D<a class="headerlink" href="#distance2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="22%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Line end (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="distance3d">
+<span id="index-9"></span><h3>Distance3D<a class="headerlink" href="#distance3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="22%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Line end (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polylines">
+<span id="index-10"></span><h2>Polylines<a class="headerlink" href="#polylines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polyline2d">
+<span id="index-11"></span><h3>Polyline2D<a class="headerlink" href="#polyline2d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="22%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Second point</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex2D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex2D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polyline3d">
+<span id="index-12"></span><h3>Polyline3D<a class="headerlink" href="#polyline3d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="22%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Second point</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex3D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex3D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polygons">
+<span id="index-13"></span><h2>Polygons<a class="headerlink" href="#polygons" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polygon2d">
+<span id="index-14"></span><h3>Polygon2D<a class="headerlink" href="#polygon2d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="29%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First vertex</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Second vertex</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex2D</td>
+<td>Further vertices</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex2D</td>
+<td>Last vertex</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polygon3d">
+<span id="index-15"></span><h3>Polygon3D<a class="headerlink" href="#polygon3d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="29%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First vertex</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Second vertex</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex3D</td>
+<td>Further vertices</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex3D</td>
+<td>Last vertex</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polydistances">
+<span id="index-16"></span><h2>Polydistances<a class="headerlink" href="#polydistances" title="Permalink to this headline">¶</a></h2>
+<p>A polydistance is a series of vectors describing the series of
+distances travelled from a starting point.</p>
+<div class="section" id="polydistance2d">
+<span id="index-17"></span><h3>Polydistance2D<a class="headerlink" href="#polydistance2d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="15%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Distance to second point (relative to P1)</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector2D</td>
+<td>Distance to second point (relative to V1)</td>
+</tr>
+<tr class="row-odd"><td>…</td>
+<td>Vector2D</td>
+<td>Further distances</td>
+</tr>
+<tr class="row-even"><td>Vn</td>
+<td>Vector2D</td>
+<td>Last distance (relative to V(n-1))</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polydistance3d">
+<span id="index-18"></span><h3>Polydistance3D<a class="headerlink" href="#polydistance3d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="15%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Distance to second point (relative to P1)</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector2D</td>
+<td>Distance to second point (relative to V1)</td>
+</tr>
+<tr class="row-odd"><td>…</td>
+<td>Vector2D</td>
+<td>Further distances</td>
+</tr>
+<tr class="row-even"><td>Vn</td>
+<td>Vector2D</td>
+<td>Last distance (relative to V(n-1))</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="squares-and-rectangles">
+<span id="index-19"></span><h2>Squares and rectangles<a class="headerlink" href="#squares-and-rectangles" title="Permalink to this headline">¶</a></h2>
+<p>A square exists in its basic 2D form, and in the form of a cube in 3D.
+Non-square variants are the rectangle and cuboid.</p>
+<div class="section" id="square2d">
+<span id="index-20"></span><h3>Square2D<a class="headerlink" href="#square2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Aligned at right angles to xy axes.  Vertex and
+point on x axis (y inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="15%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex1D</td>
+<td>x coordinate of adjacent/opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Aligned at right angles to xy axes.  Vertex and
+vector on x axis (y inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="12%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vector1D</td>
+<td>distance to adjacent corner on x axis (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 3: Rotated, not aligned at right angles to xy axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 4: Rotated, not aligned at right angles to xy axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Opposing corner (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cube3d">
+<span id="index-21"></span><h3>Cube3D<a class="headerlink" href="#cube3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Aligned at right angles to xyz axes.  Vertex and
+point on x axis (y and z inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="15%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex1D</td>
+<td>x coordinate of adjacent/opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Aligned at right angles to xyz axes.  Vertex and
+vector on x axis (y and z inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="12%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vector1D</td>
+<td>distance to adjacent corner on x axis (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 3: Rotated, not aligned at right angles to xy axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 4: Rotated, not aligned at right angles to xy axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Opposing corner (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rectangle2d">
+<span id="index-22"></span><h3>Rectangle2D<a class="headerlink" href="#rectangle2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Aligned at right angles to xy axes.  Two opposing corners.</p>
+<blockquote>
+<div><p>[ Aligned at right angles to xy axes ]
+1: P1 (Vertex2D), P2 (Vertex2D)</p>
+<blockquote>
+<div>Two opposing corners</div></blockquote>
+<dl class="docutils">
+<dt>2: P1 (Vertex2D), V1 (Vector2D)</dt>
+<dd>Vertex and vector to opposing corner</dd>
+</dl>
+<p>[ Rotated ]
+3: P1 (Vertex2D), P2 (Vertex2D), V1 (Vector1D)</p>
+<blockquote>
+<div>P1 and P2 corners specify one edge; V1 specifies length of other edge</div></blockquote>
+<dl class="docutils">
+<dt>4: P1 (Vertex2D), V1 (Vector2D), V2 (Vector1D)</dt>
+<dd>P1 is the first corner, V1 specifies the second corner and V2 the
+length of the other edge.</dd>
+</dl>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="15%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex1D</td>
+<td>x coordinate of adjacent/opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Aligned at right angles to xy axes.  Vertex and
+vector on x axis (y inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="12%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vector1D</td>
+<td>distance to adjacent corner on x axis (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 3: Rotated, not aligned at right angles to xy axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 4: Rotated, not aligned at right angles to xy axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Opposing corner (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cuboid3d">
+<span id="index-23"></span><h3>Cuboid3D<a class="headerlink" href="#cuboid3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>[ Aligned at right angles to xyz axes ]
+1: P1 (Vertex3D), P2 (Vertex3D)</p>
+<blockquote>
+<div>Two opposing corners</div></blockquote>
+<dl class="docutils">
+<dt>2: P1 (Vertex3D), V1 (Vector3D)</dt>
+<dd>Vertex and vector to opposing corner</dd>
+</dl>
+<p>[ Rotated ]
+3: P1 (Vertex3D), P2 (Vertex3D), V1 (Vector2D), V2 (Vector1D) P1 and P2</p>
+<blockquote>
+<div>corners specify one edge, V2 the corner to define the first 2D
+face, and V3 the corner to define the final two 2D faces, and
+opposes P1.</div></blockquote>
+<dl class="docutils">
+<dt>4: P1 (Vertex3D), V1 (Vector3D), V2 (Vector2D), V3 (Vector1D)</dt>
+<dd>P1 is the first corner, V1 specifies the second corner and V2 the
+corner to define the first 2D face, and V3 the corner to define
+the final two 2D faces, and opposes P1.</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="circles-and-ellipses">
+<h2>Circles and ellipses<a class="headerlink" href="#circles-and-ellipses" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="circle2d">
+<span id="index-24"></span><h3>Circle2D<a class="headerlink" href="#circle2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: P1 (Vertex2D), V1 (Vector1D)</dt>
+<dd>Centre and radius</dd>
+<dt>2: P1 (Vertex2D), V1 (Vector2D)</dt>
+<dd>Centre and radius</dd>
+<dt>3: All Square2D specifications</dt>
+<dd>Bounding square</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="sphere3d">
+<span id="index-25"></span><h3>Sphere3D<a class="headerlink" href="#sphere3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: P1 (Vertex3D), V1 (Vector1D)</dt>
+<dd>Centre and radius</dd>
+<dt>2: P1 (Vertex3D), V1 (Vector2D)</dt>
+<dd>Centre and radius</dd>
+<dt>3: P1 (Vertex3D), V1 (Vector3D)</dt>
+<dd>Centre and radius</dd>
+<dt>4: All Cube3D specifications</dt>
+<dd>Bounding cube</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="ellipse2d">
+<span id="index-26"></span><h3>Ellipse2D<a class="headerlink" href="#ellipse2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>[ Aligned at right angles to xy axes ]
+1: P1 (Vertex2D), V1 (Vector2D)</p>
+<blockquote>
+<div>Centre and half axes</div></blockquote>
+<dl class="docutils">
+<dt>2: P1 (Vertex2D), V1 (Vector1D), V2 (Vector1D)</dt>
+<dd>Centre and half axes specified separately</dd>
+</dl>
+<p>3: All Rectangle2D (aligned at right-angle) specifications.</p>
+<p>[ Rotated ]
+4: P1 (Vertex2D), V1 (Vector2D), V2 (Vector1D)</p>
+<blockquote>
+<div>Centre and half axes; V2 is at right-angles to V1, so has only one dimension.</div></blockquote>
+<p>5: All Rectangle2D (rotated) specifications.
+6: P1 (Vertex2D) COV (double × 2^2)</p>
+<blockquote>
+<div>Mahalanbobis distance used to draw an ellipse using the mean
+coordinates (P1) and 2 × 2 covariance matrix (COV)</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="ellipsoid3d">
+<span id="index-27"></span><h3>Ellipsoid3D<a class="headerlink" href="#ellipsoid3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>[ Aligned at right angles to xy axes ]
+1: P1 (Vertex3D), V1 (Vector3D)</p>
+<blockquote>
+<div>Centre and half axes</div></blockquote>
+<dl class="docutils">
+<dt>2: P1 (Vertex2D), V1 (Vector1D), V2 (Vector1D), V3 (Vector1D)</dt>
+<dd>Centre and half axes specified separately</dd>
+</dl>
+<p>3: All Rectangle3D (aligned at right-angle) specifications.</p>
+<p>[ Rotated ]
+4: P1 (Vertex3D), V1 (Vector3D), V2 (Vector2D), V3 (Vector1D)</p>
+<blockquote>
+<div>Centre and half axes; V2 and V3 are at right-angles to V1 and each
+other, so have reduced dimensions.</div></blockquote>
+<p>5: All Rectangle3D (rotated) specifications.
+6: P1 (Vertex3D) COV (double × 3^2)</p>
+<blockquote>
+<div>Mahalanbobis distance used to draw an ellipse using the mean
+coordinates (P1) and 3 × 3 covariance matrix (COV)</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="polyline-splines">
+<span id="index-28"></span><h2>Polyline Splines<a class="headerlink" href="#polyline-splines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polylinespline2d">
+<span id="index-29"></span><h3>PolylineSpline2D<a class="headerlink" href="#polylinespline2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>1: P1 (Vertex2D), P2 (Vertex2D), …, Pn (Vertex2D)</div></blockquote>
+</div>
+<div class="section" id="polylinespline3d">
+<span id="index-30"></span><h3>PolylineSpline3D<a class="headerlink" href="#polylinespline3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>1: P1 (Vertex3D), P2 (Vertex3D), …, Pn (Vertex3D)</div></blockquote>
+</div>
+</div>
+<div class="section" id="polygon-splines">
+<span id="index-31"></span><h2>Polygon splines<a class="headerlink" href="#polygon-splines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polygonspline2d">
+<span id="index-32"></span><h3>PolygonSpline2D<a class="headerlink" href="#polygonspline2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>1: P1 (Vertex2D), P2 (Vertex2D), …, Pn (Vertex2D)</div></blockquote>
+</div>
+<div class="section" id="polygonspline3d">
+<span id="index-33"></span><h3>PolygonSpline3D<a class="headerlink" href="#polygonspline3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>1: P1 (Vertex3D), P2 (Vertex3D), …, Pn (Vertex3D)</div></blockquote>
+</div>
+</div>
+<div class="section" id="cylinders">
+<span id="index-34"></span><h2>Cylinders<a class="headerlink" href="#cylinders" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cylinder3d">
+<span id="index-35"></span><h3>Cylinder3D<a class="headerlink" href="#cylinder3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>[ Circular ]
+1: P1 (Vertex3D), P2 (Vertex3D), V1 (Vector1D)</p>
+<blockquote>
+<div>Start and endpoint, plus radius</div></blockquote>
+<dl class="docutils">
+<dt>2: P1 (Vertex3D), V1 (Vector3D), V2 (Vector1D)</dt>
+<dd>Start point, distance to endpoint, plus radius</dd>
+<dt>3: P1 (Vertex3D), P2 (Vertex3D), V1 (Vector3D), V2 (Vector3D)</dt>
+<dd>Start and endpoint, plus vectors to define radius (V1) and angle
+of start face, and unit vector defining angle of end face.  Face
+angles other than right-angles let chains of cyclinders be used
+for tubular structures without gaps at the joins.</dd>
+<dt>3: P1 (Vertex3D), V1 (Vector3D), V2 (Vector3D), V3 (Vector3D)</dt>
+<dd>Start point, distance to endpoint, plus vectors to define radius
+(V2) and angle of start face, and unit vector defining angle of
+end face (V3).  Face angles other than right-angles let chains of
+cyclinders be used for tubular structures without gaps at the
+joins.</dd>
+</dl>
+<p>[ Elliptic ]
+1: P1 (Vertex3D), P2 (Vertex3D), V1 (Vector2D), V2 (Vector1D)</p>
+<blockquote>
+<div>Start and endpoint, plus half axes</div></blockquote>
+<dl class="docutils">
+<dt>2: P1 (Vertex3D), V1 (Vector3D), V2 (Vector2D), V3 (Vector1D)</dt>
+<dd>Start point, distance to endpoint, plus half axes</dd>
+<dt>3: P1 (Vertex3D), P2 (Vertex3D), V1 (Vector3D), V2 (Vector2D) V3 (Vector3D)</dt>
+<dd>Start and endpoint, plus vectors to define half axes (V1 and V2)
+and angle of start face, and unit vector defining angle of end
+face (V3).  Face angles other than right-angles let chains of
+cyclinders be used for tubular structures without gaps at the
+joins.</dd>
+<dt>3: P1 (Vertex3D), V1 (Vector3D), V2 (Vector3D), V3 (Vector2D) V4 (Vector3D)</dt>
+<dd>Start point, distance to endpoint, plus vectors to define half
+axes (V2 and V3) and angle of start face, and unit vector defining
+angle of end face (V4).  Face angles other than right-angles let
+chains of cyclinders be used for tubular structures without gaps
+at the joins.</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="arcs">
+<span id="index-36"></span><h2>Arcs<a class="headerlink" href="#arcs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="arc2d">
+<span id="index-37"></span><h3>Arc2D<a class="headerlink" href="#arc2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: P1 (Vertex2D), P2 (Vertex2D), V1 (Vector2D)</dt>
+<dd>Two points and unit vector describe an arc</dd>
+<dt>2: P1 (Vertex2D), V1 (Vector2D), V2 (Vector2D)</dt>
+<dd>Centre point, plus length and unit vector describe an arc</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="arc3d">
+<span id="index-38"></span><h3>Arc3D<a class="headerlink" href="#arc3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: P1 (Vertex3D), P2 (Vertex3D), V1 (Vector3D)</dt>
+<dd>Two points and unit vector describe an arc</dd>
+<dt>2: P1 (Vertex3D), V1 (Vector3D), V2 (Vector3D)</dt>
+<dd>Centre point, plus length and unit vector describe an arc</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="masks">
+<span id="index-39"></span><h2>Masks<a class="headerlink" href="#masks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mask2d">
+<span id="index-40"></span><h3>Mask2D<a class="headerlink" href="#mask2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: DIMS (Vector2D), OFFSET (Vector2D), DATA (double × (DIMS[0] × DIMS[1]))</dt>
+<dd>Dimensions specify the x and y size of the mask, and offset the
+offset of this mask into the plane; DATA should be stored outside
+the ROI specification either as BinData or (better) in an IFD for
+OME-TIFF.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="mask3d">
+<span id="index-41"></span><h3>Mask3D<a class="headerlink" href="#mask3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: DIMS (Vector3D), OFFSET (Vector3D), DATA (double × (DIMS[0] × DIMS[1] × DIMS[2]))</dt>
+<dd>Dimensions specify the x, y and z size of the mask, and offset the
+offset of this mask into the volume; DATA should be stored outside
+the ROI specification either as BinData or (better) in a set of
+IFDs for OME-TIFF.</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="meshes">
+<span id="index-42"></span><h2>Meshes<a class="headerlink" href="#meshes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mesh2d">
+<span id="index-43"></span><h3>Mesh2D<a class="headerlink" href="#mesh2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Representation depends on mesh format; shown here as face-vertex
+1: NUMFACE (double), (V1REF (double), V2REF (double), V3REF (double)) × NUMFACE,</p>
+<blockquote>
+<div>NUMVERT (double), V1 (Vertex2D) … Vn (Vertex2D)
+Number of faces, followed by the three vertices (counterclockwise winding) for
+each face, number of vertices, followed by a list of vertices.
+Vertex-face mapping is implied.</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="mesh3d">
+<span id="index-44"></span><h3>Mesh3D<a class="headerlink" href="#mesh3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Representation depends on mesh format; shown here as face-vertex
+1: NUMFACE (double), (V1REF (double), V2REF (double), V3REF (double)) × NUMFACE,</p>
+<blockquote>
+<div><blockquote>
+<div>NUMVERT (double), V1 (Vertex3D) … Vn (Vertex3D)
+Number of faces, followed by the three vertices (counterclockwise winding) for
+each face, number of vertices, followed by a list of vertices</div></blockquote>
+<p>Vertex-face mapping is implied.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="labels">
+<span id="index-45"></span><h2>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="text2d">
+<span id="index-46"></span><h3>Text2D<a class="headerlink" href="#text2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: All Vertex2D and Vertex3D specifications</dt>
+<dd>Text aligned relative to a point</dd>
+<dt>2: All Line2D and Line3D specifications</dt>
+<dd>Text aligned relative to a line</dd>
+<dt>3: All Rectangle2D and Rectangle3D specifications</dt>
+<dd>Text aligned and flowed inside a rectangle</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="scale-bars">
+<span id="index-47"></span><h2>Scale bars<a class="headerlink" href="#scale-bars" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scale2d">
+<span id="index-48"></span><h3>Scale2D<a class="headerlink" href="#scale2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: P1 (Vertex2D), P2 (Vertex2D)</dt>
+<dd>Scale bar with distance between the two points</dd>
+<dt>2: P1 (Vertex2D), V1 (Vector2D)</dt>
+<dd>Scale bar with distance from the vector</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="scale3d">
+<span id="index-49"></span><h3>Scale3D<a class="headerlink" href="#scale3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><dl class="docutils">
+<dt>1: P1 (Vertex3D), P2 (Vertex3D)</dt>
+<dd>Scale bar with distance between the two points</dd>
+<dt>2: P1 (Vertex3D), V1 (Vector3D)</dt>
+<dd>Scale bar with distance from the vector</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="roi.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Geometric shape primitives</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#basic-primitives">Basic primitives</a></li>
+<li><a class="reference internal" href="#points">Points</a><ul>
+<li><a class="reference internal" href="#point2d">Point2D</a></li>
+<li><a class="reference internal" href="#point3d">Point3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lines">Lines</a><ul>
+<li><a class="reference internal" href="#line2d">Line2D</a></li>
+<li><a class="reference internal" href="#line3d">Line3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#distances">Distances</a><ul>
+<li><a class="reference internal" href="#distance2d">Distance2D</a></li>
+<li><a class="reference internal" href="#distance3d">Distance3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polylines">Polylines</a><ul>
+<li><a class="reference internal" href="#polyline2d">Polyline2D</a></li>
+<li><a class="reference internal" href="#polyline3d">Polyline3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polygons">Polygons</a><ul>
+<li><a class="reference internal" href="#polygon2d">Polygon2D</a></li>
+<li><a class="reference internal" href="#polygon3d">Polygon3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polydistances">Polydistances</a><ul>
+<li><a class="reference internal" href="#polydistance2d">Polydistance2D</a></li>
+<li><a class="reference internal" href="#polydistance3d">Polydistance3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#squares-and-rectangles">Squares and rectangles</a><ul>
+<li><a class="reference internal" href="#square2d">Square2D</a></li>
+<li><a class="reference internal" href="#cube3d">Cube3D</a></li>
+<li><a class="reference internal" href="#rectangle2d">Rectangle2D</a></li>
+<li><a class="reference internal" href="#cuboid3d">Cuboid3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#circles-and-ellipses">Circles and ellipses</a><ul>
+<li><a class="reference internal" href="#circle2d">Circle2D</a></li>
+<li><a class="reference internal" href="#sphere3d">Sphere3D</a></li>
+<li><a class="reference internal" href="#ellipse2d">Ellipse2D</a></li>
+<li><a class="reference internal" href="#ellipsoid3d">Ellipsoid3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polyline-splines">Polyline Splines</a><ul>
+<li><a class="reference internal" href="#polylinespline2d">PolylineSpline2D</a></li>
+<li><a class="reference internal" href="#polylinespline3d">PolylineSpline3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polygon-splines">Polygon splines</a><ul>
+<li><a class="reference internal" href="#polygonspline2d">PolygonSpline2D</a></li>
+<li><a class="reference internal" href="#polygonspline3d">PolygonSpline3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cylinders">Cylinders</a><ul>
+<li><a class="reference internal" href="#cylinder3d">Cylinder3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#arcs">Arcs</a><ul>
+<li><a class="reference internal" href="#arc2d">Arc2D</a></li>
+<li><a class="reference internal" href="#arc3d">Arc3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#masks">Masks</a><ul>
+<li><a class="reference internal" href="#mask2d">Mask2D</a></li>
+<li><a class="reference internal" href="#mask3d">Mask3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#meshes">Meshes</a><ul>
+<li><a class="reference internal" href="#mesh2d">Mesh2D</a></li>
+<li><a class="reference internal" href="#mesh3d">Mesh3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labels">Labels</a><ul>
+<li><a class="reference internal" href="#text2d">Text2D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scale-bars">Scale bars</a><ul>
+<li><a class="reference internal" href="#scale2d">Scale2D</a></li>
+<li><a class="reference internal" href="#scale3d">Scale3D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="initial.html"
+                        title="previous chapter">ROI Discussion</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="affine.html"
+                        title="next chapter">Affine transforms</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/primitives.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="affine.html" title="Affine transforms"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="initial.html" title="ROI Discussion"
+             >previous</a> |</li>
+        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

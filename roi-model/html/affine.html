@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Affine transforms &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Definition of terms" href="terms.html" />
+    <link rel="prev" title="Geometric shape primitives" href="primitives.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="terms.html" title="Definition of terms"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             accesskey="P">previous</a> |</li>
+        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="affine-transforms">
+<span id="index-0"></span><h1>Affine transforms<a class="headerlink" href="#affine-transforms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="d-transforms">
+<span id="index-1"></span><h2>2D transforms<a class="headerlink" href="#d-transforms" title="Permalink to this headline">¶</a></h2>
+<div class="math">
+<p><img src="_images/math/35c7bcb1c97987025b72eb9c20b6e3daf3c04928.png" alt="\begin{bmatrix} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{bmatrix}"/></p>
+</div><div class="math">
+<p><img src="_images/math/f881ce7cd57bf65e2d0dc9143776f7fc67c742f7.png" alt="\begin{bmatrix} a &amp; d &amp; g \\ b &amp; e &amp; h \\ c &amp; f &amp; i \end{bmatrix}"/></p>
+</div></div>
+<div class="section" id="index-2">
+<span id="id1"></span><h2>3D transforms<a class="headerlink" href="#index-2" title="Permalink to this headline">¶</a></h2>
+<div class="math">
+<p><img src="_images/math/d39f584f06751ea65185558ae174a79ea92bc2e1.png" alt="\begin{bmatrix} a &amp; d &amp; g &amp; j \\ b &amp; e &amp; h &amp; k \\ c &amp; f &amp; i &amp; l \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}"/></p>
+</div><div class="math">
+<p><img src="_images/math/82e0bc93b343659d25741b09d019b9e95d75bc32.png" alt="\begin{bmatrix} a &amp; e &amp; i &amp; m \\ b &amp; f &amp; j &amp; n \\ c &amp; g &amp; k &amp; o \\ d &amp; h &amp; l &amp; p \end{bmatrix}"/></p>
+</div></div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="roi.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Affine transforms</a><ul>
+<li><a class="reference internal" href="#d-transforms">2D transforms</a></li>
+<li><a class="reference internal" href="#index-2">3D transforms</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="primitives.html"
+                        title="previous chapter">Geometric shape primitives</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="terms.html"
+                        title="next chapter">Definition of terms</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/affine.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="terms.html" title="Definition of terms"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             >previous</a> |</li>
+        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

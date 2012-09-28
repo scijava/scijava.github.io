@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ROI Discussion &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Geometric shape primitives" href="primitives.html" />
+    <link rel="prev" title="ROI Specification [DRAFT]" href="roi.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="roi.html" title="ROI Specification [DRAFT]"
+             accesskey="P">previous</a> |</li>
+        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="roi-discussion">
+<h1>ROI Discussion<a class="headerlink" href="#roi-discussion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rois-in-three-dimensions">
+<h2>ROIs in three dimensions<a class="headerlink" href="#rois-in-three-dimensions" title="Permalink to this headline">¶</a></h2>
+<p>This is just a followup regarding discussion with J-M and Will earlier
+today, where we covered the possibility of adding support of 3D
+primitives to the model.  (Note that opinions over what to add remain
+divided, and this certainly needs further discussion!)  These are just
+my thoughts on how we might add initial support.</p>
+<p>[Note that for the n-dimensional stuff, I just added it as something
+to think about&#8211;I&#8217;m not suggesting we add any support at this point.]</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="35%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">2D</th>
+<th class="head">3D</th>
+<th class="head">nD</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Line [2DLine]</td>
+<td>3DLine</td>
+<td>nDLine</td>
+</tr>
+<tr class="row-odd"><td>Rectangle</td>
+<td>3DCube [Cube]</td>
+<td>nDCube [Hypercube]</td>
+</tr>
+<tr class="row-even"><td>Ellipse</td>
+<td>3DEllipse [Ellipsoid]</td>
+<td>nDEllipse [Hyperellipsoid]</td>
+</tr>
+<tr class="row-odd"><td>Point [2DPoint]</td>
+<td>3DPoint</td>
+<td>nDPoint</td>
+</tr>
+<tr class="row-even"><td>Mask</td>
+<td>3DMask</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Path [2DPath]</td>
+<td>3DPath</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Mesh [2DMesh]</td>
+<td>3DMesh</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Text</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Currently, the ROI model only supports 2D shapes.  In the above table,
+additional primitives for 3D (and nD) have been added.  Due to the
+&#8220;3D&#8221; or &#8220;nD&#8221; prefix, these do not replace the existing 2D-only
+primitives for backward compatibility, and to make it clear that these
+are for 3D work.  Note that the &#8220;nD&#8221; primitives would work in 2D, 3D
+and higher dimensions; the existing primitives could all be
+implemented in terms of nD primitives in the code, but it is useful to
+have fixed-dimension primitives in the model.</p>
+<p>Some of the 3D primitives described below may appear to be redundant;
+it&#8217;s certainly possible for example, to represent a shape in 3D right
+now using multiple shapes, one per z plane.  However, being able to
+use native 3D primitives is more powerful: it permits additional
+measurements involving volume, surface area and shape.  At a higher
+level, the same is implied for e.g. cell tracking in xyzt; being able
+to draw a single polyline line (or vector), rather than storing a
+single point or line at each timepoint results in us being able to
+compute velocity and direction changes directly&#8211;rather than having to
+compute this information from discrete shapes, the information is
+directly available in a single shape.</p>
+<p>I&#8217;ve also noted that some shapes may be represented equivalently in
+different ways; it might be worth considering adding support for these
+because it firstly allows the shape to be computed in different ways,
+which can differ depending upon the problem being solved, and it also
+contains information about how the measurement was made, i.e. the
+intent of the person doing the measuring, which is lost if converted
+to a canonical form.</p>
+</div>
+<div class="section" id="basic-3d-primitives">
+<h2>Basic 3D primitives<a class="headerlink" href="#basic-3d-primitives" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>3DLine</strong>     List of (x,y,z) vertices.</dt>
+<dd>Alternative representation: a single vertex and list of
+vectors.</dd>
+<dt><strong>nDLine</strong>     List of e.g. (x,y,z,t) vertices (tracking movement including</dt>
+<dd>speed and direction changes). Alternative representation: a single vertex and list of
+vectors.</dd>
+<dt><strong>3DCube</strong>     X,Y,Z,Width,Height,Depth</dt>
+<dd>The current representation is effectively a vertex and a
+vector.
+Alternative representation: Both Rectangle and 3DCube could
+be represented by two vertices.</dd>
+<dt><strong>nDCube</strong>     Vertex + Vector</dt>
+<dd>Alternative representation: two vertices.</dd>
+<dt><strong>3DEllipse</strong>  X,Y,Z,RadiusX,RadiusY,RadiusZ</dt>
+<dd>This representation is effectively a vertex and a
+vector.
+Alternative representations:
+- two vertices,
+- vertex + vector
+- single vertex and the Mahalanobis distance [most useful when computing distributions with covariance; enables rotation with n-1 degrees of freedom]</dd>
+</dl>
+<p><strong>nDEllipse</strong>  Same as for 3DEllipse alternative representations</p>
+<p><strong>3DPoint</strong>    X,Y,Z</p>
+<p><strong>nDPoint</strong>    X,Y,Z,...</p>
+</div>
+<div class="section" id="bitmasks">
+<h2>Bitmasks<a class="headerlink" href="#bitmasks" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Mask</strong>       Could we have a pointer to an IFD/file reference plus</dt>
+<dd>two coordinates so specify a clip region, then we can
+pack potentially hundreds of masks in a single plane.</dd>
+<dt><strong>3DMask</strong>     As for Mask, but in 3D.</dt>
+<dd>A 3DMesh could be computed from a 3DMask.</dd>
+</dl>
+</div>
+<div class="section" id="meshes">
+<h2>Meshes<a class="headerlink" href="#meshes" title="Permalink to this headline">¶</a></h2>
+<p><strong>Mesh</strong>       2D mesh described as e.g a face-vertex mesh.</p>
+<p><strong>3DMesh</strong>     3D mesh described as e.g. a face-vertex mesh.</p>
+<p>Meshes could be computed from masks, polygons, extruded shapes where
+there is a z range, or from thresholding.</p>
+</div>
+<div class="section" id="paths">
+<h2>Paths<a class="headerlink" href="#paths" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>3DPath</strong>     As for Path, but with additional vector to describe motion</dt>
+<dd>along the prescribed plane?</dd>
+</dl>
+</div>
+<div class="section" id="transforms">
+<h2>Transforms<a class="headerlink" href="#transforms" title="Permalink to this headline">¶</a></h2>
+<p>To support proper 3D operation, it would make sense to extend the
+existing support for 3×3 2D affine transforms to 4×4 3D transforms.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="roi.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ROI Discussion</a><ul>
+<li><a class="reference internal" href="#rois-in-three-dimensions">ROIs in three dimensions</a></li>
+<li><a class="reference internal" href="#basic-3d-primitives">Basic 3D primitives</a></li>
+<li><a class="reference internal" href="#bitmasks">Bitmasks</a></li>
+<li><a class="reference internal" href="#meshes">Meshes</a></li>
+<li><a class="reference internal" href="#paths">Paths</a></li>
+<li><a class="reference internal" href="#transforms">Transforms</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="roi.html"
+                        title="previous chapter">ROI Specification [DRAFT]</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="primitives.html"
+                        title="next chapter">Geometric shape primitives</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/initial.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="roi.html" title="ROI Specification [DRAFT]"
+             >previous</a> |</li>
+        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
