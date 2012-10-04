@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2D primitives in 3D &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Geometric shape primitives" href="primitives.html" />
+    <link rel="prev" title="ROI Discussion" href="initial.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="initial.html" title="ROI Discussion"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2D primitives in 3D</a><ul>
+<li><a class="reference internal" href="#conversion-to-3d-primitives">Conversion to 3D primitives</a></li>
+<li><a class="reference internal" href="#use-of-2d-primitives-in-3d-space">Use of 2D primitives in 3D space</a><ul>
+<li><a class="reference internal" href="#d-extrusion">2D extrusion</a></li>
+<li><a class="reference internal" href="#d-decomposition">2D decomposition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="initial.html"
+                        title="previous chapter">ROI Discussion</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="primitives.html"
+                        title="next chapter">Geometric shape primitives</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/3dconversion.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="d-primitives-in-3d">
+<h1>2D primitives in 3D<a class="headerlink" href="#d-primitives-in-3d" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="conversion-to-3d-primitives">
+<h2>Conversion to 3D primitives<a class="headerlink" href="#conversion-to-3d-primitives" title="Permalink to this headline">¶</a></h2>
+<p>The existing 2D primitives may be represented by the equivalent 3D
+primitive for the 2D primitive, extruded in z to a single z plane
+thickness.</p>
+<p>While this is desirable for reducing code complexity, retaining the 2D
+primitives is necessary for 2D measurements (area/perimeter).  These
+can be obtained from the 3D shape by dividing the volume or surface
+area by the z thickness, respectively.  Having the 2D primitives will
+provide the context for conversion of measurements from 3D volume to
+2D surface, since these are otherwise meaningless for 3D ROIs which
+are not extruded 2D ROIs.</p>
+<p>3D ROIs, where appropriate, could provide alternative forms for 2D
+use.  For example, a 3D cylinder would, when extruded from a 2D
+circle, not have end faces (i.e. would be open), in order for 2D
+surface area measurements to be correct.</p>
+</div>
+<div class="section" id="use-of-2d-primitives-in-3d-space">
+<h2>Use of 2D primitives in 3D space<a class="headerlink" href="#use-of-2d-primitives-in-3d-space" title="Permalink to this headline">¶</a></h2>
+<p>While it would be possible to translate and rotate 2D primitives in 3D
+using a 4×4 matrix, it would be simpler for users if rotation could be
+specified using a unit vector which can specify the angle of the
+primitive in 3D space; the matrix transform can be trivially construct
+edfrom the vector.  However, note that while current transforms occur
+only in 2D, where the x and y pixel sizes are typically the same, this
+is not usually the case in z, and so the transformations may need
+performing in physical units; therefore adding proper support for
+units would also be desirable to fully support 3D transforms.  Note
+that this would also solve the existing problem in 2D that prevents
+ellipses and rectangles being rotated (without the use of a matrix
+transform), though where the rotation centre should be may be shape-
+and context-dependent.  The unit vector to (0,0,-1) which would
+specify the existing behaviour.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Define behaviour of orientation of unit vector for rotation; which
+direction are primitives facing by default?</p>
+</div>
+<div class="section" id="d-extrusion">
+<h3>2D extrusion<a class="headerlink" href="#d-extrusion" title="Permalink to this headline">¶</a></h3>
+<p>Reconstruction of 3D shapes from 2D planes distributed in z/t.
+-&gt; set of 3D objects in t.</p>
+</div>
+<div class="section" id="d-decomposition">
+<h3>2D decomposition<a class="headerlink" href="#d-decomposition" title="Permalink to this headline">¶</a></h3>
+<p>Decompose 3D shape into 3D planes distributed in z.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="initial.html" title="ROI Discussion"
+             >previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

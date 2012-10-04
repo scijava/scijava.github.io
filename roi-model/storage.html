@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Storage of vertex data &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Definition of terms" href="terms.html" />
+    <link rel="prev" title="ROI-ROI links" href="linkage.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="terms.html" title="Definition of terms"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="linkage.html" title="ROI-ROI links"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Storage of vertex data</a><ul>
+<li><a class="reference internal" href="#xml-schema">XML schema</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="linkage.html"
+                        title="previous chapter">ROI-ROI links</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="terms.html"
+                        title="next chapter">Definition of terms</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/storage.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="storage-of-vertex-data">
+<h1>Storage of vertex data<a class="headerlink" href="#storage-of-vertex-data" title="Permalink to this headline">¶</a></h1>
+<p>For quite a number of the shape primitives, it&#8217;s possible to support
+3D very simply&#8211;we just increase the number of dimensions in each
+vertex, and that&#8217;s it (obviously just for storage; it will still
+require some work for rendering).  From the point of view of storing
+the list of vertices, it would be nice if we could specify the
+dimensions being used e.g. XZT, and then allow missing dimensions to
+be specified as constants as we now do for theZ.  This will also mean
+that will will be possible to use a 2D primitive with theZ set as
+equivalent to a 3D primitive with the z value specified separately to
+the (x,y) points.  This would provide one means of keeping the
+representation compact.  Additionally, it is undesirable to have a
+separate element for each vertex, since for complex shapes
+e.g. meshes, this would waste a lot of space: when scaling up to
+thousands of vertices, this would waste multi-megabytes of XML markup
+for no good reason.</p>
+<div class="section" id="xml-schema">
+<h2>XML schema<a class="headerlink" href="#xml-schema" title="Permalink to this headline">¶</a></h2>
+<p>Shape type and representation are stored as unsigned 16 bit integers,
+counts as unsigned 32 bit integers, and vertices and vectors as
+double-precision floating point.</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;xsd:schema</span> <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span> <span class="na">elementFormDefault=</span><span class="s">&quot;qualified&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xsd:simpleType</span> <span class="na">name=</span><span class="s">&quot;shapeDetailElement&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;xsd:union</span> <span class="na">memberTypes=</span><span class="s">&quot;xsd:unsignedShort xsd:unsignedInt xsd:double&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xsd:simpleType&gt;</span>
+    <span class="nt">&lt;xsd:simpleType</span> <span class="na">name=</span><span class="s">&quot;shapeDetail&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;xsd:list</span> <span class="na">itemType=</span><span class="s">&quot;shapeDetailElement&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xsd:simpleType&gt;</span>
+    <span class="nt">&lt;xsd:element</span> <span class="na">name=</span><span class="s">&quot;shape&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;xsd:complexType&gt;</span>
+            <span class="nt">&lt;xsd:simpleContent&gt;</span>
+                <span class="nt">&lt;xsd:extension</span> <span class="na">base=</span><span class="s">&quot;shapeDetail&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;/xsd:extension&gt;</span>
+            <span class="nt">&lt;/xsd:simpleContent&gt;</span>
+        <span class="nt">&lt;/xsd:complexType&gt;</span>
+    <span class="nt">&lt;/xsd:element&gt;</span>
+<span class="nt">&lt;/xsd:schema&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>Store at the level of the ROI, not the shape.  Since all the shapes
+within a ROI describe a single entity, there is no need for separate
+properties (colour, line thickness/style/endings etc.) on each shape.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="terms.html" title="Definition of terms"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="linkage.html" title="ROI-ROI links"
+             >previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

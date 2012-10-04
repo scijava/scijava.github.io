@@ -10,7 +10,7 @@
     
     <title>ROI Specification [DRAFT] &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="#" />
     <link rel="next" title="ROI Discussion" href="initial.html" /> 
   </head>
   <body>
@@ -40,7 +40,40 @@
              accesskey="N">next</a> |</li>
         <li><a href="#">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ROI Specification [DRAFT]</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="initial.html"
+                        title="next chapter">ROI Discussion</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -62,9 +95,17 @@
 <li class="toctree-l2"><a class="reference internal" href="initial.html#transforms">Transforms</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="3dconversion.html">2D primitives in 3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3dconversion.html#conversion-to-3d-primitives">Conversion to 3D primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3dconversion.html#use-of-2d-primitives-in-3d-space">Use of 2D primitives in 3D space</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="primitives.html">Geometric shape primitives</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html#alternative-shape-representations">Alternative shape representations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#basic-primitives">Basic primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html#shape-serialisation">Shape serialisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html#shape">Shape</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#points">Points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#lines">Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#distances">Distances</a></li>
@@ -80,12 +121,30 @@
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#masks">Masks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#meshes">Meshes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#labels">Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html#text-placement-and-alignment">Text placement and alignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#scale-bars">Scale bars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html#additional-primitives">Additional primitives</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="compound.html">Compound ROIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compound.html#set-primitives">Set primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound.html#storing-and-manipulating-complex-compound-objects">Storing and manipulating complex compound objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="compound.html#compound-types">Compound types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compound.html#zeiss-axiovision-roi-types">Zeiss AxioVision ROI types</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="affine.html">Affine transforms</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="affine.html#d-transforms">2D transforms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="affine.html#index-2">3D transforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkage.html">ROI-ROI links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">Storage of vertex data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#xml-schema">XML schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#properties">Properties</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="terms.html">Definition of terms</a></li>
@@ -102,39 +161,6 @@
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">ROI Specification [DRAFT]</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-
-  <h4>Next topic</h4>
-  <p class="topless"><a href="initial.html"
-                        title="next chapter">ROI Discussion</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/roi.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>

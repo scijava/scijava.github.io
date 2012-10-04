@@ -10,7 +10,7 @@
     
     <title>ROI Discussion &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
-    <link rel="next" title="Geometric shape primitives" href="primitives.html" />
-    <link rel="prev" title="ROI Specification [DRAFT]" href="roi.html" /> 
+    <link rel="next" title="2D primitives in 3D" href="3dconversion.html" />
+    <link rel="prev" title="ROI Specification [DRAFT]" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,14 +37,55 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="primitives.html" title="Geometric shape primitives"
+          <a href="3dconversion.html" title="2D primitives in 3D"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="roi.html" title="ROI Specification [DRAFT]"
+          <a href="index.html" title="ROI Specification [DRAFT]"
              accesskey="P">previous</a> |</li>
-        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ROI Discussion</a><ul>
+<li><a class="reference internal" href="#rois-in-three-dimensions">ROIs in three dimensions</a></li>
+<li><a class="reference internal" href="#basic-3d-primitives">Basic 3D primitives</a></li>
+<li><a class="reference internal" href="#bitmasks">Bitmasks</a></li>
+<li><a class="reference internal" href="#meshes">Meshes</a></li>
+<li><a class="reference internal" href="#paths">Paths</a></li>
+<li><a class="reference internal" href="#transforms">Transforms</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">ROI Specification [DRAFT]</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="3dconversion.html"
+                        title="next chapter">2D primitives in 3D</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/initial.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -199,47 +240,6 @@ existing support for 3×3 2D affine transforms to 4×4 3D transforms.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="roi.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">ROI Discussion</a><ul>
-<li><a class="reference internal" href="#rois-in-three-dimensions">ROIs in three dimensions</a></li>
-<li><a class="reference internal" href="#basic-3d-primitives">Basic 3D primitives</a></li>
-<li><a class="reference internal" href="#bitmasks">Bitmasks</a></li>
-<li><a class="reference internal" href="#meshes">Meshes</a></li>
-<li><a class="reference internal" href="#paths">Paths</a></li>
-<li><a class="reference internal" href="#transforms">Transforms</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="roi.html"
-                        title="previous chapter">ROI Specification [DRAFT]</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="primitives.html"
-                        title="next chapter">Geometric shape primitives</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/initial.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -249,12 +249,12 @@ existing support for 3×3 2D affine transforms to 4×4 3D transforms.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="primitives.html" title="Geometric shape primitives"
+          <a href="3dconversion.html" title="2D primitives in 3D"
              >next</a> |</li>
         <li class="right" >
-          <a href="roi.html" title="ROI Specification [DRAFT]"
+          <a href="index.html" title="ROI Specification [DRAFT]"
              >previous</a> |</li>
-        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

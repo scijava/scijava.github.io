@@ -8,9 +8,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Definition of terms &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    <title>ROI-ROI links &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -26,7 +26,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
-    <link rel="prev" title="Affine transforms" href="affine.html" /> 
+    <link rel="next" title="Storage of vertex data" href="storage.html" />
+    <link rel="prev" title="Layers" href="layers.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,41 +37,25 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="affine.html" title="Affine transforms"
+          <a href="storage.html" title="Storage of vertex data"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="layers.html" title="Layers"
              accesskey="P">previous</a> |</li>
-        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="definition-of-terms">
-<h1>Definition of terms<a class="headerlink" href="#definition-of-terms" title="Permalink to this headline">¶</a></h1>
-<dl class="glossary docutils">
-<dt id="term-roi">ROI</dt>
-<dd>Region of interest.  A subset of samples within a dataset.
-This is specified by the boundary or surface of the object.</dd>
-<dt id="term-shape">Shape</dt>
-<dd>Geometric shape or mask.  A shape is a geometric primitive or
-bitmask.  A ROI is composed of one or more shapes.</dd>
-</dl>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="affine.html"
-                        title="previous chapter">Affine transforms</a></p>
+  <p class="topless"><a href="layers.html"
+                        title="previous chapter">Layers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="storage.html"
+                        title="next chapter">Storage of vertex data</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/terms.txt"
+    <li><a href="_sources/linkage.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -88,6 +73,36 @@ bitmask.  A ROI is composed of one or more shapes.</dd>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="roi-roi-links">
+<h1>ROI-ROI links<a class="headerlink" href="#roi-roi-links" title="Permalink to this headline">¶</a></h1>
+<p>ROI relationships: When segmenting cell contents, shown as cytoplasm,
+actin filaments, nucleus and nucleolus, these fall into a strict
+heirarchy (a nucleus can only be in one cell, though one cell could
+have more than one nucleus).  If we added a ROI type that was a
+container of ROIs (note: not a union), and added a means of
+classifying ROIs with tags/labels, this would be very useful for HCS
+and other types of analysis.  Additionally, some relationships are not
+hierarchial, e.g. tree-like branching and merging in a vessel bed, but
+could be represented if a ROI could point to one or more other ROIs,
+which would permit a directed graph of relationships between ROIs.</p>
+<p>Tracking
+Containment
+User modification (branch/merge)
+Inherit properties
+Layer
+DAG</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -97,9 +112,12 @@ bitmask.  A ROI is composed of one or more shapes.</dd>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="affine.html" title="Affine transforms"
+          <a href="storage.html" title="Storage of vertex data"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="layers.html" title="Layers"
              >previous</a> |</li>
-        <li><a href="roi.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

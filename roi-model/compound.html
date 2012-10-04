@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Compound ROIs &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Affine transforms" href="affine.html" />
+    <link rel="prev" title="Geometric shape primitives" href="primitives.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="affine.html" title="Affine transforms"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Compound ROIs</a><ul>
+<li><a class="reference internal" href="#set-primitives">Set primitives</a><ul>
+<li><a class="reference internal" href="#set">Set</a></li>
+<li><a class="reference internal" href="#union">Union</a></li>
+<li><a class="reference internal" href="#intersection">Intersection</a></li>
+<li><a class="reference internal" href="#difference">Difference</a></li>
+<li><a class="reference internal" href="#symmetric-difference">Symmetric difference</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#storing-and-manipulating-complex-compound-objects">Storing and manipulating complex compound objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compound-types">Compound types</a><ul>
+<li><a class="reference internal" href="#zeiss-axiovision-roi-types">Zeiss AxioVision ROI types</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="primitives.html"
+                        title="previous chapter">Geometric shape primitives</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="affine.html"
+                        title="next chapter">Affine transforms</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/compound.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="compound-rois">
+<h1>Compound ROIs<a class="headerlink" href="#compound-rois" title="Permalink to this headline">¶</a></h1>
+<p>A ROI may consist of multiple shapes combined in different ways.  The
+result is also a shape.</p>
+<div class="section" id="set-primitives">
+<h2>Set primitives<a class="headerlink" href="#set-primitives" title="Permalink to this headline">¶</a></h2>
+<p>Shapes may combined using set operators:</p>
+<ul class="simple">
+<li>union</li>
+<li>intersection</li>
+<li>difference</li>
+<li>symmetric difference</li>
+</ul>
+<p>The shape is the result of the set operation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Restrict to combinations of 2D or 3D shapes only?</p>
+</div>
+<div class="section" id="set">
+<h3>Set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
+<p>A simple collection of shapes.  There is no implied relationship
+unless used with the set operators.</p>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="27%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NSHAPE</td>
+<td>Count</td>
+<td>Number of shapes</td>
+</tr>
+<tr class="row-odd"><td>SHAPE1</td>
+<td>Shape</td>
+<td>First shape</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Shape</td>
+<td>Further shapes</td>
+</tr>
+<tr class="row-odd"><td>SHAPEn</td>
+<td>Shape</td>
+<td>Last shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="union">
+<h3>Union<a class="headerlink" href="#union" title="Permalink to this headline">¶</a></h3>
+<p>Produce the union of the shapes in the provided set.</p>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="27%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>SET</td>
+<td>Set*</td>
+<td>Set of shapes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="intersection">
+<h3>Intersection<a class="headerlink" href="#intersection" title="Permalink to this headline">¶</a></h3>
+<p>Produce the intersection of the shapes in the provided set.</p>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="27%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>SET</td>
+<td>Set*</td>
+<td>Set of shapes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="difference">
+<h3>Difference<a class="headerlink" href="#difference" title="Permalink to this headline">¶</a></h3>
+<p>Produce the set difference of the shapes in the provided set.</p>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="27%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>SET</td>
+<td>Set*</td>
+<td>Set of shapes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="symmetric-difference">
+<h3>Symmetric difference<a class="headerlink" href="#symmetric-difference" title="Permalink to this headline">¶</a></h3>
+<p>Produce the symmetric difference of the shapes in the provided set.</p>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="27%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>SET</td>
+<td>Set*</td>
+<td>Set of shapes</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Restrict to either 2D or 3D, but not both?</li>
+</ul>
+<p>How do we detect if shapes intersect?
+Edge cases for set operations using masks-false positives for
+partially occupied pixels.</p>
+<dl class="docutils">
+<dt>Event/Events: A simple list of points.</dt>
+<dd>The point size/style/colour may be changed to permit different sets to be distinguished.</dd>
+<dt>Caliper/Distance/Multi-Caliper/Multi-Distance.  These are all the same</dt>
+<dd>measurement(s), a baseline followed by a list of points.  The
+measurement is the distance from each point to the baseline.  The
+differences between the types are solely the visual presentation of
+the measurements.</dd>
+<dt>Angle3/Angle4.  These measure the angle between two lines.  Angle4 is</dt>
+<dd>two separate lines, while Angle3 is two lines with a common point
+(i.e. a special case of Angle4).  Angle3 could be represented with a
+three-point polyline.  Angle4 would need to be two separate lines.
+Given that Angle3 is a special case of Angle4, it&#8217;s not clear that
+it should be represented as a polyline.</dd>
+</dl>
+<p>Circle.  While the OME model represents this as an ellipse with equal x and y radii, there are three ways to represent a circle here:
+- radius defined as a line from centre to edge
+- radius defined as a line from edge to centre (stored as the first type with the point order reversed)
+- circumference defined using three points.  The first two are
+representable in the model as an ellipse plus a line.  The latter is
+representable as an ellipse plus three points.</p>
+<p>Polyline is directly translatable.</p>
+<p>Aligned Rectangle is directly translatable as a rectangle (with some
+trivial differences in coordinates).  However, additional tags define
+metadata to display inside the rectangle (optional) such as
+channel/slide/acquisition time/exposure time/etc.  The verbatim text
+can be put into a Label, but the specific meaning would be lost&#8211;this
+is an overlay which would change as you navigate through a stack or
+timecourse etc, varying with the plane-specific parameters.  While the
+specific tags would be retained, a more generic means to overlay
+image- and plane-specific OME metadata might be generally useful
+within the context of the OME model.</p>
+<p>Ellipse is directly translatable.</p>
+<p>Outline/closed polyline is directly translatable.</p>
+<p>Text is convertible to Label.  However, the OME Label type lacks the
+alignment attributes mentioned in my earlier mail.  This makes it
+difficult to control the placement of text in complex compound ROIs.</p>
+<p>Length is a single line distance measurement line like, but with
+additional end lines to make it like a technical drawing line outside
+the object itself, i.e.</p>
+<div class="highlight-python"><pre>|******OBJECT*******|
+|                   |
+|&lt;-----------------&gt;|
+        50 µm</pre>
+</div>
+<p>Representable in the model as a simple line, across OBJECT, but with
+loss of the other lines.  It&#8217;s representable as three separate lines,
+but with loss of the context of the specific measurement.</p>
+<p>Open and closed splines: these are probably natural splines (not
+Bezier).  ZVI currently stores them as polylines given that we don&#8217;t
+support splines.  But having a spline type would permit them to be
+stored.</p>
+<p>LUT and Profile: Covered in previous mail.</p>
+</div>
+</div>
+<div class="section" id="storing-and-manipulating-complex-compound-objects">
+<h2>Storing and manipulating complex compound objects<a class="headerlink" href="#storing-and-manipulating-complex-compound-objects" title="Permalink to this headline">¶</a></h2>
+<p>With these measurements, one thing perhaps worth considering is that
+there are up to four types of object here:</p>
+<ol class="arabic simple">
+<li>Result context.  The object(s) representing the physical
+measurement.  This is what we currently store in the model.</li>
+<li>Measurement context: line along radius of circle, points along
+circumference of circle etc.  This is &#8220;how the measurement was
+made&#8221;</li>
+<li>Visual context: such as visual cues such as construction lines.
+This is the visual presentation of the measurement to the viewer.</li>
+<li>Editing context: values which control the placement of the
+above. Information for generation of UI manipulation handles, and
+of the other contexts while editing.</li>
+</ol>
+<p>We can represent the actual measurements in most cases using the
+existing ROI types.  However, if we store the additional types, it&#8217;s
+no longer possible to distinguish between the measurement and the
+additional context.</p>
+<p>If it was possible to distinguish between these in the model, it would
+be possible for the objects to be displayed without any advanced
+knowledge of how an object should be edited.  It would also be
+possible to extract the primitive measurement values.  However, the
+measurement context would provide additional information to editors
+for manupulation of the object, which would then be able to update all
+three contexts appropriately.</p>
+<p>Doing this would provide a simple but effective means for additional
+ROI types to be added without requiring support in all programs
+displaying/modifying ROIs.  This does not of course replace the need
+for namespaces to identify ROI categories, but it does supplement it
+by allowing programs to selectively display different contexts without
+any knowledge of the underlying type.</p>
+<p>As an example, using this length measurement:</p>
+<div class="highlight-python"><pre>|******OBJECT*******|
+|                   |
+|&lt;-----------------&gt;|
+        50 µm</pre>
+</div>
+<ol class="arabic simple">
+<li>Result context</li>
+</ol>
+<div class="highlight-python"><pre> #******OBJECT*******#
+
+(where the #s are the start and end points of a Line at either end
+of the object.  This is the value of the physical measurement.)</pre>
+</div>
+<ol class="arabic" start="2">
+<li><p class="first">Measurement context</p>
+<p>No additional information needed in this case.</p>
+</li>
+<li><p class="first">Visual context</p>
+</li>
+</ol>
+<div class="highlight-python"><pre> |                   |
+ |                   |
+ |&lt;-----------------&gt;|
+         50 µm
+
+Three lines, one with arrow end markers, plus text label.
+This is the visual representation of the measurement.</pre>
+</div>
+<ol class="arabic simple" start="4">
+<li>Editing context</li>
+</ol>
+<div class="highlight-python"><pre> #******OBJECT*******
+ #
+ #
+
+(where the #s represent a distance between the measured line and
+the drawn line in the visual context.  This information is used to
+generate the visual context from the measurement context.)</pre>
+</div>
+<p>I hope the above doesn&#8217;t sound too way out.  But the current system is
+limited to storing only the first of these four contexts, which loses
+information.  While it&#8217;s possible to delegate all of the presentation
+and editing to the viewer, the reality is that this is stuff people
+want.  If I&#8217;m annotating an image for a paper, I want the annotations
+to appear exactly the same as I see them if I send them to someone
+else. And if I&#8217;m doing physical measurements, I want the specifics of
+how I made the measurement to be recorded.  All we are doing here is
+providing additional information to the viewer/editor that it is free
+to use and/or ignore as it chooses.</p>
+<p>Thinking about this a little more, in many cases it will be possible
+to omit some contexts and infer them from the others. For example, if
+I have a simple line I will store a line in the result context.  The
+measurement context is the same two points, and so we may simply use
+the result context points in its place.  Likewise, if the measurement
+is a simple one, the visual context may be omitted and inferred from
+the result context also.  The different contexts really only come into
+play when we want a more sophisticated visual representation (for
+example with overlaid textual representations of the measurement value
+or to visualise the measurement in a more complex manner than the
+result context alone can provide).  And they are essential when using
+more complex compound ROIs as the last example attached shows.</p>
+<p>In the last example, all the information is provided to allow the user
+to edit the object in a UI.  For example, they can adjust the end
+points of the baseline, and the start points of the lines in the
+measurement context can be retriangulated from the end points and
+baseline.  The measurement context can be inferred from the endpoints
+of the lines in the result context.  And the endpoints can also be
+adjusted independently.  Following any adjustment, the updated
+baseline can be stored in the editing context, the measurement lines
+in the measurement context, and the visual representation in the
+visual context.  The visual context is shown here to include end
+markers on the distance lines, and text labels with the measured
+values.  But these could be toggled on or off and the settings stored
+in an annotation specific for this measurement type&#8211;there&#8217;s really no
+limit to the &#8220;extra stuff&#8221; you can add here, but the basic measurement
+remains the same in the result context.</p>
+<p>(In this example, the baseline could actually be in the measurement
+context, since it&#8217;s part of the measurement; the first example is a
+better illustration of the editing context.)</p>
+<p>The important point is that anyone should be able to open the file and
+display the visual representation without any knowledge of the
+specifics of the ROI type or measurements being made.  Likewise they
+can also look at the measured distances in the results context and use
+them without any knowledge of how they were measured.  Only a UI which
+supports the ROI type in question will need to use the editing and/or
+measurements context, and they will know how to regenerate the other
+contexts when editing.</p>
+</div>
+</div>
+<div class="section" id="compound-types">
+<h1>Compound types<a class="headerlink" href="#compound-types" title="Permalink to this headline">¶</a></h1>
+<p>Line Profile
+LUT
+Scale bar</p>
+<p>LUT/gradient boxes are quite specialist.  However, they are also quite
+common in published figures, so it would make sense to have a general
+implementation.  These are particularly useful when you have false
+colour heat maps where you need a visual scale to interpret the
+figure.  We already support LUTs, so this is really just a view of the
+LUT for a given channel inside a rectangle.</p>
+<p>Line profiles are quite common.  But I guess supporting this would
+depend upon whether you classify the profile as the result of analysis
+of a ROI, or part of a ROI.  It might be handy to be able to overlay a
+line profile as a set of coloured polylines, for example.</p>
+<div class="section" id="zeiss-axiovision-roi-types">
+<h2>Zeiss AxioVision ROI types<a class="headerlink" href="#zeiss-axiovision-roi-types" title="Permalink to this headline">¶</a></h2>
+<p>For the Zeiss types, we can represent these in the model using:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Zeiss type</th>
+<th class="head">ROI model type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Event</td>
+<td>Point2D</td>
+</tr>
+<tr class="row-odd"><td>Events</td>
+<td>Point2D (union of points)</td>
+</tr>
+<tr class="row-even"><td>Line</td>
+<td>Line2D</td>
+</tr>
+<tr class="row-odd"><td>Caliper</td>
+<td>Line2D (union of lines)</td>
+</tr>
+<tr class="row-even"><td>Multiple caliper</td>
+<td>Line2D (union of lines)</td>
+</tr>
+<tr class="row-odd"><td>Distance</td>
+<td>Line2D (union of lines)</td>
+</tr>
+<tr class="row-even"><td>Multiple distance</td>
+<td>Line2D (union of lines)</td>
+</tr>
+<tr class="row-odd"><td>Angle3</td>
+<td>Line2D and Arc2D</td>
+</tr>
+<tr class="row-even"><td>Angle4</td>
+<td>Line2D and Arc2D</td>
+</tr>
+<tr class="row-odd"><td>Circle</td>
+<td>Circle2D and Line2D</td>
+</tr>
+<tr class="row-even"><td>Scale Bar</td>
+<td>Line2D (with end markers)</td>
+</tr>
+<tr class="row-odd"><td>Polyline [open]</td>
+<td>Polyline2D</td>
+</tr>
+<tr class="row-even"><td>Aligned Rectangle</td>
+<td>AlignedRectangle2D</td>
+</tr>
+<tr class="row-odd"><td>Rotated Rectangle</td>
+<td>Rectangle2D</td>
+</tr>
+<tr class="row-even"><td>Ellipse</td>
+<td>AlignedEllipse2D</td>
+</tr>
+<tr class="row-odd"><td>Polyline [closed]</td>
+<td>Polygon2D</td>
+</tr>
+<tr class="row-even"><td>Text</td>
+<td>Label2D</td>
+</tr>
+<tr class="row-odd"><td>Length</td>
+<td>Line2D (union of lines)</td>
+</tr>
+<tr class="row-even"><td>Spline [open]</td>
+<td>PolylineSpline2D</td>
+</tr>
+<tr class="row-odd"><td>Spline [closed]</td>
+<td>PolygonSpline2D</td>
+</tr>
+<tr class="row-even"><td>LUT</td>
+<td>AlignedRectangle2D and Label2D</td>
+</tr>
+<tr class="row-odd"><td>Line profile</td>
+<td>Line2D and Polyline2D/Rectangle2D</td>
+</tr>
+</tbody>
+</table>
+<p>Annotations don&#8217;t typically have labels (with the exception of scale
+bars).  Measurements would have one or more labels in the union as
+well displaying the value(s) of the measurement.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="affine.html" title="Affine transforms"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Geometric shape primitives"
+             >previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
