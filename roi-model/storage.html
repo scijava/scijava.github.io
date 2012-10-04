@@ -92,7 +92,7 @@
             
   <div class="section" id="storage-of-vertex-data">
 <h1>Storage of vertex data<a class="headerlink" href="#storage-of-vertex-data" title="Permalink to this headline">¶</a></h1>
-<p>For quite a number of the shape primitives, it&#8217;s possible to support
+<p>For quite a number of the shape primitives, it is possible to support
 3D very simply&#8211;we just increase the number of dimensions in each
 vertex, and that&#8217;s it (obviously just for storage; it will still
 require some work for rendering).  From the point of view of storing
@@ -137,6 +137,10 @@ double-precision floating point.</p>
 <p>Store at the level of the ROI, not the shape.  Since all the shapes
 within a ROI describe a single entity, there is no need for separate
 properties (colour, line thickness/style/endings etc.) on each shape.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>J-M Burel</strong>: previous discussion about that. Need to review the notes taken at the time.</p>
+</div>
 </div>
 </div>
 

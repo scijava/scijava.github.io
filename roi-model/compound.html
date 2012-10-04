@@ -119,6 +119,10 @@ result is also a shape.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Restrict to combinations of 2D or 3D shapes only?</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>J-M Burel</strong> Union in the mathematical sense or aggregation.</p>
+</div>
 <div class="section" id="set">
 <h3>Set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
 <p>A simple collection of shapes.  There is no implied relationship
@@ -309,7 +313,7 @@ the measurements.</dd>
 <dd>two separate lines, while Angle3 is two lines with a common point
 (i.e. a special case of Angle4).  Angle3 could be represented with a
 three-point polyline.  Angle4 would need to be two separate lines.
-Given that Angle3 is a special case of Angle4, it&#8217;s not clear that
+Given that Angle3 is a special case of Angle4, it is not clear that
 it should be represented as a polyline.</dd>
 </dl>
 <p>Circle.  While the OME model represents this as an ellipse with equal x and y radii, there are three ways to represent a circle here:
@@ -343,7 +347,7 @@ the object itself, i.e.</p>
         50 µm</pre>
 </div>
 <p>Representable in the model as a simple line, across OBJECT, but with
-loss of the other lines.  It&#8217;s representable as three separate lines,
+loss of the other lines.  It is representable as three separate lines,
 but with loss of the context of the specific measurement.</p>
 <p>Open and closed splines: these are probably natural splines (not
 Bezier).  ZVI currently stores them as polylines given that we don&#8217;t
@@ -357,7 +361,7 @@ stored.</p>
 <p>With these measurements, one thing perhaps worth considering is that
 there are up to four types of object here:</p>
 <ol class="arabic simple">
-<li>Result context.  The object(s) representing the physical
+<li>Result context: the object(s) representing the physical
 measurement.  This is what we currently store in the model.</li>
 <li>Measurement context: line along radius of circle, points along
 circumference of circle etc.  This is &#8220;how the measurement was
@@ -369,7 +373,7 @@ above. Information for generation of UI manipulation handles, and
 of the other contexts while editing.</li>
 </ol>
 <p>We can represent the actual measurements in most cases using the
-existing ROI types.  However, if we store the additional types, it&#8217;s
+existing ROI types.  However, if we store the additional types, it is
 no longer possible to distinguish between the measurement and the
 additional context.</p>
 <p>If it was possible to distinguish between these in the model, it would
@@ -377,7 +381,7 @@ be possible for the objects to be displayed without any advanced
 knowledge of how an object should be edited.  It would also be
 possible to extract the primitive measurement values.  However, the
 measurement context would provide additional information to editors
-for manupulation of the object, which would then be able to update all
+for manipulation of the object, which would then be able to update all
 three contexts appropriately.</p>
 <p>Doing this would provide a simple but effective means for additional
 ROI types to be added without requiring support in all programs
@@ -425,9 +429,9 @@ This is the visual representation of the measurement.</pre>
 the drawn line in the visual context.  This information is used to
 generate the visual context from the measurement context.)</pre>
 </div>
-<p>I hope the above doesn&#8217;t sound too way out.  But the current system is
+<p>I hope the above does not sound too way out.  But the current system is
 limited to storing only the first of these four contexts, which loses
-information.  While it&#8217;s possible to delegate all of the presentation
+information.  While it is possible to delegate all of the presentation
 and editing to the viewer, the reality is that this is stuff people
 want.  If I&#8217;m annotating an image for a paper, I want the annotations
 to appear exactly the same as I see them if I send them to someone
