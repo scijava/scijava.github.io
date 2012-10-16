@@ -1,0 +1,644 @@
+.. index::
+    Point
+
+Point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A single point.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Point
+    :header-rows: 1
+    :file: shape-Point.txt
+    :delim: tab
+
+.. index::
+    Point
+
+Point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A single point.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Point
+    :header-rows: 1
+    :file: shape-Point.txt
+    :delim: tab
+
+.. index::
+    Points
+
+Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of points.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Points
+    :header-rows: 1
+    :file: shape-Points.txt
+    :delim: tab
+
+.. index::
+    Points
+
+Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of points.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Points
+    :header-rows: 1
+    :file: shape-Points.txt
+    :delim: tab
+
+.. index::
+    Line
+
+Line
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A single line.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Line
+    :header-rows: 1
+    :file: shape-Line.txt
+    :delim: tab
+
+.. index::
+    Line
+
+Line
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A single line.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Line
+    :header-rows: 1
+    :file: shape-Line.txt
+    :delim: tab
+
+.. index::
+    Lines
+
+Lines
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of lines.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Lines
+    :header-rows: 1
+    :file: shape-Lines.txt
+    :delim: tab
+
+.. index::
+    Lines
+
+Lines
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of lines.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Lines
+    :header-rows: 1
+    :file: shape-Lines.txt
+    :delim: tab
+
+.. index::
+    Polyline
+
+Polyline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected points.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Polyline
+    :header-rows: 1
+    :file: shape-Polyline.txt
+    :delim: tab
+
+.. index::
+    Polyline
+
+Polyline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected points.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Polyline
+    :header-rows: 1
+    :file: shape-Polyline.txt
+    :delim: tab
+
+.. index::
+    Polygon
+
+Polygon
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A polygon (closed polyline).
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Polygon
+    :header-rows: 1
+    :file: shape-Polygon.txt
+    :delim: tab
+
+.. index::
+    Polygon
+
+Polygon
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A "polygon" (closed polyline) [does this make sense to have in 3D?].
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Polygon
+    :header-rows: 1
+    :file: shape-Polygon.txt
+    :delim: tab
+
+.. index::
+    AlignedSquare
+
+AlignedSquare
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A square aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedSquare
+    :header-rows: 1
+    :file: shape-AlignedSquare.txt
+    :delim: tab
+
+.. index::
+    AlignedCube
+
+AlignedCube
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cube aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedCube
+    :header-rows: 1
+    :file: shape-AlignedCube.txt
+    :delim: tab
+
+.. index::
+    Cube
+
+Cube
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cube.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Cube
+    :header-rows: 1
+    :file: shape-Cube.txt
+    :delim: tab
+
+.. index::
+    AlignedRectangle
+
+AlignedRectangle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A rectangle aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedRectangle
+    :header-rows: 1
+    :file: shape-AlignedRectangle.txt
+    :delim: tab
+
+.. index::
+    Rectangle
+
+Rectangle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A rectangle.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Rectangle
+    :header-rows: 1
+    :file: shape-Rectangle.txt
+    :delim: tab
+
+.. index::
+    AlignedCuboid
+
+AlignedCuboid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cuboid aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedCuboid
+    :header-rows: 1
+    :file: shape-AlignedCuboid.txt
+    :delim: tab
+
+.. index::
+    Cuboid
+
+Cuboid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cuboid.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Cuboid
+    :header-rows: 1
+    :file: shape-Cuboid.txt
+    :delim: tab
+
+.. index::
+    Circle
+
+Circle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circle.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Circle
+    :header-rows: 1
+    :file: shape-Circle.txt
+    :delim: tab
+
+.. index::
+    Sphere
+
+Sphere
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Sphere
+    :header-rows: 1
+    :file: shape-Sphere.txt
+    :delim: tab
+
+.. index::
+    AlignedEllipse
+
+AlignedEllipse
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipse aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedEllipse
+    :header-rows: 1
+    :file: shape-AlignedEllipse.txt
+    :delim: tab
+
+.. index::
+    Ellipse
+
+Ellipse
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipse.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Ellipse
+    :header-rows: 1
+    :file: shape-Ellipse.txt
+    :delim: tab
+
+.. index::
+    AlignedEllipsoid
+
+AlignedEllipsoid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipsoid aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedEllipsoid
+    :header-rows: 1
+    :file: shape-AlignedEllipsoid.txt
+    :delim: tab
+
+.. index::
+    Ellipsoid
+
+Ellipsoid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipsoid.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Ellipsoid
+    :header-rows: 1
+    :file: shape-Ellipsoid.txt
+    :delim: tab
+
+.. index::
+    PolylineSpline
+
+PolylineSpline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected splines (open).
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: PolylineSpline
+    :header-rows: 1
+    :file: shape-PolylineSpline.txt
+    :delim: tab
+
+.. index::
+    PolylineSpline
+
+PolylineSpline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected splines (open).
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: PolylineSpline
+    :header-rows: 1
+    :file: shape-PolylineSpline.txt
+    :delim: tab
+
+.. index::
+    PolygonSpline
+
+PolygonSpline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected splines (closed).
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: PolygonSpline
+    :header-rows: 1
+    :file: shape-PolygonSpline.txt
+    :delim: tab
+
+.. index::
+    PolygonSpline
+
+PolygonSpline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected splines (closed).
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: PolygonSpline
+    :header-rows: 1
+    :file: shape-PolygonSpline.txt
+    :delim: tab
+
+.. index::
+    AlignedCircularCylinder
+
+AlignedCircularCylinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circular cylinder aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedCircularCylinder
+    :header-rows: 1
+    :file: shape-AlignedCircularCylinder.txt
+    :delim: tab
+
+.. index::
+    CircularCylinder
+
+CircularCylinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circular cylinder.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: CircularCylinder
+    :header-rows: 1
+    :file: shape-CircularCylinder.txt
+    :delim: tab
+
+.. index::
+    AlignedEllipticCylinder
+
+AlignedEllipticCylinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An elliptic cylinder aligned with all axes.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AlignedEllipticCylinder
+    :header-rows: 1
+    :file: shape-AlignedEllipticCylinder.txt
+    :delim: tab
+
+.. index::
+    EllipticCylinder
+
+EllipticCylinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Al elliptic cylinder.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: EllipticCylinder
+    :header-rows: 1
+    :file: shape-EllipticCylinder.txt
+    :delim: tab
+
+.. index::
+    Arc
+
+Arc
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Arc
+    :header-rows: 1
+    :file: shape-Arc.txt
+    :delim: tab
+
+.. index::
+    Arc
+
+Arc
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Arc
+    :header-rows: 1
+    :file: shape-Arc.txt
+    :delim: tab
+
+.. index::
+    BitMask
+
+BitMask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with one bit values.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: BitMask
+    :header-rows: 1
+    :file: shape-BitMask.txt
+    :delim: tab
+
+.. index::
+    BitMask
+
+BitMask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with one bit values.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: BitMask
+    :header-rows: 1
+    :file: shape-BitMask.txt
+    :delim: tab
+
+.. index::
+    BitMask
+
+BitMask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with one bit values.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: BitMask
+    :header-rows: 1
+    :file: shape-BitMask.txt
+    :delim: tab
+
+.. index::
+    GreyMask
+
+GreyMask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with multiple grey levels.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: GreyMask
+    :header-rows: 1
+    :file: shape-GreyMask.txt
+    :delim: tab
+
+.. index::
+    GreyMask
+
+GreyMask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with multiple grey levels.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: GreyMask
+    :header-rows: 1
+    :file: shape-GreyMask.txt
+    :delim: tab
+
+.. index::
+    GreyMask
+
+GreyMask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with multiple grey levels.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: GreyMask
+    :header-rows: 1
+    :file: shape-GreyMask.txt
+    :delim: tab
+
+.. index::
+    Mesh
+
+Mesh
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mesh.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Mesh
+    :header-rows: 1
+    :file: shape-Mesh.txt
+    :delim: tab
+
+.. index::
+    Mesh
+
+Mesh
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mesh.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: Mesh
+    :header-rows: 1
+    :file: shape-Mesh.txt
+    :delim: tab
+
+.. index::
+    AffineTransform
+
+AffineTransform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Affine transformation of a shape.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AffineTransform
+    :header-rows: 1
+    :file: shape-AffineTransform.txt
+    :delim: tab
+
+.. index::
+    AffineTransform
+
+AffineTransform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Affine transformation of a shape.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AffineTransform
+    :header-rows: 1
+    :file: shape-AffineTransform.txt
+    :delim: tab
+
+.. index::
+    AffineTransform
+
+AffineTransform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Affine transformation of a shape.
+
+.. tabularcolumns:: |l|l|l|p{3in}|
+.. csv-table:: AffineTransform
+    :header-rows: 1
+    :file: shape-AffineTransform.txt
+    :delim: tab
+

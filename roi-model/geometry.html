@@ -1,0 +1,3192 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Geometric shape primitives &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
+    <link rel="next" title="Regions in arbitrary dimensions" href="ndim.html" />
+    <link rel="prev" title="Fundamental data types" href="primitives.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ndim.html" title="Regions in arbitrary dimensions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Fundamental data types"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" accesskey="U">ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Geometric shape primitives</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#alternative-shape-representations">Alternative shape representations</a></li>
+<li><a class="reference internal" href="#shape-serialisation">Shape serialisation</a></li>
+<li><a class="reference internal" href="#shape">Shape</a><ul>
+<li><a class="reference internal" href="#point2d">Point2D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#points">Points</a><ul>
+<li><a class="reference internal" href="#index-4">Point2D</a></li>
+<li><a class="reference internal" href="#point3d">Point3D</a></li>
+<li><a class="reference internal" href="#points2d">Points2D</a></li>
+<li><a class="reference internal" href="#points3d">Points3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lines">Lines</a><ul>
+<li><a class="reference internal" href="#line2d">Line2D</a></li>
+<li><a class="reference internal" href="#line3d">Line3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#distances">Distances</a><ul>
+<li><a class="reference internal" href="#distance2d">Distance2D</a></li>
+<li><a class="reference internal" href="#distance3d">Distance3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polylines">Polylines</a><ul>
+<li><a class="reference internal" href="#polyline2d">Polyline2D</a></li>
+<li><a class="reference internal" href="#polyline3d">Polyline3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polygons">Polygons</a><ul>
+<li><a class="reference internal" href="#polygon2d">Polygon2D</a></li>
+<li><a class="reference internal" href="#polygon3d">Polygon3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polydistances">Polydistances</a><ul>
+<li><a class="reference internal" href="#polydistance2d">Polydistance2D</a></li>
+<li><a class="reference internal" href="#polydistance3d">Polydistance3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#squares-and-rectangles">Squares and rectangles</a><ul>
+<li><a class="reference internal" href="#alignedsquare2d">AlignedSquare2D</a></li>
+<li><a class="reference internal" href="#square2d">Square2D</a></li>
+<li><a class="reference internal" href="#alignedcube3d">AlignedCube3D</a></li>
+<li><a class="reference internal" href="#cube3d">Cube3D</a></li>
+<li><a class="reference internal" href="#alignedrectangle2d">AlignedRectangle2D</a></li>
+<li><a class="reference internal" href="#rectangle2d">Rectangle2D</a></li>
+<li><a class="reference internal" href="#alignedcuboid3d">AlignedCuboid3D</a></li>
+<li><a class="reference internal" href="#cuboid3d">Cuboid3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#circles-and-ellipses">Circles and ellipses</a><ul>
+<li><a class="reference internal" href="#circle2d">Circle2D</a></li>
+<li><a class="reference internal" href="#sphere3d">Sphere3D</a></li>
+<li><a class="reference internal" href="#alignedellipse2d">AlignedEllipse2D</a></li>
+<li><a class="reference internal" href="#ellipse2d">Ellipse2D</a></li>
+<li><a class="reference internal" href="#alignedellipsoid3d">AlignedEllipsoid3D</a></li>
+<li><a class="reference internal" href="#ellipsoid3d">Ellipsoid3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polyline-splines">Polyline Splines</a><ul>
+<li><a class="reference internal" href="#polylinespline2d">PolylineSpline2D</a></li>
+<li><a class="reference internal" href="#polylinespline3d">PolylineSpline3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polygon-splines">Polygon splines</a><ul>
+<li><a class="reference internal" href="#polygonspline2d">PolygonSpline2D</a></li>
+<li><a class="reference internal" href="#polygonspline3d">PolygonSpline3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cylinders">Cylinders</a><ul>
+<li><a class="reference internal" href="#alignedcircularcylinder3d">AlignedCircularCylinder3D</a></li>
+<li><a class="reference internal" href="#circularcylinder3d">CircularCylinder3D</a></li>
+<li><a class="reference internal" href="#alignedellipticcylinder3d">AlignedEllipticCylinder3D</a></li>
+<li><a class="reference internal" href="#ellipticcylinder3d">EllipticCylinder3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#arcs">Arcs</a><ul>
+<li><a class="reference internal" href="#arc2d">Arc2D</a></li>
+<li><a class="reference internal" href="#arc3d">Arc3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#masks">Masks</a><ul>
+<li><a class="reference internal" href="#greymask2d">GreyMask2D</a></li>
+<li><a class="reference internal" href="#bitmask2d">BitMask2D</a></li>
+<li><a class="reference internal" href="#greymask3d">GreyMask3D</a></li>
+<li><a class="reference internal" href="#bitmask3d">BitMask3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#meshes">Meshes</a><ul>
+<li><a class="reference internal" href="#mesh2d">Mesh2D</a></li>
+<li><a class="reference internal" href="#mesh3d">Mesh3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labels">Labels</a></li>
+<li><a class="reference internal" href="#text-placement-and-alignment">Text placement and alignment</a><ul>
+<li><a class="reference internal" href="#text2d">Text2D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scale-bars">Scale bars</a><ul>
+<li><a class="reference internal" href="#scale2d">Scale2D</a></li>
+<li><a class="reference internal" href="#scale3d">Scale3D</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#additional-primitives">Additional primitives</a></li>
+<li><a class="reference internal" href="#shape-combination">Shape combination</a><ul>
+<li><a class="reference internal" href="#logical-combination">Logical combination</a></li>
+<li><a class="reference internal" href="#concatenation">Concatenation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="primitives.html"
+                        title="previous chapter">Fundamental data types</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ndim.html"
+                        title="next chapter">Regions in arbitrary dimensions</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/geometry.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="geometric-shape-primitives">
+<h1>Geometric shape primitives<a class="headerlink" href="#geometric-shape-primitives" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This section specifies how shapes are described in the model.  For
+some shapes, there are several alternative ways of specifying them;
+which are worth supporting needs further discussion.  One point to
+consider is that the different ways preserve the intent behind the
+original measurement and what is in the original metadata where this
+makes sense, even if this does mean some redundancy; this won&#8217;t impact
+on the actual drawing/analysis code, which can deal with each shape in
+a canonical form.  This records how the measurement was made by the
+user, which may have implications in further analysis and/or
+verification that the measurement was correct.</p>
+<p>While some shapes have been included here for completeness, it&#8217;s quite
+possible that not all are needed, particularly in all dimensions.</p>
+<p>If anyone wants to check the maths behind the geometry, that would be
+much appreciated, because I&#8217;m firstly not an expert in this area, and
+it&#8217;s also quite possible I&#8217;ve made some typos.  The naming of the
+shapes is probably also wanting some improvement.</p>
+</div>
+<div class="section" id="alternative-shape-representations">
+<h2>Alternative shape representations<a class="headerlink" href="#alternative-shape-representations" title="Permalink to this headline">¶</a></h2>
+<p>Using the current ROI model is that there is only one way to describe
+each shape.  e.g. a polyline can only be described as a series of
+points; it might in some cases be more natural to specify one as a
+starting point and a series of vectors; while either are fine just to
+draw the ROI, it would desirable to store what was measured, since
+converting it to a canonical representation is lossy, and removes the
+original measurements taken, and hence the intent of the original
+annotation.  This applies to other shapes as well.  For example, a
+circle or ellipse can be described by a bounding box (which may itself
+be a point and one or two vectors, or a set of points), or by a point
+and radius or half-axes, or by the Mahalanobis distance (typically for
+computing from a normal distribution of points).  For a cylinder/cone,
+we can specify this in multiple ways also from a circle/ellipse plus
+length, or point plus vector (length and direction) plus radius (or
+half-axes).</p>
+<p>The current model is focussed on drawing shapes, while making
+measurements involves drawing only for visualisation; the important
+parts are the values for making the measurement, and of course the
+results.  Some programs (e.g. AxioVision) have separate sets of
+objects for drawing (annotation) and measurement.  These are a largely
+overlapping set, but the former are not used for any
+length/area/volume/pixel measurements.  Objects such as scale bars and
+labels are for drawing only.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p>Common methods for all primitives:
+Bounding box [AlignedCuboid3D]
+Rotation centre [Vertex2D/Vertex3D]
+Control points [may use points and vertex to describe position and movement path]
+Conversion to 2D (slab through); equivalent to intersection with cuboid.  Should
+all primitives support a minimum of intersection with AlignedCuboid3D?  Or Mesh3D
+for non-square images.
+Can 2D methods use alternative axes to project in xz/yz?  Default
+to xy.  If all 2D shapes must be represented by 3D forms (i.e. are
+just proxies), then the equivalent 3D can be used quite simply.
+Get greymap/bitmap.
+Get 2D/3D mesh.
+Intersect (only for cuboid?)  Need to clip to image volume
+(optionally).  Also useful to reduce to 2D (which can be a cuboid
+for a single plane).
+Non-aligned shapes inherit/implement the aligned forms.
+Shrink and grow: move polygons along surface normals for meshes.
+For other shapes, this will require recalculation of the geometry.</p>
+<p>Add triangle as special case of polygon, which can be a special case of mesh?</p>
+<p>Meshes: Need to be able to triangulate if higher order polygons are possible.</p>
+<p class="last">Add representation number to start of number list; this will allow
+shapes to be embedded in other shapes and be self-describing.
+e.g. all circle types may be used to specify a circular cylinder
+end.  This will simplify the specification of more complex shapes
+by limiting the number of variants.</p>
+</div>
+</div>
+<div class="section" id="shape-serialisation">
+<h2>Shape serialisation<a class="headerlink" href="#shape-serialisation" title="Permalink to this headline">¶</a></h2>
+<p>Key considerations:</p>
+<ul class="simple">
+<li>A shape exists in a set of dimensions e.g. xy, xyz, xyt.  The shape
+must define the number of dimensions it exists in, and their identity.</li>
+<li>A shape must be identifiable unambiguously</li>
+<li>A shape must be versioned (to permit correction of any
+design/analysis bugs without altering any data retrospectively);
+this permits the replacement of the buggy implementation while not
+removing it.</li>
+<li>In order to allow code reuse and flexible use of shapes, shapes may
+include other shapes as part of their primitive specification.</li>
+</ul>
+<p>In the following shape descriptions, all shapes are identified by a
+Shape ID and Representation ID.  The shape specifies the geometric
+shape type.  The representation specifies both the primitives required
+for serialisation, and can also be used for versioning the
+shape&#8211;i.e. it also specifies the behaviour for conversion to greymaps
+and bitmaps.</p>
+</div>
+<div class="section" id="shape">
+<span id="index-1"></span><h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<p>An abstract description of a shape.</p>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+</tbody>
+</table>
+<p>Concrete implementations of shapes provide further elements in their
+representation.  The above are only sufficient to describe the shape
+and its representation.  The combination of shape and representation
+specifies the data required to construct the shape.</p>
+<p>Note that one disadvantage of this method is that a reader will be
+required to understand how to deserialise all shape types; it&#8217;s not
+possible to skip unknown shapes due to not knowing their lengths
+(which may be variable).  However, this would be an issue for a purely
+XML-based implementation as well, so may not be a problem in practice.</p>
+<p>When a shape embeds a specific shape, it may skip the ShapeID and/or
+RepID header if one or both of these are fixed.  If both headers are
+skipped, this is indicated with a &#8216;*&#8217;, or if only the ShapeID header
+is skipped, this is indicated with &#8216;&amp;&#8217;:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Cube3D</td>
+<td>Shape contains a 3D cube</td>
+</tr>
+<tr class="row-odd"><td>Cube3D*</td>
+<td>Shape contains a 3D cube with no header</td>
+</tr>
+<tr class="row-even"><td>Cube3D&amp;</td>
+<td>Shape contains a 3D cube with RepID only</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="point2d">
+<span id="index-2"></span><h3>Point2D<a class="headerlink" href="#point2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="points">
+<span id="index-3"></span><h2>Points<a class="headerlink" href="#points" title="Permalink to this headline">¶</a></h2>
+<p>A point is a single point in space.</p>
+<div class="section" id="index-4">
+<span id="id1"></span><h3>Point2D<a class="headerlink" href="#index-4" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="point3d">
+<span id="index-5"></span><h3>Point3D<a class="headerlink" href="#point3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="points2d">
+<h3>Points2D<a class="headerlink" href="#points2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="25%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex2D</td>
+<td>First point</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex2D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex2D</td>
+<td>Last point</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="points3d">
+<span id="index-6"></span><h3>Points3D<a class="headerlink" href="#points3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="25%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex3D</td>
+<td>First point</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex3D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex3D</td>
+<td>Last point</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="lines">
+<span id="index-7"></span><h2>Lines<a class="headerlink" href="#lines" title="Permalink to this headline">¶</a></h2>
+<p>A line is a single straight edge drawn between two points.</p>
+<div class="section" id="line2d">
+<span id="index-8"></span><h3>Line2D<a class="headerlink" href="#line2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line3d">
+<span id="index-9"></span><h3>Line3D<a class="headerlink" href="#line3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="distances">
+<span id="index-10"></span><h2>Distances<a class="headerlink" href="#distances" title="Permalink to this headline">¶</a></h2>
+<p>A distance is a vector describing the distance travelled from a starting point.</p>
+<div class="section" id="distance2d">
+<span id="index-11"></span><h3>Distance2D<a class="headerlink" href="#distance2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="22%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Line end (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="distance3d">
+<span id="index-12"></span><h3>Distance3D<a class="headerlink" href="#distance3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="22%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Line end (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polylines">
+<span id="index-13"></span><h2>Polylines<a class="headerlink" href="#polylines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polyline2d">
+<span id="index-14"></span><h3>Polyline2D<a class="headerlink" href="#polyline2d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex2D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex2D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polyline3d">
+<span id="index-15"></span><h3>Polyline3D<a class="headerlink" href="#polyline3d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex3D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex3D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polygons">
+<span id="index-16"></span><h2>Polygons<a class="headerlink" href="#polygons" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polygon2d">
+<span id="index-17"></span><h3>Polygon2D<a class="headerlink" href="#polygon2d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex2D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex2D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polygon3d">
+<span id="index-18"></span><h3>Polygon3D<a class="headerlink" href="#polygon3d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex3D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex3D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polydistances">
+<span id="index-19"></span><h2>Polydistances<a class="headerlink" href="#polydistances" title="Permalink to this headline">¶</a></h2>
+<p>A polydistance is a series of vectors describing the series of
+distances travelled from a starting point.</p>
+<div class="section" id="polydistance2d">
+<span id="index-20"></span><h3>Polydistance2D<a class="headerlink" href="#polydistance2d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="14%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>NVEC</td>
+<td>Count</td>
+<td>Number of vectors</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector2D</td>
+<td>Distance to second point (relative to P1)</td>
+</tr>
+<tr class="row-odd"><td>…</td>
+<td>Vector2D</td>
+<td>Further distances</td>
+</tr>
+<tr class="row-even"><td>Vn</td>
+<td>Vector2D</td>
+<td>Last distance (relative to V(n-1))</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polydistance3d">
+<span id="index-21"></span><h3>Polydistance3D<a class="headerlink" href="#polydistance3d" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="14%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>NVEC</td>
+<td>Count</td>
+<td>Number of vectors</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector3D</td>
+<td>Distance to second point (relative to P1)</td>
+</tr>
+<tr class="row-odd"><td>…</td>
+<td>Vector3D</td>
+<td>Further distances</td>
+</tr>
+<tr class="row-even"><td>Vn</td>
+<td>Vector3D</td>
+<td>Last distance (relative to V(n-1))</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="squares-and-rectangles">
+<span id="index-22"></span><h2>Squares and rectangles<a class="headerlink" href="#squares-and-rectangles" title="Permalink to this headline">¶</a></h2>
+<p>A square exists in its basic 2D form, and in the form of a cube in 3D.
+Non-square variants are the rectangle and cuboid.  All have simplified
+aligned forms with the shape aligned to the axes.</p>
+<div class="section" id="alignedsquare2d">
+<span id="index-23"></span><h3>AlignedSquare2D<a class="headerlink" href="#alignedsquare2d" title="Permalink to this headline">¶</a></h3>
+<p>Aligned at right angles to xy axes.</p>
+<p>Representation 1: Vertex and point on x axis (y inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="15%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex1D</td>
+<td>x coordinate of adjacent/opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Vertex and vector on x axis (y inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="12%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vector1D</td>
+<td>distance to adjacent corner on x axis (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="square2d">
+<span id="index-24"></span><h3>Square2D<a class="headerlink" href="#square2d" title="Permalink to this headline">¶</a></h3>
+<p>May be rotated; not aligned at right angles to xy axes.</p>
+<p>Representation 1: Vertices of two opposing corners.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Vertex and vector to opposing corner.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Opposing corner (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="alignedcube3d">
+<span id="index-25"></span><h3>AlignedCube3D<a class="headerlink" href="#alignedcube3d" title="Permalink to this headline">¶</a></h3>
+<p>Aligned at right angles to xyz axes.</p>
+<p>Representation 1: Vertex and point on x axis (y and z inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="15%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex1D</td>
+<td>x coordinate of adjacent/opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Vertex and vector on x axis (y and z inferred).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="12%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vector1D</td>
+<td>distance to adjacent corner on x axis (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cube3d">
+<span id="index-26"></span><h3>Cube3D<a class="headerlink" href="#cube3d" title="Permalink to this headline">¶</a></h3>
+<p>May be rotated; not aligned at right angles to xyz axes.</p>
+<p>Representation 1: Vertices of two opposing corners.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Vertex and vector to opposing corner.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Opposing corner (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="alignedrectangle2d">
+<span id="index-27"></span><h3>AlignedRectangle2D<a class="headerlink" href="#alignedrectangle2d" title="Permalink to this headline">¶</a></h3>
+<p>Aligned at right angles to xy axes.</p>
+<p>Representation 1: Two opposing corners.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Two opposing corners.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Distance to opposing corner (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rectangle2d">
+<span id="index-28"></span><h3>Rectangle2D<a class="headerlink" href="#rectangle2d" title="Permalink to this headline">¶</a></h3>
+<p>May be rotated; not aligned at right angles to xy axes.</p>
+<p>Representation 1: P1 and P2 corners specify one edge; V1 specifies
+length of other edge.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Adjacent corner</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector1D</td>
+<td>Distance to corner opposing P1 (relative to P2)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Rotated, not aligned at right angles to xy axes.  P1
+is the first corner, V1 specifies the second corner and V2 the length
+of the other edge.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Distance to adjacent corner (relative to P1)</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector1D</td>
+<td>Distance to corner opposing P1 (relative to P2)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="alignedcuboid3d">
+<span id="index-29"></span><h3>AlignedCuboid3D<a class="headerlink" href="#alignedcuboid3d" title="Permalink to this headline">¶</a></h3>
+<p>Aligned at right angles to xyz axes.</p>
+<p>Representation 1: Two opposing corners.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Opposing corner</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Vertex and vector to opposing corner</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Distance to opposing corner (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cuboid3d">
+<span id="index-30"></span><h3>Cuboid3D<a class="headerlink" href="#cuboid3d" title="Permalink to this headline">¶</a></h3>
+<p>May be rotated; not aligned at right angles to xyz axes.</p>
+<p>Representation 3: P1 and P2 corners specify one edge, V2 the
+corner to define the first 2D face, and V3 the corner to define the
+final two 2D faces, and opposes P1.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="12%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Second corner (adjacent to P1)</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector2D</td>
+<td>Distance to third corner (adjacent to P2)</td>
+</tr>
+<tr class="row-odd"><td>V2</td>
+<td>Vector1D</td>
+<td>Distance to fourth corner (opposing P1, adjacent to V1)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 4: P1 is the first corner, V1 specifies the
+second corner and V2 the corner to define the first 2D face, and V3
+the corner to define the final two 2D faces, and opposes P1.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="12%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Distance to second corner (relative to P1)</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector2D</td>
+<td>Distance to third corner (relative to V1)</td>
+</tr>
+<tr class="row-odd"><td>V3</td>
+<td>Vector1D</td>
+<td>Distance to fourth corner (relative to V2, opposing P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="circles-and-ellipses">
+<h2>Circles and ellipses<a class="headerlink" href="#circles-and-ellipses" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="circle2d">
+<span id="index-31"></span><h3>Circle2D<a class="headerlink" href="#circle2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Centre point and radius (1D vector)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector1D</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Centre point and radius (2D vector)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+<p>Representation: 3: Bounding square.  Inherits all Square2D and AlignedSquare2D representations.</p>
+<div class="admonition-todo admonition" id="index-32">
+<p class="first admonition-title">Todo</p>
+<p class="last">Specify using reversed radius (vector2D to centre)
+Specify using diameter (two points)
+Specify using three points around circumference (-&gt;radius and centre)</p>
+</div>
+</div>
+<div class="section" id="sphere3d">
+<span id="index-33"></span><h3>Sphere3D<a class="headerlink" href="#sphere3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Centre point and radius (1D vector)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector1D</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Centre point and radius (2D vector)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 3: Centre point and radius (3D vector)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+<p>Representation: 4: Bounding cube.  Inherits all Cube3D and AlignedCube3D representations.</p>
+<div class="admonition-todo admonition" id="index-34">
+<p class="first admonition-title">Todo</p>
+<p class="last">Specify using reversed radius (vector3D to centre)
+Specify using diameter (two points)
+Specify using 4 points around surface (-&gt;radius and centre)</p>
+</div>
+</div>
+<div class="section" id="alignedellipse2d">
+<span id="index-35"></span><h3>AlignedEllipse2D<a class="headerlink" href="#alignedellipse2d" title="Permalink to this headline">¶</a></h3>
+<p>Aligned at right angles to xy axes.</p>
+<p>Representation 1: Centre and half axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Half axes (x,y)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Bounding rectangle.  Inherits all AlignedRectangle2D
+representations.</p>
+</div>
+<div class="section" id="ellipse2d">
+<span id="index-36"></span><h3>Ellipse2D<a class="headerlink" href="#ellipse2d" title="Permalink to this headline">¶</a></h3>
+<p>May be rotated; not aligned at right angles to xy axes.</p>
+<p>Representation 1: Centre and half axes; V2 is at right-angles to V1,
+so has only one dimension.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector2D</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector1D</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Bounding rectangle: Inherits all Rectangle2D and
+AlignedRectangle2D representations.</p>
+<p>Representation 3: Mahalanbobis distance used to draw an ellipse using the mean
+coordinates (P1) and 2 × 2 covariance matrix (COV1)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="25%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point (mean)</td>
+</tr>
+<tr class="row-odd"><td>COV1</td>
+<td>double[4]</td>
+<td>2 × 2 covariance matrix</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="alignedellipsoid3d">
+<span id="index-37"></span><h3>AlignedEllipsoid3D<a class="headerlink" href="#alignedellipsoid3d" title="Permalink to this headline">¶</a></h3>
+<p>Aligned at right angles to xyz axes.</p>
+<p>Representation 1: Centre and half axes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Half axes (x,y,z)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Centre and half axes (specified separately).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Half axis (x)</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector3D</td>
+<td>Half axis (y)</td>
+</tr>
+<tr class="row-odd"><td>V3</td>
+<td>Vector3D</td>
+<td>Half axis (z)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 3: Bounding cuboid: Inherits all AlignedCuboid3D representations.</p>
+</div>
+<div class="section" id="ellipsoid3d">
+<span id="index-38"></span><h3>Ellipsoid3D<a class="headerlink" href="#ellipsoid3d" title="Permalink to this headline">¶</a></h3>
+<p>May be rotated; not aligned at right angles to xyz axes.</p>
+<p>Representation 1: Centre and half axes; V2 and V3 are at right-angles
+to V1 and each other, so have reduced dimensions.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="30%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Half axes (xyz)</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector2D</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-odd"><td>V3</td>
+<td>Vector1D</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Bounding cuboid: Inherits all Cuboid3D and
+AlignedCuboid3D representations.</p>
+<p>Representation 3: Mahalanbobis distance used to draw an ellipse using the mean
+coordinates (P1) and 3 × 3 covariance matrix (COV1)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="25%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point (mean)</td>
+</tr>
+<tr class="row-odd"><td>COV1</td>
+<td>double[9]</td>
+<td>3 × 3 covariance matrix</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polyline-splines">
+<span id="index-39"></span><h2>Polyline Splines<a class="headerlink" href="#polyline-splines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polylinespline2d">
+<span id="index-40"></span><h3>PolylineSpline2D<a class="headerlink" href="#polylinespline2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex2D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex2D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polylinespline3d">
+<span id="index-41"></span><h3>PolylineSpline3D<a class="headerlink" href="#polylinespline3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex3D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex3D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="polygon-splines">
+<span id="index-42"></span><h2>Polygon splines<a class="headerlink" href="#polygon-splines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polygonspline2d">
+<span id="index-43"></span><h3>PolygonSpline2D<a class="headerlink" href="#polygonspline2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex2D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex2D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex2D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="polygonspline3d">
+<span id="index-44"></span><h3>PolygonSpline3D<a class="headerlink" href="#polygonspline3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NPOINTS</td>
+<td>Count</td>
+<td>Number of points</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>Vertex3D</td>
+<td>Line start</td>
+</tr>
+<tr class="row-even"><td>…</td>
+<td>Vertex3D</td>
+<td>Further points</td>
+</tr>
+<tr class="row-odd"><td>Pn</td>
+<td>Vertex3D</td>
+<td>Line end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="cylinders">
+<span id="index-45"></span><h2>Cylinders<a class="headerlink" href="#cylinders" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="alignedcircularcylinder3d">
+<span id="index-46"></span><h3>AlignedCircularCylinder3D<a class="headerlink" href="#alignedcircularcylinder3d" title="Permalink to this headline">¶</a></h3>
+<p>Aligned</p>
+</div>
+<div class="section" id="circularcylinder3d">
+<span id="index-47"></span><h3>CircularCylinder3D<a class="headerlink" href="#circularcylinder3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Start and endpoint, plus radius.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="24%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector1D</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2: Start point, distance to endpoint, plus radius</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Distance to centre of second face</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector1D</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 3: Start and endpoint, plus vectors to define radius
+(V1) and angle of start face, and unit vector defining angle of end
+face.  Face angles other than right-angles let chains of cyclinders be
+used for tubular structures without gaps at the joins.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Should V2 only allow angle, assuming radius from V1, or also allow
+a second radius to represent a conical section?</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="19%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector3D</td>
+<td>Radius and angle of first face</td>
+</tr>
+<tr class="row-odd"><td>V2</td>
+<td>Vector3D</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 4: Start point, distance to endpoint, plus vectors to
+define radius (V2) and angle of start face, and unit vector defining
+angle of end face (V3).  Face angles other than right-angles let
+chains of cyclinders be used for tubular structures without gaps at
+the joins.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Distance to centre of second face</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector3D</td>
+<td>Radius and angle of first face</td>
+</tr>
+<tr class="row-odd"><td>V3</td>
+<td>Vector3D</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Should V3 only allow angle, assuming radius from V2, or also allow
+a second radius to represent a conical section?</p>
+</div>
+</div>
+<div class="section" id="alignedellipticcylinder3d">
+<span id="index-48"></span><h3>AlignedEllipticCylinder3D<a class="headerlink" href="#alignedellipticcylinder3d" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-49">
+<p class="first admonition-title">Todo</p>
+<p class="last">Inherits from AlignedEllipse.</p>
+</div>
+</div>
+<div class="section" id="ellipticcylinder3d">
+<span id="index-50"></span><h3>EllipticCylinder3D<a class="headerlink" href="#ellipticcylinder3d" title="Permalink to this headline">¶</a></h3>
+<p>Representations 1 and 2 describe basic elliptic cylinders with faces
+at right angles; the following representations permit faces at
+arbitrary angles.  Face angles other than right-angles let chains of
+cyclinders be used for tubular structures without gaps at the joins.</p>
+<p>Representation 1: Start and endpoint, plus half axes.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="24%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector2D</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-odd"><td>V2</td>
+<td>Vector1D</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Is the dimensionality of the half axes correct here?</p>
+</div>
+<p>Representation 2: Start point, distance to endpoint, plus half axes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="23%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Distance to second face</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector3D</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-odd"><td>V3</td>
+<td>Vector2D</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Is the dimensionality of the half axes correct here?</p>
+</div>
+<div class="admonition-todo admonition" id="index-51">
+<p class="first admonition-title">Todo</p>
+<blockquote>
+<div>Should half axes and angle be specified in same vector or separately?</div></blockquote>
+<dl class="last docutils">
+<dt>3: Start and endpoint, plus vectors to define half axes (V1 and V2)</dt>
+<dd>and angle of start face, and unit vector defining angle of end
+face (V3).</dd>
+</dl>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="20%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector3D</td>
+<td>Half axes of first face (xyz)</td>
+</tr>
+<tr class="row-odd"><td>V2</td>
+<td>Vector2D</td>
+<td>Half axes of first face (xy)</td>
+</tr>
+<tr class="row-even"><td>V3</td>
+<td>Vector3D</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><dl class="docutils">
+<dt>3: Start and endpoint, plus vectors to define half axes (V1 and V2)</dt>
+<dd>and angle of start face, and unit vector defining angle of end
+face (V3).</dd>
+</dl>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="23%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>V1</td>
+<td>Vector3D</td>
+<td>Distance to second face</td>
+</tr>
+<tr class="row-even"><td>V2</td>
+<td>Vector3D</td>
+<td>Half axes (xyz)</td>
+</tr>
+<tr class="row-odd"><td>V3</td>
+<td>Vector2D</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-even"><td>V4</td>
+<td>Vector3D</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 4: Bounding cuboid: Inherits all Cube3D and Cuboid3D
+representations; first face is the base.</p>
+</div>
+</div>
+<div class="section" id="arcs">
+<span id="index-52"></span><h2>Arcs<a class="headerlink" href="#arcs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="arc2d">
+<span id="index-53"></span><h3>Arc2D<a class="headerlink" href="#arc2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>Arc start</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector2D</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V2</td>
+<td>Vector2D</td>
+<td>Arc start</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector2D</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arc3d">
+<span id="index-54"></span><h3>Arc3D<a class="headerlink" href="#arc3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>Arc start</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector3D</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+<p>Representation 2:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="31%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>V2</td>
+<td>Vector3D</td>
+<td>Arc start</td>
+</tr>
+<tr class="row-even"><td>V1</td>
+<td>Vector3D</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="masks">
+<span id="index-55"></span><h2>Masks<a class="headerlink" href="#masks" title="Permalink to this headline">¶</a></h2>
+<p>Masks may be either grey masks (double or integer) or bitmasks.</p>
+<p>For all of the following masks, DATA should be stored outside the ROI
+specification either as BinData or (better) in an IFD for OME-TIFF.
+It could be stored as part of the double array, but this would be
+quite inefficient.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Masks are applied to the bounding rectangle, and so a 1:1
+correspondance between mask and image pixel data is not required.
+In this case, a new greymask should be computed which is aligned
+with the pixel data, and then (if required) thresholded to a
+bitmask.</p>
+</div>
+<div class="section" id="greymask2d">
+<span id="index-56"></span><h3>GreyMask2D<a class="headerlink" href="#greymask2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<p>The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="23%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Start point of bounding rectangle</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>End point of bounding rectangle</td>
+</tr>
+<tr class="row-even"><td>DIM1</td>
+<td>Vector2D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-odd"><td>DATA</td>
+<td>double[x,y]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bitmask2d">
+<span id="index-57"></span><h3>BitMask2D<a class="headerlink" href="#bitmask2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<p>The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="23%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex2D</td>
+<td>Start point of bounding rectangle</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex2D</td>
+<td>End point of bounding rectangle</td>
+</tr>
+<tr class="row-even"><td>DIM1</td>
+<td>Vector2D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-odd"><td>DATA</td>
+<td>bool[x,y]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="greymask3d">
+<span id="index-58"></span><h3>GreyMask3D<a class="headerlink" href="#greymask3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<p>The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="26%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Start point of bounding rectangle</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>End point of bounding rectangle</td>
+</tr>
+<tr class="row-even"><td>DIM1</td>
+<td>Vector3D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-odd"><td>DATA</td>
+<td>double[x,y,z]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bitmask3d">
+<span id="index-59"></span><h3>BitMask3D<a class="headerlink" href="#bitmask3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<p>The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="23%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>P1</td>
+<td>Vertex3D</td>
+<td>Start point of bounding rectangle</td>
+</tr>
+<tr class="row-odd"><td>P2</td>
+<td>Vertex3D</td>
+<td>End point of bounding rectangle</td>
+</tr>
+<tr class="row-even"><td>DIM1</td>
+<td>Vector3D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-odd"><td>DATA</td>
+<td>bool[x,y,z]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="meshes">
+<span id="index-60"></span><h2>Meshes<a class="headerlink" href="#meshes" title="Permalink to this headline">¶</a></h2>
+<p>Mesh representation depends upon the mesh format.  In the examples
+below, face-vertex meshes are used.</p>
+<div class="section" id="mesh2d">
+<span id="index-61"></span><h3>Mesh2D<a class="headerlink" href="#mesh2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="22%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NFACE</td>
+<td>Count</td>
+<td>Number of faces</td>
+</tr>
+<tr class="row-odd"><td>VREF</td>
+<td>double[NFACE][3]</td>
+<td>Vertex references per face, counterclockwise winding</td>
+</tr>
+<tr class="row-even"><td>NVERT</td>
+<td>Count</td>
+<td>Number of vertices</td>
+</tr>
+<tr class="row-odd"><td>VERTS</td>
+<td>Vertex2D[NVERT]</td>
+<td>Vertex coordinates</td>
+</tr>
+</tbody>
+</table>
+<p>Vertex references are indexes into the VERTS array.  Vertex-face
+mapping is implied, and will require the implementor to construct the
+mapping.</p>
+</div>
+<div class="section" id="mesh3d">
+<span id="index-62"></span><h3>Mesh3D<a class="headerlink" href="#mesh3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="22%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NFACE</td>
+<td>Count</td>
+<td>Number of faces</td>
+</tr>
+<tr class="row-odd"><td>VREF</td>
+<td>double[NFACE][3]</td>
+<td>Vertex references per face, counterclockwise winding</td>
+</tr>
+<tr class="row-even"><td>NVERT</td>
+<td>Count</td>
+<td>Number of vertices</td>
+</tr>
+<tr class="row-odd"><td>VERTS</td>
+<td>Vertex3D[NVERT]</td>
+<td>Vertex coordinates</td>
+</tr>
+</tbody>
+</table>
+<p>Vertex references are indexes into the VERTS array.  Vertex-face
+mapping is implied, and will require the implementor to construct the
+mapping.</p>
+</div>
+</div>
+<div class="section" id="labels">
+<span id="index-63"></span><h2>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="text-placement-and-alignment">
+<h2>Text placement and alignment<a class="headerlink" href="#text-placement-and-alignment" title="Permalink to this headline">¶</a></h2>
+<p>In order to annotate text next to measurements, it would be ideal if
+it were possible to control text placement and orientation.  Currently
+the coordinate of the first letter is required.  However, it would be
+nicer if the text could be also placed to the right of the point or
+centred on the point.  And additionally, to the top, middle or bottom
+for vertical placement.  Rotation would also be useful, though it&#8217;s
+probably achievable indirectly via the transformation matrix, i.e. you
+would effectively have these anchors for placement, where 1 is the
+current behaviour.</p>
+<div class="highlight-python"><pre>7      8      9
+4Text h5ere...6
+1      2      3</pre>
+</div>
+<p>This is needed to e.g. align text along measurement lines.  Having a
+rotation angle specified directly would also save the need for complex
+calculations to work out the rotation origin and transform every time
+you want to just place a label along a line.  It also makes it
+possible to place text in the centre of a shape.</p>
+<div class="section" id="text2d">
+<span id="index-64"></span><h3>Text2D<a class="headerlink" href="#text2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Text aligned relative to a point.  Inherits all
+Point2D and Point3D representations.</p>
+<p>Representation 2: Text aligned relative to a line.  Inherits all
+Line2D and Line3D, Direction2D and Direction3D representations.</p>
+<p>Representation 3: Text aligned and flowed inside a rectangle.
+Inherits all AlignedSquare2D, Square2D, AlignedRectangle2D and
+Rectangle2D representations.</p>
+</div>
+</div>
+<div class="section" id="scale-bars">
+<span id="index-65"></span><h2>Scale bars<a class="headerlink" href="#scale-bars" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scale2d">
+<span id="index-66"></span><h3>Scale2D<a class="headerlink" href="#scale2d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Scale bar between two points.  Inherits all Line2D representations.</p>
+<p>Representation 1: Scale bar described by vector.  Inherits all Distance2D representations.</p>
+</div>
+<div class="section" id="scale3d">
+<span id="index-67"></span><h3>Scale3D<a class="headerlink" href="#scale3d" title="Permalink to this headline">¶</a></h3>
+<p>Representation 1: Scale bar between two points.  Inherits all Line3D representations</p>
+<p>Representation 1: Scale bar described by vector.  Inherits all Distance3D representations.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A 3D scale may need to be a 3D grid to allow visualisation of
+perspective, in which case the representation will define the grid
+bounding cuboid; inherit AlignedCuboid3D representations.  Permit
+scale rotation with Cuboid3D?  Allow specification of grid size
+and only allow sizing in discrete units?</p>
+</div>
+</div>
+</div>
+<div class="section" id="additional-primitives">
+<h2>Additional primitives<a class="headerlink" href="#additional-primitives" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>3D spline surfaces</dt>
+<dd>Natural cubic spline (Catmull-Rom)</dd>
+</dl>
+<p>The axiovision curve type is most likely a natural cubic spline, the
+curve passing smoothly through all points, but without local control.
+It is simply represented as a list of points through which the curve
+must pass; there are no additional control points.  Depending upon if
+they are doing any custom stuff, it might not be possible to represent
+with pixel-perfect accuracy.</p>
+<p>Curves might be more generally applicable to other formats, and useful
+in their own right.  It might be worth considering adding a spline
+type with local control where the curve passes straight through the
+control points such as Catmull-Rom splines.  This would make it very
+simple for non-experts to fit smooth lines while annotating their
+images.</p>
+</div>
+<div class="section" id="shape-combination">
+<h2>Shape combination<a class="headerlink" href="#shape-combination" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="logical-combination">
+<h3>Logical combination<a class="headerlink" href="#logical-combination" title="Permalink to this headline">¶</a></h3>
+<p>Representation:</p>
+<p>Logical combination of two shapes using the formula S2 B1 S3, e.g S2 ∧
+S3.  Shapes must have compatible dimensions.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>B1</td>
+<td>BLogic</td>
+<td>Bitwise binary logical operator</td>
+</tr>
+<tr class="row-odd"><td>S2</td>
+<td>ShapeID</td>
+<td>Shape1</td>
+</tr>
+<tr class="row-even"><td>S3</td>
+<td>ShapeID</td>
+<td>Shape2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="concatenation">
+<h3>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h3>
+<p>Logical combination of shapes.  Shapes must not share any dimensions,
+i.e. this is a means of adding additional dimensions to shapes.  The
+purpose is to enable combination of 2D or 3D geometry with additional
+nD shapes.</p>
+<p>Representation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="40%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>S1</td>
+<td>ShapeID</td>
+<td>Shape</td>
+</tr>
+<tr class="row-odd"><td>R1</td>
+<td>RepID</td>
+<td>Representation</td>
+</tr>
+<tr class="row-even"><td>NSHAPES</td>
+<td>Count</td>
+<td>Number of shapes</td>
+</tr>
+<tr class="row-odd"><td>SHAPES</td>
+<td>ShapeID[NSHAPES]</td>
+<td>Shapes to combine</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ndim.html" title="Regions in arbitrary dimensions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Fundamental data types"
+             >previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" >ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

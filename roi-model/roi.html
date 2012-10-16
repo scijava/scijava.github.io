@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
-    <link rel="next" title="ROI Discussion" href="initial.html" />
+    <link rel="next" title="Introduction" href="introduction.html" />
     <link rel="prev" title="ROI Specification Overview" href="index.html" /> 
   </head>
   <body>
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="initial.html" title="ROI Discussion"
+          <a href="introduction.html" title="Introduction"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="ROI Specification Overview"
@@ -59,8 +59,8 @@
   <p class="topless"><a href="index.html"
                         title="previous chapter">ROI Specification Overview</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="initial.html"
-                        title="next chapter">ROI Discussion</a></p>
+  <p class="topless"><a href="introduction.html"
+                        title="next chapter">Introduction</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/roi.txt"
@@ -93,13 +93,22 @@
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#reference-implementation">Reference implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#concepts">Concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#barcelona-meeting">Barcelona meeting</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="initial.html">ROI Discussion</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="initial.html#rois-in-three-dimensions">ROIs in three dimensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="initial.html#basic-3d-primitives">Basic 3D primitives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="initial.html#bitmasks">Bitmasks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="initial.html#meshes">Meshes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="initial.html#paths">Paths</a></li>
-<li class="toctree-l2"><a class="reference internal" href="initial.html#transforms">Transforms</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="3dconversion.html">2D primitives in 3D</a><ul>
@@ -107,30 +116,41 @@
 <li class="toctree-l2"><a class="reference internal" href="3dconversion.html#use-of-2d-primitives-in-3d-space">Use of 2D primitives in 3D space</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Geometric shape primitives</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#alternative-shape-representations">Alternative shape representations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primitives.html">Fundamental data types</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="primitives.html#basic-primitives">Basic primitives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#shape-serialisation">Shape serialisation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#shape">Shape</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#points">Points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#lines">Lines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#distances">Distances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#polylines">Polylines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#polygons">Polygons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#polydistances">Polydistances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#squares-and-rectangles">Squares and rectangles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#circles-and-ellipses">Circles and ellipses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#polyline-splines">Polyline Splines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#polygon-splines">Polygon splines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#cylinders">Cylinders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#arcs">Arcs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#masks">Masks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#meshes">Meshes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#labels">Labels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#text-placement-and-alignment">Text placement and alignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#scale-bars">Scale bars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primitives.html#additional-primitives">Additional primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html#basic-operators">Basic operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html#binary-bitwise-operators">Binary bitwise operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geometry.html">Geometric shape primitives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#alternative-shape-representations">Alternative shape representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#shape-serialisation">Shape serialisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#shape">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#points">Points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#lines">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#distances">Distances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#polylines">Polylines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#polygons">Polygons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#polydistances">Polydistances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#squares-and-rectangles">Squares and rectangles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#circles-and-ellipses">Circles and ellipses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#polyline-splines">Polyline Splines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#polygon-splines">Polygon splines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#cylinders">Cylinders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#arcs">Arcs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#masks">Masks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#meshes">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#labels">Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#text-placement-and-alignment">Text placement and alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#scale-bars">Scale bars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#additional-primitives">Additional primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry.html#shape-combination">Shape combination</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ndim.html">Regions in arbitrary dimensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ndim.html#regions-within-a-single-dimension">Regions within a single dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ndim.html#regions-in-multiple-dimensions">Regions in multiple dimensions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="compound.html">Compound ROIs</a><ul>
@@ -145,6 +165,14 @@
 <li class="toctree-l1"><a class="reference internal" href="affine.html">Affine transforms</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="affine.html#d-transforms">2D transforms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="affine.html#index-2">3D transforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shapes.html">Shapes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shapes.html#overview">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="representations.html">Shape representations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="representations.html#overview">Overview</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="layers.html">Layers</a></li>
@@ -179,7 +207,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="initial.html" title="ROI Discussion"
+          <a href="introduction.html" title="Introduction"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="ROI Specification Overview"
