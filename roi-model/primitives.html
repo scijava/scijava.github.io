@@ -203,8 +203,8 @@ be exact.  Using plain text would mitigate this to an extent.</p>
 <tbody valign="top">
 <tr class="row-even"><td>String</td>
 <td>0</td>
-<td>Count</td>
 <td>NCHAR</td>
+<td>Count</td>
 <td>Number of octets</td>
 </tr>
 <tr class="row-odd"><td>String</td>
@@ -212,6 +212,60 @@ be exact.  Using plain text would mitigate this to an extent.</p>
 <td>uint8[NCHAR]</td>
 <td>CHARS</td>
 <td>Array of octets (UTF-8)</td>
+</tr>
+<tr class="row-even"><td># Per-shape state also includes: shape- and representation- specific data</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Shape</td>
+<td>0</td>
+<td>NCHAR</td>
+<td>Count</td>
+<td>Number of octets</td>
+</tr>
+<tr class="row-even"><td>Shape</td>
+<td>1</td>
+<td>SID</td>
+<td>ShapeID</td>
+<td>Shape identifier</td>
+</tr>
+<tr class="row-odd"><td># Also used for re-serialisation; may be converted to canonical form internally</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Shape</td>
+<td>2</td>
+<td>RID</td>
+<td>RepID</td>
+<td>Representation identifier</td>
+</tr>
+<tr class="row-odd"><td># Internal</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td># Shape</td>
+<td>3</td>
+<td>NDIM</td>
+<td>Count</td>
+<td>Number of dimensions</td>
+</tr>
+<tr class="row-odd"><td># Shape</td>
+<td>4</td>
+<td>DIMS</td>
+<td>Index[NDIM]</td>
+<td>Object dimensionality (dimension numbers in use)</td>
+</tr>
+<tr class="row-even"><td># Shape</td>
+<td>5</td>
+<td>PROPS</td>
+<td>Props</td>
+<td>Shape properties (point size, line width, text font/size etc.)</td>
 </tr>
 </tbody>
 </table>
@@ -278,19 +332,19 @@ be exact.  Using plain text would mitigate this to an extent.</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>∧</td>
+<tr class="row-even"><td>AND</td>
 <td>0</td>
 <td>And</td>
 </tr>
-<tr class="row-odd"><td>∨</td>
+<tr class="row-odd"><td>OR</td>
 <td>1</td>
 <td>Or</td>
 </tr>
-<tr class="row-even"><td>¬</td>
+<tr class="row-even"><td>NOT</td>
 <td>2</td>
 <td>Not</td>
 </tr>
-<tr class="row-odd"><td>⊻</td>
+<tr class="row-odd"><td>XOR</td>
 <td>3</td>
 <td>Exclusive or</td>
 </tr>

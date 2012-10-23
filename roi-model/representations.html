@@ -91,12 +91,12 @@
 <li><a class="reference internal" href="#rcircle1-2d">RCircle1 (2D)</a></li>
 <li><a class="reference internal" href="#rcircle2-2d">RCircle2 (2D)</a></li>
 <li><a class="reference internal" href="#rcircle3-2d">RCircle3 (2D)</a></li>
-<li><a class="reference internal" href="#rcircle4-2d">RCircle4 (2D)</a></li>
+<li><a class="reference internal" href="#rcircle5-2d">RCircle5 (2D)</a></li>
 <li><a class="reference internal" href="#rsphere1-3d">RSphere1 (3D)</a></li>
 <li><a class="reference internal" href="#rsphere2-3d">RSphere2 (3D)</a></li>
 <li><a class="reference internal" href="#rsphere3-3d">RSphere3 (3D)</a></li>
 <li><a class="reference internal" href="#rsphere4-3d">RSphere4 (3D)</a></li>
-<li><a class="reference internal" href="#rsphere5-3d">RSphere5 (3D)</a></li>
+<li><a class="reference internal" href="#rsphere6-3d">RSphere6 (3D)</a></li>
 <li><a class="reference internal" href="#ralignedhalfaxes-2d">RAlignedHalfAxes (2D)</a></li>
 <li><a class="reference internal" href="#rhalfaxes-2d">RHalfAxes (2D)</a></li>
 <li><a class="reference internal" href="#rellipsecovariance-2d">REllipseCovariance (2D)</a></li>
@@ -128,6 +128,31 @@
 <li><a class="reference internal" href="#raffinetransform-1d">RAffineTransform (1D)</a></li>
 <li><a class="reference internal" href="#raffinetransform-2d">RAffineTransform (2D)</a></li>
 <li><a class="reference internal" href="#raffinetransform-3d">RAffineTransform (3D)</a></li>
+<li><a class="reference internal" href="#rtranslatetransform-1d">RTranslateTransform (1D)</a></li>
+<li><a class="reference internal" href="#rtranslatetransform-2d">RTranslateTransform (2D)</a></li>
+<li><a class="reference internal" href="#rtranslatetransform-3d">RTranslateTransform (3D)</a></li>
+<li><a class="reference internal" href="#rscaletransform-1d">RScaleTransform (1D)</a></li>
+<li><a class="reference internal" href="#rscaletransform-2d">RScaleTransform (2D)</a></li>
+<li><a class="reference internal" href="#rscaletransform-3d">RScaleTransform (3D)</a></li>
+<li><a class="reference internal" href="#rrotatetransform-2d">RRotateTransform (2D)</a></li>
+<li><a class="reference internal" href="#rrotatetransform-3d">RRotateTransform (3D)</a></li>
+<li><a class="reference internal" href="#rabstracttransform-1d">RAbstractTransform (1D)</a></li>
+<li><a class="reference internal" href="#rabstracttransform-2d">RAbstractTransform (2D)</a></li>
+<li><a class="reference internal" href="#rabstracttransform-3d">RAbstractTransform (3D)</a></li>
+<li><a class="reference internal" href="#rtext-2d">RText (2D)</a></li>
+<li><a class="reference internal" href="#rvalue-nd">RValue (nD)</a></li>
+<li><a class="reference internal" href="#rvalues-nd">RValues (nD)</a></li>
+<li><a class="reference internal" href="#rrange1-nd">RRange1 (nD)</a></li>
+<li><a class="reference internal" href="#rrange2-nd">RRange2 (nD)</a></li>
+<li><a class="reference internal" href="#rextrude-nd">RExtrude (nD)</a></li>
+<li><a class="reference internal" href="#rcombine-nd">RCombine (nD)</a></li>
+<li><a class="reference internal" href="#rbitwise-1d">RBitwise (1D)</a></li>
+<li><a class="reference internal" href="#rbitwise-2d">RBitwise (2D)</a></li>
+<li><a class="reference internal" href="#rbitwise-3d">RBitwise (3D)</a></li>
+<li><a class="reference internal" href="#rcircle0-2d">RCircle0 (2D)</a></li>
+<li><a class="reference internal" href="#rcircle4-2d">RCircle4 (2D)</a></li>
+<li><a class="reference internal" href="#rsphere0-3d">RSphere0 (3D)</a></li>
+<li><a class="reference internal" href="#rsphere5-3d">RSphere5 (3D)</a></li>
 </ul>
 </li>
 </ul>
@@ -372,7 +397,7 @@
 <td>A circle in 2D described by a circumference point and vector to the centre point</td>
 </tr>
 <tr class="row-odd"><td>37</td>
-<td><a class="reference internal" href="#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<td><a class="reference internal" href="#rep-rcircle5-2d"><em>RCircle5</em></a></td>
 <td>2D</td>
 <td>A circle in 2D described by three circumference points</td>
 </tr>
@@ -397,7 +422,7 @@
 <td>A sphere in 3D described by a surface point and vector to the centre point</td>
 </tr>
 <tr class="row-even"><td>42</td>
-<td><a class="reference internal" href="#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<td><a class="reference internal" href="#rep-rsphere6-3d"><em>RSphere6</em></a></td>
 <td>3D</td>
 <td>A sphere in 3D described by a four surface points</td>
 </tr>
@@ -414,7 +439,7 @@
 <tr class="row-odd"><td>45</td>
 <td><a class="reference internal" href="#rep-rellipsecovariance-2d"><em>REllipseCovariance</em></a></td>
 <td>2D</td>
-<td>An ellipse in 2D described by a centre point and covariance matrix</td>
+<td>An ellipse in 2D described by a centre point and covariance matrix (Mahalanbobis distance)</td>
 </tr>
 <tr class="row-even"><td>46</td>
 <td><a class="reference internal" href="#rep-ralignedhalfaxes-3d"><em>RAlignedHalfAxes</em></a></td>
@@ -429,7 +454,7 @@
 <tr class="row-even"><td>48</td>
 <td><a class="reference internal" href="#rep-rellipsoidcovariance-3d"><em>REllipsoidCovariance</em></a></td>
 <td>3D</td>
-<td>An ellipsoid in 3D described by a centre point and covariance matrix</td>
+<td>An ellipsoid in 3D described by a centre point and covariance matrix (Mahalanbobis distance)</td>
 </tr>
 <tr class="row-odd"><td>49</td>
 <td><a class="reference internal" href="#rep-rcircularcylinder1-3d"><em>RCircularCylinder1</em></a></td>
@@ -555,6 +580,131 @@
 <td><a class="reference internal" href="#rep-raffinetransform-3d"><em>RAffineTransform</em></a></td>
 <td>3D</td>
 <td>An affine transform in 3D described by a transformation matrix and 3D shape to transform</td>
+</tr>
+<tr class="row-even"><td>74</td>
+<td><a class="reference internal" href="#rep-rtranslatetransform-1d"><em>RTranslateTransform</em></a></td>
+<td>1D</td>
+<td>A translation transformation in 1D</td>
+</tr>
+<tr class="row-odd"><td>75</td>
+<td><a class="reference internal" href="#rep-rtranslatetransform-2d"><em>RTranslateTransform</em></a></td>
+<td>2D</td>
+<td>A translation transformation in 2D</td>
+</tr>
+<tr class="row-even"><td>76</td>
+<td><a class="reference internal" href="#rep-rtranslatetransform-3d"><em>RTranslateTransform</em></a></td>
+<td>3D</td>
+<td>A translation transformation in 3D</td>
+</tr>
+<tr class="row-odd"><td>77</td>
+<td><a class="reference internal" href="#rep-rscaletransform-1d"><em>RScaleTransform</em></a></td>
+<td>1D</td>
+<td>A scaling transformation in 1D</td>
+</tr>
+<tr class="row-even"><td>78</td>
+<td><a class="reference internal" href="#rep-rscaletransform-2d"><em>RScaleTransform</em></a></td>
+<td>2D</td>
+<td>A scaling transformation in 2D</td>
+</tr>
+<tr class="row-odd"><td>79</td>
+<td><a class="reference internal" href="#rep-rscaletransform-3d"><em>RScaleTransform</em></a></td>
+<td>3D</td>
+<td>A scaling transformation in 3D</td>
+</tr>
+<tr class="row-even"><td>80</td>
+<td><a class="reference internal" href="#rep-rrotatetransform-2d"><em>RRotateTransform</em></a></td>
+<td>2D</td>
+<td>A rotation transformation in 2D</td>
+</tr>
+<tr class="row-odd"><td>81</td>
+<td><a class="reference internal" href="#rep-rrotatetransform-3d"><em>RRotateTransform</em></a></td>
+<td>3D</td>
+<td>A rotation transformation in 3D</td>
+</tr>
+<tr class="row-even"><td>82</td>
+<td><a class="reference internal" href="#rep-rabstracttransform-1d"><em>RAbstractTransform</em></a></td>
+<td>1D</td>
+<td>An abstract (implementation-defined) transform in 1D</td>
+</tr>
+<tr class="row-odd"><td>83</td>
+<td><a class="reference internal" href="#rep-rabstracttransform-2d"><em>RAbstractTransform</em></a></td>
+<td>2D</td>
+<td>An abstract (implementation-defined) transform in 2D</td>
+</tr>
+<tr class="row-even"><td>84</td>
+<td><a class="reference internal" href="#rep-rabstracttransform-3d"><em>RAbstractTransform</em></a></td>
+<td>3D</td>
+<td>An abstract (implementation-defined) transform in 3D</td>
+</tr>
+<tr class="row-odd"><td>85</td>
+<td><a class="reference internal" href="#rep-rtext-2d"><em>RText</em></a></td>
+<td>2D</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>87</td>
+<td><a class="reference internal" href="#rep-rvalue-nd"><em>RValue</em></a></td>
+<td>nD</td>
+<td>A single value</td>
+</tr>
+<tr class="row-odd"><td>88</td>
+<td><a class="reference internal" href="#rep-rvalues-nd"><em>RValues</em></a></td>
+<td>nD</td>
+<td>A set of values</td>
+</tr>
+<tr class="row-even"><td>89</td>
+<td><a class="reference internal" href="#rep-rrange1-nd"><em>RRange1</em></a></td>
+<td>nD</td>
+<td>A range of values specified as the half-open range [V1, V2)</td>
+</tr>
+<tr class="row-odd"><td>90</td>
+<td><a class="reference internal" href="#rep-rrange2-nd"><em>RRange2</em></a></td>
+<td>nD</td>
+<td>A range of valuea specified as an inequality (or equality)</td>
+</tr>
+<tr class="row-even"><td>91</td>
+<td><a class="reference internal" href="#rep-rextrude-nd"><em>RExtrude</em></a></td>
+<td>nD</td>
+<td>A shape extruded in an additional dimension</td>
+</tr>
+<tr class="row-odd"><td>92</td>
+<td><a class="reference internal" href="#rep-rcombine-nd"><em>RCombine</em></a></td>
+<td>nD</td>
+<td>A shape combined from shapes in different dimensions</td>
+</tr>
+<tr class="row-even"><td>93</td>
+<td><a class="reference internal" href="#rep-rbitwise-1d"><em>RBitwise</em></a></td>
+<td>1D</td>
+<td>Binary bitwise operation</td>
+</tr>
+<tr class="row-odd"><td>94</td>
+<td><a class="reference internal" href="#rep-rbitwise-2d"><em>RBitwise</em></a></td>
+<td>2D</td>
+<td>Binary bitwise operation</td>
+</tr>
+<tr class="row-even"><td>95</td>
+<td><a class="reference internal" href="#rep-rbitwise-3d"><em>RBitwise</em></a></td>
+<td>3D</td>
+<td>Binary bitwise operation</td>
+</tr>
+<tr class="row-odd"><td>341</td>
+<td><a class="reference internal" href="#rep-rcircle0-2d"><em>RCircle0</em></a></td>
+<td>2D</td>
+<td>A circle in 2D described by a centre point and circumference point</td>
+</tr>
+<tr class="row-even"><td>371</td>
+<td><a class="reference internal" href="#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<td>2D</td>
+<td>A circle in 2D described by two circumference points [diameter]</td>
+</tr>
+<tr class="row-odd"><td>381</td>
+<td><a class="reference internal" href="#rep-rsphere0-3d"><em>RSphere0</em></a></td>
+<td>3D</td>
+<td>A sphere in 3D described by a centre point and surface point</td>
+</tr>
+<tr class="row-even"><td>421</td>
+<td><a class="reference internal" href="#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<td>3D</td>
+<td>A sphere in 3D described by a two surface points [diameter]</td>
 </tr>
 </tbody>
 </table>
@@ -1715,11 +1865,11 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="rcircle4-2d">
-<span id="rep-rcircle4-2d"></span><span id="index-37"></span><h3>RCircle4 (2D)<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rcircle5-2d">
+<span id="rep-rcircle5-2d"></span><span id="index-37"></span><h3>RCircle5 (2D)<a class="headerlink" href="#rcircle5-2d" title="Permalink to this headline">¶</a></h3>
 <p>A circle in 2D described by three circumference points.</p>
 <table border="1" class="docutils">
-<caption>RCircle4 members (2D)</caption>
+<caption>RCircle5 members (2D)</caption>
 <colgroup>
 <col width="11%" />
 <col width="11%" />
@@ -1870,11 +2020,11 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="rsphere5-3d">
-<span id="rep-rsphere5-3d"></span><span id="index-42"></span><h3>RSphere5 (3D)<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rsphere6-3d">
+<span id="rep-rsphere6-3d"></span><span id="index-42"></span><h3>RSphere6 (3D)<a class="headerlink" href="#rsphere6-3d" title="Permalink to this headline">¶</a></h3>
 <p>A sphere in 3D described by a four surface points.</p>
 <table border="1" class="docutils">
-<caption>RSphere5 members (3D)</caption>
+<caption>RSphere6 members (3D)</caption>
 <colgroup>
 <col width="11%" />
 <col width="11%" />
@@ -1968,7 +2118,7 @@
 </div>
 <div class="section" id="rellipsecovariance-2d">
 <span id="rep-rellipsecovariance-2d"></span><span id="index-45"></span><h3>REllipseCovariance (2D)<a class="headerlink" href="#rellipsecovariance-2d" title="Permalink to this headline">¶</a></h3>
-<p>An ellipse in 2D described by a centre point and covariance matrix.</p>
+<p>An ellipse in 2D described by a centre point and covariance matrix (Mahalanbobis distance).</p>
 <table border="1" class="docutils">
 <caption>REllipseCovariance members (2D)</caption>
 <colgroup>
@@ -2074,7 +2224,7 @@
 </div>
 <div class="section" id="rellipsoidcovariance-3d">
 <span id="rep-rellipsoidcovariance-3d"></span><span id="index-48"></span><h3>REllipsoidCovariance (3D)<a class="headerlink" href="#rellipsoidcovariance-3d" title="Permalink to this headline">¶</a></h3>
-<p>An ellipsoid in 3D described by a centre point and covariance matrix.</p>
+<p>An ellipsoid in 3D described by a centre point and covariance matrix (Mahalanbobis distance).</p>
 <table border="1" class="docutils">
 <caption>REllipsoidCovariance members (3D)</caption>
 <colgroup>
@@ -2954,7 +3104,7 @@
 </tr>
 <tr class="row-odd"><td>1</td>
 <td>SHAPE</td>
-<td>Shape1D</td>
+<td>Shape</td>
 <td>Shape</td>
 </tr>
 </tbody>
@@ -2986,7 +3136,7 @@
 </tr>
 <tr class="row-odd"><td>1</td>
 <td>SHAPE</td>
-<td>Shape2D</td>
+<td>Shape</td>
 <td>Shape</td>
 </tr>
 </tbody>
@@ -3018,8 +3168,843 @@
 </tr>
 <tr class="row-odd"><td>1</td>
 <td>SHAPE</td>
-<td>Shape3D</td>
 <td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rtranslatetransform-1d">
+<span id="rep-rtranslatetransform-1d"></span><span id="index-74"></span><h3>RTranslateTransform (1D)<a class="headerlink" href="#rtranslatetransform-1d" title="Permalink to this headline">¶</a></h3>
+<p>A translation transformation in 1D.</p>
+<table border="1" class="docutils">
+<caption>RTranslateTransform members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>TR1</td>
+<td>Vector1D</td>
+<td>Translation in x</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape1D</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rtranslatetransform-2d">
+<span id="rep-rtranslatetransform-2d"></span><span id="index-75"></span><h3>RTranslateTransform (2D)<a class="headerlink" href="#rtranslatetransform-2d" title="Permalink to this headline">¶</a></h3>
+<p>A translation transformation in 2D.</p>
+<table border="1" class="docutils">
+<caption>RTranslateTransform members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>TR1</td>
+<td>Vector2D</td>
+<td>Translation in x,y</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape1D</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rtranslatetransform-3d">
+<span id="rep-rtranslatetransform-3d"></span><span id="index-76"></span><h3>RTranslateTransform (3D)<a class="headerlink" href="#rtranslatetransform-3d" title="Permalink to this headline">¶</a></h3>
+<p>A translation transformation in 3D.</p>
+<table border="1" class="docutils">
+<caption>RTranslateTransform members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>TR1</td>
+<td>Vector3D</td>
+<td>Translation in x,y,z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape1D</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rscaletransform-1d">
+<span id="rep-rscaletransform-1d"></span><span id="index-77"></span><h3>RScaleTransform (1D)<a class="headerlink" href="#rscaletransform-1d" title="Permalink to this headline">¶</a></h3>
+<p>A scaling transformation in 1D.</p>
+<table border="1" class="docutils">
+<caption>RScaleTransform members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>SF1</td>
+<td>double[1]</td>
+<td>Scale factor for x</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape1D</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rscaletransform-2d">
+<span id="rep-rscaletransform-2d"></span><span id="index-78"></span><h3>RScaleTransform (2D)<a class="headerlink" href="#rscaletransform-2d" title="Permalink to this headline">¶</a></h3>
+<p>A scaling transformation in 2D.</p>
+<table border="1" class="docutils">
+<caption>RScaleTransform members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>SF1</td>
+<td>double[2]</td>
+<td>Scale factor for x,y</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape1D</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rscaletransform-3d">
+<span id="rep-rscaletransform-3d"></span><span id="index-79"></span><h3>RScaleTransform (3D)<a class="headerlink" href="#rscaletransform-3d" title="Permalink to this headline">¶</a></h3>
+<p>A scaling transformation in 3D.</p>
+<table border="1" class="docutils">
+<caption>RScaleTransform members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>SF1</td>
+<td>double[3]</td>
+<td>Scale factor for x,y,z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rrotatetransform-2d">
+<span id="rep-rrotatetransform-2d"></span><span id="index-80"></span><h3>RRotateTransform (2D)<a class="headerlink" href="#rrotatetransform-2d" title="Permalink to this headline">¶</a></h3>
+<p>A rotation transformation in 2D.</p>
+<table border="1" class="docutils">
+<caption>RRotateTransform members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>RA</td>
+<td>double[1]</td>
+<td>Rotation angle in z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rrotatetransform-3d">
+<span id="rep-rrotatetransform-3d"></span><span id="index-81"></span><h3>RRotateTransform (3D)<a class="headerlink" href="#rrotatetransform-3d" title="Permalink to this headline">¶</a></h3>
+<p>A rotation transformation in 3D.</p>
+<table border="1" class="docutils">
+<caption>RRotateTransform members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>RA</td>
+<td>double[3]</td>
+<td>Rotation angle in x,y,z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rabstracttransform-1d">
+<span id="rep-rabstracttransform-1d"></span><span id="index-82"></span><h3>RAbstractTransform (1D)<a class="headerlink" href="#rabstracttransform-1d" title="Permalink to this headline">¶</a></h3>
+<p>An abstract (implementation-defined) transform in 1D.</p>
+<table border="1" class="docutils">
+<caption>RAbstractTransform members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NAME</td>
+<td>String</td>
+<td>Name of transformation</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>ARGS</td>
+<td>String</td>
+<td>Arguments</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>SHAPE</td>
+<td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rabstracttransform-2d">
+<span id="rep-rabstracttransform-2d"></span><span id="index-83"></span><h3>RAbstractTransform (2D)<a class="headerlink" href="#rabstracttransform-2d" title="Permalink to this headline">¶</a></h3>
+<p>An abstract (implementation-defined) transform in 2D.</p>
+<table border="1" class="docutils">
+<caption>RAbstractTransform members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NAME</td>
+<td>String</td>
+<td>Name of transformation</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>ARGS</td>
+<td>String</td>
+<td>Arguments</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>SHAPE</td>
+<td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rabstracttransform-3d">
+<span id="rep-rabstracttransform-3d"></span><span id="index-84"></span><h3>RAbstractTransform (3D)<a class="headerlink" href="#rabstracttransform-3d" title="Permalink to this headline">¶</a></h3>
+<p>An abstract (implementation-defined) transform in 3D.</p>
+<table border="1" class="docutils">
+<caption>RAbstractTransform members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NAME</td>
+<td>String</td>
+<td>Name of transformation</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>ARGS</td>
+<td>String</td>
+<td>Arguments</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>SHAPE</td>
+<td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rtext-2d">
+<span id="rep-rtext-2d"></span><span id="index-85"></span><h3>RText (2D)<a class="headerlink" href="#rtext-2d" title="Permalink to this headline">¶</a></h3>
+<p>Text.</p>
+<table border="1" class="docutils">
+<caption>RText members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RRectangle2</td>
+<td>Text bounds</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>TEXT</td>
+<td>String</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rvalue-nd">
+<span id="rep-rvalue-nd"></span><span id="index-86"></span><h3>RValue (nD)<a class="headerlink" href="#rvalue-nd" title="Permalink to this headline">¶</a></h3>
+<p>A single value.</p>
+<table border="1" class="docutils">
+<caption>RValue members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>D1</td>
+<td>Index</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>V1</td>
+<td>Index</td>
+<td>Value within dimension</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rvalues-nd">
+<span id="rep-rvalues-nd"></span><span id="index-87"></span><h3>RValues (nD)<a class="headerlink" href="#rvalues-nd" title="Permalink to this headline">¶</a></h3>
+<p>A set of values.</p>
+<table border="1" class="docutils">
+<caption>RValues members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>D1</td>
+<td>Index</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>NVAL</td>
+<td>Count</td>
+<td>Number of values</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>V1</td>
+<td>Index[NVAL]</td>
+<td>Values within dimension</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rrange1-nd">
+<span id="rep-rrange1-nd"></span><span id="index-88"></span><h3>RRange1 (nD)<a class="headerlink" href="#rrange1-nd" title="Permalink to this headline">¶</a></h3>
+<p>A range of values specified as the half-open range [V1, V2).</p>
+<table border="1" class="docutils">
+<caption>RRange1 members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>D1</td>
+<td>Index</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>V1</td>
+<td>Index</td>
+<td>Starting value within dimension</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>V2</td>
+<td>Index</td>
+<td>Ending value +1 within dimension</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rrange2-nd">
+<span id="rep-rrange2-nd"></span><span id="index-89"></span><h3>RRange2 (nD)<a class="headerlink" href="#rrange2-nd" title="Permalink to this headline">¶</a></h3>
+<p>A range of valuea specified as an inequality (or equality).</p>
+<table border="1" class="docutils">
+<caption>RRange2 members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>D1</td>
+<td>Index</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>O1</td>
+<td>Operator</td>
+<td>Mathematical operator</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>V1</td>
+<td>Value</td>
+<td>Value for operation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rextrude-nd">
+<span id="rep-rextrude-nd"></span><span id="index-90"></span><h3>RExtrude (nD)<a class="headerlink" href="#rextrude-nd" title="Permalink to this headline">¶</a></h3>
+<p>A shape extruded in an additional dimension.</p>
+<table border="1" class="docutils">
+<caption>RExtrude members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>D1</td>
+<td>Index</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SHAPE</td>
+<td>Shape</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rcombine-nd">
+<span id="rep-rcombine-nd"></span><span id="index-91"></span><h3>RCombine (nD)<a class="headerlink" href="#rcombine-nd" title="Permalink to this headline">¶</a></h3>
+<p>A shape combined from shapes in different dimensions.</p>
+<table border="1" class="docutils">
+<caption>RCombine members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>S1</td>
+<td>Shape</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>S2</td>
+<td>Shape</td>
+<td>Dimension</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rbitwise-1d">
+<span id="rep-rbitwise-1d"></span><span id="index-92"></span><h3>RBitwise (1D)<a class="headerlink" href="#rbitwise-1d" title="Permalink to this headline">¶</a></h3>
+<p>Binary bitwise operation.</p>
+<table border="1" class="docutils">
+<caption>RBitwise members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>O1</td>
+<td>BLogic</td>
+<td>Bitwise logic operator</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>M1</td>
+<td>RBitMask1D</td>
+<td>Mask 1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>M2</td>
+<td>RBitMask1D</td>
+<td>Mask 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rbitwise-2d">
+<span id="rep-rbitwise-2d"></span><span id="index-93"></span><h3>RBitwise (2D)<a class="headerlink" href="#rbitwise-2d" title="Permalink to this headline">¶</a></h3>
+<p>Binary bitwise operation.</p>
+<table border="1" class="docutils">
+<caption>RBitwise members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>O1</td>
+<td>BLogic</td>
+<td>Bitwise logic operator</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>M1</td>
+<td>RBitMask2D</td>
+<td>Mask 1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>M2</td>
+<td>RBitMask2D</td>
+<td>Mask 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rbitwise-3d">
+<span id="rep-rbitwise-3d"></span><span id="index-94"></span><h3>RBitwise (3D)<a class="headerlink" href="#rbitwise-3d" title="Permalink to this headline">¶</a></h3>
+<p>Binary bitwise operation.</p>
+<table border="1" class="docutils">
+<caption>RBitwise members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>O1</td>
+<td>BLogic</td>
+<td>Bitwise logic operator</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>M1</td>
+<td>RBitMask3D</td>
+<td>Mask 1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>M2</td>
+<td>RBitMask3D</td>
+<td>Mask 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rcircle0-2d">
+<span id="rep-rcircle0-2d"></span><span id="index-95"></span><h3>RCircle0 (2D)<a class="headerlink" href="#rcircle0-2d" title="Permalink to this headline">¶</a></h3>
+<p>A circle in 2D described by a centre point and circumference point.</p>
+<table border="1" class="docutils">
+<caption>RCircle0 members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex2D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>P2</td>
+<td>Vertex2D</td>
+<td>Circumference point</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rcircle4-2d">
+<span id="rep-rcircle4-2d"></span><span id="index-96"></span><h3>RCircle4 (2D)<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h3>
+<p>A circle in 2D described by two circumference points [diameter].</p>
+<table border="1" class="docutils">
+<caption>RCircle4 members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex2D[2]</td>
+<td>Two points on circumference</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rsphere0-3d">
+<span id="rep-rsphere0-3d"></span><span id="index-97"></span><h3>RSphere0 (3D)<a class="headerlink" href="#rsphere0-3d" title="Permalink to this headline">¶</a></h3>
+<p>A sphere in 3D described by a centre point and surface point.</p>
+<table border="1" class="docutils">
+<caption>RSphere0 members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex3D</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>P2</td>
+<td>Vertex3D</td>
+<td>Surface point</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rsphere5-3d">
+<span id="rep-rsphere5-3d"></span><span id="index-98"></span><h3>RSphere5 (3D)<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h3>
+<p>A sphere in 3D described by a two surface points [diameter].</p>
+<table border="1" class="docutils">
+<caption>RSphere5 members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex3D[2]</td>
+<td>Two points on surface</td>
 </tr>
 </tbody>
 </table>

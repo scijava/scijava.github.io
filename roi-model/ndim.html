@@ -49,24 +49,6 @@
     </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Regions in arbitrary dimensions</a><ul>
-<li><a class="reference internal" href="#regions-within-a-single-dimension">Regions within a single dimension</a><ul>
-<li><a class="reference internal" href="#valuend">ValuenD</a></li>
-<li><a class="reference internal" href="#valuesnd">ValuesnD</a></li>
-<li><a class="reference internal" href="#rangend">RangenD</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#regions-in-multiple-dimensions">Regions in multiple dimensions</a><ul>
-<li><a class="reference internal" href="#extrudend">ExtrudenD</a></li>
-<li><a class="reference internal" href="#combinend">CombinenD</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
   <h4>Previous topic</h4>
   <p class="topless"><a href="geometry.html"
                         title="previous chapter">Geometric shape primitives</a></p>
@@ -106,242 +88,25 @@ physical dimensions, this does not translate meaningfully to arbitrary
 dimensions.  The following primitives work in any &#8220;dimension&#8221; with a
 discrete or continuous range by permitting the selection of specific
 values, or sub-ranges.</p>
-<p>These representations could be represented efficiently using a 1D
-bitmap or Line1D.</p>
-<div class="section" id="regions-within-a-single-dimension">
-<h2>Regions within a single dimension<a class="headerlink" href="#regions-within-a-single-dimension" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="valuend">
-<span id="index-0"></span><h3>ValuenD<a class="headerlink" href="#valuend" title="Permalink to this headline">¶</a></h3>
-<p>Constrain region to a single value within a specific dimension.</p>
-<p>Representation:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="24%" />
-<col width="65%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>S1</td>
-<td>ShapeID</td>
-<td>Shape</td>
-</tr>
-<tr class="row-odd"><td>R1</td>
-<td>RepID</td>
-<td>Representation</td>
-</tr>
-<tr class="row-even"><td>D1</td>
-<td>Index</td>
-<td>Dimension</td>
-</tr>
-<tr class="row-odd"><td>V1</td>
-<td>Value</td>
-<td>Value within dimension</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="valuesnd">
-<h3>ValuesnD<a class="headerlink" href="#valuesnd" title="Permalink to this headline">¶</a></h3>
-<p>Constrain region to multiple values within a specific dimension.</p>
-<p>Representation:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="11%" />
-<col width="29%" />
-<col width="61%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>S1</td>
-<td>ShapeID</td>
-<td>Shape</td>
-</tr>
-<tr class="row-odd"><td>R1</td>
-<td>RepID</td>
-<td>Representation</td>
-</tr>
-<tr class="row-even"><td>D1</td>
-<td>Index</td>
-<td>Dimension</td>
-</tr>
-<tr class="row-odd"><td>NVAL</td>
-<td>Count</td>
-<td>Number of values</td>
-</tr>
-<tr class="row-even"><td>VALS</td>
-<td>Value[NVAL]</td>
-<td>Values within dimension</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="rangend">
-<h3>RangenD<a class="headerlink" href="#rangend" title="Permalink to this headline">¶</a></h3>
-<p>Constrain region to a range of values within a specific dimension.</p>
-<p>Representation1:</p>
-<p>Specified as the half-open range [V1, V2).</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="9%" />
-<col width="18%" />
-<col width="73%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>S1</td>
-<td>ShapeID</td>
-<td>Shape</td>
-</tr>
-<tr class="row-odd"><td>R1</td>
-<td>RepID</td>
-<td>Representation</td>
-</tr>
-<tr class="row-even"><td>D1</td>
-<td>Index</td>
-<td>Dimension</td>
-</tr>
-<tr class="row-odd"><td>V1</td>
-<td>Value</td>
-<td>Starting value within dimension</td>
-</tr>
-<tr class="row-even"><td>V2</td>
-<td>Value</td>
-<td>Ending value +1 within dimension</td>
-</tr>
-</tbody>
-</table>
-<p>Representation2:</p>
-<p>As an inequality (or equality).</p>
-<p>Specified as all values for which the formula &#8220;n O1 V1&#8221; is true,
-e.g. &#8220;n ≤ 5&#8221;.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="9%" />
-<col width="18%" />
-<col width="73%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>S1</td>
-<td>ShapeID</td>
-<td>Shape</td>
-</tr>
-<tr class="row-odd"><td>R1</td>
-<td>RepID</td>
-<td>Representation</td>
-</tr>
-<tr class="row-even"><td>D1</td>
-<td>Index</td>
-<td>Dimension</td>
-</tr>
-<tr class="row-odd"><td>O1</td>
-<td>Operator</td>
-<td>Mathematical operator</td>
-</tr>
-<tr class="row-even"><td>V1</td>
-<td>Value</td>
-<td>Value for operation</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="regions-in-multiple-dimensions">
-<h2>Regions in multiple dimensions<a class="headerlink" href="#regions-in-multiple-dimensions" title="Permalink to this headline">¶</a></h2>
-<p>Regions in single dimensions may be combined to result in a region in
-multiple dimensions.</p>
-<div class="section" id="extrudend">
-<h3>ExtrudenD<a class="headerlink" href="#extrudend" title="Permalink to this headline">¶</a></h3>
-<p>Extrude a shape of arbitrary dimensionality into an additional
-dimension.  There are no limits in the additional dimension; these
-must be set by combining with a range instead.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="9%" />
-<col width="18%" />
-<col width="73%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>S1</td>
-<td>ShapeID</td>
-<td>Shape</td>
-</tr>
-<tr class="row-odd"><td>R1</td>
-<td>RepID</td>
-<td>Representation</td>
-</tr>
-<tr class="row-even"><td>D1</td>
-<td>Index</td>
-<td>Dimension</td>
-</tr>
-<tr class="row-odd"><td>S2</td>
-<td>ShapeID</td>
-<td>Shape to extrude</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="combinend">
-<h3>CombinenD<a class="headerlink" href="#combinend" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="9%" />
-<col width="18%" />
-<col width="73%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>S1</td>
-<td>ShapeID</td>
-<td>Shape</td>
-</tr>
-<tr class="row-odd"><td>R1</td>
-<td>RepID</td>
-<td>Representation</td>
-</tr>
-<tr class="row-even"><td>S2</td>
-<td>ShapeID</td>
-<td>First shape to combine</td>
-</tr>
-<tr class="row-odd"><td>S3</td>
-<td>ShapeID</td>
-<td>Second shape to combine</td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>These &#8220;nD&#8221; shapes (Value, Values, Range) and the extrusion and
+combining shapes (Extrude, Combine), permit the specification of ROIs
+in multiple arbitrary dimensions, and their combination with geometry
+in 1D, 2D and 3D.</p>
+<p>Just as all 1D, 2D and 3D geometry can be converted to the respective
+1D, 2D or 3D bitmask or greymask representing the described shape, all
+nD primitives in higher dimensions can be converted to 1D bitmask or
+greymask.  A 1D bitmask for each dimension will allow efficient
+iteration over the higher-order dimensions using the resulting
+bitmaps.</p>
+<p>By default, a ROI is unconstrained within all dimensions.  The
+addition of constraints restricts it to particular dimensions, or
+subsets thereof.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">RL.  Should we be unconstrained by default, or completely
+constrained?  Should this behaviour be different for &#8220;real&#8221;
+dimensions (xyzt) compared with virtual dimensions such as
+channels?</p>
 </div>
 </div>
 

@@ -94,6 +94,22 @@
 <li><a class="reference internal" href="#affinetransform-1d">AffineTransform (1D)</a></li>
 <li><a class="reference internal" href="#affinetransform-2d">AffineTransform (2D)</a></li>
 <li><a class="reference internal" href="#affinetransform-3d">AffineTransform (3D)</a></li>
+<li><a class="reference internal" href="#abstracttransform-1d">AbstractTransform (1D)</a></li>
+<li><a class="reference internal" href="#abstracttransform-2d">AbstractTransform (2D)</a></li>
+<li><a class="reference internal" href="#abstracttransform-3d">AbstractTransform (3D)</a></li>
+<li><a class="reference internal" href="#text-2d">Text (2D)</a></li>
+<li><a class="reference internal" href="#value-nd">Value (nD)</a></li>
+<li><a class="reference internal" href="#values-nd">Values (nD)</a></li>
+<li><a class="reference internal" href="#range-nd">Range (nD)</a></li>
+<li><a class="reference internal" href="#extrude-nd">Extrude (nD)</a></li>
+<li><a class="reference internal" href="#combine-nd">Combine (nD)</a></li>
+<li><a class="reference internal" href="#scale-2d">Scale (2D)</a></li>
+<li><a class="reference internal" href="#scale-3d">Scale (3D)</a></li>
+<li><a class="reference internal" href="#grid-2d">Grid (2D)</a></li>
+<li><a class="reference internal" href="#grid-3d">Grid (3D)</a></li>
+<li><a class="reference internal" href="#bitwise-1d">Bitwise (1D)</a></li>
+<li><a class="reference internal" href="#bitwise-2d">Bitwise (2D)</a></li>
+<li><a class="reference internal" href="#bitwise-3d">Bitwise (3D)</a></li>
 </ul>
 
   <h4>Previous topic</h4>
@@ -814,25 +830,49 @@
 <td>&nbsp;</td>
 <td>AlignedEllipse (2D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle1-2d"><em>RCircle1</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare1-2d"><em>RAlignedSquare1</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare2-2d"><em>RAlignedSquare2</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle0-2d"><em>RCircle0</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Circle (2D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle2-2d"><em>RCircle2</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle1-2d"><em>RCircle1</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Circle (2D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle3-2d"><em>RCircle3</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle2-2d"><em>RCircle2</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Circle (2D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle3-2d"><em>RCircle3</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle5-2d"><em>RCircle5</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -854,13 +894,13 @@
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedRectangle (2D), Line (2D)</td>
+<td>AlignedRectangle (2D), Line (2D), Square (2D)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinevector-2d"><em>RLineVector</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedRectangle (2D), Line (2D)</td>
+<td>AlignedRectangle (2D), Line (2D), Square (2D)</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rpoint-2d"><em>RPoint</em></a></td>
 <td>2D</td>
@@ -948,6 +988,18 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedcube1-3d"><em>RAlignedCube1</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedcube2-3d"><em>RAlignedCube2</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedhalfaxes-3d"><em>RAlignedHalfAxes</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
@@ -982,13 +1034,13 @@
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedCuboid (3D), Line (3D)</td>
+<td>AlignedCuboid (3D), Cube (3D), Line (3D)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinevector-3d"><em>RLineVector</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedCuboid (3D), Line (3D)</td>
+<td>AlignedCuboid (3D), Cube (3D), Line (3D)</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rpoint-3d"><em>RPoint</em></a></td>
 <td>3D</td>
@@ -996,31 +1048,43 @@
 <td>&nbsp;</td>
 <td>Point (3D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere1-3d"><em>RSphere1</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere0-3d"><em>RSphere0</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere2-3d"><em>RSphere2</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere1-3d"><em>RSphere1</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere3-3d"><em>RSphere3</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere2-3d"><em>RSphere2</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere4-3d"><em>RSphere4</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere3-3d"><em>RSphere3</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere4-3d"><em>RSphere4</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere6-3d"><em>RSphere6</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1051,29 +1115,65 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle1-2d"><em>RCircle1</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare1-2d"><em>RAlignedSquare1</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare2-2d"><em>RAlignedSquare2</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle0-2d"><em>RCircle0</em></a></td>
 <td>2D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Circle (2D)</strong> [self]</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle2-2d"><em>RCircle2</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle1-2d"><em>RCircle1</em></a></td>
 <td>2D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Circle (2D)</strong> [self]</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle3-2d"><em>RCircle3</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle2-2d"><em>RCircle2</em></a></td>
 <td>2D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Circle (2D)</strong> [self]</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle3-2d"><em>RCircle3</em></a></td>
 <td>2D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Circle (2D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Circle (2D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle5-2d"><em>RCircle5</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Circle (2D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinepoints-2d"><em>RLinePoints</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Square (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rlinevector-2d"><em>RLineVector</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Square (2D)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rpoint-2d"><em>RPoint</em></a></td>
 <td>2D</td>
@@ -1106,37 +1206,73 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedcube1-3d"><em>RAlignedCube1</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedcube2-3d"><em>RAlignedCube2</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinepoints-3d"><em>RLinePoints</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Cube (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rlinevector-3d"><em>RLineVector</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Cube (3D)</td>
+</tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rpoint-3d"><em>RPoint</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Point (3D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere1-3d"><em>RSphere1</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere0-3d"><em>RSphere0</em></a></td>
 <td>3D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Sphere (3D)</strong> [self]</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere2-3d"><em>RSphere2</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere1-3d"><em>RSphere1</em></a></td>
 <td>3D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Sphere (3D)</strong> [self]</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere3-3d"><em>RSphere3</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere2-3d"><em>RSphere2</em></a></td>
 <td>3D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Sphere (3D)</strong> [self]</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere4-3d"><em>RSphere4</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere3-3d"><em>RSphere3</em></a></td>
 <td>3D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>Sphere (3D)</strong> [self]</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere4-3d"><em>RSphere4</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Sphere (3D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Sphere (3D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere6-3d"><em>RSphere6</em></a></td>
 <td>3D</td>
 <td>•</td>
 <td>•</td>
@@ -1216,25 +1352,49 @@
 <td>&nbsp;</td>
 <td>AlignedEllipse (2D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle1-2d"><em>RCircle1</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare1-2d"><em>RAlignedSquare1</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare2-2d"><em>RAlignedSquare2</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle0-2d"><em>RCircle0</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Circle (2D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle2-2d"><em>RCircle2</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle1-2d"><em>RCircle1</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Circle (2D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle3-2d"><em>RCircle3</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle2-2d"><em>RCircle2</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Circle (2D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle3-2d"><em>RCircle3</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle5-2d"><em>RCircle5</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1256,13 +1416,13 @@
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedRectangle (2D), Line (2D)</td>
+<td>AlignedRectangle (2D), Line (2D), Square (2D)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinevector-2d"><em>RLineVector</em></a></td>
 <td>2D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedRectangle (2D), Line (2D)</td>
+<td>AlignedRectangle (2D), Line (2D), Square (2D)</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rpoint-2d"><em>RPoint</em></a></td>
 <td>2D</td>
@@ -1350,6 +1510,18 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedcube1-3d"><em>RAlignedCube1</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedcube2-3d"><em>RAlignedCube2</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedhalfaxes-3d"><em>RAlignedHalfAxes</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
@@ -1384,13 +1556,13 @@
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedCuboid (3D), Line (3D)</td>
+<td>AlignedCuboid (3D), Cube (3D), Line (3D)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinevector-3d"><em>RLineVector</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>AlignedCuboid (3D), Line (3D)</td>
+<td>AlignedCuboid (3D), Cube (3D), Line (3D)</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rpoint-3d"><em>RPoint</em></a></td>
 <td>3D</td>
@@ -1398,31 +1570,43 @@
 <td>&nbsp;</td>
 <td>Point (3D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere1-3d"><em>RSphere1</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere0-3d"><em>RSphere0</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere2-3d"><em>RSphere2</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere1-3d"><em>RSphere1</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere3-3d"><em>RSphere3</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere2-3d"><em>RSphere2</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere4-3d"><em>RSphere4</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere3-3d"><em>RSphere3</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Sphere (3D)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere4-3d"><em>RSphere4</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere6-3d"><em>RSphere6</em></a></td>
 <td>3D</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -2063,6 +2247,18 @@
 <td>•</td>
 <td><strong>AffineTransform (1D)</strong> [self]</td>
 </tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rscaletransform-1d"><em>RScaleTransform</em></a></td>
+<td>1D</td>
+<td>•</td>
+<td>&nbsp;</td>
+<td><strong>AffineTransform (1D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rtranslatetransform-1d"><em>RTranslateTransform</em></a></td>
+<td>1D</td>
+<td>•</td>
+<td>&nbsp;</td>
+<td><strong>AffineTransform (1D)</strong> [self]</td>
+</tr>
 </tbody>
 </table>
 <p>Canonical form is RAffineTransform (1D).</p>
@@ -2092,6 +2288,24 @@
 <td>2D</td>
 <td>•</td>
 <td>•</td>
+<td><strong>AffineTransform (2D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rrotatetransform-2d"><em>RRotateTransform</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>&nbsp;</td>
+<td><strong>AffineTransform (2D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rscaletransform-2d"><em>RScaleTransform</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>&nbsp;</td>
+<td><strong>AffineTransform (2D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rtranslatetransform-2d"><em>RTranslateTransform</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>&nbsp;</td>
 <td><strong>AffineTransform (2D)</strong> [self]</td>
 </tr>
 </tbody>
@@ -2125,9 +2339,789 @@
 <td>•</td>
 <td><strong>AffineTransform (3D)</strong> [self]</td>
 </tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rrotatetransform-3d"><em>RRotateTransform</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>&nbsp;</td>
+<td><strong>AffineTransform (3D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rscaletransform-3d"><em>RScaleTransform</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>&nbsp;</td>
+<td><strong>AffineTransform (3D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rtranslatetransform-3d"><em>RTranslateTransform</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>&nbsp;</td>
+<td><strong>AffineTransform (3D)</strong> [self]</td>
+</tr>
 </tbody>
 </table>
 <p>Canonical form is RAffineTransform (3D).</p>
+</div>
+<div class="section" id="abstracttransform-1d">
+<span id="shape-abstracttransform-1d"></span><span id="index-45"></span><h1>AbstractTransform (1D)<a class="headerlink" href="#abstracttransform-1d" title="Permalink to this headline">¶</a></h1>
+<p>Abstract (implementation-defined) transformation of a shape.</p>
+<table border="1" class="docutils">
+<caption>AbstractTransform representations (1D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rabstracttransform-1d"><em>RAbstractTransform</em></a></td>
+<td>1D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>AbstractTransform (1D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-raffinetransform-1d"><em>RAffineTransform</em></a></td>
+<td>1D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (1D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rscaletransform-1d"><em>RScaleTransform</em></a></td>
+<td>1D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (1D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rtranslatetransform-1d"><em>RTranslateTransform</em></a></td>
+<td>1D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (1D)</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RAbstractTransform (1D).</p>
+</div>
+<div class="section" id="abstracttransform-2d">
+<span id="shape-abstracttransform-2d"></span><span id="index-46"></span><h1>AbstractTransform (2D)<a class="headerlink" href="#abstracttransform-2d" title="Permalink to this headline">¶</a></h1>
+<p>Abstract (implementation-defined) transformation of a shape.</p>
+<table border="1" class="docutils">
+<caption>AbstractTransform representations (2D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rabstracttransform-2d"><em>RAbstractTransform</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>AbstractTransform (2D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-raffinetransform-2d"><em>RAffineTransform</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rrotatetransform-2d"><em>RRotateTransform</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rscaletransform-2d"><em>RScaleTransform</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rtranslatetransform-2d"><em>RTranslateTransform</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (2D)</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RAbstractTransform (2D).</p>
+</div>
+<div class="section" id="abstracttransform-3d">
+<span id="shape-abstracttransform-3d"></span><span id="index-47"></span><h1>AbstractTransform (3D)<a class="headerlink" href="#abstracttransform-3d" title="Permalink to this headline">¶</a></h1>
+<p>Abstract (implementation-defined) transformation of a shape.</p>
+<table border="1" class="docutils">
+<caption>AbstractTransform representations (3D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rabstracttransform-3d"><em>RAbstractTransform</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>AbstractTransform (3D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-raffinetransform-3d"><em>RAffineTransform</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rrotatetransform-3d"><em>RRotateTransform</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rscaletransform-3d"><em>RScaleTransform</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rtranslatetransform-3d"><em>RTranslateTransform</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AffineTransform (3D)</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RAbstractTransform (3D).</p>
+</div>
+<div class="section" id="text-2d">
+<span id="shape-text-2d"></span><span id="index-48"></span><h1>Text (2D)<a class="headerlink" href="#text-2d" title="Permalink to this headline">¶</a></h1>
+<p>Text (label).</p>
+<table border="1" class="docutils">
+<caption>Text representations (2D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rtext-2d"><em>RText</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Text (2D)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RText (2D).</p>
+</div>
+<div class="section" id="value-nd">
+<span id="shape-value-nd"></span><span id="index-49"></span><h1>Value (nD)<a class="headerlink" href="#value-nd" title="Permalink to this headline">¶</a></h1>
+<p>A value in an arbitrary dimension.</p>
+<table border="1" class="docutils">
+<caption>Value representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rvalue-nd"><em>RValue</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Value (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RValue (nD).</p>
+</div>
+<div class="section" id="values-nd">
+<span id="shape-values-nd"></span><span id="index-50"></span><h1>Values (nD)<a class="headerlink" href="#values-nd" title="Permalink to this headline">¶</a></h1>
+<p>A set of values in an arbitrary dimension.</p>
+<table border="1" class="docutils">
+<caption>Values representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rvalues-nd"><em>RValues</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Values (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RValues (nD).</p>
+</div>
+<div class="section" id="range-nd">
+<span id="shape-range-nd"></span><span id="index-51"></span><h1>Range (nD)<a class="headerlink" href="#range-nd" title="Permalink to this headline">¶</a></h1>
+<p>A range of values in an arbitrary dimension.</p>
+<table border="1" class="docutils">
+<caption>Range representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rrange1-nd"><em>RRange1</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Range (nD)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rrange2-nd"><em>RRange2</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Range (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RRange2 (nD).</p>
+</div>
+<div class="section" id="extrude-nd">
+<span id="shape-extrude-nd"></span><span id="index-52"></span><h1>Extrude (nD)<a class="headerlink" href="#extrude-nd" title="Permalink to this headline">¶</a></h1>
+<p>Extrude a shape of arbitrary dimensionality into an additional dimension..</p>
+<table border="1" class="docutils">
+<caption>Extrude representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rextrude-nd"><em>RExtrude</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Extrude (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RExtrude (nD).</p>
+</div>
+<div class="section" id="combine-nd">
+<span id="shape-combine-nd"></span><span id="index-53"></span><h1>Combine (nD)<a class="headerlink" href="#combine-nd" title="Permalink to this headline">¶</a></h1>
+<p>Combine shapes of differing dimensionality to form a shape combining all subset dimensions..</p>
+<table border="1" class="docutils">
+<caption>Combine representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcombine-nd"><em>RCombine</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Combine (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RCombine (nD).</p>
+</div>
+<div class="section" id="scale-2d">
+<span id="shape-scale-2d"></span><span id="index-54"></span><h1>Scale (2D)<a class="headerlink" href="#scale-2d" title="Permalink to this headline">¶</a></h1>
+<p>A scale bar between two points.</p>
+<table border="1" class="docutils">
+<caption>Scale representations (2D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinepoints-2d"><em>RLinePoints</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Line (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rlinevector-2d"><em>RLineVector</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Line (2D)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scale-3d">
+<span id="shape-scale-3d"></span><span id="index-55"></span><h1>Scale (3D)<a class="headerlink" href="#scale-3d" title="Permalink to this headline">¶</a></h1>
+<p>A scale bar between two points.</p>
+<table border="1" class="docutils">
+<caption>Scale representations (3D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinepoints-3d"><em>RLinePoints</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Line (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rlinevector-3d"><em>RLineVector</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Line (3D)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="grid-2d">
+<span id="shape-grid-2d"></span><span id="index-56"></span><h1>Grid (2D)<a class="headerlink" href="#grid-2d" title="Permalink to this headline">¶</a></h1>
+<p>A scale bar between two points.</p>
+<table border="1" class="docutils">
+<caption>Grid representations (2D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedhalfaxes-2d"><em>RAlignedHalfAxes</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedEllipse (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare1-2d"><em>RAlignedSquare1</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedsquare2-2d"><em>RAlignedSquare2</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedSquare (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle0-2d"><em>RCircle0</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle1-2d"><em>RCircle1</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle2-2d"><em>RCircle2</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle3-2d"><em>RCircle3</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcircle4-2d"><em>RCircle4</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcircle5-2d"><em>RCircle5</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Circle (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rellipsecovariance-2d"><em>REllipseCovariance</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Ellipse (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rhalfaxes-2d"><em>RHalfAxes</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Ellipse (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rlinepoints-2d"><em>RLinePoints</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedRectangle (2D), Line (2D), Square (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinevector-2d"><em>RLineVector</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedRectangle (2D), Line (2D), Square (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rpoint-2d"><em>RPoint</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Point (2D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rrectangle1-2d"><em>RRectangle1</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Rectangle (2D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rrectangle2-2d"><em>RRectangle2</em></a></td>
+<td>2D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Rectangle (2D)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="grid-3d">
+<span id="shape-grid-3d"></span><span id="index-57"></span><h1>Grid (3D)<a class="headerlink" href="#grid-3d" title="Permalink to this headline">¶</a></h1>
+<p>A scale bar between two points.</p>
+<table border="1" class="docutils">
+<caption>Grid representations (3D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedcube1-3d"><em>RAlignedCube1</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-ralignedcube2-3d"><em>RAlignedCube2</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCube (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-ralignedhalfaxes-3d"><em>RAlignedHalfAxes</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedEllipsoid (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rcuboid1-3d"><em>RCuboid1</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Cuboid (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rcuboid2-3d"><em>RCuboid2</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Cuboid (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rellipsoidcovariance-3d"><em>REllipsoidCovariance</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Ellipsoid (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rhalfaxes-3d"><em>RHalfAxes</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Ellipsoid (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rlinepoints-3d"><em>RLinePoints</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCuboid (3D), Cube (3D), Line (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rlinevector-3d"><em>RLineVector</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>AlignedCuboid (3D), Cube (3D), Line (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rpoint-3d"><em>RPoint</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Point (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere0-3d"><em>RSphere0</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere1-3d"><em>RSphere1</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere2-3d"><em>RSphere2</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere3-3d"><em>RSphere3</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere4-3d"><em>RSphere4</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../representations.html#rep-rsphere5-3d"><em>RSphere5</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rsphere6-3d"><em>RSphere6</em></a></td>
+<td>3D</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sphere (3D)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bitwise-1d">
+<span id="shape-bitwise-1d"></span><span id="index-58"></span><h1>Bitwise (1D)<a class="headerlink" href="#bitwise-1d" title="Permalink to this headline">¶</a></h1>
+<p>Binary bitwise operation.</p>
+<table border="1" class="docutils">
+<caption>Bitwise representations (1D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rbitwise-1d"><em>RBitwise</em></a></td>
+<td>1D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Bitwise (1D)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RBitwise (1D).</p>
+</div>
+<div class="section" id="bitwise-2d">
+<span id="shape-bitwise-2d"></span><span id="index-59"></span><h1>Bitwise (2D)<a class="headerlink" href="#bitwise-2d" title="Permalink to this headline">¶</a></h1>
+<p>Binary bitwise operation.</p>
+<table border="1" class="docutils">
+<caption>Bitwise representations (2D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rbitwise-2d"><em>RBitwise</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Bitwise (2D)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RBitwise (2D).</p>
+</div>
+<div class="section" id="bitwise-3d">
+<span id="shape-bitwise-3d"></span><span id="index-60"></span><h1>Bitwise (3D)<a class="headerlink" href="#bitwise-3d" title="Permalink to this headline">¶</a></h1>
+<p>Binary bitwise operation.</p>
+<table border="1" class="docutils">
+<caption>Bitwise representations (3D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../representations.html#rep-rbitwise-3d"><em>RBitwise</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Bitwise (3D)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RBitwise (3D).</p>
 </div>
 
 

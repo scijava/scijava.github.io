@@ -853,3 +853,303 @@ Affine transformation of a shape.
     :widths: 5, 2, 2, 2, 10
 
 Canonical form is RAffineTransform (3D).
+
+.. index::
+    AbstractTransform (1D)
+
+.. _shape_AbstractTransform_1D:
+
+AbstractTransform (1D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Abstract (implementation-defined) transformation of a shape.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AbstractTransform representations (1D)
+    :header-rows: 1
+    :file: shape-AbstractTransform-1D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAbstractTransform (1D).
+
+.. index::
+    AbstractTransform (2D)
+
+.. _shape_AbstractTransform_2D:
+
+AbstractTransform (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Abstract (implementation-defined) transformation of a shape.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AbstractTransform representations (2D)
+    :header-rows: 1
+    :file: shape-AbstractTransform-2D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAbstractTransform (2D).
+
+.. index::
+    AbstractTransform (3D)
+
+.. _shape_AbstractTransform_3D:
+
+AbstractTransform (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Abstract (implementation-defined) transformation of a shape.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AbstractTransform representations (3D)
+    :header-rows: 1
+    :file: shape-AbstractTransform-3D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAbstractTransform (3D).
+
+.. index::
+    Text (2D)
+
+.. _shape_Text_2D:
+
+Text (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Text (label).
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Text representations (2D)
+    :header-rows: 1
+    :file: shape-Text-2D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RText (2D).
+
+.. index::
+    Value (nD)
+
+.. _shape_Value_nD:
+
+Value (nD)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A value in an arbitrary dimension.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Value representations (nD)
+    :header-rows: 1
+    :file: shape-Value-nD.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RValue (nD).
+
+.. index::
+    Values (nD)
+
+.. _shape_Values_nD:
+
+Values (nD)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of values in an arbitrary dimension.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Values representations (nD)
+    :header-rows: 1
+    :file: shape-Values-nD.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RValues (nD).
+
+.. index::
+    Range (nD)
+
+.. _shape_Range_nD:
+
+Range (nD)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A range of values in an arbitrary dimension.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Range representations (nD)
+    :header-rows: 1
+    :file: shape-Range-nD.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RRange2 (nD).
+
+.. index::
+    Extrude (nD)
+
+.. _shape_Extrude_nD:
+
+Extrude (nD)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Extrude a shape of arbitrary dimensionality into an additional dimension..
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Extrude representations (nD)
+    :header-rows: 1
+    :file: shape-Extrude-nD.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RExtrude (nD).
+
+.. index::
+    Combine (nD)
+
+.. _shape_Combine_nD:
+
+Combine (nD)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Combine shapes of differing dimensionality to form a shape combining all subset dimensions..
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Combine representations (nD)
+    :header-rows: 1
+    :file: shape-Combine-nD.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RCombine (nD).
+
+.. index::
+    Scale (2D)
+
+.. _shape_Scale_2D:
+
+Scale (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scale bar between two points.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Scale representations (2D)
+    :header-rows: 1
+    :file: shape-Scale-2D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+
+.. index::
+    Scale (3D)
+
+.. _shape_Scale_3D:
+
+Scale (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scale bar between two points.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Scale representations (3D)
+    :header-rows: 1
+    :file: shape-Scale-3D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+
+.. index::
+    Grid (2D)
+
+.. _shape_Grid_2D:
+
+Grid (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scale bar between two points.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Grid representations (2D)
+    :header-rows: 1
+    :file: shape-Grid-2D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+
+.. index::
+    Grid (3D)
+
+.. _shape_Grid_3D:
+
+Grid (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scale bar between two points.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Grid representations (3D)
+    :header-rows: 1
+    :file: shape-Grid-3D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+
+.. index::
+    Bitwise (1D)
+
+.. _shape_Bitwise_1D:
+
+Bitwise (1D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Binary bitwise operation.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Bitwise representations (1D)
+    :header-rows: 1
+    :file: shape-Bitwise-1D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RBitwise (1D).
+
+.. index::
+    Bitwise (2D)
+
+.. _shape_Bitwise_2D:
+
+Bitwise (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Binary bitwise operation.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Bitwise representations (2D)
+    :header-rows: 1
+    :file: shape-Bitwise-2D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RBitwise (2D).
+
+.. index::
+    Bitwise (3D)
+
+.. _shape_Bitwise_3D:
+
+Bitwise (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Binary bitwise operation.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Bitwise representations (3D)
+    :header-rows: 1
+    :file: shape-Bitwise-3D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RBitwise (3D).
