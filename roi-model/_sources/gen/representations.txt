@@ -1,1080 +1,1332 @@
-.. index::
-    RPoint	1D
 
-RPoint	1D
+.. index::
+    RPoint (1D)
+
+.. _rep_RPoint_1D:
+
+RPoint (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A single point in 1D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPoint	1D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPoint members (1D)
     :header-rows: 1
-    :file: rep-RPoint1D.txt
+    :file: rep-RPoint-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPoint	2D
+    RPoint (2D)
 
-RPoint	2D
+.. _rep_RPoint_2D:
+
+RPoint (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A single point in 2D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPoint	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPoint members (2D)
     :header-rows: 1
-    :file: rep-RPoint2D.txt
+    :file: rep-RPoint-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPoint	3D
+    RPoint (3D)
 
-RPoint	3D
+.. _rep_RPoint_3D:
+
+RPoint (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A single point in 3D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPoint	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPoint members (3D)
     :header-rows: 1
-    :file: rep-RPoint3D.txt
+    :file: rep-RPoint-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPoints	1D
+    RPoints (1D)
 
-RPoints	1D
+.. _rep_RPoints_1D:
+
+RPoints (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of points in 1D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPoints	1D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPoints members (1D)
     :header-rows: 1
-    :file: rep-RPoints1D.txt
+    :file: rep-RPoints-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPoints	2D
+    RPoints (2D)
 
-RPoints	2D
+.. _rep_RPoints_2D:
+
+RPoints (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of points in 2D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPoints	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPoints members (2D)
     :header-rows: 1
-    :file: rep-RPoints2D.txt
+    :file: rep-RPoints-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPoints	3D
+    RPoints (3D)
 
-RPoints	3D
+.. _rep_RPoints_3D:
+
+RPoints (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of points in 3D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPoints	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPoints members (3D)
     :header-rows: 1
-    :file: rep-RPoints3D.txt
+    :file: rep-RPoints-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RVector	1D
+    RVector (1D)
 
-RVector	1D
+.. _rep_RVector_1D:
+
+RVector (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A vector in 1D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RVector	1D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RVector members (1D)
     :header-rows: 1
-    :file: rep-RVector1D.txt
+    :file: rep-RVector-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RVector	2D
+    RVector (2D)
 
-RVector	2D
+.. _rep_RVector_2D:
+
+RVector (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A vector in 2D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RVector	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RVector members (2D)
     :header-rows: 1
-    :file: rep-RVector2D.txt
+    :file: rep-RVector-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RVector	3D
+    RVector (3D)
 
-RVector	3D
+.. _rep_RVector_3D:
+
+RVector (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A vector in 3D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RVector	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RVector members (3D)
     :header-rows: 1
-    :file: rep-RVector3D.txt
+    :file: rep-RVector-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RVectors	1D
+    RVectors (1D)
 
-RVectors	1D
+.. _rep_RVectors_1D:
+
+RVectors (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of vectors in 1D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RVectors	1D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RVectors members (1D)
     :header-rows: 1
-    :file: rep-RVectors1D.txt
+    :file: rep-RVectors-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RVectors	2D
+    RVectors (2D)
 
-RVectors	2D
+.. _rep_RVectors_2D:
+
+RVectors (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of vectors in 2D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RVectors	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RVectors members (2D)
     :header-rows: 1
-    :file: rep-RVectors2D.txt
+    :file: rep-RVectors-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RVectors	3D
+    RVectors (3D)
 
-RVectors	3D
+.. _rep_RVectors_3D:
+
+RVectors (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of vectors in 3D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RVectors	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RVectors members (3D)
     :header-rows: 1
-    :file: rep-RVectors3D.txt
+    :file: rep-RVectors-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RLinePoints	2D
+    RLinePoints (1D)
 
-RLinePoints	2D
+.. _rep_RLinePoints_1D:
+
+RLinePoints (1D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by two points in 1D.
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinePoints members (1D)
+    :header-rows: 1
+    :file: rep-RLinePoints-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RLinePoints (2D)
+
+.. _rep_RLinePoints_2D:
+
+RLinePoints (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A line described by two points in 2D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLinePoints	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinePoints members (2D)
     :header-rows: 1
-    :file: rep-RLinePoints2D.txt
+    :file: rep-RLinePoints-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RLineVector	2D
+    RLinePoints (3D)
 
-RLineVector	2D
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _rep_RLinePoints_3D:
 
-A line described by a point and a vector.
-
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLineVector	2D
-    :header-rows: 1
-    :file: rep-RLineVector2D.txt
-    :delim: tab
-
-.. index::
-    RLinePoints	3D
-
-RLinePoints	3D
+RLinePoints (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A line described by two points in 3D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLinePoints	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinePoints members (3D)
     :header-rows: 1
-    :file: rep-RLinePoints3D.txt
+    :file: rep-RLinePoints-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RLineVector	3D
+    RLineVector (1D)
 
-RLineVector	3D
+.. _rep_RLineVector_1D:
+
+RLineVector (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A line described by a point and a vector.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLineVector	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLineVector members (1D)
     :header-rows: 1
-    :file: rep-RLineVector3D.txt
+    :file: rep-RLineVector-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RLinesPoints	2D
+    RLineVector (2D)
 
-RLinesPoints	2D
+.. _rep_RLineVector_2D:
+
+RLineVector (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by a point and a vector.
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLineVector members (2D)
+    :header-rows: 1
+    :file: rep-RLineVector-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RLineVector (3D)
+
+.. _rep_RLineVector_3D:
+
+RLineVector (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by a point and a vector.
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLineVector members (3D)
+    :header-rows: 1
+    :file: rep-RLineVector-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RLinesPoints (2D)
+
+.. _rep_RLinesPoints_2D:
+
+RLinesPoints (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of lines described by two points in 2D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLinesPoints	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinesPoints members (2D)
     :header-rows: 1
-    :file: rep-RLinesPoints2D.txt
+    :file: rep-RLinesPoints-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RLinesPoints	3D
+    RLinesPoints (3D)
 
-RLinesPoints	3D
+.. _rep_RLinesPoints_3D:
+
+RLinesPoints (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of lines described by two points in 3D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLinesPoints	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinesPoints members (3D)
     :header-rows: 1
-    :file: rep-RLinesPoints3D.txt
+    :file: rep-RLinesPoints-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RLinesVectors	2D
+    RLinesVectors (2D)
 
-RLinesVectors	2D
+.. _rep_RLinesVectors_2D:
+
+RLinesVectors (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of lines described by a point and a vector in 2D; can be used to represent a vector field.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLinesVectors	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinesVectors members (2D)
     :header-rows: 1
-    :file: rep-RLinesVectors2D.txt
+    :file: rep-RLinesVectors-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RLinesVectors	3D
+    RLinesVectors (3D)
 
-RLinesVectors	3D
+.. _rep_RLinesVectors_3D:
+
+RLinesVectors (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of lines described by a point and a vector in 3D; can be used to represent a vector field.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RLinesVectors	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinesVectors members (3D)
     :header-rows: 1
-    :file: rep-RLinesVectors3D.txt
+    :file: rep-RLinesVectors-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPolylinePoints	2D
+    RPolylinePoints (2D)
 
-RPolylinePoints	2D
+.. _rep_RPolylinePoints_2D:
+
+RPolylinePoints (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline in 2D [could use RPoints2D directly].
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPolylinePoints	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPolylinePoints members (2D)
     :header-rows: 1
-    :file: rep-RPolylinePoints2D.txt
+    :file: rep-RPolylinePoints-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPolylinePoints	3D
+    RPolylinePoints (3D)
 
-RPolylinePoints	3D
+.. _rep_RPolylinePoints_3D:
+
+RPolylinePoints (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline in 3D [could use RPoints3D directly].
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPolylinePoints	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPolylinePoints members (3D)
     :header-rows: 1
-    :file: rep-RPolylinePoints3D.txt
+    :file: rep-RPolylinePoints-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPolylineVector	2D
+    RPolylineVector (2D)
 
-RPolylineVector	2D
+.. _rep_RPolylineVector_2D:
+
+RPolylineVector (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline represented by a starting point and list of vectors in 2D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPolylineVector	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPolylineVector members (2D)
     :header-rows: 1
-    :file: rep-RPolylineVector2D.txt
+    :file: rep-RPolylineVector-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RPolylineVector	3D
+    RPolylineVector (3D)
 
-RPolylineVector	3D
+.. _rep_RPolylineVector_3D:
+
+RPolylineVector (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline represented by a starting point and list of vectors in 3D.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RPolylineVector	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPolylineVector members (3D)
     :header-rows: 1
-    :file: rep-RPolylineVector3D.txt
+    :file: rep-RPolylineVector-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAlignedSquare1	2D
+    RAlignedSquare1 (2D)
 
-RAlignedSquare1	2D
+.. _rep_RAlignedSquare1_2D:
+
+RAlignedSquare1 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A square in 2D aligned with the axes described by a corner point and adjacent corner.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAlignedSquare1	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedSquare1 members (2D)
     :header-rows: 1
-    :file: rep-RAlignedSquare12D.txt
+    :file: rep-RAlignedSquare1-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAlignedSquare2	2D
+    RAlignedSquare2 (2D)
 
-RAlignedSquare2	2D
+.. _rep_RAlignedSquare2_2D:
+
+RAlignedSquare2 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A square in 2D aligned with the axes described by a corner point and vector to an adjacent corner.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAlignedSquare2	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedSquare2 members (2D)
     :header-rows: 1
-    :file: rep-RAlignedSquare22D.txt
+    :file: rep-RAlignedSquare2-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAlignedCube1	3D
+    RAlignedCube1 (3D)
 
-RAlignedCube1	3D
+.. _rep_RAlignedCube1_3D:
+
+RAlignedCube1 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cube in 3D aligned with the axes described by a corner point and adjacent corner.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAlignedCube1	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedCube1 members (3D)
     :header-rows: 1
-    :file: rep-RAlignedCube13D.txt
+    :file: rep-RAlignedCube1-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAlignedCube2	3D
+    RAlignedCube2 (3D)
 
-RAlignedCube2	3D
+.. _rep_RAlignedCube2_3D:
+
+RAlignedCube2 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cube in 3D aligned with the axes described by a corner point and vector to an adjacent corner.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAlignedCube2	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedCube2 members (3D)
     :header-rows: 1
-    :file: rep-RAlignedCube23D.txt
+    :file: rep-RAlignedCube2-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RRectangle1	2D
+    RRectangle1 (2D)
 
-RRectangle1	2D
+.. _rep_RRectangle1_2D:
+
+RRectangle1 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A rectangle in 2D described by two corner points and a vector.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RRectangle1	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RRectangle1 members (2D)
     :header-rows: 1
-    :file: rep-RRectangle12D.txt
+    :file: rep-RRectangle1-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RRectangle2	2D
+    RRectangle2 (2D)
 
-RRectangle2	2D
+.. _rep_RRectangle2_2D:
+
+RRectangle2 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A rectangle in 2D described by a corner point and two vectors.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RRectangle2	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RRectangle2 members (2D)
     :header-rows: 1
-    :file: rep-RRectangle22D.txt
+    :file: rep-RRectangle2-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCuboid1	3D
+    RCuboid1 (3D)
 
-RCuboid1	3D
+.. _rep_RCuboid1_3D:
+
+RCuboid1 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cuboid in 3D described by two adjacent corners and two vectors.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCuboid1	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCuboid1 members (3D)
     :header-rows: 1
-    :file: rep-RCuboid13D.txt
+    :file: rep-RCuboid1-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCuboid2	3D
+    RCuboid2 (3D)
 
-RCuboid2	3D
+.. _rep_RCuboid2_3D:
+
+RCuboid2 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cuboid in 3D described by a corner and three vectors.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCuboid2	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCuboid2 members (3D)
     :header-rows: 1
-    :file: rep-RCuboid23D.txt
+    :file: rep-RCuboid2-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircle1	2D
+    RCircle1 (2D)
 
-RCircle1	2D
+.. _rep_RCircle1_2D:
+
+RCircle1 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circle in 2D described by a centre point and 1D radius.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircle1	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircle1 members (2D)
     :header-rows: 1
-    :file: rep-RCircle12D.txt
+    :file: rep-RCircle1-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircle2	2D
+    RCircle2 (2D)
 
-RCircle2	2D
+.. _rep_RCircle2_2D:
+
+RCircle2 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circle in 2D described by a centre point and 2D radius.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircle2	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircle2 members (2D)
     :header-rows: 1
-    :file: rep-RCircle22D.txt
+    :file: rep-RCircle2-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircle3	2D
+    RCircle3 (2D)
 
-RCircle3	2D
+.. _rep_RCircle3_2D:
+
+RCircle3 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circle in 2D described by a circumference point and vector to the centre point.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircle3	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircle3 members (2D)
     :header-rows: 1
-    :file: rep-RCircle32D.txt
+    :file: rep-RCircle3-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircle4	2D
+    RCircle4 (2D)
 
-RCircle4	2D
+.. _rep_RCircle4_2D:
+
+RCircle4 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circle in 2D described by three circumference points.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircle4	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircle4 members (2D)
     :header-rows: 1
-    :file: rep-RCircle42D.txt
+    :file: rep-RCircle4-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RSphere1	3D
+    RSphere1 (3D)
 
-RSphere1	3D
+.. _rep_RSphere1_3D:
+
+RSphere1 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sphere in 3D described by a centre point and 1D radius.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RSphere1	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RSphere1 members (3D)
     :header-rows: 1
-    :file: rep-RSphere13D.txt
+    :file: rep-RSphere1-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RSphere2	3D
+    RSphere2 (3D)
 
-RSphere2	3D
+.. _rep_RSphere2_3D:
+
+RSphere2 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sphere in 3D described by a centre point and 2D radius.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RSphere2	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RSphere2 members (3D)
     :header-rows: 1
-    :file: rep-RSphere23D.txt
+    :file: rep-RSphere2-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RSphere3	3D
+    RSphere3 (3D)
 
-RSphere3	3D
+.. _rep_RSphere3_3D:
+
+RSphere3 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sphere in 3D described by a centre point and 3D radius.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RSphere3	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RSphere3 members (3D)
     :header-rows: 1
-    :file: rep-RSphere33D.txt
+    :file: rep-RSphere3-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RSphere4	3D
+    RSphere4 (3D)
 
-RSphere4	3D
+.. _rep_RSphere4_3D:
+
+RSphere4 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sphere in 3D described by a surface point and vector to the centre point.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RSphere4	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RSphere4 members (3D)
     :header-rows: 1
-    :file: rep-RSphere43D.txt
+    :file: rep-RSphere4-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RSphere5	3D
+    RSphere5 (3D)
 
-RSphere5	3D
+.. _rep_RSphere5_3D:
+
+RSphere5 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sphere in 3D described by a four surface points.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RSphere5	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RSphere5 members (3D)
     :header-rows: 1
-    :file: rep-RSphere53D.txt
+    :file: rep-RSphere5-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAlignedHalfAxes	2D
+    RAlignedHalfAxes (2D)
 
-RAlignedHalfAxes	2D
+.. _rep_RAlignedHalfAxes_2D:
+
+RAlignedHalfAxes (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipse in 2D aligned with the axes described by two half axes.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAlignedHalfAxes	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedHalfAxes members (2D)
     :header-rows: 1
-    :file: rep-RAlignedHalfAxes2D.txt
+    :file: rep-RAlignedHalfAxes-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RHalfAxes	2D
+    RHalfAxes (2D)
 
-RHalfAxes	2D
+.. _rep_RHalfAxes_2D:
+
+RHalfAxes (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipse in 2D described by two half axes.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RHalfAxes	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RHalfAxes members (2D)
     :header-rows: 1
-    :file: rep-RHalfAxes2D.txt
+    :file: rep-RHalfAxes-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    REllipseCovariance	2D
+    REllipseCovariance (2D)
 
-REllipseCovariance	2D
+.. _rep_REllipseCovariance_2D:
+
+REllipseCovariance (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipse in 2D described by a centre point and covariance matrix.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: REllipseCovariance	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: REllipseCovariance members (2D)
     :header-rows: 1
-    :file: rep-REllipseCovariance2D.txt
+    :file: rep-REllipseCovariance-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAlignedHalfAxes	3D
+    RAlignedHalfAxes (3D)
 
-RAlignedHalfAxes	3D
+.. _rep_RAlignedHalfAxes_3D:
+
+RAlignedHalfAxes (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipsoid in 3D aligned with the axes.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAlignedHalfAxes	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedHalfAxes members (3D)
     :header-rows: 1
-    :file: rep-RAlignedHalfAxes3D.txt
+    :file: rep-RAlignedHalfAxes-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RHalfAxes	3D
+    RHalfAxes (3D)
 
-RHalfAxes	3D
+.. _rep_RHalfAxes_3D:
+
+RHalfAxes (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipsoid in 3D described by three half axes.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RHalfAxes	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RHalfAxes members (3D)
     :header-rows: 1
-    :file: rep-RHalfAxes3D.txt
+    :file: rep-RHalfAxes-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    REllipsoidCovariance	3D
+    REllipsoidCovariance (3D)
 
-REllipsoidCovariance	3D
+.. _rep_REllipsoidCovariance_3D:
+
+REllipsoidCovariance (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipsoid in 3D described by a centre point and covariance matrix.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: REllipsoidCovariance	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: REllipsoidCovariance members (3D)
     :header-rows: 1
-    :file: rep-REllipsoidCovariance3D.txt
+    :file: rep-REllipsoidCovariance-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircularCylinder1	3D
+    RCircularCylinder1 (3D)
 
-RCircularCylinder1	3D
+.. _rep_RCircularCylinder1_3D:
+
+RCircularCylinder1 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D described by the centres of both faces and a radius.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircularCylinder1	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircularCylinder1 members (3D)
     :header-rows: 1
-    :file: rep-RCircularCylinder13D.txt
+    :file: rep-RCircularCylinder1-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircularCylinder2	3D
+    RCircularCylinder2 (3D)
 
-RCircularCylinder2	3D
+.. _rep_RCircularCylinder2_3D:
+
+RCircularCylinder2 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D described by the centre of one face, vector to second face and a radius.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircularCylinder2	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircularCylinder2 members (3D)
     :header-rows: 1
-    :file: rep-RCircularCylinder23D.txt
+    :file: rep-RCircularCylinder2-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircularCylinder3	3D
+    RCircularCylinder3 (3D)
 
-RCircularCylinder3	3D
+.. _rep_RCircularCylinder3_3D:
+
+RCircularCylinder3 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D with faces at different angles described by the centres of both faces and vectors specifying the radius and angles of the faces.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircularCylinder3	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircularCylinder3 members (3D)
     :header-rows: 1
-    :file: rep-RCircularCylinder33D.txt
+    :file: rep-RCircularCylinder3-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RCircularCylinder4	3D
+    RCircularCylinder4 (3D)
 
-RCircularCylinder4	3D
+.. _rep_RCircularCylinder4_3D:
+
+RCircularCylinder4 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and vectors specifying the radius and angles of the faces.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RCircularCylinder4	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCircularCylinder4 members (3D)
     :header-rows: 1
-    :file: rep-RCircularCylinder43D.txt
+    :file: rep-RCircularCylinder4-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    REllipticCylinder1	3D
+    REllipticCylinder1 (3D)
 
-REllipticCylinder1	3D
+.. _rep_REllipticCylinder1_3D:
+
+REllipticCylinder1 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D described by the centres both faces and half axes.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: REllipticCylinder1	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: REllipticCylinder1 members (3D)
     :header-rows: 1
-    :file: rep-REllipticCylinder13D.txt
+    :file: rep-REllipticCylinder1-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    REllipticCylinder2	3D
+    REllipticCylinder2 (3D)
 
-REllipticCylinder2	3D
+.. _rep_REllipticCylinder2_3D:
+
+REllipticCylinder2 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D described by the centre of one face, vector to second face and half axes.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: REllipticCylinder2	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: REllipticCylinder2 members (3D)
     :header-rows: 1
-    :file: rep-REllipticCylinder23D.txt
+    :file: rep-REllipticCylinder2-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    REllipticCylinder3	3D
+    REllipticCylinder3 (3D)
 
-REllipticCylinder3	3D
+.. _rep_REllipticCylinder3_3D:
+
+REllipticCylinder3 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D with faces at different angles described by the centres both faces and half axes and angles.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: REllipticCylinder3	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: REllipticCylinder3 members (3D)
     :header-rows: 1
-    :file: rep-REllipticCylinder33D.txt
+    :file: rep-REllipticCylinder3-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    REllipticCylinder4	3D
+    REllipticCylinder4 (3D)
 
-REllipticCylinder4	3D
+.. _rep_REllipticCylinder4_3D:
+
+REllipticCylinder4 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and half axes and angles.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: REllipticCylinder4	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: REllipticCylinder4 members (3D)
     :header-rows: 1
-    :file: rep-REllipticCylinder43D.txt
+    :file: rep-REllipticCylinder4-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RArc1	2D
+    RArc1 (2D)
 
-RArc1	2D
+.. _rep_RArc1_2D:
+
+RArc1 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc in 2D described by a line (points) and vector.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RArc1	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RArc1 members (2D)
     :header-rows: 1
-    :file: rep-RArc12D.txt
+    :file: rep-RArc1-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RArc2	2D
+    RArc2 (2D)
 
-RArc2	2D
+.. _rep_RArc2_2D:
+
+RArc2 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc in 2D described by a line (vector) and a vector.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RArc2	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RArc2 members (2D)
     :header-rows: 1
-    :file: rep-RArc22D.txt
+    :file: rep-RArc2-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RArc3	2D
+    RArc3 (2D)
 
-RArc3	2D
+.. _rep_RArc3_2D:
+
+RArc3 (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc in 2D described by three points; vector inferred from third point.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RArc3	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RArc3 members (2D)
     :header-rows: 1
-    :file: rep-RArc32D.txt
+    :file: rep-RArc3-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RArc1	3D
+    RArc1 (3D)
 
-RArc1	3D
+.. _rep_RArc1_3D:
+
+RArc1 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc in 3D described by a line (points) and vector.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RArc1	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RArc1 members (3D)
     :header-rows: 1
-    :file: rep-RArc13D.txt
+    :file: rep-RArc1-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RArc2	3D
+    RArc2 (3D)
 
-RArc2	3D
+.. _rep_RArc2_3D:
+
+RArc2 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc in 3D described by a line (vector) and a vector.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RArc2	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RArc2 members (3D)
     :header-rows: 1
-    :file: rep-RArc23D.txt
+    :file: rep-RArc2-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RArc3	3D
+    RArc3 (3D)
 
-RArc3	3D
+.. _rep_RArc3_3D:
+
+RArc3 (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc in 3D described by three points; vector inferred from third point.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RArc3	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RArc3 members (3D)
     :header-rows: 1
-    :file: rep-RArc33D.txt
+    :file: rep-RArc3-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RBitMask	1D
+    RBitMask (1D)
 
-RBitMask	1D
+.. _rep_RBitMask_1D:
+
+RBitMask (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A bitmask in 1D described by bounding line, dimensions and mask data.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RBitMask	1D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RBitMask members (1D)
     :header-rows: 1
-    :file: rep-RBitMask1D.txt
+    :file: rep-RBitMask-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RBitMask	2D
+    RBitMask (2D)
 
-RBitMask	2D
+.. _rep_RBitMask_2D:
+
+RBitMask (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A bitmask in 2D described by bounding rectangle, dimensions and mask data.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RBitMask	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RBitMask members (2D)
     :header-rows: 1
-    :file: rep-RBitMask2D.txt
+    :file: rep-RBitMask-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RBitMask	3D
+    RBitMask (3D)
 
-RBitMask	3D
+.. _rep_RBitMask_3D:
+
+RBitMask (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A bitmask in 3D described by bounding cuboid, dimensions and mask data.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RBitMask	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RBitMask members (3D)
     :header-rows: 1
-    :file: rep-RBitMask3D.txt
+    :file: rep-RBitMask-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RGreyMask	1D
+    RGreyMask (1D)
 
-RGreyMask	1D
+.. _rep_RGreyMask_1D:
+
+RGreyMask (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A greymask in 1D described by bounding line, dimensions and mask data.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RGreyMask	1D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RGreyMask members (1D)
     :header-rows: 1
-    :file: rep-RGreyMask1D.txt
+    :file: rep-RGreyMask-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RGreyMask	2D
+    RGreyMask (2D)
 
-RGreyMask	2D
+.. _rep_RGreyMask_2D:
+
+RGreyMask (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A greymask in 2D described by bounding rectangle, dimensions and mask data.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RGreyMask	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RGreyMask members (2D)
     :header-rows: 1
-    :file: rep-RGreyMask2D.txt
+    :file: rep-RGreyMask-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RGreyMask	3D
+    RGreyMask (3D)
 
-RGreyMask	3D
+.. _rep_RGreyMask_3D:
+
+RGreyMask (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A greymask in 3D described by bounding cuboid, dimensions and mask data.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RGreyMask	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RGreyMask members (3D)
     :header-rows: 1
-    :file: rep-RGreyMask3D.txt
+    :file: rep-RGreyMask-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RMesh	2D
+    RMesh (2D)
 
-RMesh	2D
+.. _rep_RMesh_2D:
+
+RMesh (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A face-vertex mesh in 2D described by face and vertex lists.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RMesh	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RMesh members (2D)
     :header-rows: 1
-    :file: rep-RMesh2D.txt
+    :file: rep-RMesh-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RMesh	3D
+    RMesh (3D)
 
-RMesh	3D
+.. _rep_RMesh_3D:
+
+RMesh (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A face-vertex mesh in 3D described by face and vertex lists.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RMesh	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RMesh members (3D)
     :header-rows: 1
-    :file: rep-RMesh3D.txt
+    :file: rep-RMesh-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAffineTransform	1D
+    RAffineTransform (1D)
 
-RAffineTransform	1D
+.. _rep_RAffineTransform_1D:
+
+RAffineTransform (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An affine transform in 1D described by a transformation matrix and 1D shape to transform.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAffineTransform	1D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAffineTransform members (1D)
     :header-rows: 1
-    :file: rep-RAffineTransform1D.txt
+    :file: rep-RAffineTransform-1D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAffineTransform	2D
+    RAffineTransform (2D)
 
-RAffineTransform	2D
+.. _rep_RAffineTransform_2D:
+
+RAffineTransform (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An affine transform in 2D described by a transformation matrix and 2D shape to transform.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAffineTransform	2D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAffineTransform members (2D)
     :header-rows: 1
-    :file: rep-RAffineTransform2D.txt
+    :file: rep-RAffineTransform-2D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
+
 
 .. index::
-    RAffineTransform	3D
+    RAffineTransform (3D)
 
-RAffineTransform	3D
+.. _rep_RAffineTransform_3D:
+
+RAffineTransform (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An affine transform in 3D described by a transformation matrix and 3D shape to transform.
 
-.. tabularcolumns |l|l|l|p{2in}|
-
-.. csv-table:: RAffineTransform	3D
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAffineTransform members (3D)
     :header-rows: 1
-    :file: rep-RAffineTransform3D.txt
+    :file: rep-RAffineTransform-3D.txt
     :delim: tab
+    :widths: 2, 2, 5, 10
 

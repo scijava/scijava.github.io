@@ -1,644 +1,855 @@
-.. index::
-    Point
 
-Point
+.. index::
+    Point (2D)
+
+.. _shape_Point_2D:
+
+Point (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A single point.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Point
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Point representations (2D)
     :header-rows: 1
-    :file: shape-Point.txt
+    :file: shape-Point-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPoint (2D).
 
 .. index::
-    Point
+    Point (3D)
 
-Point
+.. _shape_Point_3D:
+
+Point (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A single point.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Point
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Point representations (3D)
     :header-rows: 1
-    :file: shape-Point.txt
+    :file: shape-Point-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPoint (3D).
 
 .. index::
-    Points
+    Points (2D)
 
-Points
+.. _shape_Points_2D:
+
+Points (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of points.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Points
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Points representations (2D)
     :header-rows: 1
-    :file: shape-Points.txt
+    :file: shape-Points-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPoints (2D).
 
 .. index::
-    Points
+    Points (3D)
 
-Points
+.. _shape_Points_3D:
+
+Points (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of points.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Points
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Points representations (3D)
     :header-rows: 1
-    :file: shape-Points.txt
+    :file: shape-Points-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPoints (3D).
 
 .. index::
-    Line
+    Line (2D)
 
-Line
+.. _shape_Line_2D:
+
+Line (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A single line.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Line
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Line representations (2D)
     :header-rows: 1
-    :file: shape-Line.txt
+    :file: shape-Line-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinePoints (2D).
 
 .. index::
-    Line
+    Line (3D)
 
-Line
+.. _shape_Line_3D:
+
+Line (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A single line.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Line
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Line representations (3D)
     :header-rows: 1
-    :file: shape-Line.txt
+    :file: shape-Line-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinePoints (3D).
 
 .. index::
-    Lines
+    Lines (2D)
 
-Lines
+.. _shape_Lines_2D:
+
+Lines (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of lines.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Lines
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Lines representations (2D)
     :header-rows: 1
-    :file: shape-Lines.txt
+    :file: shape-Lines-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinesPoints (2D).
 
 .. index::
-    Lines
+    Lines (3D)
 
-Lines
+.. _shape_Lines_3D:
+
+Lines (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of lines.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Lines
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Lines representations (3D)
     :header-rows: 1
-    :file: shape-Lines.txt
+    :file: shape-Lines-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinesPoints (3D).
 
 .. index::
-    Polyline
+    Polyline (2D)
 
-Polyline
+.. _shape_Polyline_2D:
+
+Polyline (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of connected points.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Polyline
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Polyline representations (2D)
     :header-rows: 1
-    :file: shape-Polyline.txt
+    :file: shape-Polyline-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylinePoints (2D).
 
 .. index::
-    Polyline
+    Polyline (3D)
 
-Polyline
+.. _shape_Polyline_3D:
+
+Polyline (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of connected points.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Polyline
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Polyline representations (3D)
     :header-rows: 1
-    :file: shape-Polyline.txt
+    :file: shape-Polyline-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylinePoints (3D).
 
 .. index::
-    Polygon
+    Polygon (2D)
 
-Polygon
+.. _shape_Polygon_2D:
+
+Polygon (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A polygon (closed polyline).
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Polygon
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Polygon representations (2D)
     :header-rows: 1
-    :file: shape-Polygon.txt
+    :file: shape-Polygon-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylinePoints (2D).
 
 .. index::
-    Polygon
+    Polygon (3D)
 
-Polygon
+.. _shape_Polygon_3D:
+
+Polygon (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A "polygon" (closed polyline) [does this make sense to have in 3D?].
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Polygon
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Polygon representations (3D)
     :header-rows: 1
-    :file: shape-Polygon.txt
+    :file: shape-Polygon-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylinePoints (3D).
 
 .. index::
-    AlignedSquare
+    AlignedSquare (2D)
 
-AlignedSquare
+.. _shape_AlignedSquare_2D:
+
+AlignedSquare (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A square aligned with all axes.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedSquare
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AlignedSquare representations (2D)
     :header-rows: 1
-    :file: shape-AlignedSquare.txt
+    :file: shape-AlignedSquare-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAlignedSquare1 (2D).
 
 .. index::
-    AlignedCube
+    Square (2D)
 
-AlignedCube
+.. _shape_Square_2D:
+
+Square (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A square.
+
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Square representations (2D)
+    :header-rows: 1
+    :file: shape-Square-2D.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinePoints (2D).
+
+.. index::
+    AlignedCube (3D)
+
+.. _shape_AlignedCube_3D:
+
+AlignedCube (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cube aligned with all axes.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedCube
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AlignedCube representations (3D)
     :header-rows: 1
-    :file: shape-AlignedCube.txt
+    :file: shape-AlignedCube-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAlignedCube1 (3D).
 
 .. index::
-    Cube
+    Cube (3D)
 
-Cube
+.. _shape_Cube_3D:
+
+Cube (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cube.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Cube
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Cube representations (3D)
     :header-rows: 1
-    :file: shape-Cube.txt
+    :file: shape-Cube-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinePoints (3D).
 
 .. index::
-    AlignedRectangle
+    AlignedRectangle (2D)
 
-AlignedRectangle
+.. _shape_AlignedRectangle_2D:
+
+AlignedRectangle (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A rectangle aligned with all axes.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedRectangle
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AlignedRectangle representations (2D)
     :header-rows: 1
-    :file: shape-AlignedRectangle.txt
+    :file: shape-AlignedRectangle-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinePoints (2D).
 
 .. index::
-    Rectangle
+    Rectangle (2D)
 
-Rectangle
+.. _shape_Rectangle_2D:
+
+Rectangle (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A rectangle.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Rectangle
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Rectangle representations (2D)
     :header-rows: 1
-    :file: shape-Rectangle.txt
+    :file: shape-Rectangle-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RRectangle1 (2D).
 
 .. index::
-    AlignedCuboid
+    AlignedCuboid (3D)
 
-AlignedCuboid
+.. _shape_AlignedCuboid_3D:
+
+AlignedCuboid (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cuboid aligned with all axes.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedCuboid
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AlignedCuboid representations (3D)
     :header-rows: 1
-    :file: shape-AlignedCuboid.txt
+    :file: shape-AlignedCuboid-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RLinePoints (3D).
 
 .. index::
-    Cuboid
+    Cuboid (3D)
 
-Cuboid
+.. _shape_Cuboid_3D:
+
+Cuboid (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A cuboid.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Cuboid
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Cuboid representations (3D)
     :header-rows: 1
-    :file: shape-Cuboid.txt
+    :file: shape-Cuboid-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RCuboid1 (3D).
 
 .. index::
-    Circle
+    Circle (2D)
 
-Circle
+.. _shape_Circle_2D:
+
+Circle (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circle.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Circle
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Circle representations (2D)
     :header-rows: 1
-    :file: shape-Circle.txt
+    :file: shape-Circle-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RCircle1 (2D).
 
 .. index::
-    Sphere
+    Sphere (3D)
 
-Sphere
+.. _shape_Sphere_3D:
+
+Sphere (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sphere.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Sphere
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Sphere representations (3D)
     :header-rows: 1
-    :file: shape-Sphere.txt
+    :file: shape-Sphere-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RSphere1 (3D).
 
 .. index::
-    AlignedEllipse
+    AlignedEllipse (2D)
 
-AlignedEllipse
+.. _shape_AlignedEllipse_2D:
+
+AlignedEllipse (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipse aligned with all axes.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedEllipse
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AlignedEllipse representations (2D)
     :header-rows: 1
-    :file: shape-AlignedEllipse.txt
+    :file: shape-AlignedEllipse-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAlignedHalfAxes (2D).
 
 .. index::
-    Ellipse
+    Ellipse (2D)
 
-Ellipse
+.. _shape_Ellipse_2D:
+
+Ellipse (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipse.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Ellipse
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Ellipse representations (2D)
     :header-rows: 1
-    :file: shape-Ellipse.txt
+    :file: shape-Ellipse-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RHalfAxes (2D).
 
 .. index::
-    AlignedEllipsoid
+    AlignedEllipsoid (3D)
 
-AlignedEllipsoid
+.. _shape_AlignedEllipsoid_3D:
+
+AlignedEllipsoid (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipsoid aligned with all axes.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedEllipsoid
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AlignedEllipsoid representations (3D)
     :header-rows: 1
-    :file: shape-AlignedEllipsoid.txt
+    :file: shape-AlignedEllipsoid-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAlignedHalfAxes (3D).
 
 .. index::
-    Ellipsoid
+    Ellipsoid (3D)
 
-Ellipsoid
+.. _shape_Ellipsoid_3D:
+
+Ellipsoid (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipsoid.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Ellipsoid
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Ellipsoid representations (3D)
     :header-rows: 1
-    :file: shape-Ellipsoid.txt
+    :file: shape-Ellipsoid-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RHalfAxes (3D).
 
 .. index::
-    PolylineSpline
+    PolylineSpline (2D)
 
-PolylineSpline
+.. _shape_PolylineSpline_2D:
+
+PolylineSpline (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of connected splines (open).
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: PolylineSpline
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: PolylineSpline representations (2D)
     :header-rows: 1
-    :file: shape-PolylineSpline.txt
+    :file: shape-PolylineSpline-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylineVector (2D).
 
 .. index::
-    PolylineSpline
+    PolylineSpline (3D)
 
-PolylineSpline
+.. _shape_PolylineSpline_3D:
+
+PolylineSpline (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of connected splines (open).
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: PolylineSpline
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: PolylineSpline representations (3D)
     :header-rows: 1
-    :file: shape-PolylineSpline.txt
+    :file: shape-PolylineSpline-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylineVector (3D).
 
 .. index::
-    PolygonSpline
+    PolygonSpline (2D)
 
-PolygonSpline
+.. _shape_PolygonSpline_2D:
+
+PolygonSpline (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of connected splines (closed).
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: PolygonSpline
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: PolygonSpline representations (2D)
     :header-rows: 1
-    :file: shape-PolygonSpline.txt
+    :file: shape-PolygonSpline-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylineVector (2D).
 
 .. index::
-    PolygonSpline
+    PolygonSpline (3D)
 
-PolygonSpline
+.. _shape_PolygonSpline_3D:
+
+PolygonSpline (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A set of connected splines (closed).
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: PolygonSpline
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: PolygonSpline representations (3D)
     :header-rows: 1
-    :file: shape-PolygonSpline.txt
+    :file: shape-PolygonSpline-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RPolylineVector (3D).
 
 .. index::
-    AlignedCircularCylinder
+    CircularCylinder (3D)
 
-AlignedCircularCylinder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _shape_CircularCylinder_3D:
 
-A circular cylinder aligned with all axes.
-
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedCircularCylinder
-    :header-rows: 1
-    :file: shape-AlignedCircularCylinder.txt
-    :delim: tab
-
-.. index::
-    CircularCylinder
-
-CircularCylinder
+CircularCylinder (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: CircularCylinder
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: CircularCylinder representations (3D)
     :header-rows: 1
-    :file: shape-CircularCylinder.txt
+    :file: shape-CircularCylinder-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RCircularCylinder1 (3D).
 
 .. index::
-    AlignedEllipticCylinder
+    EllipticCylinder (3D)
 
-AlignedEllipticCylinder
+.. _shape_EllipticCylinder_3D:
+
+EllipticCylinder (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-An elliptic cylinder aligned with all axes.
+An elliptic cylinder.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AlignedEllipticCylinder
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: EllipticCylinder representations (3D)
     :header-rows: 1
-    :file: shape-AlignedEllipticCylinder.txt
+    :file: shape-EllipticCylinder-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is REllipticCylinder1 (3D).
 
 .. index::
-    EllipticCylinder
+    Arc (2D)
 
-EllipticCylinder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _shape_Arc_2D:
 
-Al elliptic cylinder.
-
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: EllipticCylinder
-    :header-rows: 1
-    :file: shape-EllipticCylinder.txt
-    :delim: tab
-
-.. index::
-    Arc
-
-Arc
+Arc (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Arc
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Arc representations (2D)
     :header-rows: 1
-    :file: shape-Arc.txt
+    :file: shape-Arc-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RArc1 (2D).
 
 .. index::
-    Arc
+    Arc (3D)
 
-Arc
+.. _shape_Arc_3D:
+
+Arc (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An arc.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Arc
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Arc representations (3D)
     :header-rows: 1
-    :file: shape-Arc.txt
+    :file: shape-Arc-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RArc1 (3D).
 
 .. index::
-    BitMask
+    BitMask (1D)
 
-BitMask
+.. _shape_BitMask_1D:
+
+BitMask (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mask with one bit values.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: BitMask
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: BitMask representations (1D)
     :header-rows: 1
-    :file: shape-BitMask.txt
+    :file: shape-BitMask-1D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RBitMask (1D).
 
 .. index::
-    BitMask
+    BitMask (2D)
 
-BitMask
+.. _shape_BitMask_2D:
+
+BitMask (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mask with one bit values.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: BitMask
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: BitMask representations (2D)
     :header-rows: 1
-    :file: shape-BitMask.txt
+    :file: shape-BitMask-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RBitMask (2D).
 
 .. index::
-    BitMask
+    BitMask (3D)
 
-BitMask
+.. _shape_BitMask_3D:
+
+BitMask (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mask with one bit values.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: BitMask
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: BitMask representations (3D)
     :header-rows: 1
-    :file: shape-BitMask.txt
+    :file: shape-BitMask-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RBitMask (3D).
 
 .. index::
-    GreyMask
+    GreyMask (1D)
 
-GreyMask
+.. _shape_GreyMask_1D:
+
+GreyMask (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mask with multiple grey levels.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: GreyMask
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: GreyMask representations (1D)
     :header-rows: 1
-    :file: shape-GreyMask.txt
+    :file: shape-GreyMask-1D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RGreyMask (1D).
 
 .. index::
-    GreyMask
+    GreyMask (2D)
 
-GreyMask
+.. _shape_GreyMask_2D:
+
+GreyMask (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mask with multiple grey levels.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: GreyMask
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: GreyMask representations (2D)
     :header-rows: 1
-    :file: shape-GreyMask.txt
+    :file: shape-GreyMask-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RGreyMask (2D).
 
 .. index::
-    GreyMask
+    GreyMask (3D)
 
-GreyMask
+.. _shape_GreyMask_3D:
+
+GreyMask (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mask with multiple grey levels.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: GreyMask
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: GreyMask representations (3D)
     :header-rows: 1
-    :file: shape-GreyMask.txt
+    :file: shape-GreyMask-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RGreyMask (3D).
 
 .. index::
-    Mesh
+    Mesh (2D)
 
-Mesh
+.. _shape_Mesh_2D:
+
+Mesh (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mesh.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Mesh
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Mesh representations (2D)
     :header-rows: 1
-    :file: shape-Mesh.txt
+    :file: shape-Mesh-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RMesh (2D).
 
 .. index::
-    Mesh
+    Mesh (3D)
 
-Mesh
+.. _shape_Mesh_3D:
+
+Mesh (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A mesh.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: Mesh
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: Mesh representations (3D)
     :header-rows: 1
-    :file: shape-Mesh.txt
+    :file: shape-Mesh-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RMesh (3D).
 
 .. index::
-    AffineTransform
+    AffineTransform (1D)
 
-AffineTransform
+.. _shape_AffineTransform_1D:
+
+AffineTransform (1D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Affine transformation of a shape.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AffineTransform
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AffineTransform representations (1D)
     :header-rows: 1
-    :file: shape-AffineTransform.txt
+    :file: shape-AffineTransform-1D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAffineTransform (1D).
 
 .. index::
-    AffineTransform
+    AffineTransform (2D)
 
-AffineTransform
+.. _shape_AffineTransform_2D:
+
+AffineTransform (2D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Affine transformation of a shape.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AffineTransform
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AffineTransform representations (2D)
     :header-rows: 1
-    :file: shape-AffineTransform.txt
+    :file: shape-AffineTransform-2D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RAffineTransform (2D).
 
 .. index::
-    AffineTransform
+    AffineTransform (3D)
 
-AffineTransform
+.. _shape_AffineTransform_3D:
+
+AffineTransform (3D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Affine transformation of a shape.
 
-.. tabularcolumns:: |l|l|l|p{3in}|
-.. csv-table:: AffineTransform
+.. tabularcolumns:: |l|l|l|l|p{3in}|
+.. csv-table:: AffineTransform representations (3D)
     :header-rows: 1
-    :file: shape-AffineTransform.txt
+    :file: shape-AffineTransform-3D.txt
     :delim: tab
+    :widths: 5, 2, 2, 2, 10
 
+Canonical form is RAffineTransform (3D).

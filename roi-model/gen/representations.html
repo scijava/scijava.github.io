@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>RPoint 1D &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    <title>RPoint (1D) &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="../index.html" />
-    <link rel="prev" title="Point" href="shapes.html" /> 
+    <link rel="prev" title="Point (2D)" href="shapes.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,7 +36,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="shapes.html" title="Point"
+          <a href="shapes.html" title="Point (2D)"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -45,83 +45,85 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">RPoint  1D</a></li>
-<li><a class="reference internal" href="#rpoint-2d">RPoint  2D</a></li>
-<li><a class="reference internal" href="#rpoint-3d">RPoint  3D</a></li>
-<li><a class="reference internal" href="#rpoints-1d">RPoints 1D</a></li>
-<li><a class="reference internal" href="#rpoints-2d">RPoints 2D</a></li>
-<li><a class="reference internal" href="#rpoints-3d">RPoints 3D</a></li>
-<li><a class="reference internal" href="#rvector-1d">RVector 1D</a></li>
-<li><a class="reference internal" href="#rvector-2d">RVector 2D</a></li>
-<li><a class="reference internal" href="#rvector-3d">RVector 3D</a></li>
-<li><a class="reference internal" href="#rvectors-1d">RVectors        1D</a></li>
-<li><a class="reference internal" href="#rvectors-2d">RVectors        2D</a></li>
-<li><a class="reference internal" href="#rvectors-3d">RVectors        3D</a></li>
-<li><a class="reference internal" href="#rlinepoints-2d">RLinePoints     2D</a></li>
-<li><a class="reference internal" href="#rlinevector-2d">RLineVector     2D</a></li>
-<li><a class="reference internal" href="#rlinepoints-3d">RLinePoints     3D</a></li>
-<li><a class="reference internal" href="#rlinevector-3d">RLineVector     3D</a></li>
-<li><a class="reference internal" href="#rlinespoints-2d">RLinesPoints    2D</a></li>
-<li><a class="reference internal" href="#rlinespoints-3d">RLinesPoints    3D</a></li>
-<li><a class="reference internal" href="#rlinesvectors-2d">RLinesVectors   2D</a></li>
-<li><a class="reference internal" href="#rlinesvectors-3d">RLinesVectors   3D</a></li>
-<li><a class="reference internal" href="#rpolylinepoints-2d">RPolylinePoints 2D</a></li>
-<li><a class="reference internal" href="#rpolylinepoints-3d">RPolylinePoints 3D</a></li>
-<li><a class="reference internal" href="#rpolylinevector-2d">RPolylineVector 2D</a></li>
-<li><a class="reference internal" href="#rpolylinevector-3d">RPolylineVector 3D</a></li>
-<li><a class="reference internal" href="#ralignedsquare1-2d">RAlignedSquare1 2D</a></li>
-<li><a class="reference internal" href="#ralignedsquare2-2d">RAlignedSquare2 2D</a></li>
-<li><a class="reference internal" href="#ralignedcube1-3d">RAlignedCube1   3D</a></li>
-<li><a class="reference internal" href="#ralignedcube2-3d">RAlignedCube2   3D</a></li>
-<li><a class="reference internal" href="#rrectangle1-2d">RRectangle1     2D</a></li>
-<li><a class="reference internal" href="#rrectangle2-2d">RRectangle2     2D</a></li>
-<li><a class="reference internal" href="#rcuboid1-3d">RCuboid1        3D</a></li>
-<li><a class="reference internal" href="#rcuboid2-3d">RCuboid2        3D</a></li>
-<li><a class="reference internal" href="#rcircle1-2d">RCircle1        2D</a></li>
-<li><a class="reference internal" href="#rcircle2-2d">RCircle2        2D</a></li>
-<li><a class="reference internal" href="#rcircle3-2d">RCircle3        2D</a></li>
-<li><a class="reference internal" href="#rcircle4-2d">RCircle4        2D</a></li>
-<li><a class="reference internal" href="#rsphere1-3d">RSphere1        3D</a></li>
-<li><a class="reference internal" href="#rsphere2-3d">RSphere2        3D</a></li>
-<li><a class="reference internal" href="#rsphere3-3d">RSphere3        3D</a></li>
-<li><a class="reference internal" href="#rsphere4-3d">RSphere4        3D</a></li>
-<li><a class="reference internal" href="#rsphere5-3d">RSphere5        3D</a></li>
-<li><a class="reference internal" href="#ralignedhalfaxes-2d">RAlignedHalfAxes        2D</a></li>
-<li><a class="reference internal" href="#rhalfaxes-2d">RHalfAxes       2D</a></li>
-<li><a class="reference internal" href="#rellipsecovariance-2d">REllipseCovariance      2D</a></li>
-<li><a class="reference internal" href="#ralignedhalfaxes-3d">RAlignedHalfAxes        3D</a></li>
-<li><a class="reference internal" href="#rhalfaxes-3d">RHalfAxes       3D</a></li>
-<li><a class="reference internal" href="#rellipsoidcovariance-3d">REllipsoidCovariance    3D</a></li>
-<li><a class="reference internal" href="#rcircularcylinder1-3d">RCircularCylinder1      3D</a></li>
-<li><a class="reference internal" href="#rcircularcylinder2-3d">RCircularCylinder2      3D</a></li>
-<li><a class="reference internal" href="#rcircularcylinder3-3d">RCircularCylinder3      3D</a></li>
-<li><a class="reference internal" href="#rcircularcylinder4-3d">RCircularCylinder4      3D</a></li>
-<li><a class="reference internal" href="#rellipticcylinder1-3d">REllipticCylinder1      3D</a></li>
-<li><a class="reference internal" href="#rellipticcylinder2-3d">REllipticCylinder2      3D</a></li>
-<li><a class="reference internal" href="#rellipticcylinder3-3d">REllipticCylinder3      3D</a></li>
-<li><a class="reference internal" href="#rellipticcylinder4-3d">REllipticCylinder4      3D</a></li>
-<li><a class="reference internal" href="#rarc1-2d">RArc1   2D</a></li>
-<li><a class="reference internal" href="#rarc2-2d">RArc2   2D</a></li>
-<li><a class="reference internal" href="#rarc3-2d">RArc3   2D</a></li>
-<li><a class="reference internal" href="#rarc1-3d">RArc1   3D</a></li>
-<li><a class="reference internal" href="#rarc2-3d">RArc2   3D</a></li>
-<li><a class="reference internal" href="#rarc3-3d">RArc3   3D</a></li>
-<li><a class="reference internal" href="#rbitmask-1d">RBitMask        1D</a></li>
-<li><a class="reference internal" href="#rbitmask-2d">RBitMask        2D</a></li>
-<li><a class="reference internal" href="#rbitmask-3d">RBitMask        3D</a></li>
-<li><a class="reference internal" href="#rgreymask-1d">RGreyMask       1D</a></li>
-<li><a class="reference internal" href="#rgreymask-2d">RGreyMask       2D</a></li>
-<li><a class="reference internal" href="#rgreymask-3d">RGreyMask       3D</a></li>
-<li><a class="reference internal" href="#rmesh-2d">RMesh   2D</a></li>
-<li><a class="reference internal" href="#rmesh-3d">RMesh   3D</a></li>
-<li><a class="reference internal" href="#raffinetransform-1d">RAffineTransform        1D</a></li>
-<li><a class="reference internal" href="#raffinetransform-2d">RAffineTransform        2D</a></li>
-<li><a class="reference internal" href="#raffinetransform-3d">RAffineTransform        3D</a></li>
+<li><a class="reference internal" href="#">RPoint (1D)</a></li>
+<li><a class="reference internal" href="#rpoint-2d">RPoint (2D)</a></li>
+<li><a class="reference internal" href="#rpoint-3d">RPoint (3D)</a></li>
+<li><a class="reference internal" href="#rpoints-1d">RPoints (1D)</a></li>
+<li><a class="reference internal" href="#rpoints-2d">RPoints (2D)</a></li>
+<li><a class="reference internal" href="#rpoints-3d">RPoints (3D)</a></li>
+<li><a class="reference internal" href="#rvector-1d">RVector (1D)</a></li>
+<li><a class="reference internal" href="#rvector-2d">RVector (2D)</a></li>
+<li><a class="reference internal" href="#rvector-3d">RVector (3D)</a></li>
+<li><a class="reference internal" href="#rvectors-1d">RVectors (1D)</a></li>
+<li><a class="reference internal" href="#rvectors-2d">RVectors (2D)</a></li>
+<li><a class="reference internal" href="#rvectors-3d">RVectors (3D)</a></li>
+<li><a class="reference internal" href="#rlinepoints-1d">RLinePoints (1D)</a></li>
+<li><a class="reference internal" href="#rlinepoints-2d">RLinePoints (2D)</a></li>
+<li><a class="reference internal" href="#rlinepoints-3d">RLinePoints (3D)</a></li>
+<li><a class="reference internal" href="#rlinevector-1d">RLineVector (1D)</a></li>
+<li><a class="reference internal" href="#rlinevector-2d">RLineVector (2D)</a></li>
+<li><a class="reference internal" href="#rlinevector-3d">RLineVector (3D)</a></li>
+<li><a class="reference internal" href="#rlinespoints-2d">RLinesPoints (2D)</a></li>
+<li><a class="reference internal" href="#rlinespoints-3d">RLinesPoints (3D)</a></li>
+<li><a class="reference internal" href="#rlinesvectors-2d">RLinesVectors (2D)</a></li>
+<li><a class="reference internal" href="#rlinesvectors-3d">RLinesVectors (3D)</a></li>
+<li><a class="reference internal" href="#rpolylinepoints-2d">RPolylinePoints (2D)</a></li>
+<li><a class="reference internal" href="#rpolylinepoints-3d">RPolylinePoints (3D)</a></li>
+<li><a class="reference internal" href="#rpolylinevector-2d">RPolylineVector (2D)</a></li>
+<li><a class="reference internal" href="#rpolylinevector-3d">RPolylineVector (3D)</a></li>
+<li><a class="reference internal" href="#ralignedsquare1-2d">RAlignedSquare1 (2D)</a></li>
+<li><a class="reference internal" href="#ralignedsquare2-2d">RAlignedSquare2 (2D)</a></li>
+<li><a class="reference internal" href="#ralignedcube1-3d">RAlignedCube1 (3D)</a></li>
+<li><a class="reference internal" href="#ralignedcube2-3d">RAlignedCube2 (3D)</a></li>
+<li><a class="reference internal" href="#rrectangle1-2d">RRectangle1 (2D)</a></li>
+<li><a class="reference internal" href="#rrectangle2-2d">RRectangle2 (2D)</a></li>
+<li><a class="reference internal" href="#rcuboid1-3d">RCuboid1 (3D)</a></li>
+<li><a class="reference internal" href="#rcuboid2-3d">RCuboid2 (3D)</a></li>
+<li><a class="reference internal" href="#rcircle1-2d">RCircle1 (2D)</a></li>
+<li><a class="reference internal" href="#rcircle2-2d">RCircle2 (2D)</a></li>
+<li><a class="reference internal" href="#rcircle3-2d">RCircle3 (2D)</a></li>
+<li><a class="reference internal" href="#rcircle4-2d">RCircle4 (2D)</a></li>
+<li><a class="reference internal" href="#rsphere1-3d">RSphere1 (3D)</a></li>
+<li><a class="reference internal" href="#rsphere2-3d">RSphere2 (3D)</a></li>
+<li><a class="reference internal" href="#rsphere3-3d">RSphere3 (3D)</a></li>
+<li><a class="reference internal" href="#rsphere4-3d">RSphere4 (3D)</a></li>
+<li><a class="reference internal" href="#rsphere5-3d">RSphere5 (3D)</a></li>
+<li><a class="reference internal" href="#ralignedhalfaxes-2d">RAlignedHalfAxes (2D)</a></li>
+<li><a class="reference internal" href="#rhalfaxes-2d">RHalfAxes (2D)</a></li>
+<li><a class="reference internal" href="#rellipsecovariance-2d">REllipseCovariance (2D)</a></li>
+<li><a class="reference internal" href="#ralignedhalfaxes-3d">RAlignedHalfAxes (3D)</a></li>
+<li><a class="reference internal" href="#rhalfaxes-3d">RHalfAxes (3D)</a></li>
+<li><a class="reference internal" href="#rellipsoidcovariance-3d">REllipsoidCovariance (3D)</a></li>
+<li><a class="reference internal" href="#rcircularcylinder1-3d">RCircularCylinder1 (3D)</a></li>
+<li><a class="reference internal" href="#rcircularcylinder2-3d">RCircularCylinder2 (3D)</a></li>
+<li><a class="reference internal" href="#rcircularcylinder3-3d">RCircularCylinder3 (3D)</a></li>
+<li><a class="reference internal" href="#rcircularcylinder4-3d">RCircularCylinder4 (3D)</a></li>
+<li><a class="reference internal" href="#rellipticcylinder1-3d">REllipticCylinder1 (3D)</a></li>
+<li><a class="reference internal" href="#rellipticcylinder2-3d">REllipticCylinder2 (3D)</a></li>
+<li><a class="reference internal" href="#rellipticcylinder3-3d">REllipticCylinder3 (3D)</a></li>
+<li><a class="reference internal" href="#rellipticcylinder4-3d">REllipticCylinder4 (3D)</a></li>
+<li><a class="reference internal" href="#rarc1-2d">RArc1 (2D)</a></li>
+<li><a class="reference internal" href="#rarc2-2d">RArc2 (2D)</a></li>
+<li><a class="reference internal" href="#rarc3-2d">RArc3 (2D)</a></li>
+<li><a class="reference internal" href="#rarc1-3d">RArc1 (3D)</a></li>
+<li><a class="reference internal" href="#rarc2-3d">RArc2 (3D)</a></li>
+<li><a class="reference internal" href="#rarc3-3d">RArc3 (3D)</a></li>
+<li><a class="reference internal" href="#rbitmask-1d">RBitMask (1D)</a></li>
+<li><a class="reference internal" href="#rbitmask-2d">RBitMask (2D)</a></li>
+<li><a class="reference internal" href="#rbitmask-3d">RBitMask (3D)</a></li>
+<li><a class="reference internal" href="#rgreymask-1d">RGreyMask (1D)</a></li>
+<li><a class="reference internal" href="#rgreymask-2d">RGreyMask (2D)</a></li>
+<li><a class="reference internal" href="#rgreymask-3d">RGreyMask (3D)</a></li>
+<li><a class="reference internal" href="#rmesh-2d">RMesh (2D)</a></li>
+<li><a class="reference internal" href="#rmesh-3d">RMesh (3D)</a></li>
+<li><a class="reference internal" href="#raffinetransform-1d">RAffineTransform (1D)</a></li>
+<li><a class="reference internal" href="#raffinetransform-2d">RAffineTransform (2D)</a></li>
+<li><a class="reference internal" href="#raffinetransform-3d">RAffineTransform (3D)</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="shapes.html"
-                        title="previous chapter">Point</a></p>
+                        title="previous chapter">Point (2D)</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/gen/representations.txt"
@@ -149,15 +151,15 @@
           <div class="body">
             
   <div class="section" id="rpoint-1d">
-<span id="index-0"></span><h1>RPoint  1D<a class="headerlink" href="#rpoint-1d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpoint-1d"></span><span id="index-0"></span><h1>RPoint (1D)<a class="headerlink" href="#rpoint-1d" title="Permalink to this headline">¶</a></h1>
 <p>A single point in 1D.</p>
 <table border="1" class="docutils">
-<caption>RPoint   1D</caption>
+<caption>RPoint members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -176,15 +178,15 @@
 </table>
 </div>
 <div class="section" id="rpoint-2d">
-<span id="index-1"></span><h1>RPoint  2D<a class="headerlink" href="#rpoint-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpoint-2d"></span><span id="index-1"></span><h1>RPoint (2D)<a class="headerlink" href="#rpoint-2d" title="Permalink to this headline">¶</a></h1>
 <p>A single point in 2D.</p>
 <table border="1" class="docutils">
-<caption>RPoint   2D</caption>
+<caption>RPoint members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -203,15 +205,15 @@
 </table>
 </div>
 <div class="section" id="rpoint-3d">
-<span id="index-2"></span><h1>RPoint  3D<a class="headerlink" href="#rpoint-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpoint-3d"></span><span id="index-2"></span><h1>RPoint (3D)<a class="headerlink" href="#rpoint-3d" title="Permalink to this headline">¶</a></h1>
 <p>A single point in 3D.</p>
 <table border="1" class="docutils">
-<caption>RPoint   3D</caption>
+<caption>RPoint members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -230,15 +232,15 @@
 </table>
 </div>
 <div class="section" id="rpoints-1d">
-<span id="index-3"></span><h1>RPoints 1D<a class="headerlink" href="#rpoints-1d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpoints-1d"></span><span id="index-3"></span><h1>RPoints (1D)<a class="headerlink" href="#rpoints-1d" title="Permalink to this headline">¶</a></h1>
 <p>A list of points in 1D.</p>
 <table border="1" class="docutils">
-<caption>RPoints  1D</caption>
+<caption>RPoints members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -262,15 +264,15 @@
 </table>
 </div>
 <div class="section" id="rpoints-2d">
-<span id="index-4"></span><h1>RPoints 2D<a class="headerlink" href="#rpoints-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpoints-2d"></span><span id="index-4"></span><h1>RPoints (2D)<a class="headerlink" href="#rpoints-2d" title="Permalink to this headline">¶</a></h1>
 <p>A list of points in 2D.</p>
 <table border="1" class="docutils">
-<caption>RPoints  2D</caption>
+<caption>RPoints members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -294,15 +296,15 @@
 </table>
 </div>
 <div class="section" id="rpoints-3d">
-<span id="index-5"></span><h1>RPoints 3D<a class="headerlink" href="#rpoints-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpoints-3d"></span><span id="index-5"></span><h1>RPoints (3D)<a class="headerlink" href="#rpoints-3d" title="Permalink to this headline">¶</a></h1>
 <p>A list of points in 3D.</p>
 <table border="1" class="docutils">
-<caption>RPoints  3D</caption>
+<caption>RPoints members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -326,15 +328,15 @@
 </table>
 </div>
 <div class="section" id="rvector-1d">
-<span id="index-6"></span><h1>RVector 1D<a class="headerlink" href="#rvector-1d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rvector-1d"></span><span id="index-6"></span><h1>RVector (1D)<a class="headerlink" href="#rvector-1d" title="Permalink to this headline">¶</a></h1>
 <p>A vector in 1D.</p>
 <table border="1" class="docutils">
-<caption>RVector  1D</caption>
+<caption>RVector members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -353,15 +355,15 @@
 </table>
 </div>
 <div class="section" id="rvector-2d">
-<span id="index-7"></span><h1>RVector 2D<a class="headerlink" href="#rvector-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rvector-2d"></span><span id="index-7"></span><h1>RVector (2D)<a class="headerlink" href="#rvector-2d" title="Permalink to this headline">¶</a></h1>
 <p>A vector in 2D.</p>
 <table border="1" class="docutils">
-<caption>RVector  2D</caption>
+<caption>RVector members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -380,15 +382,15 @@
 </table>
 </div>
 <div class="section" id="rvector-3d">
-<span id="index-8"></span><h1>RVector 3D<a class="headerlink" href="#rvector-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rvector-3d"></span><span id="index-8"></span><h1>RVector (3D)<a class="headerlink" href="#rvector-3d" title="Permalink to this headline">¶</a></h1>
 <p>A vector in 3D.</p>
 <table border="1" class="docutils">
-<caption>RVector  3D</caption>
+<caption>RVector members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -407,15 +409,15 @@
 </table>
 </div>
 <div class="section" id="rvectors-1d">
-<span id="index-9"></span><h1>RVectors        1D<a class="headerlink" href="#rvectors-1d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rvectors-1d"></span><span id="index-9"></span><h1>RVectors (1D)<a class="headerlink" href="#rvectors-1d" title="Permalink to this headline">¶</a></h1>
 <p>A list of vectors in 1D.</p>
 <table border="1" class="docutils">
-<caption>RVectors 1D</caption>
+<caption>RVectors members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -439,15 +441,15 @@
 </table>
 </div>
 <div class="section" id="rvectors-2d">
-<span id="index-10"></span><h1>RVectors        2D<a class="headerlink" href="#rvectors-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rvectors-2d"></span><span id="index-10"></span><h1>RVectors (2D)<a class="headerlink" href="#rvectors-2d" title="Permalink to this headline">¶</a></h1>
 <p>A list of vectors in 2D.</p>
 <table border="1" class="docutils">
-<caption>RVectors 2D</caption>
+<caption>RVectors members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -471,15 +473,15 @@
 </table>
 </div>
 <div class="section" id="rvectors-3d">
-<span id="index-11"></span><h1>RVectors        3D<a class="headerlink" href="#rvectors-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rvectors-3d"></span><span id="index-11"></span><h1>RVectors (3D)<a class="headerlink" href="#rvectors-3d" title="Permalink to this headline">¶</a></h1>
 <p>A list of vectors in 3D.</p>
 <table border="1" class="docutils">
-<caption>RVectors 3D</caption>
+<caption>RVectors members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -502,16 +504,43 @@
 </tbody>
 </table>
 </div>
+<div class="section" id="rlinepoints-1d">
+<span id="rep-rlinepoints-1d"></span><span id="index-12"></span><h1>RLinePoints (1D)<a class="headerlink" href="#rlinepoints-1d" title="Permalink to this headline">¶</a></h1>
+<p>A line described by two points in 1D.</p>
+<table border="1" class="docutils">
+<caption>RLinePoints members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex1D[2]</td>
+<td>Line start and end points</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="rlinepoints-2d">
-<span id="index-12"></span><h1>RLinePoints     2D<a class="headerlink" href="#rlinepoints-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rlinepoints-2d"></span><span id="index-13"></span><h1>RLinePoints (2D)<a class="headerlink" href="#rlinepoints-2d" title="Permalink to this headline">¶</a></h1>
 <p>A line described by two points in 2D.</p>
 <table border="1" class="docutils">
-<caption>RLinePoints      2D</caption>
+<caption>RLinePoints members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -529,16 +558,70 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="rlinevector-2d">
-<span id="index-13"></span><h1>RLineVector     2D<a class="headerlink" href="#rlinevector-2d" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rlinepoints-3d">
+<span id="rep-rlinepoints-3d"></span><span id="index-14"></span><h1>RLinePoints (3D)<a class="headerlink" href="#rlinepoints-3d" title="Permalink to this headline">¶</a></h1>
+<p>A line described by two points in 3D.</p>
+<table border="1" class="docutils">
+<caption>RLinePoints members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex3D[2]</td>
+<td>Line start and end points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rlinevector-1d">
+<span id="rep-rlinevector-1d"></span><span id="index-15"></span><h1>RLineVector (1D)<a class="headerlink" href="#rlinevector-1d" title="Permalink to this headline">¶</a></h1>
 <p>A line described by a point and a vector.</p>
 <table border="1" class="docutils">
-<caption>RLineVector      2D</caption>
+<caption>RLineVector members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex1D</td>
+<td>Line start</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rlinevector-2d">
+<span id="rep-rlinevector-2d"></span><span id="index-16"></span><h1>RLineVector (2D)<a class="headerlink" href="#rlinevector-2d" title="Permalink to this headline">¶</a></h1>
+<p>A line described by a point and a vector.</p>
+<table border="1" class="docutils">
+<caption>RLineVector members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -561,43 +644,16 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="rlinepoints-3d">
-<span id="index-14"></span><h1>RLinePoints     3D<a class="headerlink" href="#rlinepoints-3d" title="Permalink to this headline">¶</a></h1>
-<p>A line described by two points in 3D.</p>
-<table border="1" class="docutils">
-<caption>RLinePoints      3D</caption>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">SeqNo</th>
-<th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>P1</td>
-<td>Vertex3D[2]</td>
-<td>Line start and end points</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="rlinevector-3d">
-<span id="index-15"></span><h1>RLineVector     3D<a class="headerlink" href="#rlinevector-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rlinevector-3d"></span><span id="index-17"></span><h1>RLineVector (3D)<a class="headerlink" href="#rlinevector-3d" title="Permalink to this headline">¶</a></h1>
 <p>A line described by a point and a vector.</p>
 <table border="1" class="docutils">
-<caption>RLineVector      3D</caption>
+<caption>RLineVector members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -621,15 +677,15 @@
 </table>
 </div>
 <div class="section" id="rlinespoints-2d">
-<span id="index-16"></span><h1>RLinesPoints    2D<a class="headerlink" href="#rlinespoints-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rlinespoints-2d"></span><span id="index-18"></span><h1>RLinesPoints (2D)<a class="headerlink" href="#rlinespoints-2d" title="Permalink to this headline">¶</a></h1>
 <p>A list of lines described by two points in 2D.</p>
 <table border="1" class="docutils">
-<caption>RLinesPoints     2D</caption>
+<caption>RLinesPoints members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -653,15 +709,15 @@
 </table>
 </div>
 <div class="section" id="rlinespoints-3d">
-<span id="index-17"></span><h1>RLinesPoints    3D<a class="headerlink" href="#rlinespoints-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rlinespoints-3d"></span><span id="index-19"></span><h1>RLinesPoints (3D)<a class="headerlink" href="#rlinespoints-3d" title="Permalink to this headline">¶</a></h1>
 <p>A list of lines described by two points in 3D.</p>
 <table border="1" class="docutils">
-<caption>RLinesPoints     3D</caption>
+<caption>RLinesPoints members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -685,15 +741,15 @@
 </table>
 </div>
 <div class="section" id="rlinesvectors-2d">
-<span id="index-18"></span><h1>RLinesVectors   2D<a class="headerlink" href="#rlinesvectors-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rlinesvectors-2d"></span><span id="index-20"></span><h1>RLinesVectors (2D)<a class="headerlink" href="#rlinesvectors-2d" title="Permalink to this headline">¶</a></h1>
 <p>A list of lines described by a point and a vector in 2D; can be used to represent a vector field.</p>
 <table border="1" class="docutils">
-<caption>RLinesVectors    2D</caption>
+<caption>RLinesVectors members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -717,15 +773,15 @@
 </table>
 </div>
 <div class="section" id="rlinesvectors-3d">
-<span id="index-19"></span><h1>RLinesVectors   3D<a class="headerlink" href="#rlinesvectors-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rlinesvectors-3d"></span><span id="index-21"></span><h1>RLinesVectors (3D)<a class="headerlink" href="#rlinesvectors-3d" title="Permalink to this headline">¶</a></h1>
 <p>A list of lines described by a point and a vector in 3D; can be used to represent a vector field.</p>
 <table border="1" class="docutils">
-<caption>RLinesVectors    3D</caption>
+<caption>RLinesVectors members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -749,15 +805,15 @@
 </table>
 </div>
 <div class="section" id="rpolylinepoints-2d">
-<span id="index-20"></span><h1>RPolylinePoints 2D<a class="headerlink" href="#rpolylinepoints-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpolylinepoints-2d"></span><span id="index-22"></span><h1>RPolylinePoints (2D)<a class="headerlink" href="#rpolylinepoints-2d" title="Permalink to this headline">¶</a></h1>
 <p>A list of points in a polyline in 2D [could use RPoints2D directly].</p>
 <table border="1" class="docutils">
-<caption>RPolylinePoints  2D</caption>
+<caption>RPolylinePoints members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -776,15 +832,15 @@
 </table>
 </div>
 <div class="section" id="rpolylinepoints-3d">
-<span id="index-21"></span><h1>RPolylinePoints 3D<a class="headerlink" href="#rpolylinepoints-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpolylinepoints-3d"></span><span id="index-23"></span><h1>RPolylinePoints (3D)<a class="headerlink" href="#rpolylinepoints-3d" title="Permalink to this headline">¶</a></h1>
 <p>A list of points in a polyline in 3D [could use RPoints3D directly].</p>
 <table border="1" class="docutils">
-<caption>RPolylinePoints  3D</caption>
+<caption>RPolylinePoints members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -803,15 +859,15 @@
 </table>
 </div>
 <div class="section" id="rpolylinevector-2d">
-<span id="index-22"></span><h1>RPolylineVector 2D<a class="headerlink" href="#rpolylinevector-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpolylinevector-2d"></span><span id="index-24"></span><h1>RPolylineVector (2D)<a class="headerlink" href="#rpolylinevector-2d" title="Permalink to this headline">¶</a></h1>
 <p>A list of points in a polyline represented by a starting point and list of vectors in 2D.</p>
 <table border="1" class="docutils">
-<caption>RPolylineVector  2D</caption>
+<caption>RPolylineVector members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -835,15 +891,15 @@
 </table>
 </div>
 <div class="section" id="rpolylinevector-3d">
-<span id="index-23"></span><h1>RPolylineVector 3D<a class="headerlink" href="#rpolylinevector-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rpolylinevector-3d"></span><span id="index-25"></span><h1>RPolylineVector (3D)<a class="headerlink" href="#rpolylinevector-3d" title="Permalink to this headline">¶</a></h1>
 <p>A list of points in a polyline represented by a starting point and list of vectors in 3D.</p>
 <table border="1" class="docutils">
-<caption>RPolylineVector  3D</caption>
+<caption>RPolylineVector members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -867,15 +923,15 @@
 </table>
 </div>
 <div class="section" id="ralignedsquare1-2d">
-<span id="index-24"></span><h1>RAlignedSquare1 2D<a class="headerlink" href="#ralignedsquare1-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-ralignedsquare1-2d"></span><span id="index-26"></span><h1>RAlignedSquare1 (2D)<a class="headerlink" href="#ralignedsquare1-2d" title="Permalink to this headline">¶</a></h1>
 <p>A square in 2D aligned with the axes described by a corner point and adjacent corner.</p>
 <table border="1" class="docutils">
-<caption>RAlignedSquare1  2D</caption>
+<caption>RAlignedSquare1 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -899,15 +955,15 @@
 </table>
 </div>
 <div class="section" id="ralignedsquare2-2d">
-<span id="index-25"></span><h1>RAlignedSquare2 2D<a class="headerlink" href="#ralignedsquare2-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-ralignedsquare2-2d"></span><span id="index-27"></span><h1>RAlignedSquare2 (2D)<a class="headerlink" href="#ralignedsquare2-2d" title="Permalink to this headline">¶</a></h1>
 <p>A square in 2D aligned with the axes described by a corner point and vector to an adjacent corner.</p>
 <table border="1" class="docutils">
-<caption>RAlignedSquare2  2D</caption>
+<caption>RAlignedSquare2 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -931,15 +987,15 @@
 </table>
 </div>
 <div class="section" id="ralignedcube1-3d">
-<span id="index-26"></span><h1>RAlignedCube1   3D<a class="headerlink" href="#ralignedcube1-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-ralignedcube1-3d"></span><span id="index-28"></span><h1>RAlignedCube1 (3D)<a class="headerlink" href="#ralignedcube1-3d" title="Permalink to this headline">¶</a></h1>
 <p>A cube in 3D aligned with the axes described by a corner point and adjacent corner.</p>
 <table border="1" class="docutils">
-<caption>RAlignedCube1    3D</caption>
+<caption>RAlignedCube1 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -963,15 +1019,15 @@
 </table>
 </div>
 <div class="section" id="ralignedcube2-3d">
-<span id="index-27"></span><h1>RAlignedCube2   3D<a class="headerlink" href="#ralignedcube2-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-ralignedcube2-3d"></span><span id="index-29"></span><h1>RAlignedCube2 (3D)<a class="headerlink" href="#ralignedcube2-3d" title="Permalink to this headline">¶</a></h1>
 <p>A cube in 3D aligned with the axes described by a corner point and vector to an adjacent corner.</p>
 <table border="1" class="docutils">
-<caption>RAlignedCube2    3D</caption>
+<caption>RAlignedCube2 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -995,15 +1051,15 @@
 </table>
 </div>
 <div class="section" id="rrectangle1-2d">
-<span id="index-28"></span><h1>RRectangle1     2D<a class="headerlink" href="#rrectangle1-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rrectangle1-2d"></span><span id="index-30"></span><h1>RRectangle1 (2D)<a class="headerlink" href="#rrectangle1-2d" title="Permalink to this headline">¶</a></h1>
 <p>A rectangle in 2D described by two corner points and a vector.</p>
 <table border="1" class="docutils">
-<caption>RRectangle1      2D</caption>
+<caption>RRectangle1 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1032,15 +1088,15 @@
 </table>
 </div>
 <div class="section" id="rrectangle2-2d">
-<span id="index-29"></span><h1>RRectangle2     2D<a class="headerlink" href="#rrectangle2-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rrectangle2-2d"></span><span id="index-31"></span><h1>RRectangle2 (2D)<a class="headerlink" href="#rrectangle2-2d" title="Permalink to this headline">¶</a></h1>
 <p>A rectangle in 2D described by a corner point and two vectors.</p>
 <table border="1" class="docutils">
-<caption>RRectangle2      2D</caption>
+<caption>RRectangle2 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1069,15 +1125,15 @@
 </table>
 </div>
 <div class="section" id="rcuboid1-3d">
-<span id="index-30"></span><h1>RCuboid1        3D<a class="headerlink" href="#rcuboid1-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcuboid1-3d"></span><span id="index-32"></span><h1>RCuboid1 (3D)<a class="headerlink" href="#rcuboid1-3d" title="Permalink to this headline">¶</a></h1>
 <p>A cuboid in 3D described by two adjacent corners and two vectors.</p>
 <table border="1" class="docutils">
-<caption>RCuboid1 3D</caption>
+<caption>RCuboid1 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1111,15 +1167,15 @@
 </table>
 </div>
 <div class="section" id="rcuboid2-3d">
-<span id="index-31"></span><h1>RCuboid2        3D<a class="headerlink" href="#rcuboid2-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcuboid2-3d"></span><span id="index-33"></span><h1>RCuboid2 (3D)<a class="headerlink" href="#rcuboid2-3d" title="Permalink to this headline">¶</a></h1>
 <p>A cuboid in 3D described by a corner and three vectors.</p>
 <table border="1" class="docutils">
-<caption>RCuboid2 3D</caption>
+<caption>RCuboid2 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1153,15 +1209,15 @@
 </table>
 </div>
 <div class="section" id="rcircle1-2d">
-<span id="index-32"></span><h1>RCircle1        2D<a class="headerlink" href="#rcircle1-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircle1-2d"></span><span id="index-34"></span><h1>RCircle1 (2D)<a class="headerlink" href="#rcircle1-2d" title="Permalink to this headline">¶</a></h1>
 <p>A circle in 2D described by a centre point and 1D radius.</p>
 <table border="1" class="docutils">
-<caption>RCircle1 2D</caption>
+<caption>RCircle1 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1185,15 +1241,15 @@
 </table>
 </div>
 <div class="section" id="rcircle2-2d">
-<span id="index-33"></span><h1>RCircle2        2D<a class="headerlink" href="#rcircle2-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircle2-2d"></span><span id="index-35"></span><h1>RCircle2 (2D)<a class="headerlink" href="#rcircle2-2d" title="Permalink to this headline">¶</a></h1>
 <p>A circle in 2D described by a centre point and 2D radius.</p>
 <table border="1" class="docutils">
-<caption>RCircle2 2D</caption>
+<caption>RCircle2 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1217,15 +1273,15 @@
 </table>
 </div>
 <div class="section" id="rcircle3-2d">
-<span id="index-34"></span><h1>RCircle3        2D<a class="headerlink" href="#rcircle3-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircle3-2d"></span><span id="index-36"></span><h1>RCircle3 (2D)<a class="headerlink" href="#rcircle3-2d" title="Permalink to this headline">¶</a></h1>
 <p>A circle in 2D described by a circumference point and vector to the centre point.</p>
 <table border="1" class="docutils">
-<caption>RCircle3 2D</caption>
+<caption>RCircle3 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1249,15 +1305,15 @@
 </table>
 </div>
 <div class="section" id="rcircle4-2d">
-<span id="index-35"></span><h1>RCircle4        2D<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircle4-2d"></span><span id="index-37"></span><h1>RCircle4 (2D)<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h1>
 <p>A circle in 2D described by three circumference points.</p>
 <table border="1" class="docutils">
-<caption>RCircle4 2D</caption>
+<caption>RCircle4 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1276,15 +1332,15 @@
 </table>
 </div>
 <div class="section" id="rsphere1-3d">
-<span id="index-36"></span><h1>RSphere1        3D<a class="headerlink" href="#rsphere1-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rsphere1-3d"></span><span id="index-38"></span><h1>RSphere1 (3D)<a class="headerlink" href="#rsphere1-3d" title="Permalink to this headline">¶</a></h1>
 <p>A sphere in 3D described by a centre point and 1D radius.</p>
 <table border="1" class="docutils">
-<caption>RSphere1 3D</caption>
+<caption>RSphere1 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1308,15 +1364,15 @@
 </table>
 </div>
 <div class="section" id="rsphere2-3d">
-<span id="index-37"></span><h1>RSphere2        3D<a class="headerlink" href="#rsphere2-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rsphere2-3d"></span><span id="index-39"></span><h1>RSphere2 (3D)<a class="headerlink" href="#rsphere2-3d" title="Permalink to this headline">¶</a></h1>
 <p>A sphere in 3D described by a centre point and 2D radius.</p>
 <table border="1" class="docutils">
-<caption>RSphere2 3D</caption>
+<caption>RSphere2 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1340,15 +1396,15 @@
 </table>
 </div>
 <div class="section" id="rsphere3-3d">
-<span id="index-38"></span><h1>RSphere3        3D<a class="headerlink" href="#rsphere3-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rsphere3-3d"></span><span id="index-40"></span><h1>RSphere3 (3D)<a class="headerlink" href="#rsphere3-3d" title="Permalink to this headline">¶</a></h1>
 <p>A sphere in 3D described by a centre point and 3D radius.</p>
 <table border="1" class="docutils">
-<caption>RSphere3 3D</caption>
+<caption>RSphere3 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1372,15 +1428,15 @@
 </table>
 </div>
 <div class="section" id="rsphere4-3d">
-<span id="index-39"></span><h1>RSphere4        3D<a class="headerlink" href="#rsphere4-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rsphere4-3d"></span><span id="index-41"></span><h1>RSphere4 (3D)<a class="headerlink" href="#rsphere4-3d" title="Permalink to this headline">¶</a></h1>
 <p>A sphere in 3D described by a surface point and vector to the centre point.</p>
 <table border="1" class="docutils">
-<caption>RSphere4 3D</caption>
+<caption>RSphere4 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1404,15 +1460,15 @@
 </table>
 </div>
 <div class="section" id="rsphere5-3d">
-<span id="index-40"></span><h1>RSphere5        3D<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rsphere5-3d"></span><span id="index-42"></span><h1>RSphere5 (3D)<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h1>
 <p>A sphere in 3D described by a four surface points.</p>
 <table border="1" class="docutils">
-<caption>RSphere5 3D</caption>
+<caption>RSphere5 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1431,15 +1487,15 @@
 </table>
 </div>
 <div class="section" id="ralignedhalfaxes-2d">
-<span id="index-41"></span><h1>RAlignedHalfAxes        2D<a class="headerlink" href="#ralignedhalfaxes-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-ralignedhalfaxes-2d"></span><span id="index-43"></span><h1>RAlignedHalfAxes (2D)<a class="headerlink" href="#ralignedhalfaxes-2d" title="Permalink to this headline">¶</a></h1>
 <p>An ellipse in 2D aligned with the axes described by two half axes.</p>
 <table border="1" class="docutils">
-<caption>RAlignedHalfAxes 2D</caption>
+<caption>RAlignedHalfAxes members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1454,19 +1510,24 @@
 <td>Vertex2D</td>
 <td>Centre point</td>
 </tr>
+<tr class="row-odd"><td>1</td>
+<td>V1</td>
+<td>Vector2D</td>
+<td>Half axes (x,y)</td>
+</tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="rhalfaxes-2d">
-<span id="index-42"></span><h1>RHalfAxes       2D<a class="headerlink" href="#rhalfaxes-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rhalfaxes-2d"></span><span id="index-44"></span><h1>RHalfAxes (2D)<a class="headerlink" href="#rhalfaxes-2d" title="Permalink to this headline">¶</a></h1>
 <p>An ellipse in 2D described by two half axes.</p>
 <table border="1" class="docutils">
-<caption>RHalfAxes        2D</caption>
+<caption>RHalfAxes members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1495,15 +1556,15 @@
 </table>
 </div>
 <div class="section" id="rellipsecovariance-2d">
-<span id="index-43"></span><h1>REllipseCovariance      2D<a class="headerlink" href="#rellipsecovariance-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rellipsecovariance-2d"></span><span id="index-45"></span><h1>REllipseCovariance (2D)<a class="headerlink" href="#rellipsecovariance-2d" title="Permalink to this headline">¶</a></h1>
 <p>An ellipse in 2D described by a centre point and covariance matrix.</p>
 <table border="1" class="docutils">
-<caption>REllipseCovariance       2D</caption>
+<caption>REllipseCovariance members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1527,15 +1588,15 @@
 </table>
 </div>
 <div class="section" id="ralignedhalfaxes-3d">
-<span id="index-44"></span><h1>RAlignedHalfAxes        3D<a class="headerlink" href="#ralignedhalfaxes-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-ralignedhalfaxes-3d"></span><span id="index-46"></span><h1>RAlignedHalfAxes (3D)<a class="headerlink" href="#ralignedhalfaxes-3d" title="Permalink to this headline">¶</a></h1>
 <p>An ellipsoid in 3D aligned with the axes.</p>
 <table border="1" class="docutils">
-<caption>RAlignedHalfAxes 3D</caption>
+<caption>RAlignedHalfAxes members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1552,11 +1613,6 @@
 </tr>
 <tr class="row-odd"><td>1</td>
 <td>V1</td>
-<td>Vector2D</td>
-<td>Half axes (x,y)</td>
-</tr>
-<tr class="row-even"><td>1</td>
-<td>V1</td>
 <td>Vector3D</td>
 <td>Half axes (x,y,z)</td>
 </tr>
@@ -1564,15 +1620,15 @@
 </table>
 </div>
 <div class="section" id="rhalfaxes-3d">
-<span id="index-45"></span><h1>RHalfAxes       3D<a class="headerlink" href="#rhalfaxes-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rhalfaxes-3d"></span><span id="index-47"></span><h1>RHalfAxes (3D)<a class="headerlink" href="#rhalfaxes-3d" title="Permalink to this headline">¶</a></h1>
 <p>An ellipsoid in 3D described by three half axes.</p>
 <table border="1" class="docutils">
-<caption>RHalfAxes        3D</caption>
+<caption>RHalfAxes members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1606,15 +1662,15 @@
 </table>
 </div>
 <div class="section" id="rellipsoidcovariance-3d">
-<span id="index-46"></span><h1>REllipsoidCovariance    3D<a class="headerlink" href="#rellipsoidcovariance-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rellipsoidcovariance-3d"></span><span id="index-48"></span><h1>REllipsoidCovariance (3D)<a class="headerlink" href="#rellipsoidcovariance-3d" title="Permalink to this headline">¶</a></h1>
 <p>An ellipsoid in 3D described by a centre point and covariance matrix.</p>
 <table border="1" class="docutils">
-<caption>REllipsoidCovariance     3D</caption>
+<caption>REllipsoidCovariance members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1638,15 +1694,15 @@
 </table>
 </div>
 <div class="section" id="rcircularcylinder1-3d">
-<span id="index-47"></span><h1>RCircularCylinder1      3D<a class="headerlink" href="#rcircularcylinder1-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircularcylinder1-3d"></span><span id="index-49"></span><h1>RCircularCylinder1 (3D)<a class="headerlink" href="#rcircularcylinder1-3d" title="Permalink to this headline">¶</a></h1>
 <p>A circular cylinder in 3D described by the centres of both faces and a radius.</p>
 <table border="1" class="docutils">
-<caption>RCircularCylinder1       3D</caption>
+<caption>RCircularCylinder1 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1675,15 +1731,15 @@
 </table>
 </div>
 <div class="section" id="rcircularcylinder2-3d">
-<span id="index-48"></span><h1>RCircularCylinder2      3D<a class="headerlink" href="#rcircularcylinder2-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircularcylinder2-3d"></span><span id="index-50"></span><h1>RCircularCylinder2 (3D)<a class="headerlink" href="#rcircularcylinder2-3d" title="Permalink to this headline">¶</a></h1>
 <p>A circular cylinder in 3D described by the centre of one face, vector to second face and a radius.</p>
 <table border="1" class="docutils">
-<caption>RCircularCylinder2       3D</caption>
+<caption>RCircularCylinder2 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1712,15 +1768,15 @@
 </table>
 </div>
 <div class="section" id="rcircularcylinder3-3d">
-<span id="index-49"></span><h1>RCircularCylinder3      3D<a class="headerlink" href="#rcircularcylinder3-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircularcylinder3-3d"></span><span id="index-51"></span><h1>RCircularCylinder3 (3D)<a class="headerlink" href="#rcircularcylinder3-3d" title="Permalink to this headline">¶</a></h1>
 <p>A circular cylinder in 3D with faces at different angles described by the centres of both faces and vectors specifying the radius and angles of the faces.</p>
 <table border="1" class="docutils">
-<caption>RCircularCylinder3       3D</caption>
+<caption>RCircularCylinder3 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1754,15 +1810,15 @@
 </table>
 </div>
 <div class="section" id="rcircularcylinder4-3d">
-<span id="index-50"></span><h1>RCircularCylinder4      3D<a class="headerlink" href="#rcircularcylinder4-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rcircularcylinder4-3d"></span><span id="index-52"></span><h1>RCircularCylinder4 (3D)<a class="headerlink" href="#rcircularcylinder4-3d" title="Permalink to this headline">¶</a></h1>
 <p>A circular cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and vectors specifying the radius and angles of the faces.</p>
 <table border="1" class="docutils">
-<caption>RCircularCylinder4       3D</caption>
+<caption>RCircularCylinder4 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1796,15 +1852,15 @@
 </table>
 </div>
 <div class="section" id="rellipticcylinder1-3d">
-<span id="index-51"></span><h1>REllipticCylinder1      3D<a class="headerlink" href="#rellipticcylinder1-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rellipticcylinder1-3d"></span><span id="index-53"></span><h1>REllipticCylinder1 (3D)<a class="headerlink" href="#rellipticcylinder1-3d" title="Permalink to this headline">¶</a></h1>
 <p>An elliptic cylinder in 3D described by the centres both faces and half axes.</p>
 <table border="1" class="docutils">
-<caption>REllipticCylinder1       3D</caption>
+<caption>REllipticCylinder1 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1838,15 +1894,15 @@
 </table>
 </div>
 <div class="section" id="rellipticcylinder2-3d">
-<span id="index-52"></span><h1>REllipticCylinder2      3D<a class="headerlink" href="#rellipticcylinder2-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rellipticcylinder2-3d"></span><span id="index-54"></span><h1>REllipticCylinder2 (3D)<a class="headerlink" href="#rellipticcylinder2-3d" title="Permalink to this headline">¶</a></h1>
 <p>An elliptic cylinder in 3D described by the centre of one face, vector to second face and half axes.</p>
 <table border="1" class="docutils">
-<caption>REllipticCylinder2       3D</caption>
+<caption>REllipticCylinder2 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1880,15 +1936,15 @@
 </table>
 </div>
 <div class="section" id="rellipticcylinder3-3d">
-<span id="index-53"></span><h1>REllipticCylinder3      3D<a class="headerlink" href="#rellipticcylinder3-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rellipticcylinder3-3d"></span><span id="index-55"></span><h1>REllipticCylinder3 (3D)<a class="headerlink" href="#rellipticcylinder3-3d" title="Permalink to this headline">¶</a></h1>
 <p>An elliptic cylinder in 3D with faces at different angles described by the centres both faces and half axes and angles.</p>
 <table border="1" class="docutils">
-<caption>REllipticCylinder3       3D</caption>
+<caption>REllipticCylinder3 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1927,15 +1983,15 @@
 </table>
 </div>
 <div class="section" id="rellipticcylinder4-3d">
-<span id="index-54"></span><h1>REllipticCylinder4      3D<a class="headerlink" href="#rellipticcylinder4-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rellipticcylinder4-3d"></span><span id="index-56"></span><h1>REllipticCylinder4 (3D)<a class="headerlink" href="#rellipticcylinder4-3d" title="Permalink to this headline">¶</a></h1>
 <p>An elliptic cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and half axes and angles.</p>
 <table border="1" class="docutils">
-<caption>REllipticCylinder4       3D</caption>
+<caption>REllipticCylinder4 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -1974,15 +2030,15 @@
 </table>
 </div>
 <div class="section" id="rarc1-2d">
-<span id="index-55"></span><h1>RArc1   2D<a class="headerlink" href="#rarc1-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rarc1-2d"></span><span id="index-57"></span><h1>RArc1 (2D)<a class="headerlink" href="#rarc1-2d" title="Permalink to this headline">¶</a></h1>
 <p>An arc in 2D described by a line (points) and vector.</p>
 <table border="1" class="docutils">
-<caption>RArc1    2D</caption>
+<caption>RArc1 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2006,15 +2062,15 @@
 </table>
 </div>
 <div class="section" id="rarc2-2d">
-<span id="index-56"></span><h1>RArc2   2D<a class="headerlink" href="#rarc2-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rarc2-2d"></span><span id="index-58"></span><h1>RArc2 (2D)<a class="headerlink" href="#rarc2-2d" title="Permalink to this headline">¶</a></h1>
 <p>An arc in 2D described by a line (vector) and a vector.</p>
 <table border="1" class="docutils">
-<caption>RArc2    2D</caption>
+<caption>RArc2 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2038,15 +2094,15 @@
 </table>
 </div>
 <div class="section" id="rarc3-2d">
-<span id="index-57"></span><h1>RArc3   2D<a class="headerlink" href="#rarc3-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rarc3-2d"></span><span id="index-59"></span><h1>RArc3 (2D)<a class="headerlink" href="#rarc3-2d" title="Permalink to this headline">¶</a></h1>
 <p>An arc in 2D described by three points; vector inferred from third point.</p>
 <table border="1" class="docutils">
-<caption>RArc3    2D</caption>
+<caption>RArc3 members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2065,15 +2121,15 @@
 </table>
 </div>
 <div class="section" id="rarc1-3d">
-<span id="index-58"></span><h1>RArc1   3D<a class="headerlink" href="#rarc1-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rarc1-3d"></span><span id="index-60"></span><h1>RArc1 (3D)<a class="headerlink" href="#rarc1-3d" title="Permalink to this headline">¶</a></h1>
 <p>An arc in 3D described by a line (points) and vector.</p>
 <table border="1" class="docutils">
-<caption>RArc1    3D</caption>
+<caption>RArc1 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2097,15 +2153,15 @@
 </table>
 </div>
 <div class="section" id="rarc2-3d">
-<span id="index-59"></span><h1>RArc2   3D<a class="headerlink" href="#rarc2-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rarc2-3d"></span><span id="index-61"></span><h1>RArc2 (3D)<a class="headerlink" href="#rarc2-3d" title="Permalink to this headline">¶</a></h1>
 <p>An arc in 3D described by a line (vector) and a vector.</p>
 <table border="1" class="docutils">
-<caption>RArc2    3D</caption>
+<caption>RArc2 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2129,15 +2185,15 @@
 </table>
 </div>
 <div class="section" id="rarc3-3d">
-<span id="index-60"></span><h1>RArc3   3D<a class="headerlink" href="#rarc3-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rarc3-3d"></span><span id="index-62"></span><h1>RArc3 (3D)<a class="headerlink" href="#rarc3-3d" title="Permalink to this headline">¶</a></h1>
 <p>An arc in 3D described by three points; vector inferred from third point.</p>
 <table border="1" class="docutils">
-<caption>RArc3    3D</caption>
+<caption>RArc3 members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2156,15 +2212,15 @@
 </table>
 </div>
 <div class="section" id="rbitmask-1d">
-<span id="index-61"></span><h1>RBitMask        1D<a class="headerlink" href="#rbitmask-1d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rbitmask-1d"></span><span id="index-63"></span><h1>RBitMask (1D)<a class="headerlink" href="#rbitmask-1d" title="Permalink to this headline">¶</a></h1>
 <p>A bitmask in 1D described by bounding line, dimensions and mask data.</p>
 <table border="1" class="docutils">
-<caption>RBitMask 1D</caption>
+<caption>RBitMask members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2193,15 +2249,15 @@
 </table>
 </div>
 <div class="section" id="rbitmask-2d">
-<span id="index-62"></span><h1>RBitMask        2D<a class="headerlink" href="#rbitmask-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rbitmask-2d"></span><span id="index-64"></span><h1>RBitMask (2D)<a class="headerlink" href="#rbitmask-2d" title="Permalink to this headline">¶</a></h1>
 <p>A bitmask in 2D described by bounding rectangle, dimensions and mask data.</p>
 <table border="1" class="docutils">
-<caption>RBitMask 2D</caption>
+<caption>RBitMask members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2230,15 +2286,15 @@
 </table>
 </div>
 <div class="section" id="rbitmask-3d">
-<span id="index-63"></span><h1>RBitMask        3D<a class="headerlink" href="#rbitmask-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rbitmask-3d"></span><span id="index-65"></span><h1>RBitMask (3D)<a class="headerlink" href="#rbitmask-3d" title="Permalink to this headline">¶</a></h1>
 <p>A bitmask in 3D described by bounding cuboid, dimensions and mask data.</p>
 <table border="1" class="docutils">
-<caption>RBitMask 3D</caption>
+<caption>RBitMask members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2267,15 +2323,15 @@
 </table>
 </div>
 <div class="section" id="rgreymask-1d">
-<span id="index-64"></span><h1>RGreyMask       1D<a class="headerlink" href="#rgreymask-1d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rgreymask-1d"></span><span id="index-66"></span><h1>RGreyMask (1D)<a class="headerlink" href="#rgreymask-1d" title="Permalink to this headline">¶</a></h1>
 <p>A greymask in 1D described by bounding line, dimensions and mask data.</p>
 <table border="1" class="docutils">
-<caption>RGreyMask        1D</caption>
+<caption>RGreyMask members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2304,15 +2360,15 @@
 </table>
 </div>
 <div class="section" id="rgreymask-2d">
-<span id="index-65"></span><h1>RGreyMask       2D<a class="headerlink" href="#rgreymask-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rgreymask-2d"></span><span id="index-67"></span><h1>RGreyMask (2D)<a class="headerlink" href="#rgreymask-2d" title="Permalink to this headline">¶</a></h1>
 <p>A greymask in 2D described by bounding rectangle, dimensions and mask data.</p>
 <table border="1" class="docutils">
-<caption>RGreyMask        2D</caption>
+<caption>RGreyMask members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2341,15 +2397,15 @@
 </table>
 </div>
 <div class="section" id="rgreymask-3d">
-<span id="index-66"></span><h1>RGreyMask       3D<a class="headerlink" href="#rgreymask-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rgreymask-3d"></span><span id="index-68"></span><h1>RGreyMask (3D)<a class="headerlink" href="#rgreymask-3d" title="Permalink to this headline">¶</a></h1>
 <p>A greymask in 3D described by bounding cuboid, dimensions and mask data.</p>
 <table border="1" class="docutils">
-<caption>RGreyMask        3D</caption>
+<caption>RGreyMask members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2378,15 +2434,15 @@
 </table>
 </div>
 <div class="section" id="rmesh-2d">
-<span id="index-67"></span><h1>RMesh   2D<a class="headerlink" href="#rmesh-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rmesh-2d"></span><span id="index-69"></span><h1>RMesh (2D)<a class="headerlink" href="#rmesh-2d" title="Permalink to this headline">¶</a></h1>
 <p>A face-vertex mesh in 2D described by face and vertex lists.</p>
 <table border="1" class="docutils">
-<caption>RMesh    2D</caption>
+<caption>RMesh members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2420,15 +2476,15 @@
 </table>
 </div>
 <div class="section" id="rmesh-3d">
-<span id="index-68"></span><h1>RMesh   3D<a class="headerlink" href="#rmesh-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-rmesh-3d"></span><span id="index-70"></span><h1>RMesh (3D)<a class="headerlink" href="#rmesh-3d" title="Permalink to this headline">¶</a></h1>
 <p>A face-vertex mesh in 3D described by face and vertex lists.</p>
 <table border="1" class="docutils">
-<caption>RMesh    3D</caption>
+<caption>RMesh members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2462,15 +2518,15 @@
 </table>
 </div>
 <div class="section" id="raffinetransform-1d">
-<span id="index-69"></span><h1>RAffineTransform        1D<a class="headerlink" href="#raffinetransform-1d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-raffinetransform-1d"></span><span id="index-71"></span><h1>RAffineTransform (1D)<a class="headerlink" href="#raffinetransform-1d" title="Permalink to this headline">¶</a></h1>
 <p>An affine transform in 1D described by a transformation matrix and 1D shape to transform.</p>
 <table border="1" class="docutils">
-<caption>RAffineTransform 1D</caption>
+<caption>RAffineTransform members (1D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2494,15 +2550,15 @@
 </table>
 </div>
 <div class="section" id="raffinetransform-2d">
-<span id="index-70"></span><h1>RAffineTransform        2D<a class="headerlink" href="#raffinetransform-2d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-raffinetransform-2d"></span><span id="index-72"></span><h1>RAffineTransform (2D)<a class="headerlink" href="#raffinetransform-2d" title="Permalink to this headline">¶</a></h1>
 <p>An affine transform in 2D described by a transformation matrix and 2D shape to transform.</p>
 <table border="1" class="docutils">
-<caption>RAffineTransform 2D</caption>
+<caption>RAffineTransform members (2D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2526,15 +2582,15 @@
 </table>
 </div>
 <div class="section" id="raffinetransform-3d">
-<span id="index-71"></span><h1>RAffineTransform        3D<a class="headerlink" href="#raffinetransform-3d" title="Permalink to this headline">¶</a></h1>
+<span id="rep-raffinetransform-3d"></span><span id="index-73"></span><h1>RAffineTransform (3D)<a class="headerlink" href="#raffinetransform-3d" title="Permalink to this headline">¶</a></h1>
 <p>An affine transform in 3D described by a transformation matrix and 3D shape to transform.</p>
 <table border="1" class="docutils">
-<caption>RAffineTransform 3D</caption>
+<caption>RAffineTransform members (3D)</caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">SeqNo</th>
@@ -2571,7 +2627,7 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="shapes.html" title="Point"
+          <a href="shapes.html" title="Point (2D)"
              >previous</a> |</li>
         <li><a href="../index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li> 
       </ul>
