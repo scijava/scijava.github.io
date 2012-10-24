@@ -659,7 +659,7 @@
 <tr class="row-odd"><td>90</td>
 <td><a class="reference internal" href="#rep-rrange2-nd"><em>RRange2</em></a></td>
 <td>nD</td>
-<td>A range of valuea specified as an inequality (or equality)</td>
+<td>A range of values specified as an inequality (or equality)</td>
 </tr>
 <tr class="row-even"><td>91</td>
 <td><a class="reference internal" href="#rep-rextrude-nd"><em>RExtrude</em></a></td>
@@ -2115,6 +2115,10 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>V1</dt>
+<dd>Is the dimensionality of the half axes correct here?</dd>
+</dl>
 </div>
 <div class="section" id="rellipsecovariance-2d">
 <span id="rep-rellipsecovariance-2d"></span><span id="index-45"></span><h3>REllipseCovariance (2D)<a class="headerlink" href="#rellipsecovariance-2d" title="Permalink to this headline">¶</a></h3>
@@ -2221,6 +2225,12 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>V2</dt>
+<dd>Is the dimensionality of the half axes correct here?</dd>
+<dt>V3</dt>
+<dd>Is the dimensionality of the half axes correct here?</dd>
+</dl>
 </div>
 <div class="section" id="rellipsoidcovariance-3d">
 <span id="rep-rellipsoidcovariance-3d"></span><span id="index-48"></span><h3>REllipsoidCovariance (3D)<a class="headerlink" href="#rellipsoidcovariance-3d" title="Permalink to this headline">¶</a></h3>
@@ -2257,6 +2267,7 @@
 <div class="section" id="rcircularcylinder1-3d">
 <span id="rep-rcircularcylinder1-3d"></span><span id="index-49"></span><h3>RCircularCylinder1 (3D)<a class="headerlink" href="#rcircularcylinder1-3d" title="Permalink to this headline">¶</a></h3>
 <p>A circular cylinder in 3D described by the centres of both faces and a radius.</p>
+<p>A basic circular cylinder with faces at right angles.</p>
 <table border="1" class="docutils">
 <caption>RCircularCylinder1 members (3D)</caption>
 <colgroup>
@@ -2294,6 +2305,7 @@
 <div class="section" id="rcircularcylinder2-3d">
 <span id="rep-rcircularcylinder2-3d"></span><span id="index-50"></span><h3>RCircularCylinder2 (3D)<a class="headerlink" href="#rcircularcylinder2-3d" title="Permalink to this headline">¶</a></h3>
 <p>A circular cylinder in 3D described by the centre of one face, vector to second face and a radius.</p>
+<p>A basic circular cylinder with faces at right angles.</p>
 <table border="1" class="docutils">
 <caption>RCircularCylinder2 members (3D)</caption>
 <colgroup>
@@ -2331,6 +2343,8 @@
 <div class="section" id="rcircularcylinder3-3d">
 <span id="rep-rcircularcylinder3-3d"></span><span id="index-51"></span><h3>RCircularCylinder3 (3D)<a class="headerlink" href="#rcircularcylinder3-3d" title="Permalink to this headline">¶</a></h3>
 <p>A circular cylinder in 3D with faces at different angles described by the centres of both faces and vectors specifying the radius and angles of the faces.</p>
+<p>Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.</p>
 <table border="1" class="docutils">
 <caption>RCircularCylinder3 members (3D)</caption>
 <colgroup>
@@ -2369,10 +2383,17 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>V2</dt>
+<dd>Should V2 only allow angle, assuming radius from V1, or also allow a
+second radius to represent a conical section?</dd>
+</dl>
 </div>
 <div class="section" id="rcircularcylinder4-3d">
 <span id="rep-rcircularcylinder4-3d"></span><span id="index-52"></span><h3>RCircularCylinder4 (3D)<a class="headerlink" href="#rcircularcylinder4-3d" title="Permalink to this headline">¶</a></h3>
 <p>A circular cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and vectors specifying the radius and angles of the faces.</p>
+<p>Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.</p>
 <table border="1" class="docutils">
 <caption>RCircularCylinder4 members (3D)</caption>
 <colgroup>
@@ -2411,10 +2432,16 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>V3</dt>
+<dd>Should V3 only allow angle, assuming radius from V2, or also allow a
+second radius to represent a conical section?</dd>
+</dl>
 </div>
 <div class="section" id="rellipticcylinder1-3d">
 <span id="rep-rellipticcylinder1-3d"></span><span id="index-53"></span><h3>REllipticCylinder1 (3D)<a class="headerlink" href="#rellipticcylinder1-3d" title="Permalink to this headline">¶</a></h3>
 <p>An elliptic cylinder in 3D described by the centres both faces and half axes.</p>
+<p>A basic elliptic cylinder with faces at right angles.</p>
 <table border="1" class="docutils">
 <caption>REllipticCylinder1 members (3D)</caption>
 <colgroup>
@@ -2453,10 +2480,15 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>V2</dt>
+<dd>Is the dimensionality of the half axes correct here?</dd>
+</dl>
 </div>
 <div class="section" id="rellipticcylinder2-3d">
 <span id="rep-rellipticcylinder2-3d"></span><span id="index-54"></span><h3>REllipticCylinder2 (3D)<a class="headerlink" href="#rellipticcylinder2-3d" title="Permalink to this headline">¶</a></h3>
 <p>An elliptic cylinder in 3D described by the centre of one face, vector to second face and half axes.</p>
+<p>A basic elliptic cylinder with faces at right angles.</p>
 <table border="1" class="docutils">
 <caption>REllipticCylinder2 members (3D)</caption>
 <colgroup>
@@ -2495,10 +2527,16 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>V3</dt>
+<dd>Is the dimensionality of the half axes correct here?</dd>
+</dl>
 </div>
 <div class="section" id="rellipticcylinder3-3d">
 <span id="rep-rellipticcylinder3-3d"></span><span id="index-55"></span><h3>REllipticCylinder3 (3D)<a class="headerlink" href="#rellipticcylinder3-3d" title="Permalink to this headline">¶</a></h3>
 <p>An elliptic cylinder in 3D with faces at different angles described by the centres both faces and half axes and angles.</p>
+<p>Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.</p>
 <table border="1" class="docutils">
 <caption>REllipticCylinder3 members (3D)</caption>
 <colgroup>
@@ -2542,10 +2580,16 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>V1</dt>
+<dd>Should half axes and angle be specified in same vector or separately?</dd>
+</dl>
 </div>
 <div class="section" id="rellipticcylinder4-3d">
 <span id="rep-rellipticcylinder4-3d"></span><span id="index-56"></span><h3>REllipticCylinder4 (3D)<a class="headerlink" href="#rellipticcylinder4-3d" title="Permalink to this headline">¶</a></h3>
 <p>An elliptic cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and half axes and angles.</p>
+<p>Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.</p>
 <table border="1" class="docutils">
 <caption>REllipticCylinder4 members (3D)</caption>
 <colgroup>
@@ -2775,6 +2819,8 @@
 <div class="section" id="rbitmask-1d">
 <span id="rep-rbitmask-1d"></span><span id="index-63"></span><h3>RBitMask (1D)<a class="headerlink" href="#rbitmask-1d" title="Permalink to this headline">¶</a></h3>
 <p>A bitmask in 1D described by bounding line, dimensions and mask data.</p>
+<p>The mask is applied to the bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.</p>
 <table border="1" class="docutils">
 <caption>RBitMask members (1D)</caption>
 <colgroup>
@@ -2812,6 +2858,8 @@
 <div class="section" id="rbitmask-2d">
 <span id="rep-rbitmask-2d"></span><span id="index-64"></span><h3>RBitMask (2D)<a class="headerlink" href="#rbitmask-2d" title="Permalink to this headline">¶</a></h3>
 <p>A bitmask in 2D described by bounding rectangle, dimensions and mask data.</p>
+<p>The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
 <table border="1" class="docutils">
 <caption>RBitMask members (2D)</caption>
 <colgroup>
@@ -2849,6 +2897,8 @@
 <div class="section" id="rbitmask-3d">
 <span id="rep-rbitmask-3d"></span><span id="index-65"></span><h3>RBitMask (3D)<a class="headerlink" href="#rbitmask-3d" title="Permalink to this headline">¶</a></h3>
 <p>A bitmask in 3D described by bounding cuboid, dimensions and mask data.</p>
+<p>The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
 <table border="1" class="docutils">
 <caption>RBitMask members (3D)</caption>
 <colgroup>
@@ -2886,6 +2936,8 @@
 <div class="section" id="rgreymask-1d">
 <span id="rep-rgreymask-1d"></span><span id="index-66"></span><h3>RGreyMask (1D)<a class="headerlink" href="#rgreymask-1d" title="Permalink to this headline">¶</a></h3>
 <p>A greymask in 1D described by bounding line, dimensions and mask data.</p>
+<p>The mask is applied to the bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.</p>
 <table border="1" class="docutils">
 <caption>RGreyMask members (1D)</caption>
 <colgroup>
@@ -2923,6 +2975,8 @@
 <div class="section" id="rgreymask-2d">
 <span id="rep-rgreymask-2d"></span><span id="index-67"></span><h3>RGreyMask (2D)<a class="headerlink" href="#rgreymask-2d" title="Permalink to this headline">¶</a></h3>
 <p>A greymask in 2D described by bounding rectangle, dimensions and mask data.</p>
+<p>The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
 <table border="1" class="docutils">
 <caption>RGreyMask members (2D)</caption>
 <colgroup>
@@ -2960,6 +3014,8 @@
 <div class="section" id="rgreymask-3d">
 <span id="rep-rgreymask-3d"></span><span id="index-68"></span><h3>RGreyMask (3D)<a class="headerlink" href="#rgreymask-3d" title="Permalink to this headline">¶</a></h3>
 <p>A greymask in 3D described by bounding cuboid, dimensions and mask data.</p>
+<p>The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
 <table border="1" class="docutils">
 <caption>RGreyMask members (3D)</caption>
 <colgroup>
@@ -2997,6 +3053,9 @@
 <div class="section" id="rmesh-2d">
 <span id="rep-rmesh-2d"></span><span id="index-69"></span><h3>RMesh (2D)<a class="headerlink" href="#rmesh-2d" title="Permalink to this headline">¶</a></h3>
 <p>A face-vertex mesh in 2D described by face and vertex lists.</p>
+<p>Vertex references are indexes into the VERTS array.  Vertex-face
+mapping is implied, and will require the implementor to construct the
+mapping.</p>
 <table border="1" class="docutils">
 <caption>RMesh members (2D)</caption>
 <colgroup>
@@ -3039,6 +3098,9 @@
 <div class="section" id="rmesh-3d">
 <span id="rep-rmesh-3d"></span><span id="index-70"></span><h3>RMesh (3D)<a class="headerlink" href="#rmesh-3d" title="Permalink to this headline">¶</a></h3>
 <p>A face-vertex mesh in 3D described by face and vertex lists.</p>
+<p>Vertex references are indexes into the VERTS array.  Vertex-face
+mapping is implied, and will require the implementor to construct the
+mapping.</p>
 <table border="1" class="docutils">
 <caption>RMesh members (3D)</caption>
 <colgroup>
@@ -3109,6 +3171,10 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>TRANS</dt>
+<dd>TODO: Specify dimensions for transform?  Or have variants for different combinations?</dd>
+</dl>
 </div>
 <div class="section" id="raffinetransform-2d">
 <span id="rep-raffinetransform-2d"></span><span id="index-72"></span><h3>RAffineTransform (2D)<a class="headerlink" href="#raffinetransform-2d" title="Permalink to this headline">¶</a></h3>
@@ -3572,6 +3638,10 @@
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>TEXT</dt>
+<dd>Or, should the text be specified externally, e.g. as ROI label text?</dd>
+</dl>
 </div>
 <div class="section" id="rvalue-nd">
 <span id="rep-rvalue-nd"></span><span id="index-86"></span><h3>RValue (nD)<a class="headerlink" href="#rvalue-nd" title="Permalink to this headline">¶</a></h3>
@@ -3681,7 +3751,8 @@
 </div>
 <div class="section" id="rrange2-nd">
 <span id="rep-rrange2-nd"></span><span id="index-89"></span><h3>RRange2 (nD)<a class="headerlink" href="#rrange2-nd" title="Permalink to this headline">¶</a></h3>
-<p>A range of valuea specified as an inequality (or equality).</p>
+<p>A range of values specified as an inequality (or equality).</p>
+<p>Specified as all values for which the formula “n O1 V1” is true, e.g. “n ≤ 5”.</p>
 <table border="1" class="docutils">
 <caption>RRange2 members (nD)</caption>
 <colgroup>
