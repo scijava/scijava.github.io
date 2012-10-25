@@ -1979,6 +1979,246 @@ Binary bitwise operation.
 
 
 .. index::
+    RLinesPoints (1D)
+
+.. _rep_RLinesPoints_1D:
+
+RLinesPoints (1D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by two points in 1D.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinesPoints members (1D)
+    :header-rows: 1
+    :file: gen/rep-RLinesPoints-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RLinesVectors (1D)
+
+.. _rep_RLinesVectors_1D:
+
+RLinesVectors (1D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by a point and a vector in 1D; can be used to represent a vector field.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RLinesVectors members (1D)
+    :header-rows: 1
+    :file: gen/rep-RLinesVectors-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RPolylinePoints (1D)
+
+.. _rep_RPolylinePoints_1D:
+
+RPolylinePoints (1D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline in 1D [could use RPoints1D directly].
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPolylinePoints members (1D)
+    :header-rows: 1
+    :file: gen/rep-RPolylinePoints-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RPolylineVector (1D)
+
+.. _rep_RPolylineVector_1D:
+
+RPolylineVector (1D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline represented by a starting point and list of vectors in 1D.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RPolylineVector members (1D)
+    :header-rows: 1
+    :file: gen/rep-RPolylineVector-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedRectangle1 (2D)
+
+.. _rep_RAlignedRectangle1_2D:
+
+RAlignedRectangle1 (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned rectangle described by two points in 2D.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedRectangle1 members (2D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedRectangle1-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedCuboid1 (3D)
+
+.. _rep_RAlignedCuboid1_3D:
+
+RAlignedCuboid1 (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by two points in 3D.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedCuboid1 members (3D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedCuboid1-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedRectangle2 (2D)
+
+.. _rep_RAlignedRectangle2_2D:
+
+RAlignedRectangle2 (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned rectangle described by a point and a vector.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedRectangle2 members (2D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedRectangle2-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedCuboid2 (3D)
+
+.. _rep_RAlignedCuboid2_3D:
+
+RAlignedCuboid2 (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by a point and a vector.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedCuboid2 members (3D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedCuboid2-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RCube1 (3D)
+
+.. _rep_RCube1_3D:
+
+RCube1 (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by two points in 3D.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCube1 members (3D)
+    :header-rows: 1
+    :file: gen/rep-RCube1-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RCube2 (3D)
+
+.. _rep_RCube2_3D:
+
+RCube2 (3D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by a point and a vector.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCube2 members (3D)
+    :header-rows: 1
+    :file: gen/rep-RCube2-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RSquare1 (2D)
+
+.. _rep_RSquare1_2D:
+
+RSquare1 (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by two points in 3D.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RSquare1 members (2D)
+    :header-rows: 1
+    :file: gen/rep-RSquare1-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RSquare2 (2D)
+
+.. _rep_RSquare2_2D:
+
+RSquare2 (2D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by a point and a vector.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RSquare2 members (2D)
+    :header-rows: 1
+    :file: gen/rep-RSquare2-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
     RCircle0 (2D)
 
 .. _rep_RCircle0_2D:

@@ -149,6 +149,18 @@
 <li><a class="reference internal" href="#rbitwise-1d">RBitwise (1D)</a></li>
 <li><a class="reference internal" href="#rbitwise-2d">RBitwise (2D)</a></li>
 <li><a class="reference internal" href="#rbitwise-3d">RBitwise (3D)</a></li>
+<li><a class="reference internal" href="#rlinespoints-1d">RLinesPoints (1D)</a></li>
+<li><a class="reference internal" href="#rlinesvectors-1d">RLinesVectors (1D)</a></li>
+<li><a class="reference internal" href="#rpolylinepoints-1d">RPolylinePoints (1D)</a></li>
+<li><a class="reference internal" href="#rpolylinevector-1d">RPolylineVector (1D)</a></li>
+<li><a class="reference internal" href="#ralignedrectangle1-2d">RAlignedRectangle1 (2D)</a></li>
+<li><a class="reference internal" href="#ralignedcuboid1-3d">RAlignedCuboid1 (3D)</a></li>
+<li><a class="reference internal" href="#ralignedrectangle2-2d">RAlignedRectangle2 (2D)</a></li>
+<li><a class="reference internal" href="#ralignedcuboid2-3d">RAlignedCuboid2 (3D)</a></li>
+<li><a class="reference internal" href="#rcube1-3d">RCube1 (3D)</a></li>
+<li><a class="reference internal" href="#rcube2-3d">RCube2 (3D)</a></li>
+<li><a class="reference internal" href="#rsquare1-2d">RSquare1 (2D)</a></li>
+<li><a class="reference internal" href="#rsquare2-2d">RSquare2 (2D)</a></li>
 <li><a class="reference internal" href="#rcircle0-2d">RCircle0 (2D)</a></li>
 <li><a class="reference internal" href="#rcircle4-2d">RCircle4 (2D)</a></li>
 <li><a class="reference internal" href="#rsphere0-3d">RSphere0 (3D)</a></li>
@@ -685,6 +697,66 @@
 <td><a class="reference internal" href="#rep-rbitwise-3d"><em>RBitwise</em></a></td>
 <td>3D</td>
 <td>Binary bitwise operation</td>
+</tr>
+<tr class="row-odd"><td>181</td>
+<td><a class="reference internal" href="#rep-rlinespoints-1d"><em>RLinesPoints</em></a></td>
+<td>1D</td>
+<td>A list of lines described by two points in 1D</td>
+</tr>
+<tr class="row-even"><td>201</td>
+<td><a class="reference internal" href="#rep-rlinesvectors-1d"><em>RLinesVectors</em></a></td>
+<td>1D</td>
+<td>A list of lines described by a point and a vector in 1D; can be used to represent a vector field</td>
+</tr>
+<tr class="row-odd"><td>221</td>
+<td><a class="reference internal" href="#rep-rpolylinepoints-1d"><em>RPolylinePoints</em></a></td>
+<td>1D</td>
+<td>A list of points in a polyline in 1D [could use RPoints1D directly]</td>
+</tr>
+<tr class="row-even"><td>241</td>
+<td><a class="reference internal" href="#rep-rpolylinevector-1d"><em>RPolylineVector</em></a></td>
+<td>1D</td>
+<td>A list of points in a polyline represented by a starting point and list of vectors in 1D</td>
+</tr>
+<tr class="row-odd"><td>291</td>
+<td><a class="reference internal" href="#rep-ralignedrectangle1-2d"><em>RAlignedRectangle1</em></a></td>
+<td>2D</td>
+<td>An aligned rectangle described by two points in 2D</td>
+</tr>
+<tr class="row-even"><td>292</td>
+<td><a class="reference internal" href="#rep-ralignedcuboid1-3d"><em>RAlignedCuboid1</em></a></td>
+<td>3D</td>
+<td>An aligned cuboid described by two points in 3D</td>
+</tr>
+<tr class="row-odd"><td>293</td>
+<td><a class="reference internal" href="#rep-ralignedrectangle2-2d"><em>RAlignedRectangle2</em></a></td>
+<td>2D</td>
+<td>An aligned rectangle described by a point and a vector</td>
+</tr>
+<tr class="row-even"><td>294</td>
+<td><a class="reference internal" href="#rep-ralignedcuboid2-3d"><em>RAlignedCuboid2</em></a></td>
+<td>3D</td>
+<td>An aligned cuboid described by a point and a vector</td>
+</tr>
+<tr class="row-odd"><td>295</td>
+<td><a class="reference internal" href="#rep-rcube1-3d"><em>RCube1</em></a></td>
+<td>3D</td>
+<td>An aligned cuboid described by two points in 3D</td>
+</tr>
+<tr class="row-even"><td>296</td>
+<td><a class="reference internal" href="#rep-rcube2-3d"><em>RCube2</em></a></td>
+<td>3D</td>
+<td>An aligned cuboid described by a point and a vector</td>
+</tr>
+<tr class="row-odd"><td>297</td>
+<td><a class="reference internal" href="#rep-rsquare1-2d"><em>RSquare1</em></a></td>
+<td>2D</td>
+<td>An aligned cuboid described by two points in 3D</td>
+</tr>
+<tr class="row-even"><td>298</td>
+<td><a class="reference internal" href="#rep-rsquare2-2d"><em>RSquare2</em></a></td>
+<td>2D</td>
+<td>An aligned cuboid described by a point and a vector</td>
 </tr>
 <tr class="row-odd"><td>341</td>
 <td><a class="reference internal" href="#rep-rcircle0-2d"><em>RCircle0</em></a></td>
@@ -3962,8 +4034,347 @@ mapping.</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="rlinespoints-1d">
+<span id="rep-rlinespoints-1d"></span><span id="index-95"></span><h3>RLinesPoints (1D)<a class="headerlink" href="#rlinespoints-1d" title="Permalink to this headline">¶</a></h3>
+<p>A list of lines described by two points in 1D.</p>
+<table border="1" class="docutils">
+<caption>RLinesPoints members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NLINES</td>
+<td>Count</td>
+<td>Number of lines</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>LINES</td>
+<td>RLinePoints1D[NLINES]</td>
+<td>Array of line points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rlinesvectors-1d">
+<span id="rep-rlinesvectors-1d"></span><span id="index-96"></span><h3>RLinesVectors (1D)<a class="headerlink" href="#rlinesvectors-1d" title="Permalink to this headline">¶</a></h3>
+<p>A list of lines described by a point and a vector in 1D; can be used to represent a vector field.</p>
+<table border="1" class="docutils">
+<caption>RLinesVectors members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NLINES</td>
+<td>Count</td>
+<td>Number of lines</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>LINES</td>
+<td>RLineVector1D[NLINES]</td>
+<td>Array of line vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpolylinepoints-1d">
+<span id="rep-rpolylinepoints-1d"></span><span id="index-97"></span><h3>RPolylinePoints (1D)<a class="headerlink" href="#rpolylinepoints-1d" title="Permalink to this headline">¶</a></h3>
+<p>A list of points in a polyline in 1D [could use RPoints1D directly].</p>
+<table border="1" class="docutils">
+<caption>RPolylinePoints members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RPoints1D</td>
+<td>Array of points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpolylinevector-1d">
+<span id="rep-rpolylinevector-1d"></span><span id="index-98"></span><h3>RPolylineVector (1D)<a class="headerlink" href="#rpolylinevector-1d" title="Permalink to this headline">¶</a></h3>
+<p>A list of points in a polyline represented by a starting point and list of vectors in 1D.</p>
+<table border="1" class="docutils">
+<caption>RPolylineVector members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>Vertex1D</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>V1</td>
+<td>RVectors1D</td>
+<td>Array of vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedrectangle1-2d">
+<span id="rep-ralignedrectangle1-2d"></span><span id="index-99"></span><h3>RAlignedRectangle1 (2D)<a class="headerlink" href="#ralignedrectangle1-2d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned rectangle described by two points in 2D.</p>
+<table border="1" class="docutils">
+<caption>RAlignedRectangle1 members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLinePoints2D</td>
+<td>Corner and opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedcuboid1-3d">
+<span id="rep-ralignedcuboid1-3d"></span><span id="index-100"></span><h3>RAlignedCuboid1 (3D)<a class="headerlink" href="#ralignedcuboid1-3d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned cuboid described by two points in 3D.</p>
+<table border="1" class="docutils">
+<caption>RAlignedCuboid1 members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLinePoints3D</td>
+<td>Corner and opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedrectangle2-2d">
+<span id="rep-ralignedrectangle2-2d"></span><span id="index-101"></span><h3>RAlignedRectangle2 (2D)<a class="headerlink" href="#ralignedrectangle2-2d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned rectangle described by a point and a vector.</p>
+<table border="1" class="docutils">
+<caption>RAlignedRectangle2 members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLineVector2D</td>
+<td>Corner and vector to opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedcuboid2-3d">
+<span id="rep-ralignedcuboid2-3d"></span><span id="index-102"></span><h3>RAlignedCuboid2 (3D)<a class="headerlink" href="#ralignedcuboid2-3d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned cuboid described by a point and a vector.</p>
+<table border="1" class="docutils">
+<caption>RAlignedCuboid2 members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLineVector3D</td>
+<td>Corner and vector to opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rcube1-3d">
+<span id="rep-rcube1-3d"></span><span id="index-103"></span><h3>RCube1 (3D)<a class="headerlink" href="#rcube1-3d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned cuboid described by two points in 3D.</p>
+<table border="1" class="docutils">
+<caption>RCube1 members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLinePoints3D</td>
+<td>Corner and adjacent corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rcube2-3d">
+<span id="rep-rcube2-3d"></span><span id="index-104"></span><h3>RCube2 (3D)<a class="headerlink" href="#rcube2-3d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned cuboid described by a point and a vector.</p>
+<table border="1" class="docutils">
+<caption>RCube2 members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLineVector3D</td>
+<td>Corner and vector to adjacent corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rsquare1-2d">
+<span id="rep-rsquare1-2d"></span><span id="index-105"></span><h3>RSquare1 (2D)<a class="headerlink" href="#rsquare1-2d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned cuboid described by two points in 3D.</p>
+<table border="1" class="docutils">
+<caption>RSquare1 members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLinePoints2D</td>
+<td>Corner and opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rsquare2-2d">
+<span id="rep-rsquare2-2d"></span><span id="index-106"></span><h3>RSquare2 (2D)<a class="headerlink" href="#rsquare2-2d" title="Permalink to this headline">¶</a></h3>
+<p>An aligned cuboid described by a point and a vector.</p>
+<table border="1" class="docutils">
+<caption>RSquare2 members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>P1</td>
+<td>RLineVector2D</td>
+<td>Corner and vector to opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="rcircle0-2d">
-<span id="rep-rcircle0-2d"></span><span id="index-95"></span><h3>RCircle0 (2D)<a class="headerlink" href="#rcircle0-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rcircle0-2d"></span><span id="index-107"></span><h3>RCircle0 (2D)<a class="headerlink" href="#rcircle0-2d" title="Permalink to this headline">¶</a></h3>
 <p>A circle in 2D described by a centre point and circumference point.</p>
 <table border="1" class="docutils">
 <caption>RCircle0 members (2D)</caption>
@@ -3995,7 +4406,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rcircle4-2d">
-<span id="rep-rcircle4-2d"></span><span id="index-96"></span><h3>RCircle4 (2D)<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rcircle4-2d"></span><span id="index-108"></span><h3>RCircle4 (2D)<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h3>
 <p>A circle in 2D described by two circumference points [diameter].</p>
 <table border="1" class="docutils">
 <caption>RCircle4 members (2D)</caption>
@@ -4022,7 +4433,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rsphere0-3d">
-<span id="rep-rsphere0-3d"></span><span id="index-97"></span><h3>RSphere0 (3D)<a class="headerlink" href="#rsphere0-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rsphere0-3d"></span><span id="index-109"></span><h3>RSphere0 (3D)<a class="headerlink" href="#rsphere0-3d" title="Permalink to this headline">¶</a></h3>
 <p>A sphere in 3D described by a centre point and surface point.</p>
 <table border="1" class="docutils">
 <caption>RSphere0 members (3D)</caption>
@@ -4054,7 +4465,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rsphere5-3d">
-<span id="rep-rsphere5-3d"></span><span id="index-98"></span><h3>RSphere5 (3D)<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rsphere5-3d"></span><span id="index-110"></span><h3>RSphere5 (3D)<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h3>
 <p>A sphere in 3D described by a two surface points [diameter].</p>
 <table border="1" class="docutils">
 <caption>RSphere5 members (3D)</caption>
