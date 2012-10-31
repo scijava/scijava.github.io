@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Layers &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    <title>Compound types &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
     <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
-    <link rel="next" title="ROI-ROI links" href="linkage.html" />
-    <link rel="prev" title="Masks" href="masks.html" /> 
+    <link rel="next" title="Geometric shape primitives" href="geometry.html" />
+    <link rel="prev" title="Enumerated types" href="enums.html" /> 
   </head>
   <body>
     <div class="related">
@@ -38,10 +38,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="linkage.html" title="ROI-ROI links"
+          <a href="geometry.html" title="Geometric shape primitives"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="masks.html" title="Masks"
+          <a href="enums.html" title="Enumerated types"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
           <li><a href="roi.html" accesskey="U">ROI Specification [DRAFT]</a> &raquo;</li> 
@@ -49,15 +49,24 @@
     </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Compound types</a><ul>
+<li><a class="reference internal" href="#shape">Shape</a></li>
+<li><a class="reference internal" href="#string">String</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="masks.html"
-                        title="previous chapter">Masks</a></p>
+  <p class="topless"><a href="enums.html"
+                        title="previous chapter">Enumerated types</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="linkage.html"
-                        title="next chapter">ROI-ROI links</a></p>
+  <p class="topless"><a href="geometry.html"
+                        title="next chapter">Geometric shape primitives</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/layers.txt"
+    <li><a href="_sources/compounds.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -81,17 +90,75 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="layers">
-<h1>Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h1>
-<p>In the Zeiss AxioVision formats, ROIs (shapes) are contained within
-Layers.  Sets of ROIs are collected in different layers.  The UI only
-uses a single layer, but uses separate layers for acquisition and
-post-acquisition ROIs.  But in the file format one may define arbitrary
-numbers of layers to act as a grouping mechanism for ROIs.</p>
-<p>Adding layers as a top level grouping would permit related ROIs to be
-grouped together.  However, this would also be possible using ROI-ROI
-links; it could be implemented using Layer-ROI links.  Maybe layer
-could be a ROI type used solely for grouping?</p>
+  <div class="section" id="compound-types">
+<h1>Compound types<a class="headerlink" href="#compound-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="shape">
+<span id="compound-shape"></span><span id="index-0"></span><h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>Shape</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NCHAR</td>
+<td>Count</td>
+<td>Number of octets</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>SID</td>
+<td>ShapeID</td>
+<td>Shape identifier</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>RID</td>
+<td>RepID</td>
+<td>Representation identifier</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="string">
+<span id="compound-string"></span><span id="index-1"></span><h2>String<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>String</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NCHAR</td>
+<td>Count</td>
+<td>Number of octets</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>uint8[NCHAR]</td>
+<td>CHARS</td>
+<td>Array of octets (UTF-8)</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -107,10 +174,10 @@ could be a ROI type used solely for grouping?</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="linkage.html" title="ROI-ROI links"
+          <a href="geometry.html" title="Geometric shape primitives"
              >next</a> |</li>
         <li class="right" >
-          <a href="masks.html" title="Masks"
+          <a href="enums.html" title="Enumerated types"
              >previous</a> |</li>
         <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
           <li><a href="roi.html" >ROI Specification [DRAFT]</a> &raquo;</li> 

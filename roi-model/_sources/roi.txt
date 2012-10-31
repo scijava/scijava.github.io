@@ -18,12 +18,15 @@ ROI Specification [DRAFT]
    initial
    3dconversion
    primitives
+   enums
+   compounds
    geometry
    ndim
    compound
    affine
    shapes
    representations
+   masks.rst
    layers
    linkage
    storage

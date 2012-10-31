@@ -1,0 +1,31 @@
+Enumerated types
+================
+
+
+.. index::
+    BLogic
+
+.. _enum_BLogic:
+
+BLogic
+^^^^^^
+
+.. csv-table:: BLogic
+    :header-rows: 1
+    :file: gen/enum-BLogic.txt
+    :delim: tab
+
+
+.. index::
+    Operator
+
+.. _enum_Operator:
+
+Operator
+^^^^^^^^
+
+.. csv-table:: Operator
+    :header-rows: 1
+    :file: gen/enum-Operator.txt
+    :delim: tab
+

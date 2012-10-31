@@ -132,16 +132,34 @@ curves so that it does not vary between implementations.</p>
 <li><dl class="first docutils">
 <dt>Transforms</dt>
 <dd><ul class="first last">
+<li><p class="first">Abililty to attach transforms</p>
+</li>
 <li><dl class="first docutils">
 <dt>Non-affine transforms.</dt>
 <dd><ul class="first last simple">
-<li>Need examples to understand the problem better.</li>
+<li>Need examples to understand the problem better</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><p class="first">Store transforms with ROI?</p>
 </li>
+<li><p class="first">Apply multiple transforms to a ROI in sequence; nested list of transforms</p>
+</li>
+<li><p class="first">Modelling spaces and objects in space; maybe define transforms
+separately and reuse them</p>
+</li>
+<li><p class="first">Tree of transformations and operations</p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Union ROIs</dt>
+<dd><ul class="first last simple">
+<li>Only works in transform domain / &#8220;view space&#8221;</li>
+<li>Union of hypervolumes.  [How to represent different shapes at different times?]</li>
 </ul>
 </dd>
 </dl>
@@ -152,6 +170,45 @@ curves so that it does not vary between implementations.</p>
 <dt>Specific ROI types</dt>
 <dd><ul class="first last simple">
 <li>Include checkerboard (uneven integers)</li>
+<li>Hierarchy of ROIs; compound list</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Rendering:</dt>
+<dd><ul class="first last simple">
+<li>jHotDraw and other drawing toolkit independence</li>
+<li>Need objects to be manipulable</li>
+<li>List of control points</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Editing:</dt>
+<dd><ul class="first last simple">
+<li>Needed to manipulate shapes</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Tree of operations</dt>
+<dd><ul class="first last simple">
+<li>compiler/interpreter</li>
+<li>obtain a &#8220;result&#8221;</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Grouping</p>
+</li>
+<li><dl class="first docutils">
+<dt>Comparison of models:</dt>
+<dd><ul class="first last simple">
+<li>OME: ROI is union of shapes</li>
+<li>ImgLib: Group is union of ROIs</li>
 </ul>
 </dd>
 </dl>

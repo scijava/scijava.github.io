@@ -28,7 +28,7 @@
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
     <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
     <link rel="next" title="Regions in arbitrary dimensions" href="ndim.html" />
-    <link rel="prev" title="Fundamental data types" href="primitives.html" /> 
+    <link rel="prev" title="Compound types" href="compounds.html" /> 
   </head>
   <body>
     <div class="related">
@@ -41,7 +41,7 @@
           <a href="ndim.html" title="Regions in arbitrary dimensions"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="primitives.html" title="Fundamental data types"
+          <a href="compounds.html" title="Compound types"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
           <li><a href="roi.html" accesskey="U">ROI Specification [DRAFT]</a> &raquo;</li> 
@@ -64,8 +64,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="primitives.html"
-                        title="previous chapter">Fundamental data types</a></p>
+  <p class="topless"><a href="compounds.html"
+                        title="previous chapter">Compound types</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="ndim.html"
                         title="next chapter">Regions in arbitrary dimensions</a></p>
@@ -172,6 +172,27 @@ by limiting the number of variants.</p>
 </div>
 <div class="section" id="shape-serialisation">
 <h2>Shape serialisation<a class="headerlink" href="#shape-serialisation" title="Permalink to this headline">¶</a></h2>
+<p>All shape primitives are described in terms of the above fundamental
+primitives.  This means that all shape descriptions are serialisable
+as a list of integer and double-precision floating point values.  The
+specifics of this are implementation-defined.  Example formats:</p>
+<ul class="simple">
+<li>Plain text, as a list of values</li>
+<li>XML, as element content or a string attribute</li>
+<li>Binary data stream, using big-endian/network byte order</li>
+</ul>
+<p>This also means that for compatible shape types, the shape type may be
+changed while retaining the following data unchanged (e.g. polyline to
+polygon spline with the same point list).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Roger Leigh</strong> All 2D shape primitives could be oriented in 3D or
+using a unit Vector3D, which would allow all 2D shapes to be used
+as surfaces in 3D.  They would additionally require a depth in
+order to be meaningful (or assume a depth of one z slice).</p>
+<p class="last">Or, 2D shapes should specify the pair of x/y/z axes they are
+using, and will be extruded along the third axis.</p>
+</div>
 <p>Key considerations:</p>
 <ul class="simple">
 <li>A shape exists in a set of dimensions e.g. xy, xyz, xyt.  The shape
@@ -299,7 +320,7 @@ images.</p>
           <a href="ndim.html" title="Regions in arbitrary dimensions"
              >next</a> |</li>
         <li class="right" >
-          <a href="primitives.html" title="Fundamental data types"
+          <a href="compounds.html" title="Compound types"
              >previous</a> |</li>
         <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
           <li><a href="roi.html" >ROI Specification [DRAFT]</a> &raquo;</li> 

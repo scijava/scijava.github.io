@@ -26,7 +26,7 @@ shape's representations for in (or vice-versa for out).
 .. _shape_Point_3D:
 
 Point (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 A single point.
 
@@ -48,7 +48,7 @@ Canonical form is RPoint (3D).
 .. _shape_Points_3D:
 
 Points (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 A set of points.
 
@@ -70,7 +70,7 @@ Canonical form is RPoints (3D).
 .. _shape_Line_3D:
 
 Line (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^
 
 A single line.
 
@@ -92,7 +92,7 @@ Canonical form is RLinePoints (3D).
 .. _shape_Lines_3D:
 
 Lines (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 A set of lines.
 
@@ -114,7 +114,7 @@ Canonical form is RLinesPoints (3D).
 .. _shape_Polyline_3D:
 
 Polyline (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A set of connected points (open).
 
@@ -136,7 +136,7 @@ Canonical form is RPolylinePoints (3D).
 .. _shape_Polygon_3D:
 
 Polygon (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A set of connected points (closed).
 
@@ -158,7 +158,7 @@ Canonical form is RPolylinePoints (3D).
 .. _shape_PolylineSpline_3D:
 
 PolylineSpline (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 A set of connected splines (open).
 
@@ -180,7 +180,7 @@ Canonical form is RPolylineVector (3D).
 .. _shape_PolygonSpline_3D:
 
 PolygonSpline (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 A set of connected splines (closed).
 
@@ -202,7 +202,7 @@ Canonical form is RPolylineVector (3D).
 .. _shape_Arc_3D:
 
 Arc (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
 
 An arc.
 
@@ -224,7 +224,7 @@ Canonical form is RArc1 (3D).
 .. _shape_Cuboid_3D:
 
 Cuboid (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 A cuboid.
 
@@ -246,7 +246,7 @@ Canonical form is RCuboid1 (3D).
 .. _shape_Ellipsoid_3D:
 
 Ellipsoid (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 An ellipsoid.
 
@@ -282,7 +282,7 @@ Cuboid
 .. _shape_Cylinder_3D:
 
 Cylinder (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 An elliptic cylinder.
 
@@ -304,7 +304,7 @@ Canonical form is REllipticCylinder1 (3D).
 .. _shape_Mesh_3D:
 
 Mesh (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^
 
 A mesh.
 
@@ -326,7 +326,7 @@ Canonical form is RMesh (3D).
 .. _shape_BitMask_3D:
 
 BitMask (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A mask with one bit values.
 
@@ -348,7 +348,7 @@ Canonical form is RBitMask (3D).
 .. _shape_GreyMask_3D:
 
 GreyMask (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A mask with multiple grey levels.
 
@@ -370,7 +370,7 @@ Canonical form is RGreyMask (3D).
 .. _shape_AffineTransform_3D:
 
 AffineTransform (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 Affine transformation of a shape.
 
@@ -392,7 +392,7 @@ Canonical form is RAffineTransform (3D).
 .. _shape_AbstractTransform_3D:
 
 AbstractTransform (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 Abstract (implementation-defined) transformation of a shape.
 
@@ -414,7 +414,7 @@ Canonical form is RAbstractTransform (3D).
 .. _shape_Bitwise_3D:
 
 Bitwise (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 Binary bitwise operation.
 
@@ -436,7 +436,7 @@ Canonical form is RBitwise (3D).
 .. _shape_Value_nD:
 
 Value (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 A value in an arbitrary dimension.
 
@@ -459,7 +459,7 @@ Canonical form is RValue (nD).
 .. _shape_Values_nD:
 
 Values (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 A set of values in an arbitrary dimension.
 
@@ -482,7 +482,7 @@ Canonical form is RValues (nD).
 .. _shape_Range_nD:
 
 Range (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 A range of values in an arbitrary dimension.
 
@@ -505,7 +505,7 @@ Canonical form is RRange2 (nD).
 .. _shape_Extrude_nD:
 
 Extrude (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 Extrude a shape of arbitrary dimensionality into an additional dimension..
 
@@ -529,7 +529,7 @@ Canonical form is RExtrude (nD).
 .. _shape_Combine_nD:
 
 Combine (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 Combine shapes of differing dimensionality.
 
@@ -553,7 +553,7 @@ Canonical form is RCombine (nD).
 .. _shape_Text_3D:
 
 Text (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^
 
 Text (label).
 
@@ -578,7 +578,7 @@ Canonical form is RText (2D).
 .. _shape_Scale_3D:
 
 Scale (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 A scale bar between two points.
 
@@ -598,7 +598,7 @@ A scale bar between two points.
 .. _shape_Grid_3D:
 
 Grid (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^
 
 A scale grid in a defined volume.
 

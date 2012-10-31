@@ -27,7 +27,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
     <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
-    <link rel="next" title="Geometric shape primitives" href="geometry.html" />
+    <link rel="next" title="Enumerated types" href="enums.html" />
     <link rel="prev" title="2D primitives in 3D" href="3dconversion.html" /> 
   </head>
   <body>
@@ -38,7 +38,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="geometry.html" title="Geometric shape primitives"
+          <a href="enums.html" title="Enumerated types"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="3dconversion.html" title="2D primitives in 3D"
@@ -49,22 +49,12 @@
     </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Fundamental data types</a><ul>
-<li><a class="reference internal" href="#basic-primitives">Basic primitives</a></li>
-<li><a class="reference internal" href="#basic-operators">Basic operators</a></li>
-<li><a class="reference internal" href="#binary-bitwise-operators">Binary bitwise operators</a></li>
-</ul>
-</li>
-</ul>
-
   <h4>Previous topic</h4>
   <p class="topless"><a href="3dconversion.html"
                         title="previous chapter">2D primitives in 3D</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="geometry.html"
-                        title="next chapter">Geometric shape primitives</a></p>
+  <p class="topless"><a href="enums.html"
+                        title="next chapter">Enumerated types</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/primitives.txt"
@@ -101,8 +91,6 @@ Implementors should treat these sizes as minimium requirements.</p>
 interoperability between implementations, these may be required to
 be exact.  Using plain text would mitigate this to an extent.</p>
 </div>
-<div class="section" id="basic-primitives">
-<h2>Basic primitives<a class="headerlink" href="#basic-primitives" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <caption>Primitives</caption>
 <colgroup>
@@ -111,161 +99,229 @@ be exact.  Using plain text would mitigate this to an extent.</p>
 <col width="33%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Primitive</th>
-<th class="head">Type</th>
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">BinType</th>
 <th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>ShapeID</td>
-<td>uint16</td>
-<td>Numeric shape identifier</td>
-</tr>
-<tr class="row-odd"><td>RepID</td>
-<td>uint16</td>
-<td>Numeric shape representation identifier</td>
-</tr>
-<tr class="row-even"><td>Count</td>
-<td>uint32</td>
-<td>Number of objects</td>
-</tr>
-<tr class="row-odd"><td>Index</td>
-<td>uint32</td>
-<td>Index into an array</td>
-</tr>
-<tr class="row-even"><td>Value</td>
-<td>double</td>
-<td>Numerical value</td>
-</tr>
-<tr class="row-odd"><td>Operator</td>
-<td>uint8</td>
-<td>Mathematical operator</td>
-</tr>
-<tr class="row-even"><td>BLogic</td>
-<td>uint8</td>
-<td>Bitwise binary logical operator</td>
-</tr>
-<tr class="row-odd"><td>Vertex1D</td>
-<td>double[1]</td>
-<td>Vertex in 1D</td>
-</tr>
-<tr class="row-even"><td>Vertex2D</td>
-<td>double[2]</td>
-<td>Vertex in 2D</td>
-</tr>
-<tr class="row-odd"><td>Vertex3D</td>
-<td>double[3]</td>
-<td>Vertex in 3D</td>
-</tr>
-<tr class="row-even"><td>Vector1D</td>
-<td>double[1]</td>
-<td>Vector in 1D</td>
-</tr>
-<tr class="row-odd"><td>Vector2D</td>
-<td>double[2]</td>
-<td>Vector in 2D</td>
-</tr>
-<tr class="row-even"><td>Vector3D</td>
-<td>double[3]</td>
-<td>Vector in 3D</td>
-</tr>
-<tr class="row-odd"><td>Affine1D</td>
+<tr class="row-even"><td><em class="xref std std-ref">Affine1D</em></td>
 <td>double[2][2]</td>
 <td>Affine transform in 1D</td>
 </tr>
-<tr class="row-even"><td>Affine2D</td>
+<tr class="row-odd"><td><em class="xref std std-ref">Affine2D</em></td>
 <td>double[3][3]</td>
 <td>Affine transform in 2D</td>
 </tr>
-<tr class="row-odd"><td>Affine3D</td>
+<tr class="row-even"><td><em class="xref std std-ref">Affine3D</em></td>
 <td>double[4][4]</td>
 <td>Affine transform in 3D</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="enums.html#enum-blogic"><em>BLogic</em></a></td>
+<td>uint8</td>
+<td>Bitwise binary logical operator</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Count</em></td>
+<td>uint32</td>
+<td>Number of objects</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Index</em></td>
+<td>uint32</td>
+<td>Index into an array</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="enums.html#enum-operator"><em>Operator</em></a></td>
+<td>uint8</td>
+<td>Mathematical operator</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">RepID</em></td>
+<td>uint16</td>
+<td>Numeric shape representation identifier</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Representation</em></td>
+<td>compound</td>
+<td>Abstract shape representation</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="compounds.html#compound-shape"><em>Shape</em></a></td>
+<td>compound</td>
+<td>Abstract shape</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">ShapeID</em></td>
+<td>uint16</td>
+<td>Numeric shape identifier</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="compounds.html#compound-string"><em>String</em></a></td>
+<td>compound</td>
+<td>Text string</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Value</em></td>
+<td>double</td>
+<td>Numerical value</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vector1D</em></td>
+<td>double</td>
+<td>Vector in 1D</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vector2D</em></td>
+<td>double[2]</td>
+<td>Vector in 2D</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vector3D</em></td>
+<td>double[3]</td>
+<td>Vector in 3D</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vertex1D</em></td>
+<td>double</td>
+<td>Vertex in 1D</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vertex2D</em></td>
+<td>double[2]</td>
+<td>Vertex in 2D</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vertex3D</em></td>
+<td>double[3]</td>
+<td>Vertex in 3D</td>
 </tr>
 </tbody>
 </table>
 <table border="1" class="docutils">
-<caption>Compound primitives</caption>
+<caption>C++ primitives</caption>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">#Primitive</th>
-<th class="head">SeqNo</th>
-<th class="head">Type</th>
-<th class="head">Name</th>
-<th class="head">Description</th>
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">C++ Type</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>String</td>
-<td>0</td>
-<td>NCHAR</td>
-<td>Count</td>
-<td>Number of octets</td>
+<tr class="row-even"><td><em class="xref std std-ref">Affine1D</em></td>
+<td>glm::detail::tmat2x2&lt;double&gt;</td>
 </tr>
-<tr class="row-odd"><td>String</td>
-<td>1</td>
-<td>uint8[NCHAR]</td>
-<td>CHARS</td>
-<td>Array of octets (UTF-8)</td>
+<tr class="row-odd"><td><em class="xref std std-ref">Affine2D</em></td>
+<td>glm::detail::tmat3x3&lt;double&gt;</td>
 </tr>
-<tr class="row-even"><td># Per-shape state also includes: shape- and representation- specific data</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><em class="xref std std-ref">Affine3D</em></td>
+<td>glm::detail::tmat4x4&lt;double&gt;</td>
 </tr>
-<tr class="row-odd"><td>Shape</td>
-<td>0</td>
-<td>NCHAR</td>
-<td>Count</td>
-<td>Number of octets</td>
+<tr class="row-odd"><td><a class="reference internal" href="enums.html#enum-blogic"><em>BLogic</em></a></td>
+<td><a class="reference internal" href="enums.html#enum-blogic"><em>BLogic</em></a></td>
 </tr>
-<tr class="row-even"><td>Shape</td>
-<td>1</td>
-<td>SID</td>
-<td>ShapeID</td>
-<td>Shape identifier</td>
+<tr class="row-even"><td><em class="xref std std-ref">Count</em></td>
+<td>int32_t</td>
 </tr>
-<tr class="row-odd"><td># Also used for re-serialisation; may be converted to canonical form internally</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><em class="xref std std-ref">Index</em></td>
+<td>uint32_t</td>
 </tr>
-<tr class="row-even"><td>Shape</td>
-<td>2</td>
-<td>RID</td>
-<td>RepID</td>
-<td>Representation identifier</td>
+<tr class="row-even"><td><a class="reference internal" href="enums.html#enum-operator"><em>Operator</em></a></td>
+<td><a class="reference internal" href="enums.html#enum-operator"><em>Operator</em></a></td>
 </tr>
-<tr class="row-odd"><td># Internal</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><em class="xref std std-ref">RepID</em></td>
+<td>uint16_t</td>
 </tr>
-<tr class="row-even"><td># Shape</td>
-<td>3</td>
-<td>NDIM</td>
-<td>Count</td>
-<td>Number of dimensions</td>
+<tr class="row-even"><td><em class="xref std std-ref">Representation</em></td>
+<td>scijava::roi::representation</td>
 </tr>
-<tr class="row-odd"><td># Shape</td>
-<td>4</td>
-<td>DIMS</td>
-<td>Index[NDIM]</td>
-<td>Object dimensionality (dimension numbers in use)</td>
+<tr class="row-odd"><td><a class="reference internal" href="compounds.html#compound-shape"><em>Shape</em></a></td>
+<td>scijava::roi::shape</td>
 </tr>
-<tr class="row-even"><td># Shape</td>
-<td>5</td>
-<td>PROPS</td>
-<td>Props</td>
-<td>Shape properties (point size, line width, text font/size etc.)</td>
+<tr class="row-even"><td><em class="xref std std-ref">ShapeID</em></td>
+<td>uint16_t</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="compounds.html#compound-string"><em>String</em></a></td>
+<td>std::string</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Value</em></td>
+<td>double</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vector1D</em></td>
+<td>double</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vector2D</em></td>
+<td>glm::detail::tvec2&lt;double&gt;</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vector3D</em></td>
+<td>glm::detail::tvec3&lt;double&gt;</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vertex1D</em></td>
+<td>double</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vertex2D</em></td>
+<td>glm::detail::tvec2&lt;double&gt;</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vertex3D</em></td>
+<td>glm::detail::tvec2&lt;double&gt;</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<caption>Java primitives</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Java Type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em class="xref std std-ref">Affine1D</em></td>
+<td>scijava.roi.types.Matrix2D</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Affine2D</em></td>
+<td>scijava.roi.types.Matrix3D</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Affine3D</em></td>
+<td>scijava.roi.types.Matrix4D</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="enums.html#enum-blogic"><em>BLogic</em></a></td>
+<td><a class="reference internal" href="enums.html#enum-blogic"><em>BLogic</em></a></td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Count</em></td>
+<td>int</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Index</em></td>
+<td>int</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="enums.html#enum-operator"><em>Operator</em></a></td>
+<td><a class="reference internal" href="enums.html#enum-operator"><em>Operator</em></a></td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">RepID</em></td>
+<td>short</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Representation</em></td>
+<td>scijava.roi.representation</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="compounds.html#compound-shape"><em>Shape</em></a></td>
+<td>scijava.roi.shape</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">ShapeID</em></td>
+<td>short</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="compounds.html#compound-string"><em>String</em></a></td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Value</em></td>
+<td>double</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vector1D</em></td>
+<td>scijava.roi.types.Vector1D</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vector2D</em></td>
+<td>scijava.roi.types.Vector2D</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vector3D</em></td>
+<td>scijava.roi.types.Vector3D</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vertex1D</em></td>
+<td>scijava.roi.types.Point1D</td>
+</tr>
+<tr class="row-odd"><td><em class="xref std std-ref">Vertex2D</em></td>
+<td>scijava.roi.types.Point2D</td>
+</tr>
+<tr class="row-even"><td><em class="xref std std-ref">Vertex3D</em></td>
+<td>scijava.roi.types.Point3D</td>
 </tr>
 </tbody>
 </table>
@@ -273,104 +329,6 @@ be exact.  Using plain text would mitigate this to an extent.</p>
 <p class="first admonition-title">Note</p>
 <p class="last"><strong>Barry DeZonia</strong> Support different coordinate spaces as needed
 (int, long, double).  Should be possible to iterate some regions.</p>
-</div>
-</div>
-<div class="section" id="basic-operators">
-<h2>Basic operators<a class="headerlink" href="#basic-operators" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="22%" />
-<col width="65%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Value</th>
-<th class="head">Operator</th>
-<th class="head">Value Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>=</td>
-<td>Equals</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>≠</td>
-<td>Not equals</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>&lt;</td>
-<td>Less than</td>
-</tr>
-<tr class="row-odd"><td>3</td>
-<td>≤</td>
-<td>Less than or equal to</td>
-</tr>
-<tr class="row-even"><td>4</td>
-<td>&gt;</td>
-<td>Greater than</td>
-</tr>
-<tr class="row-odd"><td>5</td>
-<td>≥</td>
-<td>Greater than or equal to</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="binary-bitwise-operators">
-<h2>Binary bitwise operators<a class="headerlink" href="#binary-bitwise-operators" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="16%" />
-<col width="26%" />
-<col width="58%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Value</th>
-<th class="head">Operator</th>
-<th class="head">Value Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>AND</td>
-<td>0     And</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>OR</td>
-<td>1     Or</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>NOT</td>
-<td>2     Not</td>
-</tr>
-<tr class="row-odd"><td>3</td>
-<td>XOR</td>
-<td>3     Exclusive or</td>
-</tr>
-</tbody>
-</table>
-<p>All shape primitives are described in terms of the above fundamental
-primitives.  This means that all shape descriptions are serialisable
-as a list of integer and double-precision floating point values.  The
-specifics of this are implementation-defined.  Example formats:</p>
-<ul class="simple">
-<li>Plain text, as a list of values</li>
-<li>XML, as element content or a string attribute</li>
-<li>Binary data stream, using big-endian/network byte order</li>
-</ul>
-<p>This also means that for compatible shape types, the shape type may be
-changed while retaining the following data unchanged (e.g. polyline to
-polygon spline with the same point list).</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p><strong>Roger Leigh</strong> All 2D shape primitives could be oriented in 3D or
-using a unit Vector3D, which would allow all 2D shapes to be used
-as surfaces in 3D.  They would additionally require a depth in
-order to be meaningful (or assume a depth of one z slice).</p>
-<p class="last">Or, 2D shapes should specify the pair of x/y/z axes they are
-using, and will be extruded along the third axis.</p>
-</div>
 </div>
 </div>
 
@@ -387,7 +345,7 @@ using, and will be extruded along the third axis.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="geometry.html" title="Geometric shape primitives"
+          <a href="enums.html" title="Enumerated types"
              >next</a> |</li>
         <li class="right" >
           <a href="3dconversion.html" title="2D primitives in 3D"

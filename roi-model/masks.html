@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Masks &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
+    <link rel="next" title="Layers" href="layers.html" />
+    <link rel="prev" title="Shape representations" href="representations.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="layers.html" title="Layers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="representations.html" title="Shape representations"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" accesskey="U">ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Masks</a><ul>
+<li><a class="reference internal" href="#specification">Specification</a></li>
+<li><a class="reference internal" href="#set-operations">Set operations</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="representations.html"
+                        title="previous chapter">Shape representations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="layers.html"
+                        title="next chapter">Layers</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/masks.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="masks">
+<h1>Masks<a class="headerlink" href="#masks" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="specification">
+<h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h2>
+<p>Bitmasks may be specified directly, e.g. by segmenting an image.  They
+may also be derived from any shape, since every shape is reducible to
+a bitmask.</p>
+<p>Greymasks (masks with multiple greylevels) may also be specified
+directly.  They may also be derived from any shape.  Shapes may
+provide direct conversion to a greymask, or alternatively via a
+high-resolution bitmask, which is then converted into a greymask.
+This process is illustrated in the following figure.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<dl class="last docutils">
+<dt><strong>Roger</strong></dt>
+<dd><p class="first">We need to specify the criteria for pixel inclusion when
+converting from a shape to bitmask.  Some shapes may be able
+to efficiently convert to a greymask, but a threshold value is
+still needed.</p>
+<p>We also need to allow the user to specify the threshold value
+when converting from a greymask to bitmask.</p>
+<p class="last">Also need to have rules for conversion of points and lines,
+which do not have any intrinsic area, to pixels.  Does a point
+always occupy a single pixel?  How about lines, which pass
+through multiple pixels?  The latter could convert to a
+greymask.  Both could have default widths and allow the user
+to override them.  Convert via a shape e.g. implicitly convert
+line to cuboid and point to sphere?</p>
+</dd>
+</dl>
+</div>
+<p>A circle, drawn a 6×6 pixel grid may be converted directly as a 6×6
+pixel bitmap.  Alternatively, the grid may be subdivided further so
+that each pixel is itself an 8×8 pixel grid, to give a grid size of
+48×48 pixels.  Each real pixel therefore contains 256 bits of
+information, from which it is trivial to derive a 6×6 pixel 6-bit
+greymask with 256 grey levels.  The resolution may be further
+increased so that each pixel is a 16×16 pixel grid from which an 8-bit
+greymask with 256 greylevels may be derived.</p>
+<img alt="Bitmasks and greymasks" src="_images/greymap.svg" width="60%" /><p>The following grid sizes could be used:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="21%" />
+<col width="33%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Grid size</th>
+<th class="head">Grid bits</th>
+<th class="head">Greylevel bits</th>
+<th class="head">Greylevels</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2×2</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>4×4</td>
+<td>16</td>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr class="row-even"><td>8×8</td>
+<td>64</td>
+<td>6</td>
+<td>64</td>
+</tr>
+<tr class="row-odd"><td>16×16</td>
+<td>256</td>
+<td>8</td>
+<td>256</td>
+</tr>
+<tr class="row-even"><td>32×32</td>
+<td>1024</td>
+<td>10</td>
+<td>1024</td>
+</tr>
+<tr class="row-odd"><td>64×64</td>
+<td>3096</td>
+<td>12</td>
+<td>4096</td>
+</tr>
+<tr class="row-even"><td>128×128</td>
+<td>16384</td>
+<td>14</td>
+<td>16384</td>
+</tr>
+<tr class="row-odd"><td>256x256</td>
+<td>65536</td>
+<td>16</td>
+<td>65536</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<dl class="last docutils">
+<dt><strong>Roger</strong></dt>
+<dd>We don&#8217;t need to support all these sizes, but supporting 8 bit
+masks at a minimum would be useful.  Larger sizes would have
+greater precision, but quite a large overhead: a 16 bit
+greymask requires 8KiB/pixel!</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="set-operations">
+<h2>Set operations<a class="headerlink" href="#set-operations" title="Permalink to this headline">¶</a></h2>
+<p>Set operations only make sense to perform at the level of bitmasks.
+Set operations on basic shape geometry rapidly becomes an intractable
+problem, since this for example requires that it be possible to
+describe the union of every shape type with every other shape type,
+including all combinations of unions.  This would be possible if all
+geometry was reduced to meshes, but this would also result in a loss
+of precision.</p>
+<p>Set operations are trivial to perform using masks.  However, as shown
+in the above figure, there may be loss of precision when converting to
+a mask.  However, it would be possible to do the set operations on a
+higher-resolution mask prior to conversion to a greymask or
+lower-resolution bitmask.  This includes intersection, set difference,
+etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<dl class="last docutils">
+<dt><strong>Roger</strong></dt>
+<dd>Consider a union of two shapes which do not touch, but which
+overlap a common pixel.  It is possible to compute the union
+using the higher-resolution bitmask because this takes into
+account the extent to which the shapes overlap (or not), and
+this can be reflected in the resulting greymap.  The user
+can choose the precision of the operation via the grid size</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="layers.html" title="Layers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="representations.html" title="Shape representations"
+             >previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" >ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

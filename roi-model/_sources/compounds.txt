@@ -1,0 +1,31 @@
+Compound types
+==============
+
+
+.. index::
+    Shape
+
+.. _compound_Shape:
+
+Shape
+^^^^^
+
+.. csv-table:: Shape
+    :header-rows: 1
+    :file: gen/compound-Shape.txt
+    :delim: tab
+
+
+.. index::
+    String
+
+.. _compound_String:
+
+String
+^^^^^^
+
+.. csv-table:: String
+    :header-rows: 1
+    :file: gen/compound-String.txt
+    :delim: tab
+

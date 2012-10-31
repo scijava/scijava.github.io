@@ -21,7 +21,7 @@ Definitions
 .. _rep_RPoint_1D:
 
 RPoint (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 A single point in 1D.
 
@@ -41,7 +41,7 @@ A single point in 1D.
 .. _rep_RPoint_2D:
 
 RPoint (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 A single point in 2D.
 
@@ -61,7 +61,7 @@ A single point in 2D.
 .. _rep_RPoint_3D:
 
 RPoint (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 A single point in 3D.
 
@@ -81,7 +81,7 @@ A single point in 3D.
 .. _rep_RPoints_1D:
 
 RPoints (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A list of points in 1D.
 
@@ -101,7 +101,7 @@ A list of points in 1D.
 .. _rep_RPoints_2D:
 
 RPoints (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A list of points in 2D.
 
@@ -121,7 +121,7 @@ A list of points in 2D.
 .. _rep_RPoints_3D:
 
 RPoints (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A list of points in 3D.
 
@@ -141,7 +141,7 @@ A list of points in 3D.
 .. _rep_RVector_1D:
 
 RVector (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A vector in 1D.
 
@@ -161,7 +161,7 @@ A vector in 1D.
 .. _rep_RVector_2D:
 
 RVector (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A vector in 2D.
 
@@ -181,7 +181,7 @@ A vector in 2D.
 .. _rep_RVector_3D:
 
 RVector (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A vector in 3D.
 
@@ -201,7 +201,7 @@ A vector in 3D.
 .. _rep_RVectors_1D:
 
 RVectors (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A list of vectors in 1D.
 
@@ -221,7 +221,7 @@ A list of vectors in 1D.
 .. _rep_RVectors_2D:
 
 RVectors (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A list of vectors in 2D.
 
@@ -241,7 +241,7 @@ A list of vectors in 2D.
 .. _rep_RVectors_3D:
 
 RVectors (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A list of vectors in 3D.
 
@@ -261,7 +261,7 @@ A list of vectors in 3D.
 .. _rep_RLinePoints_1D:
 
 RLinePoints (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A line described by two points in 1D.
 
@@ -281,7 +281,7 @@ A line described by two points in 1D.
 .. _rep_RLinePoints_2D:
 
 RLinePoints (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A line described by two points in 2D.
 
@@ -301,7 +301,7 @@ A line described by two points in 2D.
 .. _rep_RLinePoints_3D:
 
 RLinePoints (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A line described by two points in 3D.
 
@@ -321,7 +321,7 @@ A line described by two points in 3D.
 .. _rep_RLineVector_1D:
 
 RLineVector (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A line described by a point and a vector.
 
@@ -341,7 +341,7 @@ A line described by a point and a vector.
 .. _rep_RLineVector_2D:
 
 RLineVector (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A line described by a point and a vector.
 
@@ -361,7 +361,7 @@ A line described by a point and a vector.
 .. _rep_RLineVector_3D:
 
 RLineVector (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A line described by a point and a vector.
 
@@ -381,7 +381,7 @@ A line described by a point and a vector.
 .. _rep_RLinesPoints_2D:
 
 RLinesPoints (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 A list of lines described by two points in 2D.
 
@@ -401,7 +401,7 @@ A list of lines described by two points in 2D.
 .. _rep_RLinesPoints_3D:
 
 RLinesPoints (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 A list of lines described by two points in 3D.
 
@@ -421,7 +421,7 @@ A list of lines described by two points in 3D.
 .. _rep_RLinesVectors_2D:
 
 RLinesVectors (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 A list of lines described by a point and a vector in 2D; can be used to represent a vector field.
 
@@ -441,7 +441,7 @@ A list of lines described by a point and a vector in 2D; can be used to represen
 .. _rep_RLinesVectors_3D:
 
 RLinesVectors (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 A list of lines described by a point and a vector in 3D; can be used to represent a vector field.
 
@@ -461,7 +461,7 @@ A list of lines described by a point and a vector in 3D; can be used to represen
 .. _rep_RPolylinePoints_2D:
 
 RPolylinePoints (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline in 2D [could use RPoints2D directly].
 
@@ -481,7 +481,7 @@ A list of points in a polyline in 2D [could use RPoints2D directly].
 .. _rep_RPolylinePoints_3D:
 
 RPolylinePoints (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline in 3D [could use RPoints3D directly].
 
@@ -501,7 +501,7 @@ A list of points in a polyline in 3D [could use RPoints3D directly].
 .. _rep_RPolylineVector_2D:
 
 RPolylineVector (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline represented by a starting point and list of vectors in 2D.
 
@@ -521,7 +521,7 @@ A list of points in a polyline represented by a starting point and list of vecto
 .. _rep_RPolylineVector_3D:
 
 RPolylineVector (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline represented by a starting point and list of vectors in 3D.
 
@@ -541,7 +541,7 @@ A list of points in a polyline represented by a starting point and list of vecto
 .. _rep_RAlignedSquare1_2D:
 
 RAlignedSquare1 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A square in 2D aligned with the axes described by a corner point and adjacent corner.
 
@@ -561,7 +561,7 @@ A square in 2D aligned with the axes described by a corner point and adjacent co
 .. _rep_RAlignedSquare2_2D:
 
 RAlignedSquare2 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A square in 2D aligned with the axes described by a corner point and vector to an adjacent corner.
 
@@ -581,7 +581,7 @@ A square in 2D aligned with the axes described by a corner point and vector to a
 .. _rep_RAlignedCube1_3D:
 
 RAlignedCube1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 A cube in 3D aligned with the axes described by a corner point and adjacent corner.
 
@@ -601,7 +601,7 @@ A cube in 3D aligned with the axes described by a corner point and adjacent corn
 .. _rep_RAlignedCube2_3D:
 
 RAlignedCube2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 A cube in 3D aligned with the axes described by a corner point and vector to an adjacent corner.
 
@@ -621,7 +621,7 @@ A cube in 3D aligned with the axes described by a corner point and vector to an 
 .. _rep_RRectangle1_2D:
 
 RRectangle1 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A rectangle in 2D described by two corner points and a vector.
 
@@ -641,7 +641,7 @@ A rectangle in 2D described by two corner points and a vector.
 .. _rep_RRectangle2_2D:
 
 RRectangle2 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 A rectangle in 2D described by a corner point and two vectors.
 
@@ -661,7 +661,7 @@ A rectangle in 2D described by a corner point and two vectors.
 .. _rep_RCuboid1_3D:
 
 RCuboid1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A cuboid in 3D described by two adjacent corners and two vectors.
 
@@ -681,7 +681,7 @@ A cuboid in 3D described by two adjacent corners and two vectors.
 .. _rep_RCuboid2_3D:
 
 RCuboid2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A cuboid in 3D described by a corner and three vectors.
 
@@ -701,7 +701,7 @@ A cuboid in 3D described by a corner and three vectors.
 .. _rep_RCircle1_2D:
 
 RCircle1 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A circle in 2D described by a centre point and 1D radius.
 
@@ -721,7 +721,7 @@ A circle in 2D described by a centre point and 1D radius.
 .. _rep_RCircle2_2D:
 
 RCircle2 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A circle in 2D described by a centre point and 2D radius.
 
@@ -741,7 +741,7 @@ A circle in 2D described by a centre point and 2D radius.
 .. _rep_RCircle3_2D:
 
 RCircle3 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A circle in 2D described by a circumference point and vector to the centre point.
 
@@ -761,7 +761,7 @@ A circle in 2D described by a circumference point and vector to the centre point
 .. _rep_RCircle5_2D:
 
 RCircle5 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A circle in 2D described by three circumference points.
 
@@ -781,7 +781,7 @@ A circle in 2D described by three circumference points.
 .. _rep_RSphere1_3D:
 
 RSphere1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A sphere in 3D described by a centre point and 1D radius.
 
@@ -801,7 +801,7 @@ A sphere in 3D described by a centre point and 1D radius.
 .. _rep_RSphere2_3D:
 
 RSphere2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A sphere in 3D described by a centre point and 2D radius.
 
@@ -821,7 +821,7 @@ A sphere in 3D described by a centre point and 2D radius.
 .. _rep_RSphere3_3D:
 
 RSphere3 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A sphere in 3D described by a centre point and 3D radius.
 
@@ -841,7 +841,7 @@ A sphere in 3D described by a centre point and 3D radius.
 .. _rep_RSphere4_3D:
 
 RSphere4 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A sphere in 3D described by a surface point and vector to the centre point.
 
@@ -861,7 +861,7 @@ A sphere in 3D described by a surface point and vector to the centre point.
 .. _rep_RSphere6_3D:
 
 RSphere6 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A sphere in 3D described by a four surface points.
 
@@ -881,7 +881,7 @@ A sphere in 3D described by a four surface points.
 .. _rep_RAlignedHalfAxes_2D:
 
 RAlignedHalfAxes (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 An ellipse in 2D aligned with the axes described by two half axes.
 
@@ -901,7 +901,7 @@ An ellipse in 2D aligned with the axes described by two half axes.
 .. _rep_RHalfAxes_2D:
 
 RHalfAxes (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 An ellipse in 2D described by two half axes.
 
@@ -924,7 +924,7 @@ V1
 .. _rep_REllipseCovariance_2D:
 
 REllipseCovariance (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipse in 2D described by a centre point and covariance matrix (Mahalanbobis distance).
 
@@ -944,7 +944,7 @@ An ellipse in 2D described by a centre point and covariance matrix (Mahalanbobis
 .. _rep_RAlignedHalfAxes_3D:
 
 RAlignedHalfAxes (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 An ellipsoid in 3D aligned with the axes.
 
@@ -964,7 +964,7 @@ An ellipsoid in 3D aligned with the axes.
 .. _rep_RHalfAxes_3D:
 
 RHalfAxes (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 An ellipsoid in 3D described by three half axes.
 
@@ -990,7 +990,7 @@ V3
 .. _rep_REllipsoidCovariance_3D:
 
 REllipsoidCovariance (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An ellipsoid in 3D described by a centre point and covariance matrix (Mahalanbobis distance).
 
@@ -1010,7 +1010,7 @@ An ellipsoid in 3D described by a centre point and covariance matrix (Mahalanbob
 .. _rep_RCircularCylinder1_3D:
 
 RCircularCylinder1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D described by the centres of both faces and a radius.
 
@@ -1031,7 +1031,7 @@ A basic circular cylinder with faces at right angles.
 .. _rep_RCircularCylinder2_3D:
 
 RCircularCylinder2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D described by the centre of one face, vector to second face and a radius.
 
@@ -1052,7 +1052,7 @@ A basic circular cylinder with faces at right angles.
 .. _rep_RCircularCylinder3_3D:
 
 RCircularCylinder3 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D with faces at different angles described by the centres of both faces and vectors specifying the radius and angles of the faces.
 
@@ -1078,7 +1078,7 @@ V2
 .. _rep_RCircularCylinder4_3D:
 
 RCircularCylinder4 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 A circular cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and vectors specifying the radius and angles of the faces.
 
@@ -1104,7 +1104,7 @@ V3
 .. _rep_REllipticCylinder1_3D:
 
 REllipticCylinder1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D described by the centres both faces and half axes.
 
@@ -1128,7 +1128,7 @@ V2
 .. _rep_REllipticCylinder2_3D:
 
 REllipticCylinder2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D described by the centre of one face, vector to second face and half axes.
 
@@ -1152,7 +1152,7 @@ V3
 .. _rep_REllipticCylinder3_3D:
 
 REllipticCylinder3 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D with faces at different angles described by the centres both faces and half axes and angles.
 
@@ -1177,7 +1177,7 @@ V1
 .. _rep_REllipticCylinder4_3D:
 
 REllipticCylinder4 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An elliptic cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and half axes and angles.
 
@@ -1199,7 +1199,7 @@ for tubular structures without gaps at the joins.
 .. _rep_RArc1_2D:
 
 RArc1 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 An arc in 2D described by a line (points) and vector.
 
@@ -1219,7 +1219,7 @@ An arc in 2D described by a line (points) and vector.
 .. _rep_RArc2_2D:
 
 RArc2 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 An arc in 2D described by a line (vector) and a vector.
 
@@ -1239,7 +1239,7 @@ An arc in 2D described by a line (vector) and a vector.
 .. _rep_RArc3_2D:
 
 RArc3 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 An arc in 2D described by three points; vector inferred from third point.
 
@@ -1259,7 +1259,7 @@ An arc in 2D described by three points; vector inferred from third point.
 .. _rep_RArc1_3D:
 
 RArc1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 An arc in 3D described by a line (points) and vector.
 
@@ -1279,7 +1279,7 @@ An arc in 3D described by a line (points) and vector.
 .. _rep_RArc2_3D:
 
 RArc2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 An arc in 3D described by a line (vector) and a vector.
 
@@ -1299,7 +1299,7 @@ An arc in 3D described by a line (vector) and a vector.
 .. _rep_RArc3_3D:
 
 RArc3 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 An arc in 3D described by three points; vector inferred from third point.
 
@@ -1319,7 +1319,7 @@ An arc in 3D described by three points; vector inferred from third point.
 .. _rep_RBitMask_1D:
 
 RBitMask (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A bitmask in 1D described by bounding line, dimensions and mask data.
 
@@ -1341,7 +1341,7 @@ x size of the mask.  DATA is the mask pixel data.
 .. _rep_RBitMask_2D:
 
 RBitMask (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A bitmask in 2D described by bounding rectangle, dimensions and mask data.
 
@@ -1363,7 +1363,7 @@ x and y size of the mask.  DATA is the mask pixel data.
 .. _rep_RBitMask_3D:
 
 RBitMask (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A bitmask in 3D described by bounding cuboid, dimensions and mask data.
 
@@ -1385,7 +1385,7 @@ x, y and z size of the mask.  DATA is the mask pixel data.
 .. _rep_RGreyMask_1D:
 
 RGreyMask (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 A greymask in 1D described by bounding line, dimensions and mask data.
 
@@ -1407,7 +1407,7 @@ x size of the mask.  DATA is the mask pixel data.
 .. _rep_RGreyMask_2D:
 
 RGreyMask (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 A greymask in 2D described by bounding rectangle, dimensions and mask data.
 
@@ -1429,7 +1429,7 @@ x and y size of the mask.  DATA is the mask pixel data.
 .. _rep_RGreyMask_3D:
 
 RGreyMask (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 A greymask in 3D described by bounding cuboid, dimensions and mask data.
 
@@ -1451,7 +1451,7 @@ x, y and z size of the mask.  DATA is the mask pixel data.
 .. _rep_RMesh_2D:
 
 RMesh (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 A face-vertex mesh in 2D described by face and vertex lists.
 
@@ -1474,7 +1474,7 @@ mapping.
 .. _rep_RMesh_3D:
 
 RMesh (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 A face-vertex mesh in 3D described by face and vertex lists.
 
@@ -1497,7 +1497,7 @@ mapping.
 .. _rep_RAffineTransform_1D:
 
 RAffineTransform (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 An affine transform in 1D described by a transformation matrix and 1D shape to transform.
 
@@ -1520,7 +1520,7 @@ TRANS
 .. _rep_RAffineTransform_2D:
 
 RAffineTransform (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 An affine transform in 2D described by a transformation matrix and 2D shape to transform.
 
@@ -1540,7 +1540,7 @@ An affine transform in 2D described by a transformation matrix and 2D shape to t
 .. _rep_RAffineTransform_3D:
 
 RAffineTransform (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 An affine transform in 3D described by a transformation matrix and 3D shape to transform.
 
@@ -1560,7 +1560,7 @@ An affine transform in 3D described by a transformation matrix and 3D shape to t
 .. _rep_RTranslateTransform_1D:
 
 RTranslateTransform (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 A translation transformation in 1D.
 
@@ -1580,7 +1580,7 @@ A translation transformation in 1D.
 .. _rep_RTranslateTransform_2D:
 
 RTranslateTransform (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 A translation transformation in 2D.
 
@@ -1600,7 +1600,7 @@ A translation transformation in 2D.
 .. _rep_RTranslateTransform_3D:
 
 RTranslateTransform (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 A translation transformation in 3D.
 
@@ -1620,7 +1620,7 @@ A translation transformation in 3D.
 .. _rep_RScaleTransform_1D:
 
 RScaleTransform (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A scaling transformation in 1D.
 
@@ -1640,7 +1640,7 @@ A scaling transformation in 1D.
 .. _rep_RScaleTransform_2D:
 
 RScaleTransform (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A scaling transformation in 2D.
 
@@ -1660,7 +1660,7 @@ A scaling transformation in 2D.
 .. _rep_RScaleTransform_3D:
 
 RScaleTransform (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A scaling transformation in 3D.
 
@@ -1680,7 +1680,7 @@ A scaling transformation in 3D.
 .. _rep_RRotateTransform_2D:
 
 RRotateTransform (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 A rotation transformation in 2D.
 
@@ -1700,7 +1700,7 @@ A rotation transformation in 2D.
 .. _rep_RRotateTransform_3D:
 
 RRotateTransform (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 A rotation transformation in 3D.
 
@@ -1720,7 +1720,7 @@ A rotation transformation in 3D.
 .. _rep_RAbstractTransform_1D:
 
 RAbstractTransform (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An abstract (implementation-defined) transform in 1D.
 
@@ -1740,7 +1740,7 @@ An abstract (implementation-defined) transform in 1D.
 .. _rep_RAbstractTransform_2D:
 
 RAbstractTransform (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An abstract (implementation-defined) transform in 2D.
 
@@ -1760,7 +1760,7 @@ An abstract (implementation-defined) transform in 2D.
 .. _rep_RAbstractTransform_3D:
 
 RAbstractTransform (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An abstract (implementation-defined) transform in 3D.
 
@@ -1780,7 +1780,7 @@ An abstract (implementation-defined) transform in 3D.
 .. _rep_RText_2D:
 
 RText (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 Text.
 
@@ -1803,7 +1803,7 @@ TEXT
 .. _rep_RValue_nD:
 
 RValue (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 A single value.
 
@@ -1823,7 +1823,7 @@ A single value.
 .. _rep_RValues_nD:
 
 RValues (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A set of values.
 
@@ -1843,7 +1843,7 @@ A set of values.
 .. _rep_RRange1_nD:
 
 RRange1 (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A range of values specified as the half-open range [V1, V2).
 
@@ -1863,7 +1863,7 @@ A range of values specified as the half-open range [V1, V2).
 .. _rep_RRange2_nD:
 
 RRange2 (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 A range of values specified as an inequality (or equality).
 
@@ -1884,7 +1884,7 @@ Specified as all values for which the formula “n O1 V1” is true, e.g. “n �
 .. _rep_RExtrude_nD:
 
 RExtrude (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A shape extruded in an additional dimension.
 
@@ -1904,7 +1904,7 @@ A shape extruded in an additional dimension.
 .. _rep_RCombine_nD:
 
 RCombine (nD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A shape combined from shapes in different dimensions.
 
@@ -1924,7 +1924,7 @@ A shape combined from shapes in different dimensions.
 .. _rep_RBitwise_1D:
 
 RBitwise (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 Binary bitwise operation.
 
@@ -1944,7 +1944,7 @@ Binary bitwise operation.
 .. _rep_RBitwise_2D:
 
 RBitwise (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 Binary bitwise operation.
 
@@ -1964,7 +1964,7 @@ Binary bitwise operation.
 .. _rep_RBitwise_3D:
 
 RBitwise (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 Binary bitwise operation.
 
@@ -1984,7 +1984,7 @@ Binary bitwise operation.
 .. _rep_RLinesPoints_1D:
 
 RLinesPoints (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 A list of lines described by two points in 1D.
 
@@ -2004,7 +2004,7 @@ A list of lines described by two points in 1D.
 .. _rep_RLinesVectors_1D:
 
 RLinesVectors (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 A list of lines described by a point and a vector in 1D; can be used to represent a vector field.
 
@@ -2024,7 +2024,7 @@ A list of lines described by a point and a vector in 1D; can be used to represen
 .. _rep_RPolylinePoints_1D:
 
 RPolylinePoints (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline in 1D [could use RPoints1D directly].
 
@@ -2044,7 +2044,7 @@ A list of points in a polyline in 1D [could use RPoints1D directly].
 .. _rep_RPolylineVector_1D:
 
 RPolylineVector (1D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 A list of points in a polyline represented by a starting point and list of vectors in 1D.
 
@@ -2064,7 +2064,7 @@ A list of points in a polyline represented by a starting point and list of vecto
 .. _rep_RAlignedRectangle1_2D:
 
 RAlignedRectangle1 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An aligned rectangle described by two points in 2D.
 
@@ -2084,7 +2084,7 @@ An aligned rectangle described by two points in 2D.
 .. _rep_RAlignedCuboid1_3D:
 
 RAlignedCuboid1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 An aligned cuboid described by two points in 3D.
 
@@ -2104,7 +2104,7 @@ An aligned cuboid described by two points in 3D.
 .. _rep_RAlignedRectangle2_2D:
 
 RAlignedRectangle2 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 An aligned rectangle described by a point and a vector.
 
@@ -2124,7 +2124,7 @@ An aligned rectangle described by a point and a vector.
 .. _rep_RAlignedCuboid2_3D:
 
 RAlignedCuboid2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 An aligned cuboid described by a point and a vector.
 
@@ -2144,7 +2144,7 @@ An aligned cuboid described by a point and a vector.
 .. _rep_RCube1_3D:
 
 RCube1 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 An aligned cuboid described by two points in 3D.
 
@@ -2164,7 +2164,7 @@ An aligned cuboid described by two points in 3D.
 .. _rep_RCube2_3D:
 
 RCube2 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 An aligned cuboid described by a point and a vector.
 
@@ -2184,7 +2184,7 @@ An aligned cuboid described by a point and a vector.
 .. _rep_RSquare1_2D:
 
 RSquare1 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 An aligned cuboid described by two points in 3D.
 
@@ -2204,7 +2204,7 @@ An aligned cuboid described by two points in 3D.
 .. _rep_RSquare2_2D:
 
 RSquare2 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 An aligned cuboid described by a point and a vector.
 
@@ -2224,7 +2224,7 @@ An aligned cuboid described by a point and a vector.
 .. _rep_RCircle0_2D:
 
 RCircle0 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A circle in 2D described by a centre point and circumference point.
 
@@ -2244,7 +2244,7 @@ A circle in 2D described by a centre point and circumference point.
 .. _rep_RCircle4_2D:
 
 RCircle4 (2D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A circle in 2D described by two circumference points [diameter].
 
@@ -2264,7 +2264,7 @@ A circle in 2D described by two circumference points [diameter].
 .. _rep_RSphere0_3D:
 
 RSphere0 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A sphere in 3D described by a centre point and surface point.
 
@@ -2284,7 +2284,7 @@ A sphere in 3D described by a centre point and surface point.
 .. _rep_RSphere5_3D:
 
 RSphere5 (3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 A sphere in 3D described by a two surface points [diameter].
 
