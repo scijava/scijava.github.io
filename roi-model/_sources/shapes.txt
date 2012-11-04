@@ -500,12 +500,12 @@ Canonical form is RRange2 (nD).
 
 
 .. index::
-    Extrude (nD)
+    ExtrudeDim (nD)
 
-.. _shape_Extrude_nD:
+.. _shape_ExtrudeDim_nD:
 
-Extrude (nD)
-^^^^^^^^^^^^
+ExtrudeDim (nD)
+^^^^^^^^^^^^^^^
 
 Extrude a shape of arbitrary dimensionality into an additional dimension..
 
@@ -514,9 +514,9 @@ by combining with a range instead.
 
 
 .. tabularcolumns:: |l|l|c|c|p{3in}|
-.. csv-table:: Extrude representations (nD)
+.. csv-table:: ExtrudeDim representations (nD)
     :header-rows: 1
-    :file: gen/shape-Extrude-nD.txt
+    :file: gen/shape-ExtrudeDim-nD.txt
     :delim: tab
     :widths: 5, 2, 2, 2, 10
 
@@ -524,12 +524,12 @@ Canonical form is RExtrude (nD).
 
 
 .. index::
-    Combine (nD)
+    CombineDim (nD)
 
-.. _shape_Combine_nD:
+.. _shape_CombineDim_nD:
 
-Combine (nD)
-^^^^^^^^^^^^
+CombineDim (nD)
+^^^^^^^^^^^^^^^
 
 Combine shapes of differing dimensionality.
 
@@ -538,13 +538,63 @@ It is illegal to have a common dimension between the two shapes.
 
 
 .. tabularcolumns:: |l|l|c|c|p{3in}|
-.. csv-table:: Combine representations (nD)
+.. csv-table:: CombineDim representations (nD)
     :header-rows: 1
-    :file: gen/shape-Combine-nD.txt
+    :file: gen/shape-CombineDim-nD.txt
     :delim: tab
     :widths: 5, 2, 2, 2, 10
 
-Canonical form is RCombine (nD).
+Canonical form is RSet (nD).
+
+
+.. index::
+    Set (nD)
+
+.. _shape_Set_nD:
+
+Set (nD)
+^^^^^^^^
+
+A set of shapes.
+
+All operations operate individually upon the contained shapes.  This
+implies that transforms are performed upon each shape, with rotation
+centres in the centre of each shape.
+
+
+.. tabularcolumns:: |l|l|c|c|p{3in}|
+.. csv-table:: Set representations (nD)
+    :header-rows: 1
+    :file: gen/shape-Set-nD.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RSet (nD).
+
+
+.. index::
+    Group (nD)
+
+.. _shape_Group_nD:
+
+Group (nD)
+^^^^^^^^^^
+
+A group of shapes.
+
+All operations operate on the grouped objects as a whole.  This
+implies that transforms are performed upon the group, with a single
+rotation centre in the centre of the group.
+
+
+.. tabularcolumns:: |l|l|c|c|p{3in}|
+.. csv-table:: Group representations (nD)
+    :header-rows: 1
+    :file: gen/shape-Group-nD.txt
+    :delim: tab
+    :widths: 5, 2, 2, 2, 10
+
+Canonical form is RSet (nD).
 
 
 .. index::
@@ -620,6 +670,17 @@ rectangles.  Black arrows indicate inheritance of shape
 representations, while red and blue arrows indicate the
 representations possible to provide as input to and obtain as output
 from a shape, respectively.
+
+.. only:: html
+
+    .. image:: gen/inherit-simple.svg
+        :width: 100%
+	:alt: Graph of canonical object relationships
+
+.. only:: latex
+
+    .. image:: gen/inherit-simple.pdf
+        :width: 100%
 
 .. only:: html
 

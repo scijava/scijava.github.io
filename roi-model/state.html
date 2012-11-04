@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>ROI Discussion &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    <title>State machine &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
     <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
-    <link rel="next" title="Current implementations" href="current.html" />
-    <link rel="prev" title="Requirements" href="requirements.html" /> 
+    <link rel="next" title="Layers" href="layers.html" />
+    <link rel="prev" title="Masks" href="masks.html" /> 
   </head>
   <body>
     <div class="related">
@@ -38,10 +38,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="current.html" title="Current implementations"
+          <a href="layers.html" title="Layers"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="requirements.html" title="Requirements"
+          <a href="masks.html" title="Masks"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
           <li><a href="roi.html" accesskey="U">ROI Specification [DRAFT]</a> &raquo;</li> 
@@ -51,24 +51,21 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">ROI Discussion</a><ul>
-<li><a class="reference internal" href="#rois-in-three-dimensions">ROIs in three dimensions</a></li>
-<li><a class="reference internal" href="#bitmasks">Bitmasks</a></li>
-<li><a class="reference internal" href="#meshes">Meshes</a></li>
-<li><a class="reference internal" href="#paths">Paths</a></li>
+<li><a class="reference internal" href="#">State machine</a><ul>
+<li><a class="reference internal" href="#properties">Properties</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="requirements.html"
-                        title="previous chapter">Requirements</a></p>
+  <p class="topless"><a href="masks.html"
+                        title="previous chapter">Masks</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="current.html"
-                        title="next chapter">Current implementations</a></p>
+  <p class="topless"><a href="layers.html"
+                        title="next chapter">Layers</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/initial.txt"
+    <li><a href="_sources/state.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -92,44 +89,39 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="roi-discussion">
-<h1>ROI Discussion<a class="headerlink" href="#roi-discussion" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="rois-in-three-dimensions">
-<h2>ROIs in three dimensions<a class="headerlink" href="#rois-in-three-dimensions" title="Permalink to this headline">¶</a></h2>
-<p>Some of the 3D primitives described below may appear to be redundant;
-it&#8217;s certainly possible for example, to represent a shape in 3D right
-now using multiple shapes, one per z plane.  However, being able to
-use native 3D primitives is more powerful: it permits additional
-measurements involving volume, surface area and shape.</p>
-<p>Some shapes may be represented equivalently in different ways; it
-might be worth considering adding support for these because it firstly
-allows the shape to be computed in different ways, which can differ
-depending upon the problem being solved, and it also contains
-information about how the measurement was made, i.e. the intent of the
-person doing the measuring, which is lost if converted to a canonical
-form.</p>
-</div>
-<div class="section" id="bitmasks">
-<h2>Bitmasks<a class="headerlink" href="#bitmasks" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt><strong>Mask</strong>       Could we have a pointer to an IFD/file reference plus</dt>
-<dd>two coordinates so specify a clip region, then we can
-pack potentially hundreds of masks in a single plane.</dd>
-</dl>
-</div>
-<div class="section" id="meshes">
-<h2>Meshes<a class="headerlink" href="#meshes" title="Permalink to this headline">¶</a></h2>
-<p><strong>Mesh</strong>       2D mesh described as e.g a face-vertex mesh.</p>
-<p><strong>3DMesh</strong>     3D mesh described as e.g. a face-vertex mesh.</p>
-<p>Meshes could be computed from masks, polygons, extruded shapes where
-there is a z range, or from thresholding.</p>
-</div>
-<div class="section" id="paths">
-<h2>Paths<a class="headerlink" href="#paths" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt><strong>3DPath</strong>     As for Path, but with additional vector to describe motion</dt>
-<dd>along the prescribed plane?</dd>
-</dl>
+  <div class="section" id="state-machine">
+<h1>State machine<a class="headerlink" href="#state-machine" title="Permalink to this headline">¶</a></h1>
+<p>Evaluating a ROI will require a simple state machine to handle the transformations involved.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>State machine properties</caption>
+<colgroup>
+<col width="29%" />
+<col width="12%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>LINECOL</td>
+<td>Colour</td>
+<td>Line (and surface) colour</td>
+</tr>
+<tr class="row-odd"><td>FILLCOL</td>
+<td>Colour</td>
+<td>Fill colour</td>
+</tr>
+<tr class="row-even"><td>TEXTCOL</td>
+<td>Colour</td>
+<td>Text colour</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -146,10 +138,10 @@ there is a z range, or from thresholding.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="current.html" title="Current implementations"
+          <a href="layers.html" title="Layers"
              >next</a> |</li>
         <li class="right" >
-          <a href="requirements.html" title="Requirements"
+          <a href="masks.html" title="Masks"
              >previous</a> |</li>
         <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
           <li><a href="roi.html" >ROI Specification [DRAFT]</a> &raquo;</li> 

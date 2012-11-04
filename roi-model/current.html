@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Current implementations &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
+    <link rel="next" title="2D primitives in 3D" href="3dconversion.html" />
+    <link rel="prev" title="ROI Discussion" href="initial.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="3dconversion.html" title="2D primitives in 3D"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="initial.html" title="ROI Discussion"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" accesskey="U">ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Current implementations</a><ul>
+<li><a class="reference internal" href="#axiovision">AxioVision</a></li>
+<li><a class="reference internal" href="#cell-profiler">Cell Profiler</a></li>
+<li><a class="reference internal" href="#imagej">ImageJ</a></li>
+<li><a class="reference internal" href="#icy">Icy</a></li>
+<li><a class="reference internal" href="#insight">Insight</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="initial.html"
+                        title="previous chapter">ROI Discussion</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="3dconversion.html"
+                        title="next chapter">2D primitives in 3D</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/current.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="current-implementations">
+<h1>Current implementations<a class="headerlink" href="#current-implementations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="axiovision">
+<h2>AxioVision<a class="headerlink" href="#axiovision" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="cell-profiler">
+<h2>Cell Profiler<a class="headerlink" href="#cell-profiler" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="imagej">
+<h2>ImageJ<a class="headerlink" href="#imagej" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/rois.png" src="_images/rois.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ROI</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Rectangle, square corners</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Rectangle, rounded corners</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Oval</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>Ellipse</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>Closed polyline</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>Closed polyline, &#8220;freehand&#8221;</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>Line</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>Open polyline</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>Open polyline, &#8220;freehand&#8221;</td>
+</tr>
+<tr class="row-odd"><td>10</td>
+<td>Arrow</td>
+</tr>
+<tr class="row-even"><td>11</td>
+<td>Arrow, doubleheaded</td>
+</tr>
+<tr class="row-odd"><td>12</td>
+<td>Angle</td>
+</tr>
+<tr class="row-even"><td>13-24</td>
+<td>Points</td>
+</tr>
+<tr class="row-odd"><td>25</td>
+<td>Bitmask</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="icy">
+<h2>Icy<a class="headerlink" href="#icy" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/rois1.png" src="_images/rois1.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ROI</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Point</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Line</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Open polyline</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>Rectangle</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>Closed polyline</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>Ellipse</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>Bitmask</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="insight">
+<h2>Insight<a class="headerlink" href="#insight" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/rois2.png" src="_images/rois2.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ROI</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Rectangle</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Ellipse</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Points</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>Line</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>Closed polyline</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="3dconversion.html" title="2D primitives in 3D"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="initial.html" title="ROI Discussion"
+             >previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" >ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

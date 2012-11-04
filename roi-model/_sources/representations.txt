@@ -1899,21 +1899,21 @@ A shape extruded in an additional dimension.
 
 
 .. index::
-    RCombine (nD)
+    RSet (nD)
 
-.. _rep_RCombine_nD:
+.. _rep_RSet_nD:
 
-RCombine (nD)
-^^^^^^^^^^^^^
+RSet (nD)
+^^^^^^^^^
 
-A shape combined from shapes in different dimensions.
+A set of shapes.
 
 
 
 .. tabularcolumns:: |r|l|l|p{2in}|
-.. csv-table:: RCombine members (nD)
+.. csv-table:: RSet members (nD)
     :header-rows: 1
-    :file: gen/rep-RCombine-nD.txt
+    :file: gen/rep-RSet-nD.txt
     :delim: tab
     :widths: 2, 2, 5, 10
 

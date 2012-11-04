@@ -145,7 +145,7 @@
 <li><a class="reference internal" href="#rrange1-nd">RRange1 (nD)</a></li>
 <li><a class="reference internal" href="#rrange2-nd">RRange2 (nD)</a></li>
 <li><a class="reference internal" href="#rextrude-nd">RExtrude (nD)</a></li>
-<li><a class="reference internal" href="#rcombine-nd">RCombine (nD)</a></li>
+<li><a class="reference internal" href="#rset-nd">RSet (nD)</a></li>
 <li><a class="reference internal" href="#rbitwise-1d">RBitwise (1D)</a></li>
 <li><a class="reference internal" href="#rbitwise-2d">RBitwise (2D)</a></li>
 <li><a class="reference internal" href="#rbitwise-3d">RBitwise (3D)</a></li>
@@ -678,22 +678,22 @@
 <td>nD</td>
 <td>A shape extruded in an additional dimension</td>
 </tr>
-<tr class="row-odd"><td>92</td>
-<td><a class="reference internal" href="#rep-rcombine-nd"><em>RCombine</em></a></td>
+<tr class="row-odd"><td>93</td>
+<td><a class="reference internal" href="#rep-rset-nd"><em>RSet</em></a></td>
 <td>nD</td>
-<td>A shape combined from shapes in different dimensions</td>
+<td>A set of shapes</td>
 </tr>
-<tr class="row-even"><td>93</td>
+<tr class="row-even"><td>94</td>
 <td><a class="reference internal" href="#rep-rbitwise-1d"><em>RBitwise</em></a></td>
 <td>1D</td>
 <td>Binary bitwise operation</td>
 </tr>
-<tr class="row-odd"><td>94</td>
+<tr class="row-odd"><td>95</td>
 <td><a class="reference internal" href="#rep-rbitwise-2d"><em>RBitwise</em></a></td>
 <td>2D</td>
 <td>Binary bitwise operation</td>
 </tr>
-<tr class="row-even"><td>95</td>
+<tr class="row-even"><td>96</td>
 <td><a class="reference internal" href="#rep-rbitwise-3d"><em>RBitwise</em></a></td>
 <td>3D</td>
 <td>Binary bitwise operation</td>
@@ -3891,11 +3891,11 @@ mapping.</p>
 </tbody>
 </table>
 </div>
-<div class="section" id="rcombine-nd">
-<span id="rep-rcombine-nd"></span><span id="index-91"></span><h3>RCombine (nD)<a class="headerlink" href="#rcombine-nd" title="Permalink to this headline">¶</a></h3>
-<p>A shape combined from shapes in different dimensions.</p>
+<div class="section" id="rset-nd">
+<span id="rep-rset-nd"></span><span id="index-91"></span><h3>RSet (nD)<a class="headerlink" href="#rset-nd" title="Permalink to this headline">¶</a></h3>
+<p>A set of shapes.</p>
 <table border="1" class="docutils">
-<caption>RCombine members (nD)</caption>
+<caption>RSet members (nD)</caption>
 <colgroup>
 <col width="11%" />
 <col width="11%" />
@@ -3911,14 +3911,14 @@ mapping.</p>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>0</td>
-<td>S1</td>
-<td>Shape</td>
-<td>Dimension</td>
+<td>NSHAPES</td>
+<td>Count</td>
+<td>Number of shapes</td>
 </tr>
 <tr class="row-odd"><td>1</td>
-<td>S2</td>
-<td>Shape</td>
-<td>Dimension</td>
+<td>SHAPES</td>
+<td>Shape[NSHAPES]</td>
+<td>List of shapes</td>
 </tr>
 </tbody>
 </table>

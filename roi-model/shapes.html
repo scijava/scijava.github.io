@@ -75,8 +75,10 @@
 <li><a class="reference internal" href="#value-nd">Value (nD)</a></li>
 <li><a class="reference internal" href="#values-nd">Values (nD)</a></li>
 <li><a class="reference internal" href="#range-nd">Range (nD)</a></li>
-<li><a class="reference internal" href="#extrude-nd">Extrude (nD)</a></li>
-<li><a class="reference internal" href="#combine-nd">Combine (nD)</a></li>
+<li><a class="reference internal" href="#extrudedim-nd">ExtrudeDim (nD)</a></li>
+<li><a class="reference internal" href="#combinedim-nd">CombineDim (nD)</a></li>
+<li><a class="reference internal" href="#set-nd">Set (nD)</a></li>
+<li><a class="reference internal" href="#group-nd">Group (nD)</a></li>
 <li><a class="reference internal" href="#text-3d">Text (3D)</a></li>
 <li><a class="reference internal" href="#scale-3d">Scale (3D)</a></li>
 <li><a class="reference internal" href="#grid-3d">Grid (3D)</a></li>
@@ -245,14 +247,24 @@
 <td>A range of values in an arbitrary dimension</td>
 </tr>
 <tr class="row-odd"><td>60</td>
-<td><a class="reference internal" href="#shape-extrude-nd"><em>Extrude</em></a></td>
+<td><a class="reference internal" href="#shape-extrudedim-nd"><em>ExtrudeDim</em></a></td>
 <td>nD</td>
 <td>Extrude a shape of arbitrary dimensionality into an additional dimension.</td>
 </tr>
 <tr class="row-even"><td>61</td>
-<td><a class="reference internal" href="#shape-combine-nd"><em>Combine</em></a></td>
+<td><a class="reference internal" href="#shape-combinedim-nd"><em>CombineDim</em></a></td>
 <td>nD</td>
 <td>Combine shapes of differing dimensionality</td>
+</tr>
+<tr class="row-odd"><td>70</td>
+<td><a class="reference internal" href="#shape-set-nd"><em>Set</em></a></td>
+<td>nD</td>
+<td>A set of shapes</td>
+</tr>
+<tr class="row-even"><td>71</td>
+<td><a class="reference internal" href="#shape-group-nd"><em>Group</em></a></td>
+<td>nD</td>
+<td>A group of shapes</td>
 </tr>
 <tr class="row-odd"><td>100</td>
 <td><a class="reference internal" href="#shape-text-3d"><em>Text</em></a></td>
@@ -1715,13 +1727,13 @@ Also inherits AlignedCuboid implicitly      true    true</dd>
 </table>
 <p>Canonical form is RRange2 (nD).</p>
 </div>
-<div class="section" id="extrude-nd">
-<span id="shape-extrude-nd"></span><span id="index-21"></span><h3>Extrude (nD)<a class="headerlink" href="#extrude-nd" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="extrudedim-nd">
+<span id="shape-extrudedim-nd"></span><span id="index-21"></span><h3>ExtrudeDim (nD)<a class="headerlink" href="#extrudedim-nd" title="Permalink to this headline">¶</a></h3>
 <p>Extrude a shape of arbitrary dimensionality into an additional dimension..</p>
 <p>There are no limits in the additional dimension; these must be set
 by combining with a range instead.</p>
 <table border="1" class="docutils">
-<caption>Extrude representations (nD)</caption>
+<caption>ExtrudeDim representations (nD)</caption>
 <colgroup>
 <col width="24%" />
 <col width="10%" />
@@ -1742,19 +1754,19 @@ by combining with a range instead.</p>
 <td>nD</td>
 <td>•</td>
 <td>•</td>
-<td><strong>Extrude (nD)</strong> [self]</td>
+<td><strong>ExtrudeDim (nD)</strong> [self]</td>
 </tr>
 </tbody>
 </table>
 <p>Canonical form is RExtrude (nD).</p>
 </div>
-<div class="section" id="combine-nd">
-<span id="shape-combine-nd"></span><span id="index-22"></span><h3>Combine (nD)<a class="headerlink" href="#combine-nd" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="combinedim-nd">
+<span id="shape-combinedim-nd"></span><span id="index-22"></span><h3>CombineDim (nD)<a class="headerlink" href="#combinedim-nd" title="Permalink to this headline">¶</a></h3>
 <p>Combine shapes of differing dimensionality.</p>
 <p>The result is a shape combining all subset dimensions.
 It is illegal to have a common dimension between the two shapes.</p>
 <table border="1" class="docutils">
-<caption>Combine representations (nD)</caption>
+<caption>CombineDim representations (nD)</caption>
 <colgroup>
 <col width="24%" />
 <col width="10%" />
@@ -1771,18 +1783,86 @@ It is illegal to have a common dimension between the two shapes.</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rcombine-nd"><em>RCombine</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rset-nd"><em>RSet</em></a></td>
 <td>nD</td>
 <td>•</td>
 <td>•</td>
-<td><strong>Combine (nD)</strong> [self]</td>
+<td><strong>CombineDim (nD)</strong> [self]</td>
 </tr>
 </tbody>
 </table>
-<p>Canonical form is RCombine (nD).</p>
+<p>Canonical form is RSet (nD).</p>
+</div>
+<div class="section" id="set-nd">
+<span id="shape-set-nd"></span><span id="index-23"></span><h3>Set (nD)<a class="headerlink" href="#set-nd" title="Permalink to this headline">¶</a></h3>
+<p>A set of shapes.</p>
+<p>All operations operate individually upon the contained shapes.  This
+implies that transforms are performed upon each shape, with rotation
+centres in the centre of each shape.</p>
+<table border="1" class="docutils">
+<caption>Set representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rset-nd"><em>RSet</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Set (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RSet (nD).</p>
+</div>
+<div class="section" id="group-nd">
+<span id="shape-group-nd"></span><span id="index-24"></span><h3>Group (nD)<a class="headerlink" href="#group-nd" title="Permalink to this headline">¶</a></h3>
+<p>A group of shapes.</p>
+<p>All operations operate on the grouped objects as a whole.  This
+implies that transforms are performed upon the group, with a single
+rotation centre in the centre of the group.</p>
+<table border="1" class="docutils">
+<caption>Group representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rset-nd"><em>RSet</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Group (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RSet (nD).</p>
 </div>
 <div class="section" id="text-3d">
-<span id="shape-text-3d"></span><span id="index-23"></span><h3>Text (3D)<a class="headerlink" href="#text-3d" title="Permalink to this headline">¶</a></h3>
+<span id="shape-text-3d"></span><span id="index-25"></span><h3>Text (3D)<a class="headerlink" href="#text-3d" title="Permalink to this headline">¶</a></h3>
 <p>Text (label).</p>
 <p>Text in 3D will need to be based upon a rectangle in 3D (not yet
 possible without a transform).  Should label alignment be specified
@@ -1816,7 +1896,7 @@ directly in the representation, or in higher-level metadata?</p>
 <p>Canonical form is RText (2D).</p>
 </div>
 <div class="section" id="scale-3d">
-<span id="shape-scale-3d"></span><span id="index-24"></span><h3>Scale (3D)<a class="headerlink" href="#scale-3d" title="Permalink to this headline">¶</a></h3>
+<span id="shape-scale-3d"></span><span id="index-26"></span><h3>Scale (3D)<a class="headerlink" href="#scale-3d" title="Permalink to this headline">¶</a></h3>
 <p>A scale bar between two points.</p>
 <table border="1" class="docutils">
 <caption>Scale representations (3D)</caption>
@@ -1876,7 +1956,7 @@ directly in the representation, or in higher-level metadata?</p>
 </table>
 </div>
 <div class="section" id="grid-3d">
-<span id="shape-grid-3d"></span><span id="index-25"></span><h3>Grid (3D)<a class="headerlink" href="#grid-3d" title="Permalink to this headline">¶</a></h3>
+<span id="shape-grid-3d"></span><span id="index-27"></span><h3>Grid (3D)<a class="headerlink" href="#grid-3d" title="Permalink to this headline">¶</a></h3>
 <p>A scale grid in a defined volume.</p>
 <table border="1" class="docutils">
 <caption>Grid representations (3D)</caption>
@@ -2004,7 +2084,7 @@ rectangles.  Black arrows indicate inheritance of shape
 representations, while red and blue arrows indicate the
 representations possible to provide as input to and obtain as output
 from a shape, respectively.</p>
-<img alt="Graph of object relationships" src="_images/inherit.svg" width="100%" /></div>
+<img alt="Graph of canonical object relationships" src="_images/inherit-simple.svg" width="100%" /><img alt="Graph of object relationships" src="_images/inherit.svg" width="100%" /></div>
 </div>
 
 
