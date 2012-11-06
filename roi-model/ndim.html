@@ -103,10 +103,14 @@ addition of constraints restricts it to particular dimensions, or
 subsets thereof.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">RL.  Should we be unconstrained by default, or completely
+<p>RL.  Should we be unconstrained by default, or completely
 constrained?  Should this behaviour be different for &#8220;real&#8221;
 dimensions (xyzt) compared with virtual dimensions such as
 channels?</p>
+<p>Should we constrain the ROI to a single timepoint when tracking?</p>
+<p class="last">Should x/y/z be blocked for nD operations?  I.e. don&#8217;t allow the
+nD shapes to specify regions in 3D space, and restrict them to
+non-physical dimensions.</p>
 </div>
 </div>
 

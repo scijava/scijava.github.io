@@ -82,6 +82,8 @@
 <li><a class="reference internal" href="#text-3d">Text (3D)</a></li>
 <li><a class="reference internal" href="#scale-3d">Scale (3D)</a></li>
 <li><a class="reference internal" href="#grid-3d">Grid (3D)</a></li>
+<li><a class="reference internal" href="#custom-3d">Custom (3D)</a></li>
+<li><a class="reference internal" href="#property-nd">Property (nD)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#relationships">Relationships</a></li>
@@ -280,6 +282,16 @@
 <td><a class="reference internal" href="#shape-grid-3d"><em>Grid</em></a></td>
 <td>3D</td>
 <td>A scale grid in a defined volume</td>
+</tr>
+<tr class="row-even"><td>200</td>
+<td><a class="reference internal" href="#shape-custom-3d"><em>Custom</em></a></td>
+<td>3D</td>
+<td>A custom (user-definable) 3D shape</td>
+</tr>
+<tr class="row-odd"><td>201</td>
+<td><a class="reference internal" href="#shape-property-nd"><em>Property</em></a></td>
+<td>nD</td>
+<td>A custom (user-definable) shape property</td>
 </tr>
 </tbody>
 </table>
@@ -1299,6 +1311,12 @@ Also inherits AlignedCuboid implicitly      true    true</dd>
 <div class="section" id="bitmask-3d">
 <span id="shape-bitmask-3d"></span><span id="index-13"></span><h3>BitMask (3D)<a class="headerlink" href="#bitmask-3d" title="Permalink to this headline">¶</a></h3>
 <p>A mask with one bit values.</p>
+<p>A bitmask may be aligned with the axes (with an aligned bounding
+box) or unaligned (with an unaligned bounding box).  In order to
+iterate over the mask with a 1:1 correspondence between mask and
+underlying image pixel data, it must be converted to an aligned
+form.  Additionally, it must be converted to an aligned form with
+the samples aligned with the pixel grid.</p>
 <table border="1" class="docutils">
 <caption>BitMask representations (3D)</caption>
 <colgroup>
@@ -1317,8 +1335,20 @@ Also inherits AlignedCuboid implicitly      true    true</dd>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rbitmask-1d"><em>RBitMask</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-ralignedbitmask-1d"><em>RAlignedBitMask</em></a></td>
 <td>1D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>BitMask (3D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="representations.html#rep-ralignedbitmask-2d"><em>RAlignedBitMask</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>BitMask (3D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-ralignedbitmask-3d"><em>RAlignedBitMask</em></a></td>
+<td>3D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>BitMask (3D)</strong> [self]</td>
@@ -1342,6 +1372,12 @@ Also inherits AlignedCuboid implicitly      true    true</dd>
 <div class="section" id="greymask-3d">
 <span id="shape-greymask-3d"></span><span id="index-14"></span><h3>GreyMask (3D)<a class="headerlink" href="#greymask-3d" title="Permalink to this headline">¶</a></h3>
 <p>A mask with multiple grey levels.</p>
+<p>A greymask may be aligned with the axes (with an aligned bounding
+box) or unaligned (with an unaligned bounding box).  In order to
+iterate over the mask with a 1:1 correspondence between mask and
+underlying image pixel data, it must be converted to an aligned
+form.  Additionally, it must be converted to an aligned form with
+the samples aligned with the pixel grid.</p>
 <table border="1" class="docutils">
 <caption>GreyMask representations (3D)</caption>
 <colgroup>
@@ -1360,8 +1396,20 @@ Also inherits AlignedCuboid implicitly      true    true</dd>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rgreymask-1d"><em>RGreyMask</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-ralignedgreymask-1d"><em>RAlignedGreyMask</em></a></td>
 <td>1D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>GreyMask (3D)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="representations.html#rep-ralignedgreymask-2d"><em>RAlignedGreyMask</em></a></td>
+<td>2D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>GreyMask (3D)</strong> [self]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-ralignedgreymask-3d"><em>RAlignedGreyMask</em></a></td>
+<td>3D</td>
 <td>•</td>
 <td>•</td>
 <td><strong>GreyMask (3D)</strong> [self]</td>
@@ -1958,6 +2006,7 @@ directly in the representation, or in higher-level metadata?</p>
 <div class="section" id="grid-3d">
 <span id="shape-grid-3d"></span><span id="index-27"></span><h3>Grid (3D)<a class="headerlink" href="#grid-3d" title="Permalink to this headline">¶</a></h3>
 <p>A scale grid in a defined volume.</p>
+<p>TODO: Specify grid spacing</p>
 <table border="1" class="docutils">
 <caption>Grid representations (3D)</caption>
 <colgroup>
@@ -2074,6 +2123,92 @@ directly in the representation, or in higher-level metadata?</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="custom-3d">
+<span id="shape-custom-3d"></span><span id="index-28"></span><h3>Custom (3D)<a class="headerlink" href="#custom-3d" title="Permalink to this headline">¶</a></h3>
+<p>A custom (user-definable) 3D shape.</p>
+<p>The custom shape type, unlike other shapes, does not define any
+intrinsic behaviour.  This is entirely the responsibility of the
+user.  The typename of the shape is specified by the user, which
+provides an extension mechanism by allowing this type to be used to
+specify an arbitrary number of shape types.
+The shape contains four sets of shapes for measurement, results,
+editing and visualisation.  The intent here is that the shapes
+required for the user to visualise the ROI are contained in the
+VISUAL set.  This will permit the ROI to be transported to other
+systems, and allow visualisation without any knowledge of the
+specific ROI type.  The other types are optional, and may be used as
+the user sees fit.  MEASUREMENTS is intended to store any points or
+other informations used when defining the ROI (which are not already
+contained in the VISUAL set).  RESULTS is intended to store any
+measurements which are not directly derivable from the other sets.
+EDIT is intended for storing label offsets, construction lines, and
+any other information used for editing which is not contained in
+the MEASUREMENTS or VISUAL sets.</p>
+<table border="1" class="docutils">
+<caption>Custom representations (3D)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rcustom-3d"><em>RCustom</em></a></td>
+<td>3D</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Custom (3D)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RCustom (3D).</p>
+</div>
+<div class="section" id="property-nd">
+<span id="shape-property-nd"></span><span id="index-29"></span><h3>Property (nD)<a class="headerlink" href="#property-nd" title="Permalink to this headline">¶</a></h3>
+<p>A custom (user-definable) shape property.</p>
+<table border="1" class="docutils">
+<caption>Property representations (nD)</caption>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Representation</th>
+<th class="head">Dim</th>
+<th class="head">In</th>
+<th class="head">Out</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="representations.html#rep-rproperties-nd"><em>RProperties</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Property (nD)</strong> [self]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="representations.html#rep-rproperty-nd"><em>RProperty</em></a></td>
+<td>nD</td>
+<td>•</td>
+<td>•</td>
+<td><strong>Property (nD)</strong> [self]</td>
+</tr>
+</tbody>
+</table>
+<p>Canonical form is RProperties (nD).</p>
 </div>
 </div>
 <div class="section" id="relationships">

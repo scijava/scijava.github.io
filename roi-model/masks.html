@@ -27,7 +27,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
     <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
-    <link rel="next" title="State machine" href="state.html" />
+    <link rel="next" title="Transforms" href="transform.html" />
     <link rel="prev" title="Shape representations" href="representations.html" /> 
   </head>
   <body>
@@ -38,7 +38,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="state.html" title="State machine"
+          <a href="transform.html" title="Transforms"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="representations.html" title="Shape representations"
@@ -53,6 +53,7 @@
   <ul>
 <li><a class="reference internal" href="#">Masks</a><ul>
 <li><a class="reference internal" href="#specification">Specification</a></li>
+<li><a class="reference internal" href="#point-and-line-conversion">Point and line conversion</a></li>
 <li><a class="reference internal" href="#set-operations">Set operations</a></li>
 </ul>
 </li>
@@ -62,8 +63,8 @@
   <p class="topless"><a href="representations.html"
                         title="previous chapter">Shape representations</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="state.html"
-                        title="next chapter">State machine</a></p>
+  <p class="topless"><a href="transform.html"
+                        title="next chapter">Transforms</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/masks.txt"
@@ -94,14 +95,23 @@
 <h1>Masks<a class="headerlink" href="#masks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="specification">
 <h2>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h2>
-<p>Bitmasks may be specified directly, e.g. by segmenting an image.  They
-may also be derived from any shape, since every shape is reducible to
-a bitmask.</p>
+<p>Bitmasks may be specified directly, e.g. by segmenting an image.
+Bitmasks may also be derived from any shape, since every shape is
+reducible to a bitmask.</p>
 <p>Greymasks (masks with multiple greylevels) may also be specified
 directly.  They may also be derived from any shape.  Shapes may
 provide direct conversion to a greymask, or alternatively via a
 high-resolution bitmask, which is then converted into a greymask.
 This process is illustrated in the following figure.</p>
+<p>Masks have aligned and unaligned variants.  The difference is not in
+the mask data, but in the alignment of the bounding box with the axes.
+Neither guarantee a 1:1 mapping with the pixel grid; this would
+require a manual conversion step.  This might also be be better
+supported with a pixel-aligned bounding box type.  Resizing to the
+pixel grid might be best performed via thresholding an intermediate
+greymask.</p>
+<p>Any shape transformations must be performed prior to conversion to an
+aligned mask, otherwise the mask alignment may be lost.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <dl class="last docutils">
@@ -112,13 +122,16 @@ to efficiently convert to a greymask, but a threshold value is
 still needed.</p>
 <p>We also need to allow the user to specify the threshold value
 when converting from a greymask to bitmask.</p>
-<p class="last">Also need to have rules for conversion of points and lines,
+<p>Also need to have rules for conversion of points and lines,
 which do not have any intrinsic area, to pixels.  Does a point
 always occupy a single pixel?  How about lines, which pass
 through multiple pixels?  The latter could convert to a
 greymask.  Both could have default widths and allow the user
 to override them.  Convert via a shape e.g. implicitly convert
 line to cuboid and point to sphere?</p>
+<p class="last">The current mask representations store the mask data directly
+in the shape.  We might wish to support alternative forms of
+storage, e.g. IFD (as a sprite sheet), labellings, etc.</p>
 </dd>
 </dl>
 </div>
@@ -199,6 +212,14 @@ greymask requires 8KiB/pixel!</dd>
 </dl>
 </div>
 </div>
+<div class="section" id="point-and-line-conversion">
+<h2>Point and line conversion<a class="headerlink" href="#point-and-line-conversion" title="Permalink to this headline">¶</a></h2>
+<p>Would it make sense to have the ability to convert point and line
+shapes to cylinder/sphere or cuboid shapes, respectively?  Useful for
+rendering, and potentially also useful for analysis.  Default point
+size and line width for converting to a mask?  Points may be expected
+to only be one pixel in size; what about lines?</p>
+</div>
 <div class="section" id="set-operations">
 <h2>Set operations<a class="headerlink" href="#set-operations" title="Permalink to this headline">¶</a></h2>
 <p>Set operations only make sense to perform at the level of bitmasks.
@@ -242,7 +263,7 @@ can choose the precision of the operation via the grid size</dd>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="state.html" title="State machine"
+          <a href="transform.html" title="Transforms"
              >next</a> |</li>
         <li class="right" >
           <a href="representations.html" title="Shape representations"

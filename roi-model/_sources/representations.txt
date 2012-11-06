@@ -1314,138 +1314,6 @@ An arc in 3D described by three points; vector inferred from third point.
 
 
 .. index::
-    RBitMask (1D)
-
-.. _rep_RBitMask_1D:
-
-RBitMask (1D)
-^^^^^^^^^^^^^
-
-A bitmask in 1D described by bounding line, dimensions and mask data.
-
-The mask is applied to the bounding line.  Dimensions specify the
-x size of the mask.  DATA is the mask pixel data.
-
-
-.. tabularcolumns:: |r|l|l|p{2in}|
-.. csv-table:: RBitMask members (1D)
-    :header-rows: 1
-    :file: gen/rep-RBitMask-1D.txt
-    :delim: tab
-    :widths: 2, 2, 5, 10
-
-
-.. index::
-    RBitMask (2D)
-
-.. _rep_RBitMask_2D:
-
-RBitMask (2D)
-^^^^^^^^^^^^^
-
-A bitmask in 2D described by bounding rectangle, dimensions and mask data.
-
-The mask is applied to the bounding rectangle.  Dimensions specify the
-x and y size of the mask.  DATA is the mask pixel data.
-
-
-.. tabularcolumns:: |r|l|l|p{2in}|
-.. csv-table:: RBitMask members (2D)
-    :header-rows: 1
-    :file: gen/rep-RBitMask-2D.txt
-    :delim: tab
-    :widths: 2, 2, 5, 10
-
-
-.. index::
-    RBitMask (3D)
-
-.. _rep_RBitMask_3D:
-
-RBitMask (3D)
-^^^^^^^^^^^^^
-
-A bitmask in 3D described by bounding cuboid, dimensions and mask data.
-
-The mask is applied to the bounding cuboid.  Dimensions specify the
-x, y and z size of the mask.  DATA is the mask pixel data.
-
-
-.. tabularcolumns:: |r|l|l|p{2in}|
-.. csv-table:: RBitMask members (3D)
-    :header-rows: 1
-    :file: gen/rep-RBitMask-3D.txt
-    :delim: tab
-    :widths: 2, 2, 5, 10
-
-
-.. index::
-    RGreyMask (1D)
-
-.. _rep_RGreyMask_1D:
-
-RGreyMask (1D)
-^^^^^^^^^^^^^^
-
-A greymask in 1D described by bounding line, dimensions and mask data.
-
-The mask is applied to the bounding line.  Dimensions specify the
-x size of the mask.  DATA is the mask pixel data.
-
-
-.. tabularcolumns:: |r|l|l|p{2in}|
-.. csv-table:: RGreyMask members (1D)
-    :header-rows: 1
-    :file: gen/rep-RGreyMask-1D.txt
-    :delim: tab
-    :widths: 2, 2, 5, 10
-
-
-.. index::
-    RGreyMask (2D)
-
-.. _rep_RGreyMask_2D:
-
-RGreyMask (2D)
-^^^^^^^^^^^^^^
-
-A greymask in 2D described by bounding rectangle, dimensions and mask data.
-
-The mask is applied to the bounding rectangle.  Dimensions specify the
-x and y size of the mask.  DATA is the mask pixel data.
-
-
-.. tabularcolumns:: |r|l|l|p{2in}|
-.. csv-table:: RGreyMask members (2D)
-    :header-rows: 1
-    :file: gen/rep-RGreyMask-2D.txt
-    :delim: tab
-    :widths: 2, 2, 5, 10
-
-
-.. index::
-    RGreyMask (3D)
-
-.. _rep_RGreyMask_3D:
-
-RGreyMask (3D)
-^^^^^^^^^^^^^^
-
-A greymask in 3D described by bounding cuboid, dimensions and mask data.
-
-The mask is applied to the bounding cuboid.  Dimensions specify the
-x, y and z size of the mask.  DATA is the mask pixel data.
-
-
-.. tabularcolumns:: |r|l|l|p{2in}|
-.. csv-table:: RGreyMask members (3D)
-    :header-rows: 1
-    :file: gen/rep-RGreyMask-3D.txt
-    :delim: tab
-    :widths: 2, 2, 5, 10
-
-
-.. index::
     RMesh (2D)
 
 .. _rep_RMesh_2D:
@@ -1979,6 +1847,226 @@ Binary bitwise operation.
 
 
 .. index::
+    RAlignedBitMask (1D)
+
+.. _rep_RAlignedBitMask_1D:
+
+RAlignedBitMask (1D)
+^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 1D described by aligned bounding line, dimensions and mask data.
+
+The mask is applied to the bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedBitMask members (1D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedBitMask-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedBitMask (2D)
+
+.. _rep_RAlignedBitMask_2D:
+
+RAlignedBitMask (2D)
+^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 2D described by aligned bounding rectangle, dimensions and mask data.
+
+The mask is applied to the aligned bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedBitMask members (2D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedBitMask-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedBitMask (3D)
+
+.. _rep_RAlignedBitMask_3D:
+
+RAlignedBitMask (3D)
+^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 3D described by aligned bounding cuboid, dimensions and mask data.
+
+The mask is applied to the aligned bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedBitMask members (3D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedBitMask-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedGreyMask (1D)
+
+.. _rep_RAlignedGreyMask_1D:
+
+RAlignedGreyMask (1D)
+^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 1D described by aligned bounding line, dimensions and mask data.
+
+The mask is applied to the aligned bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedGreyMask members (1D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedGreyMask-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedGreyMask (2D)
+
+.. _rep_RAlignedGreyMask_2D:
+
+RAlignedGreyMask (2D)
+^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 2D described by aligned bounding rectangle, dimensions and mask data.
+
+The mask is applied to the aligned bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedGreyMask members (2D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedGreyMask-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RAlignedGreyMask (3D)
+
+.. _rep_RAlignedGreyMask_3D:
+
+RAlignedGreyMask (3D)
+^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 3D described by aligned bounding cuboid, dimensions and mask data.
+
+The mask is applied to the aligned bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RAlignedGreyMask members (3D)
+    :header-rows: 1
+    :file: gen/rep-RAlignedGreyMask-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RBitMask (2D)
+
+.. _rep_RBitMask_2D:
+
+RBitMask (2D)
+^^^^^^^^^^^^^
+
+A bitmask in 2D described by bounding rectangle, dimensions and mask data.
+
+The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RBitMask members (2D)
+    :header-rows: 1
+    :file: gen/rep-RBitMask-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RBitMask (3D)
+
+.. _rep_RBitMask_3D:
+
+RBitMask (3D)
+^^^^^^^^^^^^^
+
+A bitmask in 3D described by bounding cuboid, dimensions and mask data.
+
+The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RBitMask members (3D)
+    :header-rows: 1
+    :file: gen/rep-RBitMask-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RGreyMask (2D)
+
+.. _rep_RGreyMask_2D:
+
+RGreyMask (2D)
+^^^^^^^^^^^^^^
+
+A greymask in 2D described by bounding rectangle, dimensions and mask data.
+
+The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RGreyMask members (2D)
+    :header-rows: 1
+    :file: gen/rep-RGreyMask-2D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RGreyMask (3D)
+
+.. _rep_RGreyMask_3D:
+
+RGreyMask (3D)
+^^^^^^^^^^^^^^
+
+A greymask in 3D described by bounding cuboid, dimensions and mask data.
+
+The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RGreyMask members (3D)
+    :header-rows: 1
+    :file: gen/rep-RGreyMask-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
     RLinesPoints (1D)
 
 .. _rep_RLinesPoints_1D:
@@ -1999,6 +2087,26 @@ A list of lines described by two points in 1D.
 
 
 .. index::
+    RCustom (3D)
+
+.. _rep_RCustom_3D:
+
+RCustom (3D)
+^^^^^^^^^^^^
+
+Custom (user-definable) representation.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RCustom members (3D)
+    :header-rows: 1
+    :file: gen/rep-RCustom-3D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
     RLinesVectors (1D)
 
 .. _rep_RLinesVectors_1D:
@@ -2014,6 +2122,47 @@ A list of lines described by a point and a vector in 1D; can be used to represen
 .. csv-table:: RLinesVectors members (1D)
     :header-rows: 1
     :file: gen/rep-RLinesVectors-1D.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RProperty (nD)
+
+.. _rep_RProperty_nD:
+
+RProperty (nD)
+^^^^^^^^^^^^^^
+
+Property.
+
+We could use an RShape representation here so that we could set a shape as a property.
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RProperty members (nD)
+    :header-rows: 1
+    :file: gen/rep-RProperty-nD.txt
+    :delim: tab
+    :widths: 2, 2, 5, 10
+
+
+.. index::
+    RProperties (nD)
+
+.. _rep_RProperties_nD:
+
+RProperties (nD)
+^^^^^^^^^^^^^^^^
+
+Property list.
+
+
+
+.. tabularcolumns:: |r|l|l|p{2in}|
+.. csv-table:: RProperties members (nD)
+    :header-rows: 1
+    :file: gen/rep-RProperties-nD.txt
     :delim: tab
     :widths: 2, 2, 5, 10
 

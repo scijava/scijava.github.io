@@ -117,12 +117,6 @@
 <li><a class="reference internal" href="#rarc1-3d">RArc1 (3D)</a></li>
 <li><a class="reference internal" href="#rarc2-3d">RArc2 (3D)</a></li>
 <li><a class="reference internal" href="#rarc3-3d">RArc3 (3D)</a></li>
-<li><a class="reference internal" href="#rbitmask-1d">RBitMask (1D)</a></li>
-<li><a class="reference internal" href="#rbitmask-2d">RBitMask (2D)</a></li>
-<li><a class="reference internal" href="#rbitmask-3d">RBitMask (3D)</a></li>
-<li><a class="reference internal" href="#rgreymask-1d">RGreyMask (1D)</a></li>
-<li><a class="reference internal" href="#rgreymask-2d">RGreyMask (2D)</a></li>
-<li><a class="reference internal" href="#rgreymask-3d">RGreyMask (3D)</a></li>
 <li><a class="reference internal" href="#rmesh-2d">RMesh (2D)</a></li>
 <li><a class="reference internal" href="#rmesh-3d">RMesh (3D)</a></li>
 <li><a class="reference internal" href="#raffinetransform-1d">RAffineTransform (1D)</a></li>
@@ -149,8 +143,21 @@
 <li><a class="reference internal" href="#rbitwise-1d">RBitwise (1D)</a></li>
 <li><a class="reference internal" href="#rbitwise-2d">RBitwise (2D)</a></li>
 <li><a class="reference internal" href="#rbitwise-3d">RBitwise (3D)</a></li>
+<li><a class="reference internal" href="#ralignedbitmask-1d">RAlignedBitMask (1D)</a></li>
+<li><a class="reference internal" href="#ralignedbitmask-2d">RAlignedBitMask (2D)</a></li>
+<li><a class="reference internal" href="#ralignedbitmask-3d">RAlignedBitMask (3D)</a></li>
+<li><a class="reference internal" href="#ralignedgreymask-1d">RAlignedGreyMask (1D)</a></li>
+<li><a class="reference internal" href="#ralignedgreymask-2d">RAlignedGreyMask (2D)</a></li>
+<li><a class="reference internal" href="#ralignedgreymask-3d">RAlignedGreyMask (3D)</a></li>
+<li><a class="reference internal" href="#rbitmask-2d">RBitMask (2D)</a></li>
+<li><a class="reference internal" href="#rbitmask-3d">RBitMask (3D)</a></li>
+<li><a class="reference internal" href="#rgreymask-2d">RGreyMask (2D)</a></li>
+<li><a class="reference internal" href="#rgreymask-3d">RGreyMask (3D)</a></li>
 <li><a class="reference internal" href="#rlinespoints-1d">RLinesPoints (1D)</a></li>
+<li><a class="reference internal" href="#rcustom-3d">RCustom (3D)</a></li>
 <li><a class="reference internal" href="#rlinesvectors-1d">RLinesVectors (1D)</a></li>
+<li><a class="reference internal" href="#rproperty-nd">RProperty (nD)</a></li>
+<li><a class="reference internal" href="#rproperties-nd">RProperties (nD)</a></li>
 <li><a class="reference internal" href="#rpolylinepoints-1d">RPolylinePoints (1D)</a></li>
 <li><a class="reference internal" href="#rpolylinevector-1d">RPolylineVector (1D)</a></li>
 <li><a class="reference internal" href="#ralignedrectangle1-2d">RAlignedRectangle1 (2D)</a></li>
@@ -538,36 +545,6 @@
 <td>3D</td>
 <td>An arc in 3D described by three points; vector inferred from third point</td>
 </tr>
-<tr class="row-odd"><td>63</td>
-<td><a class="reference internal" href="#rep-rbitmask-1d"><em>RBitMask</em></a></td>
-<td>1D</td>
-<td>A bitmask in 1D described by bounding line, dimensions and mask data</td>
-</tr>
-<tr class="row-even"><td>64</td>
-<td><a class="reference internal" href="#rep-rbitmask-2d"><em>RBitMask</em></a></td>
-<td>2D</td>
-<td>A bitmask in 2D described by bounding rectangle, dimensions and mask data</td>
-</tr>
-<tr class="row-odd"><td>65</td>
-<td><a class="reference internal" href="#rep-rbitmask-3d"><em>RBitMask</em></a></td>
-<td>3D</td>
-<td>A bitmask in 3D described by bounding cuboid, dimensions and mask data</td>
-</tr>
-<tr class="row-even"><td>66</td>
-<td><a class="reference internal" href="#rep-rgreymask-1d"><em>RGreyMask</em></a></td>
-<td>1D</td>
-<td>A greymask in 1D described by bounding line, dimensions and mask data</td>
-</tr>
-<tr class="row-odd"><td>67</td>
-<td><a class="reference internal" href="#rep-rgreymask-2d"><em>RGreyMask</em></a></td>
-<td>2D</td>
-<td>A greymask in 2D described by bounding rectangle, dimensions and mask data</td>
-</tr>
-<tr class="row-even"><td>68</td>
-<td><a class="reference internal" href="#rep-rgreymask-3d"><em>RGreyMask</em></a></td>
-<td>3D</td>
-<td>A greymask in 3D described by bounding cuboid, dimensions and mask data</td>
-</tr>
 <tr class="row-odd"><td>69</td>
 <td><a class="reference internal" href="#rep-rmesh-2d"><em>RMesh</em></a></td>
 <td>2D</td>
@@ -698,82 +675,147 @@
 <td>3D</td>
 <td>Binary bitwise operation</td>
 </tr>
+<tr class="row-odd"><td>100</td>
+<td><a class="reference internal" href="#rep-ralignedbitmask-1d"><em>RAlignedBitMask</em></a></td>
+<td>1D</td>
+<td>A bitmask in 1D described by aligned bounding line, dimensions and mask data</td>
+</tr>
+<tr class="row-even"><td>101</td>
+<td><a class="reference internal" href="#rep-ralignedbitmask-2d"><em>RAlignedBitMask</em></a></td>
+<td>2D</td>
+<td>A bitmask in 2D described by aligned bounding rectangle, dimensions and mask data</td>
+</tr>
+<tr class="row-odd"><td>102</td>
+<td><a class="reference internal" href="#rep-ralignedbitmask-3d"><em>RAlignedBitMask</em></a></td>
+<td>3D</td>
+<td>A bitmask in 3D described by aligned bounding cuboid, dimensions and mask data</td>
+</tr>
+<tr class="row-even"><td>103</td>
+<td><a class="reference internal" href="#rep-ralignedgreymask-1d"><em>RAlignedGreyMask</em></a></td>
+<td>1D</td>
+<td>A greymask in 1D described by aligned bounding line, dimensions and mask data</td>
+</tr>
+<tr class="row-odd"><td>104</td>
+<td><a class="reference internal" href="#rep-ralignedgreymask-2d"><em>RAlignedGreyMask</em></a></td>
+<td>2D</td>
+<td>A greymask in 2D described by aligned bounding rectangle, dimensions and mask data</td>
+</tr>
+<tr class="row-even"><td>105</td>
+<td><a class="reference internal" href="#rep-ralignedgreymask-3d"><em>RAlignedGreyMask</em></a></td>
+<td>3D</td>
+<td>A greymask in 3D described by aligned bounding cuboid, dimensions and mask data</td>
+</tr>
+<tr class="row-odd"><td>106</td>
+<td><a class="reference internal" href="#rep-rbitmask-2d"><em>RBitMask</em></a></td>
+<td>2D</td>
+<td>A bitmask in 2D described by bounding rectangle, dimensions and mask data</td>
+</tr>
+<tr class="row-even"><td>107</td>
+<td><a class="reference internal" href="#rep-rbitmask-3d"><em>RBitMask</em></a></td>
+<td>3D</td>
+<td>A bitmask in 3D described by bounding cuboid, dimensions and mask data</td>
+</tr>
+<tr class="row-odd"><td>108</td>
+<td><a class="reference internal" href="#rep-rgreymask-2d"><em>RGreyMask</em></a></td>
+<td>2D</td>
+<td>A greymask in 2D described by bounding rectangle, dimensions and mask data</td>
+</tr>
+<tr class="row-even"><td>109</td>
+<td><a class="reference internal" href="#rep-rgreymask-3d"><em>RGreyMask</em></a></td>
+<td>3D</td>
+<td>A greymask in 3D described by bounding cuboid, dimensions and mask data</td>
+</tr>
 <tr class="row-odd"><td>181</td>
 <td><a class="reference internal" href="#rep-rlinespoints-1d"><em>RLinesPoints</em></a></td>
 <td>1D</td>
 <td>A list of lines described by two points in 1D</td>
 </tr>
-<tr class="row-even"><td>201</td>
+<tr class="row-even"><td>200</td>
+<td><a class="reference internal" href="#rep-rcustom-3d"><em>RCustom</em></a></td>
+<td>3D</td>
+<td>Custom (user-definable) representation</td>
+</tr>
+<tr class="row-odd"><td>201</td>
 <td><a class="reference internal" href="#rep-rlinesvectors-1d"><em>RLinesVectors</em></a></td>
 <td>1D</td>
 <td>A list of lines described by a point and a vector in 1D; can be used to represent a vector field</td>
 </tr>
-<tr class="row-odd"><td>221</td>
+<tr class="row-even"><td>210</td>
+<td><a class="reference internal" href="#rep-rproperty-nd"><em>RProperty</em></a></td>
+<td>nD</td>
+<td>Property</td>
+</tr>
+<tr class="row-odd"><td>211</td>
+<td><a class="reference internal" href="#rep-rproperties-nd"><em>RProperties</em></a></td>
+<td>nD</td>
+<td>Property list</td>
+</tr>
+<tr class="row-even"><td>221</td>
 <td><a class="reference internal" href="#rep-rpolylinepoints-1d"><em>RPolylinePoints</em></a></td>
 <td>1D</td>
 <td>A list of points in a polyline in 1D [could use RPoints1D directly]</td>
 </tr>
-<tr class="row-even"><td>241</td>
+<tr class="row-odd"><td>241</td>
 <td><a class="reference internal" href="#rep-rpolylinevector-1d"><em>RPolylineVector</em></a></td>
 <td>1D</td>
 <td>A list of points in a polyline represented by a starting point and list of vectors in 1D</td>
 </tr>
-<tr class="row-odd"><td>291</td>
+<tr class="row-even"><td>291</td>
 <td><a class="reference internal" href="#rep-ralignedrectangle1-2d"><em>RAlignedRectangle1</em></a></td>
 <td>2D</td>
 <td>An aligned rectangle described by two points in 2D</td>
 </tr>
-<tr class="row-even"><td>292</td>
+<tr class="row-odd"><td>292</td>
 <td><a class="reference internal" href="#rep-ralignedcuboid1-3d"><em>RAlignedCuboid1</em></a></td>
 <td>3D</td>
 <td>An aligned cuboid described by two points in 3D</td>
 </tr>
-<tr class="row-odd"><td>293</td>
+<tr class="row-even"><td>293</td>
 <td><a class="reference internal" href="#rep-ralignedrectangle2-2d"><em>RAlignedRectangle2</em></a></td>
 <td>2D</td>
 <td>An aligned rectangle described by a point and a vector</td>
 </tr>
-<tr class="row-even"><td>294</td>
+<tr class="row-odd"><td>294</td>
 <td><a class="reference internal" href="#rep-ralignedcuboid2-3d"><em>RAlignedCuboid2</em></a></td>
 <td>3D</td>
 <td>An aligned cuboid described by a point and a vector</td>
 </tr>
-<tr class="row-odd"><td>295</td>
+<tr class="row-even"><td>295</td>
 <td><a class="reference internal" href="#rep-rcube1-3d"><em>RCube1</em></a></td>
 <td>3D</td>
 <td>An aligned cuboid described by two points in 3D</td>
 </tr>
-<tr class="row-even"><td>296</td>
+<tr class="row-odd"><td>296</td>
 <td><a class="reference internal" href="#rep-rcube2-3d"><em>RCube2</em></a></td>
 <td>3D</td>
 <td>An aligned cuboid described by a point and a vector</td>
 </tr>
-<tr class="row-odd"><td>297</td>
+<tr class="row-even"><td>297</td>
 <td><a class="reference internal" href="#rep-rsquare1-2d"><em>RSquare1</em></a></td>
 <td>2D</td>
 <td>An aligned cuboid described by two points in 3D</td>
 </tr>
-<tr class="row-even"><td>298</td>
+<tr class="row-odd"><td>298</td>
 <td><a class="reference internal" href="#rep-rsquare2-2d"><em>RSquare2</em></a></td>
 <td>2D</td>
 <td>An aligned cuboid described by a point and a vector</td>
 </tr>
-<tr class="row-odd"><td>341</td>
+<tr class="row-even"><td>341</td>
 <td><a class="reference internal" href="#rep-rcircle0-2d"><em>RCircle0</em></a></td>
 <td>2D</td>
 <td>A circle in 2D described by a centre point and circumference point</td>
 </tr>
-<tr class="row-even"><td>371</td>
+<tr class="row-odd"><td>371</td>
 <td><a class="reference internal" href="#rep-rcircle4-2d"><em>RCircle4</em></a></td>
 <td>2D</td>
 <td>A circle in 2D described by two circumference points [diameter]</td>
 </tr>
-<tr class="row-odd"><td>381</td>
+<tr class="row-even"><td>381</td>
 <td><a class="reference internal" href="#rep-rsphere0-3d"><em>RSphere0</em></a></td>
 <td>3D</td>
 <td>A sphere in 3D described by a centre point and surface point</td>
 </tr>
-<tr class="row-even"><td>421</td>
+<tr class="row-odd"><td>421</td>
 <td><a class="reference internal" href="#rep-rsphere5-3d"><em>RSphere5</em></a></td>
 <td>3D</td>
 <td>A sphere in 3D described by a two surface points [diameter]</td>
@@ -2888,242 +2930,8 @@ for tubular structures without gaps at the joins.</p>
 </tbody>
 </table>
 </div>
-<div class="section" id="rbitmask-1d">
-<span id="rep-rbitmask-1d"></span><span id="index-63"></span><h3>RBitMask (1D)<a class="headerlink" href="#rbitmask-1d" title="Permalink to this headline">¶</a></h3>
-<p>A bitmask in 1D described by bounding line, dimensions and mask data.</p>
-<p>The mask is applied to the bounding line.  Dimensions specify the
-x size of the mask.  DATA is the mask pixel data.</p>
-<table border="1" class="docutils">
-<caption>RBitMask members (1D)</caption>
-<colgroup>
-<col width="11%" />
-<col width="11%" />
-<col width="26%" />
-<col width="53%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">SeqNo</th>
-<th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>B1</td>
-<td>RLinePoints2D</td>
-<td>Bounding line</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>DIM1</td>
-<td>Vector1D</td>
-<td>Mask dimensions (x)</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>DATA</td>
-<td>bool[x]</td>
-<td>Mask data</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="rbitmask-2d">
-<span id="rep-rbitmask-2d"></span><span id="index-64"></span><h3>RBitMask (2D)<a class="headerlink" href="#rbitmask-2d" title="Permalink to this headline">¶</a></h3>
-<p>A bitmask in 2D described by bounding rectangle, dimensions and mask data.</p>
-<p>The mask is applied to the bounding rectangle.  Dimensions specify the
-x and y size of the mask.  DATA is the mask pixel data.</p>
-<table border="1" class="docutils">
-<caption>RBitMask members (2D)</caption>
-<colgroup>
-<col width="11%" />
-<col width="11%" />
-<col width="26%" />
-<col width="53%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">SeqNo</th>
-<th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>B1</td>
-<td>RLinePoints2D</td>
-<td>Bounding box</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>DIM1</td>
-<td>Vector2D</td>
-<td>Mask dimensions (x,y)</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>DATA</td>
-<td>bool[x,y]</td>
-<td>Mask data</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="rbitmask-3d">
-<span id="rep-rbitmask-3d"></span><span id="index-65"></span><h3>RBitMask (3D)<a class="headerlink" href="#rbitmask-3d" title="Permalink to this headline">¶</a></h3>
-<p>A bitmask in 3D described by bounding cuboid, dimensions and mask data.</p>
-<p>The mask is applied to the bounding cuboid.  Dimensions specify the
-x, y and z size of the mask.  DATA is the mask pixel data.</p>
-<table border="1" class="docutils">
-<caption>RBitMask members (3D)</caption>
-<colgroup>
-<col width="11%" />
-<col width="11%" />
-<col width="26%" />
-<col width="53%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">SeqNo</th>
-<th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>B1</td>
-<td>RLinePoints3D</td>
-<td>Bounding box</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>DIM1</td>
-<td>Vector3D</td>
-<td>Mask dimensions (x,y,z)</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>DATA</td>
-<td>bool[x,y,z]</td>
-<td>Mask data</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="rgreymask-1d">
-<span id="rep-rgreymask-1d"></span><span id="index-66"></span><h3>RGreyMask (1D)<a class="headerlink" href="#rgreymask-1d" title="Permalink to this headline">¶</a></h3>
-<p>A greymask in 1D described by bounding line, dimensions and mask data.</p>
-<p>The mask is applied to the bounding line.  Dimensions specify the
-x size of the mask.  DATA is the mask pixel data.</p>
-<table border="1" class="docutils">
-<caption>RGreyMask members (1D)</caption>
-<colgroup>
-<col width="11%" />
-<col width="11%" />
-<col width="26%" />
-<col width="53%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">SeqNo</th>
-<th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>B1</td>
-<td>RLinePoints1D</td>
-<td>Bounding line</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>DIM1</td>
-<td>Vector1D</td>
-<td>Mask dimensions (x)</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>DATA</td>
-<td>double[x]</td>
-<td>Mask data</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="rgreymask-2d">
-<span id="rep-rgreymask-2d"></span><span id="index-67"></span><h3>RGreyMask (2D)<a class="headerlink" href="#rgreymask-2d" title="Permalink to this headline">¶</a></h3>
-<p>A greymask in 2D described by bounding rectangle, dimensions and mask data.</p>
-<p>The mask is applied to the bounding rectangle.  Dimensions specify the
-x and y size of the mask.  DATA is the mask pixel data.</p>
-<table border="1" class="docutils">
-<caption>RGreyMask members (2D)</caption>
-<colgroup>
-<col width="11%" />
-<col width="11%" />
-<col width="26%" />
-<col width="53%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">SeqNo</th>
-<th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>B1</td>
-<td>RLinePoints2D</td>
-<td>Bounding box</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>DIM1</td>
-<td>Vector2D</td>
-<td>Mask dimensions (x,y)</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>DATA</td>
-<td>double[x,y]</td>
-<td>Mask data</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="rgreymask-3d">
-<span id="rep-rgreymask-3d"></span><span id="index-68"></span><h3>RGreyMask (3D)<a class="headerlink" href="#rgreymask-3d" title="Permalink to this headline">¶</a></h3>
-<p>A greymask in 3D described by bounding cuboid, dimensions and mask data.</p>
-<p>The mask is applied to the bounding cuboid.  Dimensions specify the
-x, y and z size of the mask.  DATA is the mask pixel data.</p>
-<table border="1" class="docutils">
-<caption>RGreyMask members (3D)</caption>
-<colgroup>
-<col width="11%" />
-<col width="11%" />
-<col width="26%" />
-<col width="53%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">SeqNo</th>
-<th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>B1</td>
-<td>RLinePoints3D</td>
-<td>Bounding box</td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>DIM1</td>
-<td>Vector3D</td>
-<td>Mask dimensions (x,y,z)</td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>DATA</td>
-<td>double[x,y,z]</td>
-<td>Mask data</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="rmesh-2d">
-<span id="rep-rmesh-2d"></span><span id="index-69"></span><h3>RMesh (2D)<a class="headerlink" href="#rmesh-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rmesh-2d"></span><span id="index-63"></span><h3>RMesh (2D)<a class="headerlink" href="#rmesh-2d" title="Permalink to this headline">¶</a></h3>
 <p>A face-vertex mesh in 2D described by face and vertex lists.</p>
 <p>Vertex references are indexes into the VERTS array.  Vertex-face
 mapping is implied, and will require the implementor to construct the
@@ -3168,7 +2976,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rmesh-3d">
-<span id="rep-rmesh-3d"></span><span id="index-70"></span><h3>RMesh (3D)<a class="headerlink" href="#rmesh-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rmesh-3d"></span><span id="index-64"></span><h3>RMesh (3D)<a class="headerlink" href="#rmesh-3d" title="Permalink to this headline">¶</a></h3>
 <p>A face-vertex mesh in 3D described by face and vertex lists.</p>
 <p>Vertex references are indexes into the VERTS array.  Vertex-face
 mapping is implied, and will require the implementor to construct the
@@ -3213,7 +3021,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="raffinetransform-1d">
-<span id="rep-raffinetransform-1d"></span><span id="index-71"></span><h3>RAffineTransform (1D)<a class="headerlink" href="#raffinetransform-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-raffinetransform-1d"></span><span id="index-65"></span><h3>RAffineTransform (1D)<a class="headerlink" href="#raffinetransform-1d" title="Permalink to this headline">¶</a></h3>
 <p>An affine transform in 1D described by a transformation matrix and 1D shape to transform.</p>
 <table border="1" class="docutils">
 <caption>RAffineTransform members (1D)</caption>
@@ -3249,7 +3057,7 @@ mapping.</p>
 </dl>
 </div>
 <div class="section" id="raffinetransform-2d">
-<span id="rep-raffinetransform-2d"></span><span id="index-72"></span><h3>RAffineTransform (2D)<a class="headerlink" href="#raffinetransform-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-raffinetransform-2d"></span><span id="index-66"></span><h3>RAffineTransform (2D)<a class="headerlink" href="#raffinetransform-2d" title="Permalink to this headline">¶</a></h3>
 <p>An affine transform in 2D described by a transformation matrix and 2D shape to transform.</p>
 <table border="1" class="docutils">
 <caption>RAffineTransform members (2D)</caption>
@@ -3281,7 +3089,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="raffinetransform-3d">
-<span id="rep-raffinetransform-3d"></span><span id="index-73"></span><h3>RAffineTransform (3D)<a class="headerlink" href="#raffinetransform-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-raffinetransform-3d"></span><span id="index-67"></span><h3>RAffineTransform (3D)<a class="headerlink" href="#raffinetransform-3d" title="Permalink to this headline">¶</a></h3>
 <p>An affine transform in 3D described by a transformation matrix and 3D shape to transform.</p>
 <table border="1" class="docutils">
 <caption>RAffineTransform members (3D)</caption>
@@ -3313,7 +3121,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rtranslatetransform-1d">
-<span id="rep-rtranslatetransform-1d"></span><span id="index-74"></span><h3>RTranslateTransform (1D)<a class="headerlink" href="#rtranslatetransform-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rtranslatetransform-1d"></span><span id="index-68"></span><h3>RTranslateTransform (1D)<a class="headerlink" href="#rtranslatetransform-1d" title="Permalink to this headline">¶</a></h3>
 <p>A translation transformation in 1D.</p>
 <table border="1" class="docutils">
 <caption>RTranslateTransform members (1D)</caption>
@@ -3345,7 +3153,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rtranslatetransform-2d">
-<span id="rep-rtranslatetransform-2d"></span><span id="index-75"></span><h3>RTranslateTransform (2D)<a class="headerlink" href="#rtranslatetransform-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rtranslatetransform-2d"></span><span id="index-69"></span><h3>RTranslateTransform (2D)<a class="headerlink" href="#rtranslatetransform-2d" title="Permalink to this headline">¶</a></h3>
 <p>A translation transformation in 2D.</p>
 <table border="1" class="docutils">
 <caption>RTranslateTransform members (2D)</caption>
@@ -3377,7 +3185,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rtranslatetransform-3d">
-<span id="rep-rtranslatetransform-3d"></span><span id="index-76"></span><h3>RTranslateTransform (3D)<a class="headerlink" href="#rtranslatetransform-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rtranslatetransform-3d"></span><span id="index-70"></span><h3>RTranslateTransform (3D)<a class="headerlink" href="#rtranslatetransform-3d" title="Permalink to this headline">¶</a></h3>
 <p>A translation transformation in 3D.</p>
 <table border="1" class="docutils">
 <caption>RTranslateTransform members (3D)</caption>
@@ -3409,7 +3217,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rscaletransform-1d">
-<span id="rep-rscaletransform-1d"></span><span id="index-77"></span><h3>RScaleTransform (1D)<a class="headerlink" href="#rscaletransform-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rscaletransform-1d"></span><span id="index-71"></span><h3>RScaleTransform (1D)<a class="headerlink" href="#rscaletransform-1d" title="Permalink to this headline">¶</a></h3>
 <p>A scaling transformation in 1D.</p>
 <table border="1" class="docutils">
 <caption>RScaleTransform members (1D)</caption>
@@ -3441,7 +3249,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rscaletransform-2d">
-<span id="rep-rscaletransform-2d"></span><span id="index-78"></span><h3>RScaleTransform (2D)<a class="headerlink" href="#rscaletransform-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rscaletransform-2d"></span><span id="index-72"></span><h3>RScaleTransform (2D)<a class="headerlink" href="#rscaletransform-2d" title="Permalink to this headline">¶</a></h3>
 <p>A scaling transformation in 2D.</p>
 <table border="1" class="docutils">
 <caption>RScaleTransform members (2D)</caption>
@@ -3473,7 +3281,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rscaletransform-3d">
-<span id="rep-rscaletransform-3d"></span><span id="index-79"></span><h3>RScaleTransform (3D)<a class="headerlink" href="#rscaletransform-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rscaletransform-3d"></span><span id="index-73"></span><h3>RScaleTransform (3D)<a class="headerlink" href="#rscaletransform-3d" title="Permalink to this headline">¶</a></h3>
 <p>A scaling transformation in 3D.</p>
 <table border="1" class="docutils">
 <caption>RScaleTransform members (3D)</caption>
@@ -3505,7 +3313,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rrotatetransform-2d">
-<span id="rep-rrotatetransform-2d"></span><span id="index-80"></span><h3>RRotateTransform (2D)<a class="headerlink" href="#rrotatetransform-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rrotatetransform-2d"></span><span id="index-74"></span><h3>RRotateTransform (2D)<a class="headerlink" href="#rrotatetransform-2d" title="Permalink to this headline">¶</a></h3>
 <p>A rotation transformation in 2D.</p>
 <table border="1" class="docutils">
 <caption>RRotateTransform members (2D)</caption>
@@ -3537,7 +3345,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rrotatetransform-3d">
-<span id="rep-rrotatetransform-3d"></span><span id="index-81"></span><h3>RRotateTransform (3D)<a class="headerlink" href="#rrotatetransform-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rrotatetransform-3d"></span><span id="index-75"></span><h3>RRotateTransform (3D)<a class="headerlink" href="#rrotatetransform-3d" title="Permalink to this headline">¶</a></h3>
 <p>A rotation transformation in 3D.</p>
 <table border="1" class="docutils">
 <caption>RRotateTransform members (3D)</caption>
@@ -3569,7 +3377,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rabstracttransform-1d">
-<span id="rep-rabstracttransform-1d"></span><span id="index-82"></span><h3>RAbstractTransform (1D)<a class="headerlink" href="#rabstracttransform-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rabstracttransform-1d"></span><span id="index-76"></span><h3>RAbstractTransform (1D)<a class="headerlink" href="#rabstracttransform-1d" title="Permalink to this headline">¶</a></h3>
 <p>An abstract (implementation-defined) transform in 1D.</p>
 <table border="1" class="docutils">
 <caption>RAbstractTransform members (1D)</caption>
@@ -3606,7 +3414,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rabstracttransform-2d">
-<span id="rep-rabstracttransform-2d"></span><span id="index-83"></span><h3>RAbstractTransform (2D)<a class="headerlink" href="#rabstracttransform-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rabstracttransform-2d"></span><span id="index-77"></span><h3>RAbstractTransform (2D)<a class="headerlink" href="#rabstracttransform-2d" title="Permalink to this headline">¶</a></h3>
 <p>An abstract (implementation-defined) transform in 2D.</p>
 <table border="1" class="docutils">
 <caption>RAbstractTransform members (2D)</caption>
@@ -3643,7 +3451,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rabstracttransform-3d">
-<span id="rep-rabstracttransform-3d"></span><span id="index-84"></span><h3>RAbstractTransform (3D)<a class="headerlink" href="#rabstracttransform-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rabstracttransform-3d"></span><span id="index-78"></span><h3>RAbstractTransform (3D)<a class="headerlink" href="#rabstracttransform-3d" title="Permalink to this headline">¶</a></h3>
 <p>An abstract (implementation-defined) transform in 3D.</p>
 <table border="1" class="docutils">
 <caption>RAbstractTransform members (3D)</caption>
@@ -3680,7 +3488,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rtext-2d">
-<span id="rep-rtext-2d"></span><span id="index-85"></span><h3>RText (2D)<a class="headerlink" href="#rtext-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rtext-2d"></span><span id="index-79"></span><h3>RText (2D)<a class="headerlink" href="#rtext-2d" title="Permalink to this headline">¶</a></h3>
 <p>Text.</p>
 <table border="1" class="docutils">
 <caption>RText members (2D)</caption>
@@ -3716,7 +3524,7 @@ mapping.</p>
 </dl>
 </div>
 <div class="section" id="rvalue-nd">
-<span id="rep-rvalue-nd"></span><span id="index-86"></span><h3>RValue (nD)<a class="headerlink" href="#rvalue-nd" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rvalue-nd"></span><span id="index-80"></span><h3>RValue (nD)<a class="headerlink" href="#rvalue-nd" title="Permalink to this headline">¶</a></h3>
 <p>A single value.</p>
 <table border="1" class="docutils">
 <caption>RValue members (nD)</caption>
@@ -3748,7 +3556,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rvalues-nd">
-<span id="rep-rvalues-nd"></span><span id="index-87"></span><h3>RValues (nD)<a class="headerlink" href="#rvalues-nd" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rvalues-nd"></span><span id="index-81"></span><h3>RValues (nD)<a class="headerlink" href="#rvalues-nd" title="Permalink to this headline">¶</a></h3>
 <p>A set of values.</p>
 <table border="1" class="docutils">
 <caption>RValues members (nD)</caption>
@@ -3785,7 +3593,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rrange1-nd">
-<span id="rep-rrange1-nd"></span><span id="index-88"></span><h3>RRange1 (nD)<a class="headerlink" href="#rrange1-nd" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rrange1-nd"></span><span id="index-82"></span><h3>RRange1 (nD)<a class="headerlink" href="#rrange1-nd" title="Permalink to this headline">¶</a></h3>
 <p>A range of values specified as the half-open range [V1, V2).</p>
 <table border="1" class="docutils">
 <caption>RRange1 members (nD)</caption>
@@ -3822,7 +3630,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rrange2-nd">
-<span id="rep-rrange2-nd"></span><span id="index-89"></span><h3>RRange2 (nD)<a class="headerlink" href="#rrange2-nd" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rrange2-nd"></span><span id="index-83"></span><h3>RRange2 (nD)<a class="headerlink" href="#rrange2-nd" title="Permalink to this headline">¶</a></h3>
 <p>A range of values specified as an inequality (or equality).</p>
 <p>Specified as all values for which the formula “n O1 V1” is true, e.g. “n ≤ 5”.</p>
 <table border="1" class="docutils">
@@ -3860,7 +3668,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rextrude-nd">
-<span id="rep-rextrude-nd"></span><span id="index-90"></span><h3>RExtrude (nD)<a class="headerlink" href="#rextrude-nd" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rextrude-nd"></span><span id="index-84"></span><h3>RExtrude (nD)<a class="headerlink" href="#rextrude-nd" title="Permalink to this headline">¶</a></h3>
 <p>A shape extruded in an additional dimension.</p>
 <table border="1" class="docutils">
 <caption>RExtrude members (nD)</caption>
@@ -3892,7 +3700,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rset-nd">
-<span id="rep-rset-nd"></span><span id="index-91"></span><h3>RSet (nD)<a class="headerlink" href="#rset-nd" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rset-nd"></span><span id="index-85"></span><h3>RSet (nD)<a class="headerlink" href="#rset-nd" title="Permalink to this headline">¶</a></h3>
 <p>A set of shapes.</p>
 <table border="1" class="docutils">
 <caption>RSet members (nD)</caption>
@@ -3924,7 +3732,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rbitwise-1d">
-<span id="rep-rbitwise-1d"></span><span id="index-92"></span><h3>RBitwise (1D)<a class="headerlink" href="#rbitwise-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rbitwise-1d"></span><span id="index-86"></span><h3>RBitwise (1D)<a class="headerlink" href="#rbitwise-1d" title="Permalink to this headline">¶</a></h3>
 <p>Binary bitwise operation.</p>
 <table border="1" class="docutils">
 <caption>RBitwise members (1D)</caption>
@@ -3961,7 +3769,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rbitwise-2d">
-<span id="rep-rbitwise-2d"></span><span id="index-93"></span><h3>RBitwise (2D)<a class="headerlink" href="#rbitwise-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rbitwise-2d"></span><span id="index-87"></span><h3>RBitwise (2D)<a class="headerlink" href="#rbitwise-2d" title="Permalink to this headline">¶</a></h3>
 <p>Binary bitwise operation.</p>
 <table border="1" class="docutils">
 <caption>RBitwise members (2D)</caption>
@@ -3998,7 +3806,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rbitwise-3d">
-<span id="rep-rbitwise-3d"></span><span id="index-94"></span><h3>RBitwise (3D)<a class="headerlink" href="#rbitwise-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rbitwise-3d"></span><span id="index-88"></span><h3>RBitwise (3D)<a class="headerlink" href="#rbitwise-3d" title="Permalink to this headline">¶</a></h3>
 <p>Binary bitwise operation.</p>
 <table border="1" class="docutils">
 <caption>RBitwise members (3D)</caption>
@@ -4034,8 +3842,398 @@ mapping.</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="ralignedbitmask-1d">
+<span id="rep-ralignedbitmask-1d"></span><span id="index-89"></span><h3>RAlignedBitMask (1D)<a class="headerlink" href="#ralignedbitmask-1d" title="Permalink to this headline">¶</a></h3>
+<p>A bitmask in 1D described by aligned bounding line, dimensions and mask data.</p>
+<p>The mask is applied to the bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RAlignedBitMask members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RLinePoints1D</td>
+<td>Bounding line</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector1D</td>
+<td>Mask dimensions (x)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>bool[x]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedbitmask-2d">
+<span id="rep-ralignedbitmask-2d"></span><span id="index-90"></span><h3>RAlignedBitMask (2D)<a class="headerlink" href="#ralignedbitmask-2d" title="Permalink to this headline">¶</a></h3>
+<p>A bitmask in 2D described by aligned bounding rectangle, dimensions and mask data.</p>
+<p>The mask is applied to the aligned bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RAlignedBitMask members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RLinePoints2D</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector2D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>bool[x,y]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedbitmask-3d">
+<span id="rep-ralignedbitmask-3d"></span><span id="index-91"></span><h3>RAlignedBitMask (3D)<a class="headerlink" href="#ralignedbitmask-3d" title="Permalink to this headline">¶</a></h3>
+<p>A bitmask in 3D described by aligned bounding cuboid, dimensions and mask data.</p>
+<p>The mask is applied to the aligned bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RAlignedBitMask members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RLinePoints3D</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector3D</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>bool[x,y,z]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedgreymask-1d">
+<span id="rep-ralignedgreymask-1d"></span><span id="index-92"></span><h3>RAlignedGreyMask (1D)<a class="headerlink" href="#ralignedgreymask-1d" title="Permalink to this headline">¶</a></h3>
+<p>A greymask in 1D described by aligned bounding line, dimensions and mask data.</p>
+<p>The mask is applied to the aligned bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RAlignedGreyMask members (1D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RLinePoints1D</td>
+<td>Bounding line</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector1D</td>
+<td>Mask dimensions (x)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>double[x]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedgreymask-2d">
+<span id="rep-ralignedgreymask-2d"></span><span id="index-93"></span><h3>RAlignedGreyMask (2D)<a class="headerlink" href="#ralignedgreymask-2d" title="Permalink to this headline">¶</a></h3>
+<p>A greymask in 2D described by aligned bounding rectangle, dimensions and mask data.</p>
+<p>The mask is applied to the aligned bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RAlignedGreyMask members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RLinePoints2D</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector2D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>double[x,y]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ralignedgreymask-3d">
+<span id="rep-ralignedgreymask-3d"></span><span id="index-94"></span><h3>RAlignedGreyMask (3D)<a class="headerlink" href="#ralignedgreymask-3d" title="Permalink to this headline">¶</a></h3>
+<p>A greymask in 3D described by aligned bounding cuboid, dimensions and mask data.</p>
+<p>The mask is applied to the aligned bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RAlignedGreyMask members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RLinePoints3D</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector3D</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>double[x,y,z]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rbitmask-2d">
+<span id="rep-rbitmask-2d"></span><span id="index-95"></span><h3>RBitMask (2D)<a class="headerlink" href="#rbitmask-2d" title="Permalink to this headline">¶</a></h3>
+<p>A bitmask in 2D described by bounding rectangle, dimensions and mask data.</p>
+<p>The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RBitMask members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RRectangle2</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector2D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>bool[x,y]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rbitmask-3d">
+<span id="rep-rbitmask-3d"></span><span id="index-96"></span><h3>RBitMask (3D)<a class="headerlink" href="#rbitmask-3d" title="Permalink to this headline">¶</a></h3>
+<p>A bitmask in 3D described by bounding cuboid, dimensions and mask data.</p>
+<p>The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RBitMask members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RCuboid2</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector3D</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>bool[x,y,z]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rgreymask-2d">
+<span id="rep-rgreymask-2d"></span><span id="index-97"></span><h3>RGreyMask (2D)<a class="headerlink" href="#rgreymask-2d" title="Permalink to this headline">¶</a></h3>
+<p>A greymask in 2D described by bounding rectangle, dimensions and mask data.</p>
+<p>The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RGreyMask members (2D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RRectangle2</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector2D</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>double[x,y]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rgreymask-3d">
+<span id="rep-rgreymask-3d"></span><span id="index-98"></span><h3>RGreyMask (3D)<a class="headerlink" href="#rgreymask-3d" title="Permalink to this headline">¶</a></h3>
+<p>A greymask in 3D described by bounding cuboid, dimensions and mask data.</p>
+<p>The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.</p>
+<table border="1" class="docutils">
+<caption>RGreyMask members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>B1</td>
+<td>RCuboid2</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>DIM1</td>
+<td>Vector3D</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>DATA</td>
+<td>double[x,y,z]</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="rlinespoints-1d">
-<span id="rep-rlinespoints-1d"></span><span id="index-95"></span><h3>RLinesPoints (1D)<a class="headerlink" href="#rlinespoints-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rlinespoints-1d"></span><span id="index-99"></span><h3>RLinesPoints (1D)<a class="headerlink" href="#rlinespoints-1d" title="Permalink to this headline">¶</a></h3>
 <p>A list of lines described by two points in 1D.</p>
 <table border="1" class="docutils">
 <caption>RLinesPoints members (1D)</caption>
@@ -4066,8 +4264,55 @@ mapping.</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="rcustom-3d">
+<span id="rep-rcustom-3d"></span><span id="index-100"></span><h3>RCustom (3D)<a class="headerlink" href="#rcustom-3d" title="Permalink to this headline">¶</a></h3>
+<p>Custom (user-definable) representation.</p>
+<table border="1" class="docutils">
+<caption>RCustom members (3D)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>TYPE</td>
+<td>String</td>
+<td>Name of the custom type</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>MEASUREMENTS</td>
+<td>RSet</td>
+<td>Set of shapes describing how the ROI was measured</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>RESULTS</td>
+<td>RSet</td>
+<td>Set of shapes for describing measurement results</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>EDIT</td>
+<td>RSet</td>
+<td>Set of shapes describing how to edit the ROI</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>VISUAL</td>
+<td>RSet</td>
+<td>Set of shapes describing how to visualise (render) the ROI for visualisation</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="rlinesvectors-1d">
-<span id="rep-rlinesvectors-1d"></span><span id="index-96"></span><h3>RLinesVectors (1D)<a class="headerlink" href="#rlinesvectors-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rlinesvectors-1d"></span><span id="index-101"></span><h3>RLinesVectors (1D)<a class="headerlink" href="#rlinesvectors-1d" title="Permalink to this headline">¶</a></h3>
 <p>A list of lines described by a point and a vector in 1D; can be used to represent a vector field.</p>
 <table border="1" class="docutils">
 <caption>RLinesVectors members (1D)</caption>
@@ -4098,8 +4343,73 @@ mapping.</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="rproperty-nd">
+<span id="rep-rproperty-nd"></span><span id="index-102"></span><h3>RProperty (nD)<a class="headerlink" href="#rproperty-nd" title="Permalink to this headline">¶</a></h3>
+<p>Property.</p>
+<p>We could use an RShape representation here so that we could set a shape as a property.</p>
+<table border="1" class="docutils">
+<caption>RProperty members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>KEY</td>
+<td>String</td>
+<td>Property name</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>VALUE</td>
+<td>Representation</td>
+<td>Property value (includes type information)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rproperties-nd">
+<span id="rep-rproperties-nd"></span><span id="index-103"></span><h3>RProperties (nD)<a class="headerlink" href="#rproperties-nd" title="Permalink to this headline">¶</a></h3>
+<p>Property list.</p>
+<table border="1" class="docutils">
+<caption>RProperties members (nD)</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="26%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>NPROP</td>
+<td>Count</td>
+<td>Number of properties</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>PROPS</td>
+<td>RProperty[NPROP]</td>
+<td>List of properties</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="rpolylinepoints-1d">
-<span id="rep-rpolylinepoints-1d"></span><span id="index-97"></span><h3>RPolylinePoints (1D)<a class="headerlink" href="#rpolylinepoints-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rpolylinepoints-1d"></span><span id="index-104"></span><h3>RPolylinePoints (1D)<a class="headerlink" href="#rpolylinepoints-1d" title="Permalink to this headline">¶</a></h3>
 <p>A list of points in a polyline in 1D [could use RPoints1D directly].</p>
 <table border="1" class="docutils">
 <caption>RPolylinePoints members (1D)</caption>
@@ -4126,7 +4436,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rpolylinevector-1d">
-<span id="rep-rpolylinevector-1d"></span><span id="index-98"></span><h3>RPolylineVector (1D)<a class="headerlink" href="#rpolylinevector-1d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rpolylinevector-1d"></span><span id="index-105"></span><h3>RPolylineVector (1D)<a class="headerlink" href="#rpolylinevector-1d" title="Permalink to this headline">¶</a></h3>
 <p>A list of points in a polyline represented by a starting point and list of vectors in 1D.</p>
 <table border="1" class="docutils">
 <caption>RPolylineVector members (1D)</caption>
@@ -4158,7 +4468,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="ralignedrectangle1-2d">
-<span id="rep-ralignedrectangle1-2d"></span><span id="index-99"></span><h3>RAlignedRectangle1 (2D)<a class="headerlink" href="#ralignedrectangle1-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-ralignedrectangle1-2d"></span><span id="index-106"></span><h3>RAlignedRectangle1 (2D)<a class="headerlink" href="#ralignedrectangle1-2d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned rectangle described by two points in 2D.</p>
 <table border="1" class="docutils">
 <caption>RAlignedRectangle1 members (2D)</caption>
@@ -4185,7 +4495,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="ralignedcuboid1-3d">
-<span id="rep-ralignedcuboid1-3d"></span><span id="index-100"></span><h3>RAlignedCuboid1 (3D)<a class="headerlink" href="#ralignedcuboid1-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-ralignedcuboid1-3d"></span><span id="index-107"></span><h3>RAlignedCuboid1 (3D)<a class="headerlink" href="#ralignedcuboid1-3d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned cuboid described by two points in 3D.</p>
 <table border="1" class="docutils">
 <caption>RAlignedCuboid1 members (3D)</caption>
@@ -4212,7 +4522,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="ralignedrectangle2-2d">
-<span id="rep-ralignedrectangle2-2d"></span><span id="index-101"></span><h3>RAlignedRectangle2 (2D)<a class="headerlink" href="#ralignedrectangle2-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-ralignedrectangle2-2d"></span><span id="index-108"></span><h3>RAlignedRectangle2 (2D)<a class="headerlink" href="#ralignedrectangle2-2d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned rectangle described by a point and a vector.</p>
 <table border="1" class="docutils">
 <caption>RAlignedRectangle2 members (2D)</caption>
@@ -4239,7 +4549,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="ralignedcuboid2-3d">
-<span id="rep-ralignedcuboid2-3d"></span><span id="index-102"></span><h3>RAlignedCuboid2 (3D)<a class="headerlink" href="#ralignedcuboid2-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-ralignedcuboid2-3d"></span><span id="index-109"></span><h3>RAlignedCuboid2 (3D)<a class="headerlink" href="#ralignedcuboid2-3d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned cuboid described by a point and a vector.</p>
 <table border="1" class="docutils">
 <caption>RAlignedCuboid2 members (3D)</caption>
@@ -4266,7 +4576,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rcube1-3d">
-<span id="rep-rcube1-3d"></span><span id="index-103"></span><h3>RCube1 (3D)<a class="headerlink" href="#rcube1-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rcube1-3d"></span><span id="index-110"></span><h3>RCube1 (3D)<a class="headerlink" href="#rcube1-3d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned cuboid described by two points in 3D.</p>
 <table border="1" class="docutils">
 <caption>RCube1 members (3D)</caption>
@@ -4293,7 +4603,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rcube2-3d">
-<span id="rep-rcube2-3d"></span><span id="index-104"></span><h3>RCube2 (3D)<a class="headerlink" href="#rcube2-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rcube2-3d"></span><span id="index-111"></span><h3>RCube2 (3D)<a class="headerlink" href="#rcube2-3d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned cuboid described by a point and a vector.</p>
 <table border="1" class="docutils">
 <caption>RCube2 members (3D)</caption>
@@ -4320,7 +4630,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rsquare1-2d">
-<span id="rep-rsquare1-2d"></span><span id="index-105"></span><h3>RSquare1 (2D)<a class="headerlink" href="#rsquare1-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rsquare1-2d"></span><span id="index-112"></span><h3>RSquare1 (2D)<a class="headerlink" href="#rsquare1-2d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned cuboid described by two points in 3D.</p>
 <table border="1" class="docutils">
 <caption>RSquare1 members (2D)</caption>
@@ -4347,7 +4657,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rsquare2-2d">
-<span id="rep-rsquare2-2d"></span><span id="index-106"></span><h3>RSquare2 (2D)<a class="headerlink" href="#rsquare2-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rsquare2-2d"></span><span id="index-113"></span><h3>RSquare2 (2D)<a class="headerlink" href="#rsquare2-2d" title="Permalink to this headline">¶</a></h3>
 <p>An aligned cuboid described by a point and a vector.</p>
 <table border="1" class="docutils">
 <caption>RSquare2 members (2D)</caption>
@@ -4374,7 +4684,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rcircle0-2d">
-<span id="rep-rcircle0-2d"></span><span id="index-107"></span><h3>RCircle0 (2D)<a class="headerlink" href="#rcircle0-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rcircle0-2d"></span><span id="index-114"></span><h3>RCircle0 (2D)<a class="headerlink" href="#rcircle0-2d" title="Permalink to this headline">¶</a></h3>
 <p>A circle in 2D described by a centre point and circumference point.</p>
 <table border="1" class="docutils">
 <caption>RCircle0 members (2D)</caption>
@@ -4406,7 +4716,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rcircle4-2d">
-<span id="rep-rcircle4-2d"></span><span id="index-108"></span><h3>RCircle4 (2D)<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rcircle4-2d"></span><span id="index-115"></span><h3>RCircle4 (2D)<a class="headerlink" href="#rcircle4-2d" title="Permalink to this headline">¶</a></h3>
 <p>A circle in 2D described by two circumference points [diameter].</p>
 <table border="1" class="docutils">
 <caption>RCircle4 members (2D)</caption>
@@ -4433,7 +4743,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rsphere0-3d">
-<span id="rep-rsphere0-3d"></span><span id="index-109"></span><h3>RSphere0 (3D)<a class="headerlink" href="#rsphere0-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rsphere0-3d"></span><span id="index-116"></span><h3>RSphere0 (3D)<a class="headerlink" href="#rsphere0-3d" title="Permalink to this headline">¶</a></h3>
 <p>A sphere in 3D described by a centre point and surface point.</p>
 <table border="1" class="docutils">
 <caption>RSphere0 members (3D)</caption>
@@ -4465,7 +4775,7 @@ mapping.</p>
 </table>
 </div>
 <div class="section" id="rsphere5-3d">
-<span id="rep-rsphere5-3d"></span><span id="index-110"></span><h3>RSphere5 (3D)<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h3>
+<span id="rep-rsphere5-3d"></span><span id="index-117"></span><h3>RSphere5 (3D)<a class="headerlink" href="#rsphere5-3d" title="Permalink to this headline">¶</a></h3>
 <p>A sphere in 3D described by a two surface points [diameter].</p>
 <table border="1" class="docutils">
 <caption>RSphere5 members (3D)</caption>
