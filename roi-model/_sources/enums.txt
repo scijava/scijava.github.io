@@ -3,29 +3,29 @@ Enumerated types
 
 
 .. index::
-    BLogic
+    scijava.roi.types.BLogic
 
-.. _enum_BLogic:
+.. _enum_scijava_roi_types_BLogic:
 
-BLogic
-^^^^^^
+scijava.roi.types.BLogic
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. csv-table:: BLogic
+.. csv-table:: scijava.roi.types.BLogic
     :header-rows: 1
-    :file: gen/enum-BLogic.txt
+    :file: gen/enum-scijava_roi_types_BLogic.txt
     :delim: tab
 
 
 .. index::
-    Operator
+    scijava.roi.types.Operator
 
-.. _enum_Operator:
+.. _enum_scijava_roi_types_Operator:
 
-Operator
-^^^^^^^^
+scijava.roi.types.Operator
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. csv-table:: Operator
+.. csv-table:: scijava.roi.types.Operator
     :header-rows: 1
-    :file: gen/enum-Operator.txt
+    :file: gen/enum-scijava_roi_types_Operator.txt
     :delim: tab
 

@@ -9,20 +9,24 @@ Implementors should treat these sizes as minimium requirements.
     interoperability between implementations, these may be required to
     be exact.  Using plain text would mitigate this to an extent.
 
-.. csv-table:: Primitives
+
+.. csv-table:: Raw Primitives
     :header-rows: 1
-    :file: gen/primitives.txt
+    :file: gen/primitives-raw.txt
     :delim: tab
 
-.. csv-table:: C++ primitives
+
+.. csv-table:: C++ Primitives
     :header-rows: 1
     :file: gen/primitives-c++.txt
     :delim: tab
 
-.. csv-table:: Java primitives
+
+.. csv-table:: Java Primitives
     :header-rows: 1
     :file: gen/primitives-java.txt
     :delim: tab
+
 
 .. tabularcolumns:: |l|l|p{3in}|
 .. csv-table:: Shape state/attributes

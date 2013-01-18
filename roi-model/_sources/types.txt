@@ -1,0 +1,4273 @@
+Data types
+==========
+
+.. csv-table:: Data types
+    :header-rows: 1
+    :file: gen/types.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.Iterable
+
+.. _type_scijava_roi_Iterable:
+
+scijava.roi.Iterable
+^^^^^^^^^^^^^^^^^^^^
+
+An iterable region.
+
+
+
+:ref:`Interface details <interface_scijava_roi_Iterable>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.Iterable Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_Iterable.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.RegionOfInterest
+
+.. _type_scijava_roi_RegionOfInterest:
+
+scijava.roi.RegionOfInterest
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Region of interest.
+
+
+
+:ref:`Interface details <interface_scijava_roi_RegionOfInterest>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.RegionOfInterest Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_RegionOfInterest.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.RegionOfInterestSet
+
+.. _type_scijava_roi_RegionOfInterestSet:
+
+scijava.roi.RegionOfInterestSet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Set of ROIs.
+
+
+
+:ref:`Interface details <interface_scijava_roi_RegionOfInterestSet>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.RegionOfInterestSet Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_RegionOfInterestSet.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.Serialisable
+
+.. _type_scijava_roi_Serialisable:
+
+scijava.roi.Serialisable
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Object can be serialised and deserialised.
+
+
+
+:ref:`Interface details <interface_scijava_roi_Serialisable>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.Serialisable Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_Serialisable.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.annotation.Grid
+
+.. _type_scijava_roi_annotation_Grid:
+
+scijava.roi.annotation.Grid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scale grid in a defined volume.
+
+TODO: Specify grid spacing
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.annotation.Grid Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_annotation_Grid.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.annotation.Scale
+
+.. _type_scijava_roi_annotation_Scale:
+
+scijava.roi.annotation.Scale
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scale bar between two points.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.annotation.Scale Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_annotation_Scale.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.annotation.Text
+
+.. _type_scijava_roi_annotation_Text:
+
+scijava.roi.annotation.Text
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Text (label).
+
+Text in 3D will need to be based upon a rectangle in 3D (not yet
+possible without a transform).  Should label alignment be specified
+directly in the representation, or in higher-level metadata?
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.annotation.Text Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_annotation_Text.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.dimconstraint.Extrude
+
+.. _type_scijava_roi_dimconstraint_Extrude:
+
+scijava.roi.dimconstraint.Extrude
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Extrude a shape of arbitrary dimensionality into an additional dimension..
+
+There are no limits in the additional dimension; these must be set
+by combining with a range instead.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.dimconstraint.Extrude Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_dimconstraint_Extrude.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.dimconstraint.Range
+
+.. _type_scijava_roi_dimconstraint_Range:
+
+scijava.roi.dimconstraint.Range
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A range of values in an arbitrary dimension.
+
+Constrain region to a range of values within a specific dimension.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.dimconstraint.Range Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_dimconstraint_Range.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.dimconstraint.Set
+
+.. _type_scijava_roi_dimconstraint_Set:
+
+scijava.roi.dimconstraint.Set
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Combine shapes of differing dimensionality.
+
+The result is a shape combining all subset dimensions.
+It is illegal to have a common dimension between the two shapes.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.dimconstraint.Set Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_dimconstraint_Set.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.dimconstraint.Value
+
+.. _type_scijava_roi_dimconstraint_Value:
+
+scijava.roi.dimconstraint.Value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A value in an arbitrary dimension.
+
+Constrain region to a single value within a specific dimension.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.dimconstraint.Value Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_dimconstraint_Value.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.dimconstraint.Values
+
+.. _type_scijava_roi_dimconstraint_Values:
+
+scijava.roi.dimconstraint.Values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of values in an arbitrary dimension.
+
+Constrain region to multiple values within a specific dimension.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.dimconstraint.Values Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_dimconstraint_Values.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.measurement.Area
+
+.. _type_scijava_roi_measurement_Area:
+
+scijava.roi.measurement.Area
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Get area and perimeter of object.
+
+
+
+:ref:`Interface details <interface_scijava_roi_measurement_Area>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.measurement.Area Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_measurement_Area.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.measurement.Length
+
+.. _type_scijava_roi_measurement_Length:
+
+scijava.roi.measurement.Length
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Get length of object.
+
+
+
+:ref:`Interface details <interface_scijava_roi_measurement_Length>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.measurement.Length Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_measurement_Length.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.measurement.Volume
+
+.. _type_scijava_roi_measurement_Volume:
+
+scijava.roi.measurement.Volume
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Get volume and surface area of object.
+
+
+
+:ref:`Interface details <interface_scijava_roi_measurement_Volume>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.measurement.Volume Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_measurement_Volume.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.AbstractTransform
+
+.. _type_scijava_roi_shape_AbstractTransform:
+
+scijava.roi.shape.AbstractTransform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Abstract (implementation-defined) transformation of a shape.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.AbstractTransform Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_AbstractTransform.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.AffineTransform
+
+.. _type_scijava_roi_shape_AffineTransform:
+
+scijava.roi.shape.AffineTransform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Affine transformation of a shape.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.AffineTransform Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_AffineTransform.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Arc
+
+.. _type_scijava_roi_shape_Arc:
+
+scijava.roi.shape.Arc
+^^^^^^^^^^^^^^^^^^^^^
+
+An arc.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Arc Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Arc.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.BitMask
+
+.. _type_scijava_roi_shape_BitMask:
+
+scijava.roi.shape.BitMask
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with one bit values.
+
+A bitmask may be aligned with the axes (with an aligned bounding
+box) or unaligned (with an unaligned bounding box).  In order to
+iterate over the mask with a 1:1 correspondence between mask and
+underlying image pixel data, it must be converted to an aligned
+form.  Additionally, it must be converted to an aligned form with
+the samples aligned with the pixel grid.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.BitMask Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_BitMask.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Bitwise
+
+.. _type_scijava_roi_shape_Bitwise:
+
+scijava.roi.shape.Bitwise
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Binary bitwise operation.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Bitwise Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Bitwise.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Cuboid
+
+.. _type_scijava_roi_shape_Cuboid:
+
+scijava.roi.shape.Cuboid
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cuboid.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Cuboid Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Cuboid.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Custom
+
+.. _type_scijava_roi_shape_Custom:
+
+scijava.roi.shape.Custom
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A custom (user-definable) 3D shape.
+
+The custom shape type, unlike other shapes, does not define any
+intrinsic behaviour.  This is entirely the responsibility of the
+user.  The typename of the shape is specified by the user, which
+provides an extension mechanism by allowing this type to be used to
+specify an arbitrary number of shape types.
+The shape contains four sets of shapes for measurement, results,
+editing and visualisation.  The intent here is that the shapes
+required for the user to visualise the ROI are contained in the
+VISUAL set.  This will permit the ROI to be transported to other
+systems, and allow visualisation without any knowledge of the
+specific ROI type.  The other types are optional, and may be used as
+the user sees fit.  MEASUREMENTS is intended to store any points or
+other informations used when defining the ROI (which are not already
+contained in the VISUAL set).  RESULTS is intended to store any
+measurements which are not directly derivable from the other sets.
+EDIT is intended for storing label offsets, construction lines, and
+any other information used for editing which is not contained in
+the MEASUREMENTS or VISUAL sets.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Custom Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Custom.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Cylinder
+
+.. _type_scijava_roi_shape_Cylinder:
+
+scijava.roi.shape.Cylinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An elliptic cylinder.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Cylinder Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Cylinder.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Ellipsoid
+
+.. _type_scijava_roi_shape_Ellipsoid:
+
+scijava.roi.shape.Ellipsoid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipsoid.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Ellipsoid Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Ellipsoid.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.GreyMask
+
+.. _type_scijava_roi_shape_GreyMask:
+
+scijava.roi.shape.GreyMask
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A mask with multiple grey levels.
+
+A greymask may be aligned with the axes (with an aligned bounding
+box) or unaligned (with an unaligned bounding box).  In order to
+iterate over the mask with a 1:1 correspondence between mask and
+underlying image pixel data, it must be converted to an aligned
+form.  Additionally, it must be converted to an aligned form with
+the samples aligned with the pixel grid.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.GreyMask Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_GreyMask.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Line
+
+.. _type_scijava_roi_shape_Line:
+
+scijava.roi.shape.Line
+^^^^^^^^^^^^^^^^^^^^^^
+
+A single line.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Line Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Line.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Lines
+
+.. _type_scijava_roi_shape_Lines:
+
+scijava.roi.shape.Lines
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of lines.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Lines Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Lines.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Mesh
+
+.. _type_scijava_roi_shape_Mesh:
+
+scijava.roi.shape.Mesh
+^^^^^^^^^^^^^^^^^^^^^^
+
+A mesh.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Mesh Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Mesh.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.PhysicalShape
+
+.. _type_scijava_roi_shape_PhysicalShape:
+
+scijava.roi.shape.PhysicalShape
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Abstract shape.
+
+
+
+:ref:`Interface details <interface_scijava_roi_shape_PhysicalShape>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.PhysicalShape Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_PhysicalShape.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Point
+
+.. _type_scijava_roi_shape_Point:
+
+scijava.roi.shape.Point
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A single point.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Point Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Point.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Points
+
+.. _type_scijava_roi_shape_Points:
+
+scijava.roi.shape.Points
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of points.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Points Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Points.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Polygon
+
+.. _type_scijava_roi_shape_Polygon:
+
+scijava.roi.shape.Polygon
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected points (closed).
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Polygon Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Polygon.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.PolygonSpline
+
+.. _type_scijava_roi_shape_PolygonSpline:
+
+scijava.roi.shape.PolygonSpline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected splines (closed).
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.PolygonSpline Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_PolygonSpline.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Polyline
+
+.. _type_scijava_roi_shape_Polyline:
+
+scijava.roi.shape.Polyline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected points (open).
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Polyline Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Polyline.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.PolylineSpline
+
+.. _type_scijava_roi_shape_PolylineSpline:
+
+scijava.roi.shape.PolylineSpline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of connected splines (open).
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.PolylineSpline Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_PolylineSpline.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.shape.Set
+
+.. _type_scijava_roi_shape_Set:
+
+scijava.roi.shape.Set
+^^^^^^^^^^^^^^^^^^^^^
+
+A set of shapes.
+
+All operations operate individually upon the contained shapes.  This
+implies that transforms are performed upon each shape, with rotation
+centres in the centre of each shape.
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.shape.Set Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_shape_Set.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AbstractTransform1D
+
+.. _type_scijava_roi_types_AbstractTransform1D:
+
+scijava.roi.types.AbstractTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An abstract (implementation-defined) transform in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AbstractTransform1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AbstractTransform1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AbstractTransform1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AbstractTransform2D
+
+.. _type_scijava_roi_types_AbstractTransform2D:
+
+scijava.roi.types.AbstractTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An abstract (implementation-defined) transform in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AbstractTransform2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AbstractTransform2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AbstractTransform2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AbstractTransform3D
+
+.. _type_scijava_roi_types_AbstractTransform3D:
+
+scijava.roi.types.AbstractTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An abstract (implementation-defined) transform in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AbstractTransform3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AbstractTransform3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AbstractTransform3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AffineTransform1D
+
+.. _type_scijava_roi_types_AffineTransform1D:
+
+scijava.roi.types.AffineTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An affine transform in 1D described by a transformation matrix and 1D shape to transform.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AffineTransform1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AffineTransform1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AffineTransform1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AffineTransform2D
+
+.. _type_scijava_roi_types_AffineTransform2D:
+
+scijava.roi.types.AffineTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An affine transform in 2D described by a transformation matrix and 2D shape to transform.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AffineTransform2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AffineTransform2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AffineTransform2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AffineTransform3D
+
+.. _type_scijava_roi_types_AffineTransform3D:
+
+scijava.roi.types.AffineTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An affine transform in 3D described by a transformation matrix and 3D shape to transform.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AffineTransform3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AffineTransform3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AffineTransform3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AffineTransformnD
+
+.. _type_scijava_roi_types_AffineTransformnD:
+
+scijava.roi.types.AffineTransformnD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An affine transform in nD described by a transformation matrix and nD shape to transform.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AffineTransformnD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AffineTransformnD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedBitMask1D
+
+.. _type_scijava_roi_types_AlignedBitMask1D:
+
+scijava.roi.types.AlignedBitMask1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 1D described by aligned bounding line, dimensions and mask data.
+
+The mask is applied to the bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedBitMask1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedBitMask1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedBitMask1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedBitMask2D
+
+.. _type_scijava_roi_types_AlignedBitMask2D:
+
+scijava.roi.types.AlignedBitMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 2D described by aligned bounding rectangle, dimensions and mask data.
+
+The mask is applied to the aligned bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedBitMask2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedBitMask2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedBitMask2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedBitMask3D
+
+.. _type_scijava_roi_types_AlignedBitMask3D:
+
+scijava.roi.types.AlignedBitMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 3D described by aligned bounding cuboid, dimensions and mask data.
+
+The mask is applied to the aligned bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedBitMask3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedBitMask3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedBitMask3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedCube1
+
+.. _type_scijava_roi_types_AlignedCube1:
+
+scijava.roi.types.AlignedCube1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cube in 3D aligned with the axes described by a corner point and adjacent corner.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedCube1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedCube1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedCube1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedCube2
+
+.. _type_scijava_roi_types_AlignedCube2:
+
+scijava.roi.types.AlignedCube2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cube in 3D aligned with the axes described by a corner point and vector to an adjacent corner.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedCube2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedCube2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedCube2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedCuboid1
+
+.. _type_scijava_roi_types_AlignedCuboid1:
+
+scijava.roi.types.AlignedCuboid1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by two points in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedCuboid1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedCuboid1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedCuboid1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedCuboid2
+
+.. _type_scijava_roi_types_AlignedCuboid2:
+
+scijava.roi.types.AlignedCuboid2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by a point and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedCuboid2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedCuboid2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedCuboid2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedGreyMask1D
+
+.. _type_scijava_roi_types_AlignedGreyMask1D:
+
+scijava.roi.types.AlignedGreyMask1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 1D described by aligned bounding line, dimensions and mask data.
+
+The mask is applied to the aligned bounding line.  Dimensions specify the
+x size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedGreyMask1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedGreyMask1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedGreyMask1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedGreyMask2D
+
+.. _type_scijava_roi_types_AlignedGreyMask2D:
+
+scijava.roi.types.AlignedGreyMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 2D described by aligned bounding rectangle, dimensions and mask data.
+
+The mask is applied to the aligned bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedGreyMask2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedGreyMask2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedGreyMask2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedGreyMask3D
+
+.. _type_scijava_roi_types_AlignedGreyMask3D:
+
+scijava.roi.types.AlignedGreyMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 3D described by aligned bounding cuboid, dimensions and mask data.
+
+The mask is applied to the aligned bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedGreyMask3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedGreyMask3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedGreyMask3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedHalfAxes2D
+
+.. _type_scijava_roi_types_AlignedHalfAxes2D:
+
+scijava.roi.types.AlignedHalfAxes2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipse in 2D aligned with the axes described by two half axes.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedHalfAxes2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedHalfAxes2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedHalfAxes2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedHalfAxes3D
+
+.. _type_scijava_roi_types_AlignedHalfAxes3D:
+
+scijava.roi.types.AlignedHalfAxes3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipsoid in 3D aligned with the axes.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedHalfAxes3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedHalfAxes3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedHalfAxes3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedRectangle1
+
+.. _type_scijava_roi_types_AlignedRectangle1:
+
+scijava.roi.types.AlignedRectangle1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned rectangle described by two points in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedRectangle1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedRectangle1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedRectangle1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedRectangle2
+
+.. _type_scijava_roi_types_AlignedRectangle2:
+
+scijava.roi.types.AlignedRectangle2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned rectangle described by a point and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedRectangle2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedRectangle2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedRectangle2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedSquare1
+
+.. _type_scijava_roi_types_AlignedSquare1:
+
+scijava.roi.types.AlignedSquare1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A square in 2D aligned with the axes described by a corner point and adjacent corner.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedSquare1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedSquare1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedSquare1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.AlignedSquare2
+
+.. _type_scijava_roi_types_AlignedSquare2:
+
+scijava.roi.types.AlignedSquare2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A square in 2D aligned with the axes described by a corner point and vector to an adjacent corner.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_AlignedSquare2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.AlignedSquare2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_AlignedSquare2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Arc12D
+
+.. _type_scijava_roi_types_Arc12D:
+
+scijava.roi.types.Arc12D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc in 2D described by a line (points) and vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Arc12D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Arc12D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Arc12D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Arc13D
+
+.. _type_scijava_roi_types_Arc13D:
+
+scijava.roi.types.Arc13D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc in 3D described by a line (points) and vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Arc13D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Arc13D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Arc13D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Arc22D
+
+.. _type_scijava_roi_types_Arc22D:
+
+scijava.roi.types.Arc22D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc in 2D described by a line (vector) and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Arc22D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Arc22D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Arc22D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Arc23D
+
+.. _type_scijava_roi_types_Arc23D:
+
+scijava.roi.types.Arc23D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc in 3D described by a line (vector) and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Arc23D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Arc23D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Arc23D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Arc32D
+
+.. _type_scijava_roi_types_Arc32D:
+
+scijava.roi.types.Arc32D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc in 2D described by three points; vector inferred from third point.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Arc32D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Arc32D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Arc32D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Arc33D
+
+.. _type_scijava_roi_types_Arc33D:
+
+scijava.roi.types.Arc33D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+An arc in 3D described by three points; vector inferred from third point.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Arc33D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Arc33D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Arc33D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Array
+
+.. _type_scijava_roi_types_Array:
+
+scijava.roi.types.Array
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Fixed length ordered array.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Array>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Array Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Array.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.BLogic
+
+.. _type_scijava_roi_types_BLogic:
+
+scijava.roi.types.BLogic
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.
+
+
+
+:ref:`Enumeration values <enum_scijava_roi_types_BLogic>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.BLogic Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_BLogic.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.BitMask2D
+
+.. _type_scijava_roi_types_BitMask2D:
+
+scijava.roi.types.BitMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 2D described by bounding rectangle, dimensions and mask data.
+
+The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_BitMask2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.BitMask2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_BitMask2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.BitMask3D
+
+.. _type_scijava_roi_types_BitMask3D:
+
+scijava.roi.types.BitMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A bitmask in 3D described by bounding cuboid, dimensions and mask data.
+
+The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_BitMask3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.BitMask3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_BitMask3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Bitwise1D
+
+.. _type_scijava_roi_types_Bitwise1D:
+
+scijava.roi.types.Bitwise1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Binary bitwise operation.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Bitwise1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Bitwise1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Bitwise1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Bitwise2D
+
+.. _type_scijava_roi_types_Bitwise2D:
+
+scijava.roi.types.Bitwise2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Binary bitwise operation.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Bitwise2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Bitwise2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Bitwise2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Bitwise3D
+
+.. _type_scijava_roi_types_Bitwise3D:
+
+scijava.roi.types.Bitwise3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Binary bitwise operation.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Bitwise3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Bitwise3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Bitwise3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Circle0
+
+.. _type_scijava_roi_types_Circle0:
+
+scijava.roi.types.Circle0
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circle in 2D described by a centre point and circumference point.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Circle0>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Circle0 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Circle0.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Circle1
+
+.. _type_scijava_roi_types_Circle1:
+
+scijava.roi.types.Circle1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circle in 2D described by a centre point and 1D radius.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Circle1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Circle1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Circle1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Circle2
+
+.. _type_scijava_roi_types_Circle2:
+
+scijava.roi.types.Circle2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circle in 2D described by a centre point and 2D radius.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Circle2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Circle2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Circle2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Circle3
+
+.. _type_scijava_roi_types_Circle3:
+
+scijava.roi.types.Circle3
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circle in 2D described by a circumference point and vector to the centre point.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Circle3>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Circle3 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Circle3.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Circle4
+
+.. _type_scijava_roi_types_Circle4:
+
+scijava.roi.types.Circle4
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circle in 2D described by two circumference points [diameter].
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Circle4>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Circle4 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Circle4.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Circle5
+
+.. _type_scijava_roi_types_Circle5:
+
+scijava.roi.types.Circle5
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circle in 2D described by three circumference points.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Circle5>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Circle5 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Circle5.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.CircularCylinder1
+
+.. _type_scijava_roi_types_CircularCylinder1:
+
+scijava.roi.types.CircularCylinder1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circular cylinder in 3D described by the centres of both faces and a radius.
+
+A basic circular cylinder with faces at right angles.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_CircularCylinder1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.CircularCylinder1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_CircularCylinder1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.CircularCylinder2
+
+.. _type_scijava_roi_types_CircularCylinder2:
+
+scijava.roi.types.CircularCylinder2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circular cylinder in 3D described by the centre of one face, vector to second face and a radius.
+
+A basic circular cylinder with faces at right angles.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_CircularCylinder2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.CircularCylinder2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_CircularCylinder2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.CircularCylinder3
+
+.. _type_scijava_roi_types_CircularCylinder3:
+
+scijava.roi.types.CircularCylinder3
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circular cylinder in 3D with faces at different angles described by the centres of both faces and vectors specifying the radius and angles of the faces.
+
+Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_CircularCylinder3>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.CircularCylinder3 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_CircularCylinder3.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.CircularCylinder4
+
+.. _type_scijava_roi_types_CircularCylinder4:
+
+scijava.roi.types.CircularCylinder4
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A circular cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and vectors specifying the radius and angles of the faces.
+
+Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_CircularCylinder4>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.CircularCylinder4 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_CircularCylinder4.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Color
+
+.. _type_scijava_roi_types_Color:
+
+scijava.roi.types.Color
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Color in RGBA (0,1) range.
+
+double[4] = 32 bytes; a more compact representation could be used
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Color>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Color Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Color.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Count
+
+.. _type_scijava_roi_types_Count:
+
+scijava.roi.types.Count
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Number of objects.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Count Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Count.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Cube1
+
+.. _type_scijava_roi_types_Cube1:
+
+scijava.roi.types.Cube1
+^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by two points in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Cube1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Cube1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Cube1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Cube2
+
+.. _type_scijava_roi_types_Cube2:
+
+scijava.roi.types.Cube2
+^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by a point and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Cube2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Cube2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Cube2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Cuboid1
+
+.. _type_scijava_roi_types_Cuboid1:
+
+scijava.roi.types.Cuboid1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cuboid in 3D described by two adjacent corners and two vectors.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Cuboid1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Cuboid1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Cuboid1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Cuboid2
+
+.. _type_scijava_roi_types_Cuboid2:
+
+scijava.roi.types.Cuboid2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A cuboid in 3D described by a corner and three vectors.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Cuboid2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Cuboid2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Cuboid2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Custom
+
+.. _type_scijava_roi_types_Custom:
+
+scijava.roi.types.Custom
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Custom (user-definable) representation.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Custom>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Custom Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Custom.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.DimConstraint
+
+.. _type_scijava_roi_types_DimConstraint:
+
+scijava.roi.types.DimConstraint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Abstract dimensional constraints.
+
+
+
+:ref:`Interface details <interface_scijava_roi_types_DimConstraint>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.DimConstraint Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_DimConstraint.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.DimConstraintSet
+
+.. _type_scijava_roi_types_DimConstraintSet:
+
+scijava.roi.types.DimConstraintSet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of dimensional constraints.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_DimConstraintSet>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.DimConstraintSet Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_DimConstraintSet.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.DirectedGraph
+
+.. _type_scijava_roi_types_DirectedGraph:
+
+scijava.roi.types.DirectedGraph
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Fixed length directed graph.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_DirectedGraph>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.DirectedGraph Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_DirectedGraph.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.EllipticCylinder1
+
+.. _type_scijava_roi_types_EllipticCylinder1:
+
+scijava.roi.types.EllipticCylinder1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An elliptic cylinder in 3D described by the centres both faces and half axes.
+
+A basic elliptic cylinder with faces at right angles.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_EllipticCylinder1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.EllipticCylinder1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_EllipticCylinder1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.EllipticCylinder2
+
+.. _type_scijava_roi_types_EllipticCylinder2:
+
+scijava.roi.types.EllipticCylinder2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An elliptic cylinder in 3D described by the centre of one face, vector to second face and half axes.
+
+A basic elliptic cylinder with faces at right angles.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_EllipticCylinder2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.EllipticCylinder2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_EllipticCylinder2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.EllipticCylinder3
+
+.. _type_scijava_roi_types_EllipticCylinder3:
+
+scijava.roi.types.EllipticCylinder3
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An elliptic cylinder in 3D with faces at different angles described by the centres both faces and half axes and angles.
+
+Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_EllipticCylinder3>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.EllipticCylinder3 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_EllipticCylinder3.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.EllipticCylinder4
+
+.. _type_scijava_roi_types_EllipticCylinder4:
+
+scijava.roi.types.EllipticCylinder4
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An elliptic cylinder in 3D with faces at different angles described by the centre of one face, vector to second face and half axes and angles.
+
+Face angles other than right-angles let chains of cylinders be used
+for tubular structures without gaps at the joins.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_EllipticCylinder4>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.EllipticCylinder4 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_EllipticCylinder4.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Extrude
+
+.. _type_scijava_roi_types_Extrude:
+
+scijava.roi.types.Extrude
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A shape extruded in an additional dimension.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Extrude>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Extrude Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Extrude.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Float32
+
+.. _type_scijava_roi_types_Float32:
+
+scijava.roi.types.Float32
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Single precision floating point number.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Float32 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Float32.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Float64
+
+.. _type_scijava_roi_types_Float64:
+
+scijava.roi.types.Float64
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Double precision floating point number.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Float64 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Float64.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.GreyMask2D
+
+.. _type_scijava_roi_types_GreyMask2D:
+
+scijava.roi.types.GreyMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 2D described by bounding rectangle, dimensions and mask data.
+
+The mask is applied to the bounding rectangle.  Dimensions specify the
+x and y size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_GreyMask2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.GreyMask2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_GreyMask2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.GreyMask3D
+
+.. _type_scijava_roi_types_GreyMask3D:
+
+scijava.roi.types.GreyMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A greymask in 3D described by bounding cuboid, dimensions and mask data.
+
+The mask is applied to the bounding cuboid.  Dimensions specify the
+x, y and z size of the mask.  DATA is the mask pixel data.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_GreyMask3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.GreyMask3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_GreyMask3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.HalfAxes2D
+
+.. _type_scijava_roi_types_HalfAxes2D:
+
+scijava.roi.types.HalfAxes2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipse in 2D described by two half axes.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_HalfAxes2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.HalfAxes2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_HalfAxes2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.HalfAxes3D
+
+.. _type_scijava_roi_types_HalfAxes3D:
+
+scijava.roi.types.HalfAxes3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An ellipsoid in 3D described by three half axes.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_HalfAxes3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.HalfAxes3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_HalfAxes3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Index
+
+.. _type_scijava_roi_types_Index:
+
+scijava.roi.types.Index
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Index into an array.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Index Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Index.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Int16
+
+.. _type_scijava_roi_types_Int16:
+
+scijava.roi.types.Int16
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Signed 16-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Int16 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Int16.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Int32
+
+.. _type_scijava_roi_types_Int32:
+
+scijava.roi.types.Int32
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Signed 32-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Int32 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Int32.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Int64
+
+.. _type_scijava_roi_types_Int64:
+
+scijava.roi.types.Int64
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Signed 64-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Int64 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Int64.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Int8
+
+.. _type_scijava_roi_types_Int8:
+
+scijava.roi.types.Int8
+^^^^^^^^^^^^^^^^^^^^^^
+
+Signed 8-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Int8 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Int8.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Labelling
+
+.. _type_scijava_roi_types_Labelling:
+
+scijava.roi.types.Labelling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A labelling (collection of bitmasks).
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Labelling Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Labelling.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinePoints1D
+
+.. _type_scijava_roi_types_LinePoints1D:
+
+scijava.roi.types.LinePoints1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by two points in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinePoints1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinePoints1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinePoints1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinePoints2D
+
+.. _type_scijava_roi_types_LinePoints2D:
+
+scijava.roi.types.LinePoints2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by two points in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinePoints2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinePoints2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinePoints2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinePoints3D
+
+.. _type_scijava_roi_types_LinePoints3D:
+
+scijava.roi.types.LinePoints3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by two points in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinePoints3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinePoints3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinePoints3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LineVector1D
+
+.. _type_scijava_roi_types_LineVector1D:
+
+scijava.roi.types.LineVector1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by a point and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LineVector1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LineVector1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LineVector1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LineVector2D
+
+.. _type_scijava_roi_types_LineVector2D:
+
+scijava.roi.types.LineVector2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by a point and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LineVector2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LineVector2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LineVector2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LineVector3D
+
+.. _type_scijava_roi_types_LineVector3D:
+
+scijava.roi.types.LineVector3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A line described by a point and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LineVector3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LineVector3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LineVector3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinesPoints1D
+
+.. _type_scijava_roi_types_LinesPoints1D:
+
+scijava.roi.types.LinesPoints1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by two points in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinesPoints1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinesPoints1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinesPoints1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinesPoints2D
+
+.. _type_scijava_roi_types_LinesPoints2D:
+
+scijava.roi.types.LinesPoints2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by two points in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinesPoints2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinesPoints2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinesPoints2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinesPoints3D
+
+.. _type_scijava_roi_types_LinesPoints3D:
+
+scijava.roi.types.LinesPoints3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by two points in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinesPoints3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinesPoints3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinesPoints3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinesVectors1D
+
+.. _type_scijava_roi_types_LinesVectors1D:
+
+scijava.roi.types.LinesVectors1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by a point and a vector in 1D; can be used to represent a vector field.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinesVectors1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinesVectors1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinesVectors1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinesVectors2D
+
+.. _type_scijava_roi_types_LinesVectors2D:
+
+scijava.roi.types.LinesVectors2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by a point and a vector in 2D; can be used to represent a vector field.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinesVectors2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinesVectors2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinesVectors2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.LinesVectors3D
+
+.. _type_scijava_roi_types_LinesVectors3D:
+
+scijava.roi.types.LinesVectors3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of lines described by a point and a vector in 3D; can be used to represent a vector field.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_LinesVectors3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.LinesVectors3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_LinesVectors3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Map
+
+.. _type_scijava_roi_types_Map:
+
+scijava.roi.types.Map
+^^^^^^^^^^^^^^^^^^^^^
+
+Fixed length unordered map.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Map>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Map Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Map.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Mesh2D
+
+.. _type_scijava_roi_types_Mesh2D:
+
+scijava.roi.types.Mesh2D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A face-vertex mesh in 2D described by face and vertex lists.
+
+Vertex references are indexes into the VERTS array.  Vertex-face
+mapping is implied, and will require the implementor to construct the
+mapping.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Mesh2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Mesh2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Mesh2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Mesh3D
+
+.. _type_scijava_roi_types_Mesh3D:
+
+scijava.roi.types.Mesh3D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A face-vertex mesh in 3D described by face and vertex lists.
+
+Vertex references are indexes into the VERTS array.  Vertex-face
+mapping is implied, and will require the implementor to construct the
+mapping.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Mesh3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Mesh3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Mesh3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Null
+
+.. _type_scijava_roi_types_Null:
+
+scijava.roi.types.Null
+^^^^^^^^^^^^^^^^^^^^^^
+
+Null type (used to indicate the absence of optional type).
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Null Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Null.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Operator
+
+.. _type_scijava_roi_types_Operator:
+
+scijava.roi.types.Operator
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.
+
+
+
+:ref:`Enumeration values <enum_scijava_roi_types_Operator>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Operator Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Operator.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Pair
+
+.. _type_scijava_roi_types_Pair:
+
+scijava.roi.types.Pair
+^^^^^^^^^^^^^^^^^^^^^^
+
+Pair of values (for map and graph containers).
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Pair>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Pair Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Pair.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Points1D
+
+.. _type_scijava_roi_types_Points1D:
+
+scijava.roi.types.Points1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Points1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Points1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Points1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Points2D
+
+.. _type_scijava_roi_types_Points2D:
+
+scijava.roi.types.Points2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Points2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Points2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Points2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Points3D
+
+.. _type_scijava_roi_types_Points3D:
+
+scijava.roi.types.Points3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Points3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Points3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Points3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.PointsnD
+
+.. _type_scijava_roi_types_PointsnD:
+
+scijava.roi.types.PointsnD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in nD.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.PointsnD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_PointsnD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.PolylinePoints1D
+
+.. _type_scijava_roi_types_PolylinePoints1D:
+
+scijava.roi.types.PolylinePoints1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline in 1D [could use RPoints1D directly].
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_PolylinePoints1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.PolylinePoints1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_PolylinePoints1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.PolylinePoints2D
+
+.. _type_scijava_roi_types_PolylinePoints2D:
+
+scijava.roi.types.PolylinePoints2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline in 2D [could use RPoints2D directly].
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_PolylinePoints2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.PolylinePoints2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_PolylinePoints2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.PolylinePoints3D
+
+.. _type_scijava_roi_types_PolylinePoints3D:
+
+scijava.roi.types.PolylinePoints3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline in 3D [could use RPoints3D directly].
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_PolylinePoints3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.PolylinePoints3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_PolylinePoints3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.PolylineVector1D
+
+.. _type_scijava_roi_types_PolylineVector1D:
+
+scijava.roi.types.PolylineVector1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline represented by a starting point and list of vectors in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_PolylineVector1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.PolylineVector1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_PolylineVector1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.PolylineVector2D
+
+.. _type_scijava_roi_types_PolylineVector2D:
+
+scijava.roi.types.PolylineVector2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline represented by a starting point and list of vectors in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_PolylineVector2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.PolylineVector2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_PolylineVector2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.PolylineVector3D
+
+.. _type_scijava_roi_types_PolylineVector3D:
+
+scijava.roi.types.PolylineVector3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of points in a polyline represented by a starting point and list of vectors in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_PolylineVector3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.PolylineVector3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_PolylineVector3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Properties
+
+.. _type_scijava_roi_types_Properties:
+
+scijava.roi.types.Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Property list.
+
+We could use an RShape representation here so that we could set a shape as a property.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Properties>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Properties Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Properties.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Property
+
+.. _type_scijava_roi_types_Property:
+
+scijava.roi.types.Property
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A custom (user-definable) object property.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Property>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Property Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Property.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ROI
+
+.. _type_scijava_roi_types_ROI:
+
+scijava.roi.types.ROI
+^^^^^^^^^^^^^^^^^^^^^
+
+A region of interest (top-level container of physical shape and nD constraints).
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ROI Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ROI.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ROISet
+
+.. _type_scijava_roi_types_ROISet:
+
+scijava.roi.types.ROISet
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of ROIs.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ROISet Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ROISet.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Range1nD
+
+.. _type_scijava_roi_types_Range1nD:
+
+scijava.roi.types.Range1nD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A range of values specified as the half-open range [V1, V2).
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Range1nD>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Range1nD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Range1nD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Range2nD
+
+.. _type_scijava_roi_types_Range2nD:
+
+scijava.roi.types.Range2nD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A range of values specified as an inequality (or equality).
+
+Specified as all values for which the formula “n O1 V1” is true, e.g. “n ≤ 5”.
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Range2nD>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Range2nD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Range2nD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Rectangle1
+
+.. _type_scijava_roi_types_Rectangle1:
+
+scijava.roi.types.Rectangle1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A rectangle in 2D described by two corner points and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Rectangle1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Rectangle1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Rectangle1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Rectangle2
+
+.. _type_scijava_roi_types_Rectangle2:
+
+scijava.roi.types.Rectangle2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A rectangle in 2D described by a corner point and two vectors.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Rectangle2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Rectangle2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Rectangle2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.RotateTransform2D
+
+.. _type_scijava_roi_types_RotateTransform2D:
+
+scijava.roi.types.RotateTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A rotation transformation in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_RotateTransform2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.RotateTransform2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_RotateTransform2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.RotateTransform3D
+
+.. _type_scijava_roi_types_RotateTransform3D:
+
+scijava.roi.types.RotateTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A rotation transformation in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_RotateTransform3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.RotateTransform3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_RotateTransform3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ScaleTransform1D
+
+.. _type_scijava_roi_types_ScaleTransform1D:
+
+scijava.roi.types.ScaleTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scaling transformation in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_ScaleTransform1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ScaleTransform1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ScaleTransform1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ScaleTransform2D
+
+.. _type_scijava_roi_types_ScaleTransform2D:
+
+scijava.roi.types.ScaleTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scaling transformation in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_ScaleTransform2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ScaleTransform2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ScaleTransform2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ScaleTransform3D
+
+.. _type_scijava_roi_types_ScaleTransform3D:
+
+scijava.roi.types.ScaleTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A scaling transformation in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_ScaleTransform3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ScaleTransform3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ScaleTransform3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Set
+
+.. _type_scijava_roi_types_Set:
+
+scijava.roi.types.Set
+^^^^^^^^^^^^^^^^^^^^^
+
+Fixed length unordered set.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Set>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Set Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Set.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ShapeSet
+
+.. _type_scijava_roi_types_ShapeSet:
+
+scijava.roi.types.ShapeSet
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of shapes.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_ShapeSet>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ShapeSet Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ShapeSet.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Sphere0
+
+.. _type_scijava_roi_types_Sphere0:
+
+scijava.roi.types.Sphere0
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere in 3D described by a centre point and surface point.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Sphere0>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Sphere0 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Sphere0.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Sphere1
+
+.. _type_scijava_roi_types_Sphere1:
+
+scijava.roi.types.Sphere1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere in 3D described by a centre point and 1D radius.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Sphere1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Sphere1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Sphere1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Sphere2
+
+.. _type_scijava_roi_types_Sphere2:
+
+scijava.roi.types.Sphere2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere in 3D described by a centre point and 2D radius.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Sphere2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Sphere2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Sphere2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Sphere3
+
+.. _type_scijava_roi_types_Sphere3:
+
+scijava.roi.types.Sphere3
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere in 3D described by a centre point and 3D radius.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Sphere3>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Sphere3 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Sphere3.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Sphere4
+
+.. _type_scijava_roi_types_Sphere4:
+
+scijava.roi.types.Sphere4
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere in 3D described by a surface point and vector to the centre point.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Sphere4>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Sphere4 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Sphere4.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Sphere5
+
+.. _type_scijava_roi_types_Sphere5:
+
+scijava.roi.types.Sphere5
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere in 3D described by a two surface points [diameter].
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Sphere5>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Sphere5 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Sphere5.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Sphere6
+
+.. _type_scijava_roi_types_Sphere6:
+
+scijava.roi.types.Sphere6
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sphere in 3D described by a four surface points.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Sphere6>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Sphere6 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Sphere6.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Square1
+
+.. _type_scijava_roi_types_Square1:
+
+scijava.roi.types.Square1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by two points in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Square1>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Square1 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Square1.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Square2
+
+.. _type_scijava_roi_types_Square2:
+
+scijava.roi.types.Square2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An aligned cuboid described by a point and a vector.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Square2>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Square2 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Square2.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.String
+
+.. _type_scijava_roi_types_String:
+
+scijava.roi.types.String
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Text string.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_String>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.String Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_String.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Text
+
+.. _type_scijava_roi_types_Text:
+
+scijava.roi.types.Text
+^^^^^^^^^^^^^^^^^^^^^^
+
+Text annotation.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Text>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Text Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Text.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.TranslateTransform1D
+
+.. _type_scijava_roi_types_TranslateTransform1D:
+
+scijava.roi.types.TranslateTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A translation transformation in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_TranslateTransform1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.TranslateTransform1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_TranslateTransform1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.TranslateTransform2D
+
+.. _type_scijava_roi_types_TranslateTransform2D:
+
+scijava.roi.types.TranslateTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A translation transformation in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_TranslateTransform2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.TranslateTransform2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_TranslateTransform2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.TranslateTransform3D
+
+.. _type_scijava_roi_types_TranslateTransform3D:
+
+scijava.roi.types.TranslateTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A translation transformation in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_TranslateTransform3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.TranslateTransform3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_TranslateTransform3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.TypeID
+
+.. _type_scijava_roi_types_TypeID:
+
+scijava.roi.types.TypeID
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Numeric shape identifier.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.TypeID Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_TypeID.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.UInt16
+
+.. _type_scijava_roi_types_UInt16:
+
+scijava.roi.types.UInt16
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Unsigned 16-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.UInt16 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_UInt16.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.UInt32
+
+.. _type_scijava_roi_types_UInt32:
+
+scijava.roi.types.UInt32
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Unsigned 32-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.UInt32 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_UInt32.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.UInt64
+
+.. _type_scijava_roi_types_UInt64:
+
+scijava.roi.types.UInt64
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Unsigned 64-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.UInt64 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_UInt64.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.UInt8
+
+.. _type_scijava_roi_types_UInt8:
+
+scijava.roi.types.UInt8
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Unsigned 8-bit integer.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.UInt8 Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_UInt8.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Value
+
+.. _type_scijava_roi_types_Value:
+
+scijava.roi.types.Value
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Numerical value.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Value Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Value.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ValuenD
+
+.. _type_scijava_roi_types_ValuenD:
+
+scijava.roi.types.ValuenD
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A single value.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ValuenD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ValuenD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.ValuesnD
+
+.. _type_scijava_roi_types_ValuesnD:
+
+scijava.roi.types.ValuesnD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A set of values.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_ValuesnD>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.ValuesnD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_ValuesnD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vector1D
+
+.. _type_scijava_roi_types_Vector1D:
+
+scijava.roi.types.Vector1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vector in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Vector1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vector1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vector1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vector2D
+
+.. _type_scijava_roi_types_Vector2D:
+
+scijava.roi.types.Vector2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vector in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Vector2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vector2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vector2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vector3D
+
+.. _type_scijava_roi_types_Vector3D:
+
+scijava.roi.types.Vector3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vector in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Vector3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vector3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vector3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.VectornD
+
+.. _type_scijava_roi_types_VectornD:
+
+scijava.roi.types.VectornD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vector in nD.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.VectornD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_VectornD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vectors1D
+
+.. _type_scijava_roi_types_Vectors1D:
+
+scijava.roi.types.Vectors1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vectors in 1D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Vectors1D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vectors1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vectors1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vectors2D
+
+.. _type_scijava_roi_types_Vectors2D:
+
+scijava.roi.types.Vectors2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vectors in 2D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Vectors2D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vectors2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vectors2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vectors3D
+
+.. _type_scijava_roi_types_Vectors3D:
+
+scijava.roi.types.Vectors3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vectors in 3D.
+
+
+
+:ref:`Serialisation compound structure <compound_scijava_roi_types_Vectors3D>`
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vectors3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vectors3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.VectorsnD
+
+.. _type_scijava_roi_types_VectorsnD:
+
+scijava.roi.types.VectorsnD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vectors in nD.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.VectorsnD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_VectorsnD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vertex1D
+
+.. _type_scijava_roi_types_Vertex1D:
+
+scijava.roi.types.Vertex1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vertex in 1D.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vertex1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vertex1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vertex2D
+
+.. _type_scijava_roi_types_Vertex2D:
+
+scijava.roi.types.Vertex2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vertex in 2D.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vertex2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vertex2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.Vertex3D
+
+.. _type_scijava_roi_types_Vertex3D:
+
+scijava.roi.types.Vertex3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vertex in 3D.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.Vertex3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_Vertex3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.VertexList1D
+
+.. _type_scijava_roi_types_VertexList1D:
+
+scijava.roi.types.VertexList1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vertices in 1D.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.VertexList1D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_VertexList1D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.VertexList2D
+
+.. _type_scijava_roi_types_VertexList2D:
+
+scijava.roi.types.VertexList2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vertices in 2D.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.VertexList2D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_VertexList2D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.VertexList3D
+
+.. _type_scijava_roi_types_VertexList3D:
+
+scijava.roi.types.VertexList3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vertices in 3D.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.VertexList3D Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_VertexList3D.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.VertexListnD
+
+.. _type_scijava_roi_types_VertexListnD:
+
+scijava.roi.types.VertexListnD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A list of vertices in nD.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.VertexListnD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_VertexListnD.txt
+    :delim: tab
+    :widths: 5, 10
+
+
+.. index::
+    scijava.roi.types.VertexnD
+
+.. _type_scijava_roi_types_VertexnD:
+
+scijava.roi.types.VertexnD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vertex in nD.
+
+
+
+
+
+.. tabularcolumns:: |l|p{4in}|
+.. csv-table:: scijava.roi.types.VertexnD Details
+    :header-rows: 1
+    :file: gen/type-scijava_roi_types_VertexnD.txt
+    :delim: tab
+    :widths: 5, 10
+

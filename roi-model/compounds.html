@@ -52,8 +52,126 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Compound types</a><ul>
-<li><a class="reference internal" href="#shape">Shape</a></li>
-<li><a class="reference internal" href="#string">String</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-abstracttransform1d">scijava.roi.types.AbstractTransform1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-abstracttransform2d">scijava.roi.types.AbstractTransform2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-abstracttransform3d">scijava.roi.types.AbstractTransform3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-affinetransform1d">scijava.roi.types.AffineTransform1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-affinetransform2d">scijava.roi.types.AffineTransform2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-affinetransform3d">scijava.roi.types.AffineTransform3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedbitmask1d">scijava.roi.types.AlignedBitMask1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedbitmask2d">scijava.roi.types.AlignedBitMask2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedbitmask3d">scijava.roi.types.AlignedBitMask3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedcube1">scijava.roi.types.AlignedCube1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedcube2">scijava.roi.types.AlignedCube2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedcuboid1">scijava.roi.types.AlignedCuboid1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedcuboid2">scijava.roi.types.AlignedCuboid2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedgreymask1d">scijava.roi.types.AlignedGreyMask1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedgreymask2d">scijava.roi.types.AlignedGreyMask2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedgreymask3d">scijava.roi.types.AlignedGreyMask3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedhalfaxes2d">scijava.roi.types.AlignedHalfAxes2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedhalfaxes3d">scijava.roi.types.AlignedHalfAxes3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedrectangle1">scijava.roi.types.AlignedRectangle1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedrectangle2">scijava.roi.types.AlignedRectangle2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedsquare1">scijava.roi.types.AlignedSquare1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-alignedsquare2">scijava.roi.types.AlignedSquare2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-arc12d">scijava.roi.types.Arc12D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-arc13d">scijava.roi.types.Arc13D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-arc22d">scijava.roi.types.Arc22D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-arc23d">scijava.roi.types.Arc23D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-arc32d">scijava.roi.types.Arc32D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-arc33d">scijava.roi.types.Arc33D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-array-type">scijava.roi.types.Array&lt;TYPE&gt;</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-bitmask2d">scijava.roi.types.BitMask2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-bitmask3d">scijava.roi.types.BitMask3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-bitwise1d">scijava.roi.types.Bitwise1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-bitwise2d">scijava.roi.types.Bitwise2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-bitwise3d">scijava.roi.types.Bitwise3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circle0">scijava.roi.types.Circle0</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circle1">scijava.roi.types.Circle1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circle2">scijava.roi.types.Circle2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circle3">scijava.roi.types.Circle3</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circle4">scijava.roi.types.Circle4</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circle5">scijava.roi.types.Circle5</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circularcylinder1">scijava.roi.types.CircularCylinder1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circularcylinder2">scijava.roi.types.CircularCylinder2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circularcylinder3">scijava.roi.types.CircularCylinder3</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-circularcylinder4">scijava.roi.types.CircularCylinder4</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-color">scijava.roi.types.Color</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-cube1">scijava.roi.types.Cube1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-cube2">scijava.roi.types.Cube2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-cuboid1">scijava.roi.types.Cuboid1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-cuboid2">scijava.roi.types.Cuboid2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-custom">scijava.roi.types.Custom</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-dimconstraintset">scijava.roi.types.DimConstraintSet</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-directedgraph-ntype-etype">scijava.roi.types.DirectedGraph&lt;NTYPE, ETYPE&gt;</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-ellipticcylinder1">scijava.roi.types.EllipticCylinder1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-ellipticcylinder2">scijava.roi.types.EllipticCylinder2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-ellipticcylinder3">scijava.roi.types.EllipticCylinder3</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-ellipticcylinder4">scijava.roi.types.EllipticCylinder4</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-extrude">scijava.roi.types.Extrude</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-greymask2d">scijava.roi.types.GreyMask2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-greymask3d">scijava.roi.types.GreyMask3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-halfaxes2d">scijava.roi.types.HalfAxes2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-halfaxes3d">scijava.roi.types.HalfAxes3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linepoints1d">scijava.roi.types.LinePoints1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linepoints2d">scijava.roi.types.LinePoints2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linepoints3d">scijava.roi.types.LinePoints3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linevector1d">scijava.roi.types.LineVector1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linevector2d">scijava.roi.types.LineVector2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linevector3d">scijava.roi.types.LineVector3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linespoints1d">scijava.roi.types.LinesPoints1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linespoints2d">scijava.roi.types.LinesPoints2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linespoints3d">scijava.roi.types.LinesPoints3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linesvectors1d">scijava.roi.types.LinesVectors1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linesvectors2d">scijava.roi.types.LinesVectors2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-linesvectors3d">scijava.roi.types.LinesVectors3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-map-ktype-vtype">scijava.roi.types.Map&lt;KTYPE, VTYPE&gt;</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-mesh2d">scijava.roi.types.Mesh2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-mesh3d">scijava.roi.types.Mesh3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-pair-ltype-rtype">scijava.roi.types.Pair&lt;LTYPE, RTYPE&gt;</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-points1d">scijava.roi.types.Points1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-points2d">scijava.roi.types.Points2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-points3d">scijava.roi.types.Points3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-polylinepoints1d">scijava.roi.types.PolylinePoints1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-polylinepoints2d">scijava.roi.types.PolylinePoints2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-polylinepoints3d">scijava.roi.types.PolylinePoints3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-polylinevector1d">scijava.roi.types.PolylineVector1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-polylinevector2d">scijava.roi.types.PolylineVector2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-polylinevector3d">scijava.roi.types.PolylineVector3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-properties">scijava.roi.types.Properties</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-property">scijava.roi.types.Property</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-range1nd">scijava.roi.types.Range1nD</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-range2nd">scijava.roi.types.Range2nD</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-rectangle1">scijava.roi.types.Rectangle1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-rectangle2">scijava.roi.types.Rectangle2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-rotatetransform2d">scijava.roi.types.RotateTransform2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-rotatetransform3d">scijava.roi.types.RotateTransform3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-scaletransform1d">scijava.roi.types.ScaleTransform1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-scaletransform2d">scijava.roi.types.ScaleTransform2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-scaletransform3d">scijava.roi.types.ScaleTransform3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-set-type">scijava.roi.types.Set&lt;TYPE&gt;</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-shapeset">scijava.roi.types.ShapeSet</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-sphere0">scijava.roi.types.Sphere0</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-sphere1">scijava.roi.types.Sphere1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-sphere2">scijava.roi.types.Sphere2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-sphere3">scijava.roi.types.Sphere3</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-sphere4">scijava.roi.types.Sphere4</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-sphere5">scijava.roi.types.Sphere5</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-sphere6">scijava.roi.types.Sphere6</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-square1">scijava.roi.types.Square1</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-square2">scijava.roi.types.Square2</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-string">scijava.roi.types.String</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-text">scijava.roi.types.Text</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-translatetransform1d">scijava.roi.types.TranslateTransform1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-translatetransform2d">scijava.roi.types.TranslateTransform2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-translatetransform3d">scijava.roi.types.TranslateTransform3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-valuesnd">scijava.roi.types.ValuesnD</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-vector1d">scijava.roi.types.Vector1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-vector2d">scijava.roi.types.Vector2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-vector3d">scijava.roi.types.Vector3D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-vectors1d">scijava.roi.types.Vectors1D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-vectors2d">scijava.roi.types.Vectors2D</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-vectors3d">scijava.roi.types.Vectors3D</a></li>
 </ul>
 </li>
 </ul>
@@ -92,10 +210,10 @@
             
   <div class="section" id="compound-types">
 <h1>Compound types<a class="headerlink" href="#compound-types" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="shape">
-<span id="compound-shape"></span><span id="index-0"></span><h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scijava-roi-types-abstracttransform1d">
+<span id="compound-scijava-roi-types-abstracttransform1d"></span><span id="index-0"></span><h2>scijava.roi.types.AbstractTransform1D<a class="headerlink" href="#scijava-roi-types-abstracttransform1d" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
-<caption>Shape</caption>
+<caption>scijava.roi.types.AbstractTransform1D</caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -111,27 +229,27 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>0</td>
-<td>NCHAR</td>
-<td>Count</td>
-<td>Number of octets</td>
+<td>scijava.roi.types.String</td>
+<td>NAME</td>
+<td>Name of transformation</td>
 </tr>
 <tr class="row-odd"><td>1</td>
-<td>SID</td>
-<td>ShapeID</td>
-<td>Shape identifier</td>
+<td>scijava.roi.types.String</td>
+<td>ARGS</td>
+<td>Arguments</td>
 </tr>
 <tr class="row-even"><td>2</td>
-<td>RID</td>
-<td>RepID</td>
-<td>Representation identifier</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="string">
-<span id="compound-string"></span><span id="index-1"></span><h2>String<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scijava-roi-types-abstracttransform2d">
+<span id="compound-scijava-roi-types-abstracttransform2d"></span><span id="index-1"></span><h2>scijava.roi.types.AbstractTransform2D<a class="headerlink" href="#scijava-roi-types-abstracttransform2d" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
-<caption>String</caption>
+<caption>scijava.roi.types.AbstractTransform2D</caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -147,14 +265,3747 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>0</td>
-<td>NCHAR</td>
+<td>scijava.roi.types.String</td>
+<td>NAME</td>
+<td>Name of transformation</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.String</td>
+<td>ARGS</td>
+<td>Arguments</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-abstracttransform3d">
+<span id="compound-scijava-roi-types-abstracttransform3d"></span><span id="index-2"></span><h2>scijava.roi.types.AbstractTransform3D<a class="headerlink" href="#scijava-roi-types-abstracttransform3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AbstractTransform3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.String</td>
+<td>NAME</td>
+<td>Name of transformation</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;scijava.roi.types.String&gt;</td>
+<td>ARGS</td>
+<td>Arguments</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-affinetransform1d">
+<span id="compound-scijava-roi-types-affinetransform1d"></span><span id="index-3"></span><h2>scijava.roi.types.AffineTransform1D<a class="headerlink" href="#scijava-roi-types-affinetransform1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AffineTransform1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Affine1D</td>
+<td>TRANS</td>
+<td>Transform</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-affinetransform2d">
+<span id="compound-scijava-roi-types-affinetransform2d"></span><span id="index-4"></span><h2>scijava.roi.types.AffineTransform2D<a class="headerlink" href="#scijava-roi-types-affinetransform2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AffineTransform2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Affine2D</td>
+<td>TRANS</td>
+<td>Transform</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-affinetransform3d">
+<span id="compound-scijava-roi-types-affinetransform3d"></span><span id="index-5"></span><h2>scijava.roi.types.AffineTransform3D<a class="headerlink" href="#scijava-roi-types-affinetransform3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AffineTransform3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Affine3D</td>
+<td>TRANS</td>
+<td>Transform</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedbitmask1d">
+<span id="compound-scijava-roi-types-alignedbitmask1d"></span><span id="index-6"></span><h2>scijava.roi.types.AlignedBitMask1D<a class="headerlink" href="#scijava-roi-types-alignedbitmask1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedBitMask1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints1D</td>
+<td>B1</td>
+<td>Bounding line</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector1D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>bool[x]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedbitmask2d">
+<span id="compound-scijava-roi-types-alignedbitmask2d"></span><span id="index-7"></span><h2>scijava.roi.types.AlignedBitMask2D<a class="headerlink" href="#scijava-roi-types-alignedbitmask2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedBitMask2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints2D</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>bool[x,y]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedbitmask3d">
+<span id="compound-scijava-roi-types-alignedbitmask3d"></span><span id="index-8"></span><h2>scijava.roi.types.AlignedBitMask3D<a class="headerlink" href="#scijava-roi-types-alignedbitmask3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedBitMask3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints3D</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>bool[x,y,z]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedcube1">
+<span id="compound-scijava-roi-types-alignedcube1"></span><span id="index-9"></span><h2>scijava.roi.types.AlignedCube1<a class="headerlink" href="#scijava-roi-types-alignedcube1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedCube1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex1D</td>
+<td>P2</td>
+<td>x coordinate of adjacent/opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedcube2">
+<span id="compound-scijava-roi-types-alignedcube2"></span><span id="index-10"></span><h2>scijava.roi.types.AlignedCube2<a class="headerlink" href="#scijava-roi-types-alignedcube2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedCube2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector1D</td>
+<td>P2</td>
+<td>distance to adjacent corner on x axis (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedcuboid1">
+<span id="compound-scijava-roi-types-alignedcuboid1"></span><span id="index-11"></span><h2>scijava.roi.types.AlignedCuboid1<a class="headerlink" href="#scijava-roi-types-alignedcuboid1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedCuboid1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints3D</td>
+<td>P1</td>
+<td>Corner and opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedcuboid2">
+<span id="compound-scijava-roi-types-alignedcuboid2"></span><span id="index-12"></span><h2>scijava.roi.types.AlignedCuboid2<a class="headerlink" href="#scijava-roi-types-alignedcuboid2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedCuboid2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LineVector3D</td>
+<td>P1</td>
+<td>Corner and vector to opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedgreymask1d">
+<span id="compound-scijava-roi-types-alignedgreymask1d"></span><span id="index-13"></span><h2>scijava.roi.types.AlignedGreyMask1D<a class="headerlink" href="#scijava-roi-types-alignedgreymask1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedGreyMask1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints1D</td>
+<td>B1</td>
+<td>Bounding line</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector1D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>double[x]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedgreymask2d">
+<span id="compound-scijava-roi-types-alignedgreymask2d"></span><span id="index-14"></span><h2>scijava.roi.types.AlignedGreyMask2D<a class="headerlink" href="#scijava-roi-types-alignedgreymask2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedGreyMask2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints2D</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>double[x,y]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedgreymask3d">
+<span id="compound-scijava-roi-types-alignedgreymask3d"></span><span id="index-15"></span><h2>scijava.roi.types.AlignedGreyMask3D<a class="headerlink" href="#scijava-roi-types-alignedgreymask3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedGreyMask3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints3D</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>double[x,y,z]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedhalfaxes2d">
+<span id="compound-scijava-roi-types-alignedhalfaxes2d"></span><span id="index-16"></span><h2>scijava.roi.types.AlignedHalfAxes2D<a class="headerlink" href="#scijava-roi-types-alignedhalfaxes2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedHalfAxes2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Half axes (x,y)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedhalfaxes3d">
+<span id="compound-scijava-roi-types-alignedhalfaxes3d"></span><span id="index-17"></span><h2>scijava.roi.types.AlignedHalfAxes3D<a class="headerlink" href="#scijava-roi-types-alignedhalfaxes3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedHalfAxes3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Half axes (x,y,z)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedrectangle1">
+<span id="compound-scijava-roi-types-alignedrectangle1"></span><span id="index-18"></span><h2>scijava.roi.types.AlignedRectangle1<a class="headerlink" href="#scijava-roi-types-alignedrectangle1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedRectangle1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints2D</td>
+<td>P1</td>
+<td>Corner and opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedrectangle2">
+<span id="compound-scijava-roi-types-alignedrectangle2"></span><span id="index-19"></span><h2>scijava.roi.types.AlignedRectangle2<a class="headerlink" href="#scijava-roi-types-alignedrectangle2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedRectangle2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LineVector2D</td>
+<td>P1</td>
+<td>Corner and vector to opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedsquare1">
+<span id="compound-scijava-roi-types-alignedsquare1"></span><span id="index-20"></span><h2>scijava.roi.types.AlignedSquare1<a class="headerlink" href="#scijava-roi-types-alignedsquare1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedSquare1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex1D</td>
+<td>P2</td>
+<td>x coordinate of adjacent/opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-alignedsquare2">
+<span id="compound-scijava-roi-types-alignedsquare2"></span><span id="index-21"></span><h2>scijava.roi.types.AlignedSquare2<a class="headerlink" href="#scijava-roi-types-alignedsquare2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.AlignedSquare2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector1D</td>
+<td>P2</td>
+<td>distance to adjacent corner on x axis (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-arc12d">
+<span id="compound-scijava-roi-types-arc12d"></span><span id="index-22"></span><h2>scijava.roi.types.Arc12D<a class="headerlink" href="#scijava-roi-types-arc12d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Arc12D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints2D</td>
+<td>P1</td>
+<td>Centre point and arc start</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-arc13d">
+<span id="compound-scijava-roi-types-arc13d"></span><span id="index-23"></span><h2>scijava.roi.types.Arc13D<a class="headerlink" href="#scijava-roi-types-arc13d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Arc13D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints3D</td>
+<td>P1</td>
+<td>Centre point and arc start</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-arc22d">
+<span id="compound-scijava-roi-types-arc22d"></span><span id="index-24"></span><h2>scijava.roi.types.Arc22D<a class="headerlink" href="#scijava-roi-types-arc22d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Arc22D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LineVector2D</td>
+<td>P1</td>
+<td>Centre point and arc start</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-arc23d">
+<span id="compound-scijava-roi-types-arc23d"></span><span id="index-25"></span><h2>scijava.roi.types.Arc23D<a class="headerlink" href="#scijava-roi-types-arc23d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Arc23D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LineVector3D</td>
+<td>P1</td>
+<td>Centre point and arc start</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Arc end</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-arc32d">
+<span id="compound-scijava-roi-types-arc32d"></span><span id="index-26"></span><h2>scijava.roi.types.Arc32D<a class="headerlink" href="#scijava-roi-types-arc32d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Arc32D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D[3]</td>
+<td>P1</td>
+<td>Centre point, arc start and arc end (vector inferred)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-arc33d">
+<span id="compound-scijava-roi-types-arc33d"></span><span id="index-27"></span><h2>scijava.roi.types.Arc33D<a class="headerlink" href="#scijava-roi-types-arc33d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Arc33D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D[3]</td>
+<td>P1</td>
+<td>Centre point, arc start and arc end (vector inferred)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-array-type">
+<span id="compound-scijava-roi-types-array"></span><span id="index-28"></span><h2>scijava.roi.types.Array&lt;TYPE&gt;<a class="headerlink" href="#scijava-roi-types-array-type" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Array&lt;TYPE&gt;</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>(T0)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>TYPE</td>
+<td>Type stored in container</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>scijava.roi.types.Count</td>
+<td>NELEM</td>
+<td>Number of elements</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>TYPE[NELEM]</td>
+<td>ELEM</td>
+<td>Elements</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-bitmask2d">
+<span id="compound-scijava-roi-types-bitmask2d"></span><span id="index-29"></span><h2>scijava.roi.types.BitMask2D<a class="headerlink" href="#scijava-roi-types-bitmask2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.BitMask2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Rectangle2</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>bool[x,y]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-bitmask3d">
+<span id="compound-scijava-roi-types-bitmask3d"></span><span id="index-30"></span><h2>scijava.roi.types.BitMask3D<a class="headerlink" href="#scijava-roi-types-bitmask3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.BitMask3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Cuboid2</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>bool[x,y,z]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-bitwise1d">
+<span id="compound-scijava-roi-types-bitwise1d"></span><span id="index-31"></span><h2>scijava.roi.types.Bitwise1D<a class="headerlink" href="#scijava-roi-types-bitwise1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Bitwise1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>BLogic</td>
+<td>O1</td>
+<td>Bitwise logic operator</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>BitMask1D</td>
+<td>M1</td>
+<td>Mask 1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>BitMask1D</td>
+<td>M2</td>
+<td>Mask 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-bitwise2d">
+<span id="compound-scijava-roi-types-bitwise2d"></span><span id="index-32"></span><h2>scijava.roi.types.Bitwise2D<a class="headerlink" href="#scijava-roi-types-bitwise2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Bitwise2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>BLogic</td>
+<td>O1</td>
+<td>Bitwise logic operator</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>BitMask2D</td>
+<td>M1</td>
+<td>Mask 1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>BitMask2D</td>
+<td>M2</td>
+<td>Mask 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-bitwise3d">
+<span id="compound-scijava-roi-types-bitwise3d"></span><span id="index-33"></span><h2>scijava.roi.types.Bitwise3D<a class="headerlink" href="#scijava-roi-types-bitwise3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Bitwise3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>BLogic</td>
+<td>O1</td>
+<td>Bitwise logic operator</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>BitMask3D</td>
+<td>M1</td>
+<td>Mask 1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>BitMask3D</td>
+<td>M2</td>
+<td>Mask 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circle0">
+<span id="compound-scijava-roi-types-circle0"></span><span id="index-34"></span><h2>scijava.roi.types.Circle0<a class="headerlink" href="#scijava-roi-types-circle0" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Circle0</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex2D</td>
+<td>P2</td>
+<td>Circumference point</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circle1">
+<span id="compound-scijava-roi-types-circle1"></span><span id="index-35"></span><h2>scijava.roi.types.Circle1<a class="headerlink" href="#scijava-roi-types-circle1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Circle1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector1D</td>
+<td>V1</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circle2">
+<span id="compound-scijava-roi-types-circle2"></span><span id="index-36"></span><h2>scijava.roi.types.Circle2<a class="headerlink" href="#scijava-roi-types-circle2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Circle2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circle3">
+<span id="compound-scijava-roi-types-circle3"></span><span id="index-37"></span><h2>scijava.roi.types.Circle3<a class="headerlink" href="#scijava-roi-types-circle3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Circle3</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>Point on circumference</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Vector to centre</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circle4">
+<span id="compound-scijava-roi-types-circle4"></span><span id="index-38"></span><h2>scijava.roi.types.Circle4<a class="headerlink" href="#scijava-roi-types-circle4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Circle4</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D[2]</td>
+<td>P1</td>
+<td>Two points on circumference</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circle5">
+<span id="compound-scijava-roi-types-circle5"></span><span id="index-39"></span><h2>scijava.roi.types.Circle5<a class="headerlink" href="#scijava-roi-types-circle5" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Circle5</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D[3]</td>
+<td>P1</td>
+<td>Three points on circumference</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circularcylinder1">
+<span id="compound-scijava-roi-types-circularcylinder1"></span><span id="index-40"></span><h2>scijava.roi.types.CircularCylinder1<a class="headerlink" href="#scijava-roi-types-circularcylinder1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.CircularCylinder1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex3D</td>
+<td>P2</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector1D</td>
+<td>V1</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circularcylinder2">
+<span id="compound-scijava-roi-types-circularcylinder2"></span><span id="index-41"></span><h2>scijava.roi.types.CircularCylinder2<a class="headerlink" href="#scijava-roi-types-circularcylinder2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.CircularCylinder2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Distance to centre of second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector1D</td>
+<td>V2</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circularcylinder3">
+<span id="compound-scijava-roi-types-circularcylinder3"></span><span id="index-42"></span><h2>scijava.roi.types.CircularCylinder3<a class="headerlink" href="#scijava-roi-types-circularcylinder3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.CircularCylinder3</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex3D</td>
+<td>P2</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Radius and angle of first face</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector3D</td>
+<td>V2</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-circularcylinder4">
+<span id="compound-scijava-roi-types-circularcylinder4"></span><span id="index-43"></span><h2>scijava.roi.types.CircularCylinder4<a class="headerlink" href="#scijava-roi-types-circularcylinder4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.CircularCylinder4</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Distance to centre of second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector3D</td>
+<td>V2</td>
+<td>Radius and angle of first face</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector3D</td>
+<td>V3</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-color">
+<span id="compound-scijava-roi-types-color"></span><span id="index-44"></span><h2>scijava.roi.types.Color<a class="headerlink" href="#scijava-roi-types-color" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Color</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Float64</td>
+<td>R</td>
+<td>Red value (0,1)</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Float64</td>
+<td>G</td>
+<td>Green value (0,1)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>scijava.roi.types.Float64</td>
+<td>B</td>
+<td>Blue value (0,1)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>scijava.roi.types.Float64</td>
+<td>A</td>
+<td>Alpha value (0,1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-cube1">
+<span id="compound-scijava-roi-types-cube1"></span><span id="index-45"></span><h2>scijava.roi.types.Cube1<a class="headerlink" href="#scijava-roi-types-cube1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Cube1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints3D</td>
+<td>P1</td>
+<td>Corner and adjacent corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-cube2">
+<span id="compound-scijava-roi-types-cube2"></span><span id="index-46"></span><h2>scijava.roi.types.Cube2<a class="headerlink" href="#scijava-roi-types-cube2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Cube2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LineVector3D</td>
+<td>P1</td>
+<td>Corner and vector to adjacent corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-cuboid1">
+<span id="compound-scijava-roi-types-cuboid1"></span><span id="index-47"></span><h2>scijava.roi.types.Cuboid1<a class="headerlink" href="#scijava-roi-types-cuboid1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Cuboid1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex3D</td>
+<td>P2</td>
+<td>Second corner (adjacent to P1)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Distance to third corner (adjacent to P2)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector1D</td>
+<td>V2</td>
+<td>Distance to fourth corner (opposing P1, adjacent to V1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-cuboid2">
+<span id="compound-scijava-roi-types-cuboid2"></span><span id="index-48"></span><h2>scijava.roi.types.Cuboid2<a class="headerlink" href="#scijava-roi-types-cuboid2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Cuboid2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Distance to second corner (relative to P1)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector2D</td>
+<td>V2</td>
+<td>Distance to third corner (relative to V1)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector1D</td>
+<td>V3</td>
+<td>Distance to fourth corner (relative to V2, opposing P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-custom">
+<span id="compound-scijava-roi-types-custom"></span><span id="index-49"></span><h2>scijava.roi.types.Custom<a class="headerlink" href="#scijava-roi-types-custom" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Custom</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.String</td>
+<td>TYPE</td>
+<td>Name of the custom type</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Set</td>
+<td>MEASUREMENTS</td>
+<td>Set of shapes describing how the ROI was measured</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Set</td>
+<td>RESULTS</td>
+<td>Set of shapes for describing measurement results</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Set</td>
+<td>EDIT</td>
+<td>Set of shapes describing how to edit the ROI</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Set</td>
+<td>VISUAL</td>
+<td>Set of shapes describing how to visualise (render) the ROI for visualisation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-dimconstraintset">
+<span id="compound-scijava-roi-types-dimconstraintset"></span><span id="index-50"></span><h2>scijava.roi.types.DimConstraintSet<a class="headerlink" href="#scijava-roi-types-dimconstraintset" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.DimConstraintSet</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Set&lt;scijava.roi.types.DimConstraintSet&gt;</td>
+<td>CONSTRAINTS</td>
+<td>Set of dimensional constraints</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-directedgraph-ntype-etype">
+<span id="compound-scijava-roi-types-directedgraph"></span><span id="index-51"></span><h2>scijava.roi.types.DirectedGraph&lt;NTYPE, ETYPE&gt;<a class="headerlink" href="#scijava-roi-types-directedgraph-ntype-etype" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.DirectedGraph&lt;NTYPE, ETYPE&gt;</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>(T0)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>NTYPE</td>
+<td>Node type stored in container</td>
+</tr>
+<tr class="row-odd"><td>(T1)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>ETYPE</td>
+<td>Edge type stored in container</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;NTYPE&gt;</td>
+<td>VERTS</td>
+<td>Nodes</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;scijava.roi.types.Pair&lt;ETYPE,scijava.roi.types.Pair&lt;Index,Index&gt;&gt;</td>
+<td>EDGES</td>
+<td>Edges, including out and in vertex numbers</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-ellipticcylinder1">
+<span id="compound-scijava-roi-types-ellipticcylinder1"></span><span id="index-52"></span><h2>scijava.roi.types.EllipticCylinder1<a class="headerlink" href="#scijava-roi-types-ellipticcylinder1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.EllipticCylinder1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex3D</td>
+<td>P2</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector1D</td>
+<td>V2</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-ellipticcylinder2">
+<span id="compound-scijava-roi-types-ellipticcylinder2"></span><span id="index-53"></span><h2>scijava.roi.types.EllipticCylinder2<a class="headerlink" href="#scijava-roi-types-ellipticcylinder2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.EllipticCylinder2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Distance to second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector3D</td>
+<td>V2</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector2D</td>
+<td>V3</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-ellipticcylinder3">
+<span id="compound-scijava-roi-types-ellipticcylinder3"></span><span id="index-54"></span><h2>scijava.roi.types.EllipticCylinder3<a class="headerlink" href="#scijava-roi-types-ellipticcylinder3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.EllipticCylinder3</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex3D</td>
+<td>P2</td>
+<td>Centre of second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Half axes of first face (xyz)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector2D</td>
+<td>V2</td>
+<td>Half axes of first face (xy)</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Vector3D</td>
+<td>V3</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-ellipticcylinder4">
+<span id="compound-scijava-roi-types-ellipticcylinder4"></span><span id="index-55"></span><h2>scijava.roi.types.EllipticCylinder4<a class="headerlink" href="#scijava-roi-types-ellipticcylinder4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.EllipticCylinder4</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre of first face</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Distance to second face</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector3D</td>
+<td>V2</td>
+<td>Half axes (xyz)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector2D</td>
+<td>V3</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Vector3D</td>
+<td>V4</td>
+<td>Angle of second face</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-extrude">
+<span id="compound-scijava-roi-types-extrude"></span><span id="index-56"></span><h2>scijava.roi.types.Extrude<a class="headerlink" href="#scijava-roi-types-extrude" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Extrude</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Index</td>
+<td>D1</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-greymask2d">
+<span id="compound-scijava-roi-types-greymask2d"></span><span id="index-57"></span><h2>scijava.roi.types.GreyMask2D<a class="headerlink" href="#scijava-roi-types-greymask2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.GreyMask2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Rectangle2</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>double[x,y]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-greymask3d">
+<span id="compound-scijava-roi-types-greymask3d"></span><span id="index-58"></span><h2>scijava.roi.types.GreyMask3D<a class="headerlink" href="#scijava-roi-types-greymask3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.GreyMask3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Cuboid2</td>
+<td>B1</td>
+<td>Bounding box</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>DIM1</td>
+<td>Mask dimensions (x,y,z)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>double[x,y,z]</td>
+<td>DATA</td>
+<td>Mask data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-halfaxes2d">
+<span id="compound-scijava-roi-types-halfaxes2d"></span><span id="index-59"></span><h2>scijava.roi.types.HalfAxes2D<a class="headerlink" href="#scijava-roi-types-halfaxes2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.HalfAxes2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector1D</td>
+<td>V2</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-halfaxes3d">
+<span id="compound-scijava-roi-types-halfaxes3d"></span><span id="index-60"></span><h2>scijava.roi.types.HalfAxes3D<a class="headerlink" href="#scijava-roi-types-halfaxes3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.HalfAxes3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Half axes (xyz)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector2D</td>
+<td>V2</td>
+<td>Half axes (xy)</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Vector1D</td>
+<td>V3</td>
+<td>Half axes (x)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linepoints1d">
+<span id="compound-scijava-roi-types-linepoints1d"></span><span id="index-61"></span><h2>scijava.roi.types.LinePoints1D<a class="headerlink" href="#scijava-roi-types-linepoints1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinePoints1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex1D[2]</td>
+<td>P1</td>
+<td>Line start and end points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linepoints2d">
+<span id="compound-scijava-roi-types-linepoints2d"></span><span id="index-62"></span><h2>scijava.roi.types.LinePoints2D<a class="headerlink" href="#scijava-roi-types-linepoints2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinePoints2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D[2]</td>
+<td>P1</td>
+<td>Line start and end points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linepoints3d">
+<span id="compound-scijava-roi-types-linepoints3d"></span><span id="index-63"></span><h2>scijava.roi.types.LinePoints3D<a class="headerlink" href="#scijava-roi-types-linepoints3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinePoints3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D[2]</td>
+<td>P1</td>
+<td>Line start and end points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linevector1d">
+<span id="compound-scijava-roi-types-linevector1d"></span><span id="index-64"></span><h2>scijava.roi.types.LineVector1D<a class="headerlink" href="#scijava-roi-types-linevector1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LineVector1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex1D</td>
+<td>P1</td>
+<td>Line start</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linevector2d">
+<span id="compound-scijava-roi-types-linevector2d"></span><span id="index-65"></span><h2>scijava.roi.types.LineVector2D<a class="headerlink" href="#scijava-roi-types-linevector2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LineVector2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Line end (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linevector3d">
+<span id="compound-scijava-roi-types-linevector3d"></span><span id="index-66"></span><h2>scijava.roi.types.LineVector3D<a class="headerlink" href="#scijava-roi-types-linevector3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LineVector3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Line start</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Line end (relative to P1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linespoints1d">
+<span id="compound-scijava-roi-types-linespoints1d"></span><span id="index-67"></span><h2>scijava.roi.types.LinesPoints1D<a class="headerlink" href="#scijava-roi-types-linespoints1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinesPoints1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;RLinePoints1D&gt;</td>
+<td>LINES</td>
+<td>Array of line points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linespoints2d">
+<span id="compound-scijava-roi-types-linespoints2d"></span><span id="index-68"></span><h2>scijava.roi.types.LinesPoints2D<a class="headerlink" href="#scijava-roi-types-linespoints2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinesPoints2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;RLinePoints2D&gt;</td>
+<td>LINES</td>
+<td>Array of line points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linespoints3d">
+<span id="compound-scijava-roi-types-linespoints3d"></span><span id="index-69"></span><h2>scijava.roi.types.LinesPoints3D<a class="headerlink" href="#scijava-roi-types-linespoints3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinesPoints3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;RLinePoints3D&gt;</td>
+<td>LINES</td>
+<td>Array of line points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linesvectors1d">
+<span id="compound-scijava-roi-types-linesvectors1d"></span><span id="index-70"></span><h2>scijava.roi.types.LinesVectors1D<a class="headerlink" href="#scijava-roi-types-linesvectors1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinesVectors1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;RLineVector1D&gt;</td>
+<td>LINES</td>
+<td>Array of line vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linesvectors2d">
+<span id="compound-scijava-roi-types-linesvectors2d"></span><span id="index-71"></span><h2>scijava.roi.types.LinesVectors2D<a class="headerlink" href="#scijava-roi-types-linesvectors2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinesVectors2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;RLineVector2D&gt;</td>
+<td>LINES</td>
+<td>Array of line vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-linesvectors3d">
+<span id="compound-scijava-roi-types-linesvectors3d"></span><span id="index-72"></span><h2>scijava.roi.types.LinesVectors3D<a class="headerlink" href="#scijava-roi-types-linesvectors3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.LinesVectors3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;RLineVector3D&gt;</td>
+<td>LINES</td>
+<td>Array of line vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-map-ktype-vtype">
+<span id="compound-scijava-roi-types-map"></span><span id="index-73"></span><h2>scijava.roi.types.Map&lt;KTYPE, VTYPE&gt;<a class="headerlink" href="#scijava-roi-types-map-ktype-vtype" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Map&lt;KTYPE, VTYPE&gt;</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>(T0)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>KTYPE</td>
+<td>Key type stored in container</td>
+</tr>
+<tr class="row-odd"><td>(T1)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>VTYPE</td>
+<td>Value type stored in container</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;scijava.roi.types.Pair&lt;KTYPE,VTYPE&gt;&gt;</td>
+<td>ELEM</td>
+<td>Array of key-value pairs</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-mesh2d">
+<span id="compound-scijava-roi-types-mesh2d"></span><span id="index-74"></span><h2>scijava.roi.types.Mesh2D<a class="headerlink" href="#scijava-roi-types-mesh2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Mesh2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;double[3]&gt;</td>
+<td>FACES</td>
+<td>Vertex references per face, counterclockwise winding</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;Vertex2D&gt;</td>
+<td>VERTS</td>
+<td>Vertex coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-mesh3d">
+<span id="compound-scijava-roi-types-mesh3d"></span><span id="index-75"></span><h2>scijava.roi.types.Mesh3D<a class="headerlink" href="#scijava-roi-types-mesh3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Mesh3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;double[3]&gt;</td>
+<td>FACES</td>
+<td>Vertex references per face, counterclockwise winding</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;Vertex3D&gt;</td>
+<td>VERTS</td>
+<td>Vertex coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-pair-ltype-rtype">
+<span id="compound-scijava-roi-types-pair"></span><span id="index-76"></span><h2>scijava.roi.types.Pair&lt;LTYPE, RTYPE&gt;<a class="headerlink" href="#scijava-roi-types-pair-ltype-rtype" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Pair&lt;LTYPE, RTYPE&gt;</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>(T0)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>LTYPE</td>
+<td>Left hand type</td>
+</tr>
+<tr class="row-odd"><td>(T1)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>RTYPE</td>
+<td>Right hand type</td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>LTYPE</td>
+<td>LEFT</td>
+<td>Left hand value</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>LTYPE</td>
+<td>RIGHT</td>
+<td>Right hand value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-points1d">
+<span id="compound-scijava-roi-types-points1d"></span><span id="index-77"></span><h2>scijava.roi.types.Points1D<a class="headerlink" href="#scijava-roi-types-points1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Points1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;Vertex1D&gt;</td>
+<td>POINTS</td>
+<td>Array of point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-points2d">
+<span id="compound-scijava-roi-types-points2d"></span><span id="index-78"></span><h2>scijava.roi.types.Points2D<a class="headerlink" href="#scijava-roi-types-points2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Points2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;Vertex2D&gt;</td>
+<td>POINTS</td>
+<td>Array of point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-points3d">
+<span id="compound-scijava-roi-types-points3d"></span><span id="index-79"></span><h2>scijava.roi.types.Points3D<a class="headerlink" href="#scijava-roi-types-points3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Points3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;Vertex3D&gt;</td>
+<td>POINTS</td>
+<td>Array of point coordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-polylinepoints1d">
+<span id="compound-scijava-roi-types-polylinepoints1d"></span><span id="index-80"></span><h2>scijava.roi.types.PolylinePoints1D<a class="headerlink" href="#scijava-roi-types-polylinepoints1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.PolylinePoints1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Points1D</td>
+<td>P1</td>
+<td>Array of points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-polylinepoints2d">
+<span id="compound-scijava-roi-types-polylinepoints2d"></span><span id="index-81"></span><h2>scijava.roi.types.PolylinePoints2D<a class="headerlink" href="#scijava-roi-types-polylinepoints2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.PolylinePoints2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Points2D</td>
+<td>P1</td>
+<td>Array of points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-polylinepoints3d">
+<span id="compound-scijava-roi-types-polylinepoints3d"></span><span id="index-82"></span><h2>scijava.roi.types.PolylinePoints3D<a class="headerlink" href="#scijava-roi-types-polylinepoints3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.PolylinePoints3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Points3D</td>
+<td>P1</td>
+<td>Array of points</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-polylinevector1d">
+<span id="compound-scijava-roi-types-polylinevector1d"></span><span id="index-83"></span><h2>scijava.roi.types.PolylineVector1D<a class="headerlink" href="#scijava-roi-types-polylinevector1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.PolylineVector1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex1D</td>
+<td>P1</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;Vector1D&gt;</td>
+<td>V1</td>
+<td>Array of vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-polylinevector2d">
+<span id="compound-scijava-roi-types-polylinevector2d"></span><span id="index-84"></span><h2>scijava.roi.types.PolylineVector2D<a class="headerlink" href="#scijava-roi-types-polylinevector2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.PolylineVector2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;Vector2D&gt;</td>
+<td>V1</td>
+<td>Array of vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-polylinevector3d">
+<span id="compound-scijava-roi-types-polylinevector3d"></span><span id="index-85"></span><h2>scijava.roi.types.PolylineVector3D<a class="headerlink" href="#scijava-roi-types-polylinevector3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.PolylineVector3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>First point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;Vector3D&gt;</td>
+<td>V1</td>
+<td>Array of vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-properties">
+<span id="compound-scijava-roi-types-properties"></span><span id="index-86"></span><h2>scijava.roi.types.Properties<a class="headerlink" href="#scijava-roi-types-properties" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Properties</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Set&lt;scijava.roi.types.Property&gt;</td>
+<td>PROPS</td>
+<td>Set of properties</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-property">
+<span id="compound-scijava-roi-types-property"></span><span id="index-87"></span><h2>scijava.roi.types.Property<a class="headerlink" href="#scijava-roi-types-property" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Property</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.String</td>
+<td>KEY</td>
+<td>Property name</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Representation</td>
+<td>VALUE</td>
+<td>Property value (includes type information)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-range1nd">
+<span id="compound-scijava-roi-types-range1nd"></span><span id="index-88"></span><h2>scijava.roi.types.Range1nD<a class="headerlink" href="#scijava-roi-types-range1nd" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Range1nD</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Index</td>
+<td>D1</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Index</td>
+<td>V1</td>
+<td>Starting value within dimension</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Index</td>
+<td>V2</td>
+<td>Ending value +1 within dimension</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-range2nd">
+<span id="compound-scijava-roi-types-range2nd"></span><span id="index-89"></span><h2>scijava.roi.types.Range2nD<a class="headerlink" href="#scijava-roi-types-range2nd" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Range2nD</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Index</td>
+<td>D1</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Operator</td>
+<td>O1</td>
+<td>Mathematical operator</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Value</td>
+<td>V1</td>
+<td>Value for operation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-rectangle1">
+<span id="compound-scijava-roi-types-rectangle1"></span><span id="index-90"></span><h2>scijava.roi.types.Rectangle1<a class="headerlink" href="#scijava-roi-types-rectangle1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Rectangle1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex2D</td>
+<td>P2</td>
+<td>Adjacent corner</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector1D</td>
+<td>V1</td>
+<td>Distance to corner opposing P1 (relative to P2)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-rectangle2">
+<span id="compound-scijava-roi-types-rectangle2"></span><span id="index-91"></span><h2>scijava.roi.types.Rectangle2<a class="headerlink" href="#scijava-roi-types-rectangle2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Rectangle2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex2D</td>
+<td>P1</td>
+<td>First corner</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Distance to adjacent corner (relative to P1)</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Vector1D</td>
+<td>V2</td>
+<td>Distance to corner opposing P1 (relative to P2)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-rotatetransform2d">
+<span id="compound-scijava-roi-types-rotatetransform2d"></span><span id="index-92"></span><h2>scijava.roi.types.RotateTransform2D<a class="headerlink" href="#scijava-roi-types-rotatetransform2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.RotateTransform2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>double[1]</td>
+<td>RA</td>
+<td>Rotation angle in z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-rotatetransform3d">
+<span id="compound-scijava-roi-types-rotatetransform3d"></span><span id="index-93"></span><h2>scijava.roi.types.RotateTransform3D<a class="headerlink" href="#scijava-roi-types-rotatetransform3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.RotateTransform3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>double[3]</td>
+<td>RA</td>
+<td>Rotation angle in x,y,z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-scaletransform1d">
+<span id="compound-scijava-roi-types-scaletransform1d"></span><span id="index-94"></span><h2>scijava.roi.types.ScaleTransform1D<a class="headerlink" href="#scijava-roi-types-scaletransform1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.ScaleTransform1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>double[1]</td>
+<td>SF1</td>
+<td>Scale factor for x</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape1D</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-scaletransform2d">
+<span id="compound-scijava-roi-types-scaletransform2d"></span><span id="index-95"></span><h2>scijava.roi.types.ScaleTransform2D<a class="headerlink" href="#scijava-roi-types-scaletransform2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.ScaleTransform2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>double[2]</td>
+<td>SF1</td>
+<td>Scale factor for x,y</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape1D</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-scaletransform3d">
+<span id="compound-scijava-roi-types-scaletransform3d"></span><span id="index-96"></span><h2>scijava.roi.types.ScaleTransform3D<a class="headerlink" href="#scijava-roi-types-scaletransform3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.ScaleTransform3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>double[3]</td>
+<td>SF1</td>
+<td>Scale factor for x,y,z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-set-type">
+<span id="compound-scijava-roi-types-set"></span><span id="index-97"></span><h2>scijava.roi.types.Set&lt;TYPE&gt;<a class="headerlink" href="#scijava-roi-types-set-type" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Set&lt;TYPE&gt;</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>(T0)</td>
+<td>scijava.roi.types.TypeID</td>
+<td>TYPE</td>
+<td>Type stored in container</td>
+</tr>
+<tr class="row-odd"><td>0</td>
+<td>scijava.roi.types.Count</td>
+<td>NELEM</td>
+<td>Number of elements</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>TYPE[NELEM]</td>
+<td>ELEM</td>
+<td>Elements</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-shapeset">
+<span id="compound-scijava-roi-types-shapeset"></span><span id="index-98"></span><h2>scijava.roi.types.ShapeSet<a class="headerlink" href="#scijava-roi-types-shapeset" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.ShapeSet</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Set&lt;Shape&gt;</td>
+<td>SHAPES</td>
+<td>Set of shapes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-sphere0">
+<span id="compound-scijava-roi-types-sphere0"></span><span id="index-99"></span><h2>scijava.roi.types.Sphere0<a class="headerlink" href="#scijava-roi-types-sphere0" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Sphere0</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vertex3D</td>
+<td>P2</td>
+<td>Surface point</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-sphere1">
+<span id="compound-scijava-roi-types-sphere1"></span><span id="index-100"></span><h2>scijava.roi.types.Sphere1<a class="headerlink" href="#scijava-roi-types-sphere1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Sphere1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector1D</td>
+<td>V1</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-sphere2">
+<span id="compound-scijava-roi-types-sphere2"></span><span id="index-101"></span><h2>scijava.roi.types.Sphere2<a class="headerlink" href="#scijava-roi-types-sphere2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Sphere2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-sphere3">
+<span id="compound-scijava-roi-types-sphere3"></span><span id="index-102"></span><h2>scijava.roi.types.Sphere3<a class="headerlink" href="#scijava-roi-types-sphere3" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Sphere3</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Centre point</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-sphere4">
+<span id="compound-scijava-roi-types-sphere4"></span><span id="index-103"></span><h2>scijava.roi.types.Sphere4<a class="headerlink" href="#scijava-roi-types-sphere4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Sphere4</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D</td>
+<td>P1</td>
+<td>Point on surface</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Vector to centre</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-sphere5">
+<span id="compound-scijava-roi-types-sphere5"></span><span id="index-104"></span><h2>scijava.roi.types.Sphere5<a class="headerlink" href="#scijava-roi-types-sphere5" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Sphere5</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D[2]</td>
+<td>P1</td>
+<td>Two points on surface</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-sphere6">
+<span id="compound-scijava-roi-types-sphere6"></span><span id="index-105"></span><h2>scijava.roi.types.Sphere6<a class="headerlink" href="#scijava-roi-types-sphere6" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Sphere6</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vertex3D[4]</td>
+<td>P1</td>
+<td>Four points on surface</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-square1">
+<span id="compound-scijava-roi-types-square1"></span><span id="index-106"></span><h2>scijava.roi.types.Square1<a class="headerlink" href="#scijava-roi-types-square1" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Square1</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LinePoints2D</td>
+<td>P1</td>
+<td>Corner and opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-square2">
+<span id="compound-scijava-roi-types-square2"></span><span id="index-107"></span><h2>scijava.roi.types.Square2<a class="headerlink" href="#scijava-roi-types-square2" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Square2</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>LineVector2D</td>
+<td>P1</td>
+<td>Corner and vector to opposing corner</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-string">
+<span id="compound-scijava-roi-types-string"></span><span id="index-108"></span><h2>scijava.roi.types.String<a class="headerlink" href="#scijava-roi-types-string" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.String</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
 <td>Count</td>
+<td>NCHAR</td>
 <td>Number of octets</td>
 </tr>
 <tr class="row-odd"><td>1</td>
-<td>uint8[NCHAR]</td>
 <td>CHARS</td>
+<td>uint8[NCHAR]</td>
 <td>Array of octets (UTF-8)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-text">
+<span id="compound-scijava-roi-types-text"></span><span id="index-109"></span><h2>scijava.roi.types.Text<a class="headerlink" href="#scijava-roi-types-text" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Text</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Rectangle2</td>
+<td>B1</td>
+<td>Text bounds</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.String</td>
+<td>TEXT</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-translatetransform1d">
+<span id="compound-scijava-roi-types-translatetransform1d"></span><span id="index-110"></span><h2>scijava.roi.types.TranslateTransform1D<a class="headerlink" href="#scijava-roi-types-translatetransform1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.TranslateTransform1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vector1D</td>
+<td>TR1</td>
+<td>Translation in x</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape1D</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-translatetransform2d">
+<span id="compound-scijava-roi-types-translatetransform2d"></span><span id="index-111"></span><h2>scijava.roi.types.TranslateTransform2D<a class="headerlink" href="#scijava-roi-types-translatetransform2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.TranslateTransform2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vector2D</td>
+<td>TR1</td>
+<td>Translation in x,y</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape1D</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-translatetransform3d">
+<span id="compound-scijava-roi-types-translatetransform3d"></span><span id="index-112"></span><h2>scijava.roi.types.TranslateTransform3D<a class="headerlink" href="#scijava-roi-types-translatetransform3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.TranslateTransform3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vector3D</td>
+<td>TR1</td>
+<td>Translation in x,y,z</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Shape1D</td>
+<td>SHAPE</td>
+<td>Shape</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-valuesnd">
+<span id="compound-scijava-roi-types-valuesnd"></span><span id="index-113"></span><h2>scijava.roi.types.ValuesnD<a class="headerlink" href="#scijava-roi-types-valuesnd" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.ValuesnD</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Index</td>
+<td>D1</td>
+<td>Dimension</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>scijava.roi.types.Array&lt;Index&gt;</td>
+<td>V1</td>
+<td>Values within dimension</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-vector1d">
+<span id="compound-scijava-roi-types-vector1d"></span><span id="index-114"></span><h2>scijava.roi.types.Vector1D<a class="headerlink" href="#scijava-roi-types-vector1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Vector1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vector1D</td>
+<td>V1</td>
+<td>Vector</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-vector2d">
+<span id="compound-scijava-roi-types-vector2d"></span><span id="index-115"></span><h2>scijava.roi.types.Vector2D<a class="headerlink" href="#scijava-roi-types-vector2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Vector2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vector2D</td>
+<td>V1</td>
+<td>Vector</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-vector3d">
+<span id="compound-scijava-roi-types-vector3d"></span><span id="index-116"></span><h2>scijava.roi.types.Vector3D<a class="headerlink" href="#scijava-roi-types-vector3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Vector3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>Vector3D</td>
+<td>V1</td>
+<td>Vector</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-vectors1d">
+<span id="compound-scijava-roi-types-vectors1d"></span><span id="index-117"></span><h2>scijava.roi.types.Vectors1D<a class="headerlink" href="#scijava-roi-types-vectors1d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Vectors1D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;Vector1D&gt;</td>
+<td>VECS</td>
+<td>Array of vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-vectors2d">
+<span id="compound-scijava-roi-types-vectors2d"></span><span id="index-118"></span><h2>scijava.roi.types.Vectors2D<a class="headerlink" href="#scijava-roi-types-vectors2d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Vectors2D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;Vector2D&gt;</td>
+<td>VECS</td>
+<td>Array of vectors</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-vectors3d">
+<span id="compound-scijava-roi-types-vectors3d"></span><span id="index-119"></span><h2>scijava.roi.types.Vectors3D<a class="headerlink" href="#scijava-roi-types-vectors3d" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.Vectors3D</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SeqNo</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>scijava.roi.types.Array&lt;Vector3D&gt;</td>
+<td>VECS</td>
+<td>Array of vectors</td>
 </tr>
 </tbody>
 </table>

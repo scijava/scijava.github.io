@@ -3,29 +3,1681 @@ Compound types
 
 
 .. index::
-    Shape
+    scijava_roi_types_AbstractTransform1D
 
-.. _compound_Shape:
+.. _compound_scijava_roi_types_AbstractTransform1D:
 
-Shape
-^^^^^
+scijava.roi.types.AbstractTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. csv-table:: Shape
+.. csv-table:: scijava.roi.types.AbstractTransform1D
     :header-rows: 1
-    :file: gen/compound-Shape.txt
+    :file: gen/compound-scijava_roi_types_AbstractTransform1D.txt
     :delim: tab
 
 
 .. index::
-    String
+    scijava_roi_types_AbstractTransform2D
 
-.. _compound_String:
+.. _compound_scijava_roi_types_AbstractTransform2D:
 
-String
-^^^^^^
+scijava.roi.types.AbstractTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. csv-table:: String
+.. csv-table:: scijava.roi.types.AbstractTransform2D
     :header-rows: 1
-    :file: gen/compound-String.txt
+    :file: gen/compound-scijava_roi_types_AbstractTransform2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AbstractTransform3D
+
+.. _compound_scijava_roi_types_AbstractTransform3D:
+
+scijava.roi.types.AbstractTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AbstractTransform3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AbstractTransform3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AffineTransform1D
+
+.. _compound_scijava_roi_types_AffineTransform1D:
+
+scijava.roi.types.AffineTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AffineTransform1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AffineTransform1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AffineTransform2D
+
+.. _compound_scijava_roi_types_AffineTransform2D:
+
+scijava.roi.types.AffineTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AffineTransform2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AffineTransform2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AffineTransform3D
+
+.. _compound_scijava_roi_types_AffineTransform3D:
+
+scijava.roi.types.AffineTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AffineTransform3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AffineTransform3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedBitMask1D
+
+.. _compound_scijava_roi_types_AlignedBitMask1D:
+
+scijava.roi.types.AlignedBitMask1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedBitMask1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedBitMask1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedBitMask2D
+
+.. _compound_scijava_roi_types_AlignedBitMask2D:
+
+scijava.roi.types.AlignedBitMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedBitMask2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedBitMask2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedBitMask3D
+
+.. _compound_scijava_roi_types_AlignedBitMask3D:
+
+scijava.roi.types.AlignedBitMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedBitMask3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedBitMask3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedCube1
+
+.. _compound_scijava_roi_types_AlignedCube1:
+
+scijava.roi.types.AlignedCube1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedCube1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedCube1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedCube2
+
+.. _compound_scijava_roi_types_AlignedCube2:
+
+scijava.roi.types.AlignedCube2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedCube2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedCube2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedCuboid1
+
+.. _compound_scijava_roi_types_AlignedCuboid1:
+
+scijava.roi.types.AlignedCuboid1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedCuboid1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedCuboid1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedCuboid2
+
+.. _compound_scijava_roi_types_AlignedCuboid2:
+
+scijava.roi.types.AlignedCuboid2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedCuboid2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedCuboid2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedGreyMask1D
+
+.. _compound_scijava_roi_types_AlignedGreyMask1D:
+
+scijava.roi.types.AlignedGreyMask1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedGreyMask1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedGreyMask1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedGreyMask2D
+
+.. _compound_scijava_roi_types_AlignedGreyMask2D:
+
+scijava.roi.types.AlignedGreyMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedGreyMask2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedGreyMask2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedGreyMask3D
+
+.. _compound_scijava_roi_types_AlignedGreyMask3D:
+
+scijava.roi.types.AlignedGreyMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedGreyMask3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedGreyMask3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedHalfAxes2D
+
+.. _compound_scijava_roi_types_AlignedHalfAxes2D:
+
+scijava.roi.types.AlignedHalfAxes2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedHalfAxes2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedHalfAxes2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedHalfAxes3D
+
+.. _compound_scijava_roi_types_AlignedHalfAxes3D:
+
+scijava.roi.types.AlignedHalfAxes3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedHalfAxes3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedHalfAxes3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedRectangle1
+
+.. _compound_scijava_roi_types_AlignedRectangle1:
+
+scijava.roi.types.AlignedRectangle1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedRectangle1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedRectangle1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedRectangle2
+
+.. _compound_scijava_roi_types_AlignedRectangle2:
+
+scijava.roi.types.AlignedRectangle2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedRectangle2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedRectangle2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedSquare1
+
+.. _compound_scijava_roi_types_AlignedSquare1:
+
+scijava.roi.types.AlignedSquare1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedSquare1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedSquare1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_AlignedSquare2
+
+.. _compound_scijava_roi_types_AlignedSquare2:
+
+scijava.roi.types.AlignedSquare2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.AlignedSquare2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_AlignedSquare2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Arc12D
+
+.. _compound_scijava_roi_types_Arc12D:
+
+scijava.roi.types.Arc12D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Arc12D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Arc12D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Arc13D
+
+.. _compound_scijava_roi_types_Arc13D:
+
+scijava.roi.types.Arc13D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Arc13D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Arc13D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Arc22D
+
+.. _compound_scijava_roi_types_Arc22D:
+
+scijava.roi.types.Arc22D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Arc22D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Arc22D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Arc23D
+
+.. _compound_scijava_roi_types_Arc23D:
+
+scijava.roi.types.Arc23D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Arc23D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Arc23D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Arc32D
+
+.. _compound_scijava_roi_types_Arc32D:
+
+scijava.roi.types.Arc32D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Arc32D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Arc32D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Arc33D
+
+.. _compound_scijava_roi_types_Arc33D:
+
+scijava.roi.types.Arc33D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Arc33D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Arc33D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Array
+
+.. _compound_scijava_roi_types_Array:
+
+scijava.roi.types.Array<TYPE>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Array<TYPE>
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Array.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_BitMask2D
+
+.. _compound_scijava_roi_types_BitMask2D:
+
+scijava.roi.types.BitMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.BitMask2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_BitMask2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_BitMask3D
+
+.. _compound_scijava_roi_types_BitMask3D:
+
+scijava.roi.types.BitMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.BitMask3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_BitMask3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Bitwise1D
+
+.. _compound_scijava_roi_types_Bitwise1D:
+
+scijava.roi.types.Bitwise1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Bitwise1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Bitwise1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Bitwise2D
+
+.. _compound_scijava_roi_types_Bitwise2D:
+
+scijava.roi.types.Bitwise2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Bitwise2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Bitwise2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Bitwise3D
+
+.. _compound_scijava_roi_types_Bitwise3D:
+
+scijava.roi.types.Bitwise3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Bitwise3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Bitwise3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Circle0
+
+.. _compound_scijava_roi_types_Circle0:
+
+scijava.roi.types.Circle0
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Circle0
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Circle0.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Circle1
+
+.. _compound_scijava_roi_types_Circle1:
+
+scijava.roi.types.Circle1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Circle1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Circle1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Circle2
+
+.. _compound_scijava_roi_types_Circle2:
+
+scijava.roi.types.Circle2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Circle2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Circle2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Circle3
+
+.. _compound_scijava_roi_types_Circle3:
+
+scijava.roi.types.Circle3
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Circle3
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Circle3.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Circle4
+
+.. _compound_scijava_roi_types_Circle4:
+
+scijava.roi.types.Circle4
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Circle4
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Circle4.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Circle5
+
+.. _compound_scijava_roi_types_Circle5:
+
+scijava.roi.types.Circle5
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Circle5
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Circle5.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_CircularCylinder1
+
+.. _compound_scijava_roi_types_CircularCylinder1:
+
+scijava.roi.types.CircularCylinder1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.CircularCylinder1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_CircularCylinder1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_CircularCylinder2
+
+.. _compound_scijava_roi_types_CircularCylinder2:
+
+scijava.roi.types.CircularCylinder2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.CircularCylinder2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_CircularCylinder2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_CircularCylinder3
+
+.. _compound_scijava_roi_types_CircularCylinder3:
+
+scijava.roi.types.CircularCylinder3
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.CircularCylinder3
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_CircularCylinder3.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_CircularCylinder4
+
+.. _compound_scijava_roi_types_CircularCylinder4:
+
+scijava.roi.types.CircularCylinder4
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.CircularCylinder4
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_CircularCylinder4.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Color
+
+.. _compound_scijava_roi_types_Color:
+
+scijava.roi.types.Color
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Color
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Color.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Cube1
+
+.. _compound_scijava_roi_types_Cube1:
+
+scijava.roi.types.Cube1
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Cube1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Cube1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Cube2
+
+.. _compound_scijava_roi_types_Cube2:
+
+scijava.roi.types.Cube2
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Cube2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Cube2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Cuboid1
+
+.. _compound_scijava_roi_types_Cuboid1:
+
+scijava.roi.types.Cuboid1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Cuboid1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Cuboid1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Cuboid2
+
+.. _compound_scijava_roi_types_Cuboid2:
+
+scijava.roi.types.Cuboid2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Cuboid2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Cuboid2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Custom
+
+.. _compound_scijava_roi_types_Custom:
+
+scijava.roi.types.Custom
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Custom
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Custom.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_DimConstraintSet
+
+.. _compound_scijava_roi_types_DimConstraintSet:
+
+scijava.roi.types.DimConstraintSet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.DimConstraintSet
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_DimConstraintSet.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_DirectedGraph
+
+.. _compound_scijava_roi_types_DirectedGraph:
+
+scijava.roi.types.DirectedGraph<NTYPE, ETYPE>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.DirectedGraph<NTYPE, ETYPE>
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_DirectedGraph.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_EllipticCylinder1
+
+.. _compound_scijava_roi_types_EllipticCylinder1:
+
+scijava.roi.types.EllipticCylinder1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.EllipticCylinder1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_EllipticCylinder1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_EllipticCylinder2
+
+.. _compound_scijava_roi_types_EllipticCylinder2:
+
+scijava.roi.types.EllipticCylinder2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.EllipticCylinder2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_EllipticCylinder2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_EllipticCylinder3
+
+.. _compound_scijava_roi_types_EllipticCylinder3:
+
+scijava.roi.types.EllipticCylinder3
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.EllipticCylinder3
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_EllipticCylinder3.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_EllipticCylinder4
+
+.. _compound_scijava_roi_types_EllipticCylinder4:
+
+scijava.roi.types.EllipticCylinder4
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.EllipticCylinder4
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_EllipticCylinder4.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Extrude
+
+.. _compound_scijava_roi_types_Extrude:
+
+scijava.roi.types.Extrude
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Extrude
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Extrude.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_GreyMask2D
+
+.. _compound_scijava_roi_types_GreyMask2D:
+
+scijava.roi.types.GreyMask2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.GreyMask2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_GreyMask2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_GreyMask3D
+
+.. _compound_scijava_roi_types_GreyMask3D:
+
+scijava.roi.types.GreyMask3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.GreyMask3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_GreyMask3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_HalfAxes2D
+
+.. _compound_scijava_roi_types_HalfAxes2D:
+
+scijava.roi.types.HalfAxes2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.HalfAxes2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_HalfAxes2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_HalfAxes3D
+
+.. _compound_scijava_roi_types_HalfAxes3D:
+
+scijava.roi.types.HalfAxes3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.HalfAxes3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_HalfAxes3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinePoints1D
+
+.. _compound_scijava_roi_types_LinePoints1D:
+
+scijava.roi.types.LinePoints1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinePoints1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinePoints1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinePoints2D
+
+.. _compound_scijava_roi_types_LinePoints2D:
+
+scijava.roi.types.LinePoints2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinePoints2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinePoints2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinePoints3D
+
+.. _compound_scijava_roi_types_LinePoints3D:
+
+scijava.roi.types.LinePoints3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinePoints3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinePoints3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LineVector1D
+
+.. _compound_scijava_roi_types_LineVector1D:
+
+scijava.roi.types.LineVector1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LineVector1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LineVector1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LineVector2D
+
+.. _compound_scijava_roi_types_LineVector2D:
+
+scijava.roi.types.LineVector2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LineVector2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LineVector2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LineVector3D
+
+.. _compound_scijava_roi_types_LineVector3D:
+
+scijava.roi.types.LineVector3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LineVector3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LineVector3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinesPoints1D
+
+.. _compound_scijava_roi_types_LinesPoints1D:
+
+scijava.roi.types.LinesPoints1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinesPoints1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinesPoints1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinesPoints2D
+
+.. _compound_scijava_roi_types_LinesPoints2D:
+
+scijava.roi.types.LinesPoints2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinesPoints2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinesPoints2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinesPoints3D
+
+.. _compound_scijava_roi_types_LinesPoints3D:
+
+scijava.roi.types.LinesPoints3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinesPoints3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinesPoints3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinesVectors1D
+
+.. _compound_scijava_roi_types_LinesVectors1D:
+
+scijava.roi.types.LinesVectors1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinesVectors1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinesVectors1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinesVectors2D
+
+.. _compound_scijava_roi_types_LinesVectors2D:
+
+scijava.roi.types.LinesVectors2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinesVectors2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinesVectors2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_LinesVectors3D
+
+.. _compound_scijava_roi_types_LinesVectors3D:
+
+scijava.roi.types.LinesVectors3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.LinesVectors3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_LinesVectors3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Map
+
+.. _compound_scijava_roi_types_Map:
+
+scijava.roi.types.Map<KTYPE, VTYPE>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Map<KTYPE, VTYPE>
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Map.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Mesh2D
+
+.. _compound_scijava_roi_types_Mesh2D:
+
+scijava.roi.types.Mesh2D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Mesh2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Mesh2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Mesh3D
+
+.. _compound_scijava_roi_types_Mesh3D:
+
+scijava.roi.types.Mesh3D
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Mesh3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Mesh3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Pair
+
+.. _compound_scijava_roi_types_Pair:
+
+scijava.roi.types.Pair<LTYPE, RTYPE>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Pair<LTYPE, RTYPE>
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Pair.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Points1D
+
+.. _compound_scijava_roi_types_Points1D:
+
+scijava.roi.types.Points1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Points1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Points1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Points2D
+
+.. _compound_scijava_roi_types_Points2D:
+
+scijava.roi.types.Points2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Points2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Points2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Points3D
+
+.. _compound_scijava_roi_types_Points3D:
+
+scijava.roi.types.Points3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Points3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Points3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_PolylinePoints1D
+
+.. _compound_scijava_roi_types_PolylinePoints1D:
+
+scijava.roi.types.PolylinePoints1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.PolylinePoints1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_PolylinePoints1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_PolylinePoints2D
+
+.. _compound_scijava_roi_types_PolylinePoints2D:
+
+scijava.roi.types.PolylinePoints2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.PolylinePoints2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_PolylinePoints2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_PolylinePoints3D
+
+.. _compound_scijava_roi_types_PolylinePoints3D:
+
+scijava.roi.types.PolylinePoints3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.PolylinePoints3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_PolylinePoints3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_PolylineVector1D
+
+.. _compound_scijava_roi_types_PolylineVector1D:
+
+scijava.roi.types.PolylineVector1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.PolylineVector1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_PolylineVector1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_PolylineVector2D
+
+.. _compound_scijava_roi_types_PolylineVector2D:
+
+scijava.roi.types.PolylineVector2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.PolylineVector2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_PolylineVector2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_PolylineVector3D
+
+.. _compound_scijava_roi_types_PolylineVector3D:
+
+scijava.roi.types.PolylineVector3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.PolylineVector3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_PolylineVector3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Properties
+
+.. _compound_scijava_roi_types_Properties:
+
+scijava.roi.types.Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Properties
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Properties.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Property
+
+.. _compound_scijava_roi_types_Property:
+
+scijava.roi.types.Property
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Property
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Property.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Range1nD
+
+.. _compound_scijava_roi_types_Range1nD:
+
+scijava.roi.types.Range1nD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Range1nD
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Range1nD.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Range2nD
+
+.. _compound_scijava_roi_types_Range2nD:
+
+scijava.roi.types.Range2nD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Range2nD
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Range2nD.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Rectangle1
+
+.. _compound_scijava_roi_types_Rectangle1:
+
+scijava.roi.types.Rectangle1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Rectangle1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Rectangle1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Rectangle2
+
+.. _compound_scijava_roi_types_Rectangle2:
+
+scijava.roi.types.Rectangle2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Rectangle2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Rectangle2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_RotateTransform2D
+
+.. _compound_scijava_roi_types_RotateTransform2D:
+
+scijava.roi.types.RotateTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.RotateTransform2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_RotateTransform2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_RotateTransform3D
+
+.. _compound_scijava_roi_types_RotateTransform3D:
+
+scijava.roi.types.RotateTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.RotateTransform3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_RotateTransform3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_ScaleTransform1D
+
+.. _compound_scijava_roi_types_ScaleTransform1D:
+
+scijava.roi.types.ScaleTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.ScaleTransform1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_ScaleTransform1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_ScaleTransform2D
+
+.. _compound_scijava_roi_types_ScaleTransform2D:
+
+scijava.roi.types.ScaleTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.ScaleTransform2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_ScaleTransform2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_ScaleTransform3D
+
+.. _compound_scijava_roi_types_ScaleTransform3D:
+
+scijava.roi.types.ScaleTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.ScaleTransform3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_ScaleTransform3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Set
+
+.. _compound_scijava_roi_types_Set:
+
+scijava.roi.types.Set<TYPE>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Set<TYPE>
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Set.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_ShapeSet
+
+.. _compound_scijava_roi_types_ShapeSet:
+
+scijava.roi.types.ShapeSet
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.ShapeSet
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_ShapeSet.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Sphere0
+
+.. _compound_scijava_roi_types_Sphere0:
+
+scijava.roi.types.Sphere0
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Sphere0
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Sphere0.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Sphere1
+
+.. _compound_scijava_roi_types_Sphere1:
+
+scijava.roi.types.Sphere1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Sphere1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Sphere1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Sphere2
+
+.. _compound_scijava_roi_types_Sphere2:
+
+scijava.roi.types.Sphere2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Sphere2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Sphere2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Sphere3
+
+.. _compound_scijava_roi_types_Sphere3:
+
+scijava.roi.types.Sphere3
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Sphere3
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Sphere3.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Sphere4
+
+.. _compound_scijava_roi_types_Sphere4:
+
+scijava.roi.types.Sphere4
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Sphere4
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Sphere4.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Sphere5
+
+.. _compound_scijava_roi_types_Sphere5:
+
+scijava.roi.types.Sphere5
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Sphere5
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Sphere5.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Sphere6
+
+.. _compound_scijava_roi_types_Sphere6:
+
+scijava.roi.types.Sphere6
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Sphere6
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Sphere6.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Square1
+
+.. _compound_scijava_roi_types_Square1:
+
+scijava.roi.types.Square1
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Square1
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Square1.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Square2
+
+.. _compound_scijava_roi_types_Square2:
+
+scijava.roi.types.Square2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Square2
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Square2.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_String
+
+.. _compound_scijava_roi_types_String:
+
+scijava.roi.types.String
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.String
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_String.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Text
+
+.. _compound_scijava_roi_types_Text:
+
+scijava.roi.types.Text
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Text
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Text.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_TranslateTransform1D
+
+.. _compound_scijava_roi_types_TranslateTransform1D:
+
+scijava.roi.types.TranslateTransform1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.TranslateTransform1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_TranslateTransform1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_TranslateTransform2D
+
+.. _compound_scijava_roi_types_TranslateTransform2D:
+
+scijava.roi.types.TranslateTransform2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.TranslateTransform2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_TranslateTransform2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_TranslateTransform3D
+
+.. _compound_scijava_roi_types_TranslateTransform3D:
+
+scijava.roi.types.TranslateTransform3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.TranslateTransform3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_TranslateTransform3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_ValuesnD
+
+.. _compound_scijava_roi_types_ValuesnD:
+
+scijava.roi.types.ValuesnD
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.ValuesnD
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_ValuesnD.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Vector1D
+
+.. _compound_scijava_roi_types_Vector1D:
+
+scijava.roi.types.Vector1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Vector1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Vector1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Vector2D
+
+.. _compound_scijava_roi_types_Vector2D:
+
+scijava.roi.types.Vector2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Vector2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Vector2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Vector3D
+
+.. _compound_scijava_roi_types_Vector3D:
+
+scijava.roi.types.Vector3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Vector3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Vector3D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Vectors1D
+
+.. _compound_scijava_roi_types_Vectors1D:
+
+scijava.roi.types.Vectors1D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Vectors1D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Vectors1D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Vectors2D
+
+.. _compound_scijava_roi_types_Vectors2D:
+
+scijava.roi.types.Vectors2D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Vectors2D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Vectors2D.txt
+    :delim: tab
+
+
+.. index::
+    scijava_roi_types_Vectors3D
+
+.. _compound_scijava_roi_types_Vectors3D:
+
+scijava.roi.types.Vectors3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.Vectors3D
+    :header-rows: 1
+    :file: gen/compound-scijava_roi_types_Vectors3D.txt
     :delim: tab
 

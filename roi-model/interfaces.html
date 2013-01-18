@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Interface types &mdash; ROI Specification [DRAFT] 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ROI Specification [DRAFT] 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="ROI Specification [DRAFT]" href="roi.html" />
+    <link rel="next" title="Enumerated types" href="enums.html" />
+    <link rel="prev" title="Fundamental data types" href="primitives.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="enums.html" title="Enumerated types"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Fundamental data types"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" accesskey="U">ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Interface types</a><ul>
+<li><a class="reference internal" href="#scijava-roi-iterable">scijava.roi.Iterable</a></li>
+<li><a class="reference internal" href="#scijava-roi-regionofinterest">scijava.roi.RegionOfInterest</a></li>
+<li><a class="reference internal" href="#scijava-roi-regionofinterestset">scijava.roi.RegionOfInterestSet</a></li>
+<li><a class="reference internal" href="#scijava-roi-serialisable">scijava.roi.Serialisable</a></li>
+<li><a class="reference internal" href="#scijava-roi-measurement-area">scijava.roi.measurement.Area</a></li>
+<li><a class="reference internal" href="#scijava-roi-measurement-length">scijava.roi.measurement.Length</a></li>
+<li><a class="reference internal" href="#scijava-roi-measurement-volume">scijava.roi.measurement.Volume</a></li>
+<li><a class="reference internal" href="#scijava-roi-shape-physicalshape">scijava.roi.shape.PhysicalShape</a></li>
+<li><a class="reference internal" href="#scijava-roi-types-dimconstraint">scijava.roi.types.DimConstraint</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="primitives.html"
+                        title="previous chapter">Fundamental data types</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="enums.html"
+                        title="next chapter">Enumerated types</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/interfaces.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="interface-types">
+<h1>Interface types<a class="headerlink" href="#interface-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="scijava-roi-iterable">
+<span id="interface-scijava-roi-iterable"></span><span id="index-0"></span><h2>scijava.roi.Iterable<a class="headerlink" href="#scijava-roi-iterable" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.Iterable</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-regionofinterest"><em>scijava.roi.RegionOfInterest</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-types-roi"><em>scijava.roi.types.ROI</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-regionofinterest">
+<span id="interface-scijava-roi-regionofinterest"></span><span id="index-1"></span><h2>scijava.roi.RegionOfInterest<a class="headerlink" href="#scijava-roi-regionofinterest" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.RegionOfInterest</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-types-roi"><em>scijava.roi.types.ROI</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-regionofinterestset">
+<span id="interface-scijava-roi-regionofinterestset"></span><span id="index-2"></span><h2>scijava.roi.RegionOfInterestSet<a class="headerlink" href="#scijava-roi-regionofinterestset" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.RegionOfInterestSet</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-types-labelling"><em>scijava.roi.types.Labelling</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-types-roiset"><em>scijava.roi.types.ROISet</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-serialisable">
+<span id="interface-scijava-roi-serialisable"></span><span id="index-3"></span><h2>scijava.roi.Serialisable<a class="headerlink" href="#scijava-roi-serialisable" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.Serialisable</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-regionofinterest"><em>scijava.roi.RegionOfInterest</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-regionofinterestset"><em>scijava.roi.RegionOfInterestSet</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-extrude"><em>scijava.roi.dimconstraint.Extrude</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-range"><em>scijava.roi.dimconstraint.Range</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-set"><em>scijava.roi.dimconstraint.Set</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-value"><em>scijava.roi.dimconstraint.Value</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-values"><em>scijava.roi.dimconstraint.Values</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-abstracttransform"><em>scijava.roi.shape.AbstractTransform</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-affinetransform"><em>scijava.roi.shape.AffineTransform</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-arc"><em>scijava.roi.shape.Arc</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-bitmask"><em>scijava.roi.shape.BitMask</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-bitwise"><em>scijava.roi.shape.Bitwise</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-cuboid"><em>scijava.roi.shape.Cuboid</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-custom"><em>scijava.roi.shape.Custom</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-cylinder"><em>scijava.roi.shape.Cylinder</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-ellipsoid"><em>scijava.roi.shape.Ellipsoid</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-greymask"><em>scijava.roi.shape.GreyMask</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-line"><em>scijava.roi.shape.Line</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-lines"><em>scijava.roi.shape.Lines</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-mesh"><em>scijava.roi.shape.Mesh</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-physicalshape"><em>scijava.roi.shape.PhysicalShape</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-point"><em>scijava.roi.shape.Point</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-points"><em>scijava.roi.shape.Points</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polygon"><em>scijava.roi.shape.Polygon</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polygonspline"><em>scijava.roi.shape.PolygonSpline</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polyline"><em>scijava.roi.shape.Polyline</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polylinespline"><em>scijava.roi.shape.PolylineSpline</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-set"><em>scijava.roi.shape.Set</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-types-dimconstraint"><em>scijava.roi.types.DimConstraint</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-types-labelling"><em>scijava.roi.types.Labelling</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-types-roi"><em>scijava.roi.types.ROI</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-types-roiset"><em>scijava.roi.types.ROISet</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-measurement-area">
+<span id="interface-scijava-roi-measurement-area"></span><span id="index-4"></span><h2>scijava.roi.measurement.Area<a class="headerlink" href="#scijava-roi-measurement-area" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.measurement.Area</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-mesh"><em>scijava.roi.shape.Mesh</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polygonspline"><em>scijava.roi.shape.PolygonSpline</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polyline"><em>scijava.roi.shape.Polyline</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-measurement-length">
+<span id="interface-scijava-roi-measurement-length"></span><span id="index-5"></span><h2>scijava.roi.measurement.Length<a class="headerlink" href="#scijava-roi-measurement-length" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.measurement.Length</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-arc"><em>scijava.roi.shape.Arc</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-line"><em>scijava.roi.shape.Line</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-lines"><em>scijava.roi.shape.Lines</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polyline"><em>scijava.roi.shape.Polyline</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polylinespline"><em>scijava.roi.shape.PolylineSpline</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-measurement-volume">
+<span id="interface-scijava-roi-measurement-volume"></span><span id="index-6"></span><h2>scijava.roi.measurement.Volume<a class="headerlink" href="#scijava-roi-measurement-volume" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.measurement.Volume</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-cuboid"><em>scijava.roi.shape.Cuboid</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-cylinder"><em>scijava.roi.shape.Cylinder</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-ellipsoid"><em>scijava.roi.shape.Ellipsoid</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-mesh"><em>scijava.roi.shape.Mesh</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-shape-physicalshape">
+<span id="interface-scijava-roi-shape-physicalshape"></span><span id="index-7"></span><h2>scijava.roi.shape.PhysicalShape<a class="headerlink" href="#scijava-roi-shape-physicalshape" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.shape.PhysicalShape</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-abstracttransform"><em>scijava.roi.shape.AbstractTransform</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-affinetransform"><em>scijava.roi.shape.AffineTransform</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-arc"><em>scijava.roi.shape.Arc</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-bitmask"><em>scijava.roi.shape.BitMask</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-bitwise"><em>scijava.roi.shape.Bitwise</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-cuboid"><em>scijava.roi.shape.Cuboid</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-custom"><em>scijava.roi.shape.Custom</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-cylinder"><em>scijava.roi.shape.Cylinder</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-ellipsoid"><em>scijava.roi.shape.Ellipsoid</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-greymask"><em>scijava.roi.shape.GreyMask</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-line"><em>scijava.roi.shape.Line</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-lines"><em>scijava.roi.shape.Lines</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-mesh"><em>scijava.roi.shape.Mesh</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-point"><em>scijava.roi.shape.Point</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-points"><em>scijava.roi.shape.Points</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polygon"><em>scijava.roi.shape.Polygon</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polygonspline"><em>scijava.roi.shape.PolygonSpline</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polyline"><em>scijava.roi.shape.Polyline</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-polylinespline"><em>scijava.roi.shape.PolylineSpline</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-shape-set"><em>scijava.roi.shape.Set</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="scijava-roi-types-dimconstraint">
+<span id="interface-scijava-roi-types-dimconstraint"></span><span id="index-8"></span><h2>scijava.roi.types.DimConstraint<a class="headerlink" href="#scijava-roi-types-dimconstraint" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>scijava.roi.types.DimConstraint</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Implemented by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-extrude"><em>scijava.roi.dimconstraint.Extrude</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-range"><em>scijava.roi.dimconstraint.Range</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-set"><em>scijava.roi.dimconstraint.Set</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-value"><em>scijava.roi.dimconstraint.Value</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="types.html#type-scijava-roi-dimconstraint-values"><em>scijava.roi.dimconstraint.Values</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="enums.html" title="Enumerated types"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="primitives.html" title="Fundamental data types"
+             >previous</a> |</li>
+        <li><a href="index.html">ROI Specification [DRAFT] 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="roi.html" >ROI Specification [DRAFT]</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, University of Dundee.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

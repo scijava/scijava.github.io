@@ -1,0 +1,129 @@
+Interface types
+===============
+
+
+.. index::
+    scijava.roi.Iterable
+
+.. _interface_scijava_roi_Iterable:
+
+scijava.roi.Iterable
+^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.Iterable
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_Iterable.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.RegionOfInterest
+
+.. _interface_scijava_roi_RegionOfInterest:
+
+scijava.roi.RegionOfInterest
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.RegionOfInterest
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_RegionOfInterest.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.RegionOfInterestSet
+
+.. _interface_scijava_roi_RegionOfInterestSet:
+
+scijava.roi.RegionOfInterestSet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.RegionOfInterestSet
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_RegionOfInterestSet.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.Serialisable
+
+.. _interface_scijava_roi_Serialisable:
+
+scijava.roi.Serialisable
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.Serialisable
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_Serialisable.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.measurement.Area
+
+.. _interface_scijava_roi_measurement_Area:
+
+scijava.roi.measurement.Area
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.measurement.Area
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_measurement_Area.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.measurement.Length
+
+.. _interface_scijava_roi_measurement_Length:
+
+scijava.roi.measurement.Length
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.measurement.Length
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_measurement_Length.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.measurement.Volume
+
+.. _interface_scijava_roi_measurement_Volume:
+
+scijava.roi.measurement.Volume
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.measurement.Volume
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_measurement_Volume.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.shape.PhysicalShape
+
+.. _interface_scijava_roi_shape_PhysicalShape:
+
+scijava.roi.shape.PhysicalShape
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.shape.PhysicalShape
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_shape_PhysicalShape.txt
+    :delim: tab
+
+
+.. index::
+    scijava.roi.types.DimConstraint
+
+.. _interface_scijava_roi_types_DimConstraint:
+
+scijava.roi.types.DimConstraint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: scijava.roi.types.DimConstraint
+    :header-rows: 1
+    :file: gen/interface-scijava_roi_types_DimConstraint.txt
+    :delim: tab
+
