@@ -55,56 +55,174 @@ involved.</p>
 <h2>SciJava Overview<a class="headerlink" href="#scijava-overview" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <span id="document-projects"></span><div class="section" id="projects">
-<h3>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h3>
+<h3>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h3>
+<p>
+SciJava software libraries are intended for reuse by other projects.
+</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="20%" />
-<col width="50%" />
-<col width="15%" />
-<col width="15%" />
+<col width="60%" />
+<col width="40%" />
 </colgroup>
 <thead valign="bottom">
-<tr><th class="head">Project</th>
-<th class="head">Contact</th>
-<th class="head">Depends on</th>
-<th class="head">Can interoperate with:</th>
+<tr>
+<th class="head">Project</th>
+<th class="head" nowrap>Depends on</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr><td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a></td>
-<td><a class="reference external" href="mailto:ome-users@lists.openmicroscopy.org.uk">OME mailing list</a></td>
-<td><a class="reference external" href="http://imglib2.net/">ImgLib2</a></td>
-<td>&nbsp;</td>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="Bio-Formats" src="icons/bio-formats-icon-64.png"/>
+<a class="reference external" href="http://www.openmicroscopy.org/site/products/bio-formats">Bio-Formats</a>
+</td>
+<td><!-- Bio-Formats dependencies -->
+<img class="icon" title="SCIFIO" src="icons/scifio-icon-64.png"/>
+</td>
 </tr>
-<tr><td><a class="reference external" href="http://fiji.sc/">Fiji</a></td>
-<td><a class="reference external" href="mailto:imagej@list.nih.gov">ImageJ mailing list</a>, <a class="reference external" href="mailto:fiji-devel@googlegroups.com">Fiji developers mailing list</a></td>
-<td><a class="reference external" href="http://imagejdev.org/">ImageJDev</a>, <a class="reference external" href="http://imglib2.net/">ImgLib2</a></td>
-<td>&nbsp;</td>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="ImgLib2" src="icons/imglib2-icon-64.png"/>
+<a class="reference external" href="http://imglib2.net/">ImgLib2</a>
+</td>
+<td><!-- ImgLib2 dependencies -->
+None
+</td>
 </tr>
-<tr><td><a class="reference external" href="http://icy.bioimageanalysis.org/">Icy</a></td>
-<td><a class="reference external" href="http://icy.bioimageanalysis.org/support">Icy forum</a></td>
-<td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a></td>
-<td>&nbsp;</td>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="SCIFIO" src="icons/scifio-icon-64.png"/>
+<a class="reference external" href="http://scif.io/">SCIFIO</a></td>
+<td><!-- SCIFIO dependencies -->
+<img class="icon" title="ImgLib2" src="icons/imglib2-icon-64.png"/>
+<img class="icon" title="SciJava Common" src="icons/scijava-icon-64.png"/>
+</td>
 </tr>
-<tr><td><a class="reference external" href="http://imagejdev.org/">ImageJDev</a></td>
-<td><a class="reference external" href="mailto:imagej@list.nih.gov">ImageJ mailing list</a>, <a class="reference external" href="mailto:imagej-devel@imagej.net">ImageJDev mailing list</a></td>
-<td><a class="reference external" href="http://imglib2.net/">ImgLib2</a></td>
-<td>&nbsp;</td>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="SciJava Common" src="icons/scijava-icon-64.png"/>
+<a class="reference external" href="https://github.com/scijava/scijava-common">SciJava Common</a></td>
+<td><!-- SciJava Common dependencies -->
+None
+</td>
 </tr>
-<tr><td><a class="reference external" href="http://imglib2.net/">ImgLib2</a></td>
-<td><a class="reference external" href="mailto:imagej-devel@imagej.net">ImageJDev mailing list</a>, <a class="reference external" href="mailto:fiji-devel@googlegroups.com">Fiji developers mailing list</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+</tbody>
+</table>
+<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h3>
+<p>
+SciJava applications strive for interoperability with each other, using common libraries as appropriate. These applications also have library components intended to be reused and extended (e.g., both ImageJ2 and Icy support many different types of plugins).
+</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr>
+<th class="head">Project</th>
+<th class="head" nowrap>Depends on</th>
+<th class="head" nowrap>Interoperates with</th>
 </tr>
-<tr><td><a class="reference external" href="http://knime.org/">Knime</a></td>
-<td><a class="reference external" href="http://tech.knime.org/forum">KNIME forum</a></td>
-<td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a>, <a class="reference external" href="https://www.openmicroscopy.org">OME</a>, <a class="reference external" href="http://imglib2.net/">ImgLib2</a></td>
-<td>&nbsp;</td>
+</thead>
+<tbody valign="top">
+<tr class="project-table-row">
+<td>
+<img class="icon" title="CellProfiler" src="icons/cellprofiler-icon-64.png"/>
+<a class="reference external" href="http://cellprofiler.org/">CellProfiler</a>
+</td>
+<td><!-- CellProfiler dependencies -->
+<img class="icon" title="Bio-Formats" src="icons/bio-formats-icon-64.png"/>
+</td>
+<td><!-- CellProfiler interoperability -->
+<img class="icon" title="ImageJ1" src="icons/imagej1-icon-64.png"/>
+<img class="icon" title="ImageJ2" src="icons/imagej2-icon-64.png"/>
+<img class="icon" title="OMERO" src="icons/omero-icon-64.png"/>
+</td>
 </tr>
-<tr><td><a class="reference external" href="https://www.openmicroscopy.org">OME</a></td>
-<td><a class="reference external" href="mailto:ome-users@lists.openmicroscopy.org.uk">OME mailing list</a></td>
-<td><a class="reference external" href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a></td>
-<td>&nbsp;</td>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="Fiji" src="icons/fiji-icon-64.png"/>
+<a class="reference external" href="http://fiji.sc/">Fiji</a>
+</td>
+<td><!-- Fiji dependencies -->
+<img class="icon" title="Bio-Formats" src="icons/bio-formats-icon-64.png"/>
+<img class="icon" title="ImageJ1" src="icons/imagej1-icon-64.png"/>
+<img class="icon" title="ImageJ2" src="icons/imagej2-icon-64.png"/>
+<img class="icon" title="ImgLib2" src="icons/imglib2-icon-64.png"/>
+</td>
+<td><!-- Fiji interoperability -->
+<img class="icon" title="OMERO" src="icons/omero-icon-64.png"/>
+</td>
+</tr>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="Icy" src="icons/icy-icon-64.png"/>
+<a class="reference external" href="http://icy.bioimageanalysis.org/">Icy</a>
+</td>
+<td><!-- Icy dependencies -->
+<img class="icon" title="Bio-Formats" src="icons/bio-formats-icon-64.png"/>
+</td>
+<td><!-- Icy interoperability -->
+<img class="icon" title="ImageJ1" src="icons/imagej1-icon-64.png"/>
+<img class="icon" title="OMERO" src="icons/omero-icon-64.png"/>
+</td>
+</tr>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="ImageJ1" src="icons/imagej1-icon-64.png"/>
+<a class="reference external" href="http://imagej.net/">ImageJ1</a>
+</td>
+<td><!-- ImageJ1 dependencies -->
+None
+</td>
+<td><!-- ImageJ1 interoperability -->
+-
+</td>
+</tr>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="ImageJ2" src="icons/imagej2-icon-64.png"/>
+<a class="reference external" href="http://developer.imagej.net/">ImageJ2</a>
+</td>
+<td><!-- ImageJ2 dependencies -->
+<img class="icon" title="ImgLib2" src="icons/imglib2-icon-64.png"/>
+<img class="icon" title="SCIFIO" src="icons/scifio-icon-64.png"/>
+<img class="icon" title="SciJava Common" src="icons/scijava-icon-64.png"/>
+</td>
+<td><!-- ImageJ2 interoperability -->
+<img class="icon" title="CellProfiler" src="icons/cellprofiler-icon-64.png"/>
+<img class="icon" title="ImageJ1" src="icons/imagej1-icon-64.png"/>
+<img class="icon" title="KNIME" src="icons/knime-icon-64.png"/>
+<img class="icon" title="OMERO" src="icons/omero-icon-64.png"/>
+</td>
+</tr>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="KNIME" src="icons/knime-icon-64.png"/>
+<a class="reference external" href="http://knime.org/">KNIME</a>
+</td>
+<td><!-- KNIME dependencies -->
+<img class="icon" title="Bio-Formats" src="icons/bio-formats-icon-64.png"/>
+<img class="icon" title="ImgLib2" src="icons/imglib2-icon-64.png"/>
+</td>
+<td><!-- KNIME interoperability -->
+<img class="icon" title="OMERO" src="icons/omero-icon-64.png"/>
+<img class="icon" title="ImageJ2" src="icons/imagej2-icon-64.png"/>
+</td>
+</tr>
+<tr class="project-table-row">
+<td>
+<img class="icon" title="OMERO" src="icons/omero-icon-64.png"/>
+<a class="reference external" href="http://www.openmicroscopy.org/site/products/omero">OMERO</a></td>
+<td><!-- OMERO dependencies -->
+<img class="icon" title="Bio-Formats" src="icons/bio-formats-icon-64.png"/>
+</td>
+<td><!-- OMERO interoperability -->
+<img class="icon" title="Icy" src="icons/icy-icon-64.png"/>
+<img class="icon" title="ImageJ2" src="icons/imagej2-icon-64.png"/>
+<img class="icon" title="KNIME" src="icons/knime-icon-64.png"/>
+</td>
 </tr>
 </tbody>
 </table>

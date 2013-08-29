@@ -533,3 +533,19 @@ span.eqno {
         display: none;
     }
 }
+
+/* -- customization --------------------------------------------------------- */
+
+img.icon {
+  height: 32px;
+  width: 32px;
+}
+
+tr.project-table-row td {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+tr.project-table-row img {
+  vertical-align: middle;
+}
