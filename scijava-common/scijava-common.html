@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SciJava-common -- a generic Java framework for science</title>
+
+		<meta name="description" content="A framework for easily creating scientific applications">
+		<meta name="author" content="Johannes Koenig-Schindelin">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+.bold { color: #65a4e3; }
+.reveal p { font-size: 40pt; }
+.reveal section .icon { border: 0px; margin-bottom: 0; width: .9em; color: rgba(0, 0, 0, 1); }
+.gallery img { border: 0px; width: auto; height: 5em; }
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SciJava-common</h1>
+					<h3>Plugins, contexts, utilities and more</h3>
+					<p>
+						<small>Curtis Rueden &amp; Johannes Koenig-Schindelin</small>
+					</p>
+				</section>
+
+				<section>
+					<h3>Prelude: What is SciJava?</h3>
+					<p style="color: #8080ff">http://scijava.org/</p>
+					<img src="images/scijava-website.jpg" />
+				</section>
+
+				<section>
+					<h1>Overview</h1>
+					<ol>
+						<li class="fragment">Extensibility</li>
+						<li class="fragment">Context awareness</li>
+						<li class="fragment">Common utilities</li>
+					</ol>
+				</section>
+
+				<section>
+					<section>
+						<ol>
+							<li class="bold">Extensibility</li>
+							<li>Context awareness</li>
+							<li>Common utilities</li>
+						</ol>
+					</section>
+
+					<section>
+						<p>
+						Everybody needs extensions.
+						</p>
+						<p class="fragment">... whether they call them extension points, plugins, modules, or toolboxes.
+						</p>
+					</section>
+
+					<section>
+						<p>
+						Examples: KNIME nodes<span class="fragment">, ImageJ 1.x plugins</span><span class="fragment">, ImageJ 2 commands</span><span class="fragment">, ImageJ 2 user interfaces</span><span class="fragment">, ImageJ 2 scripting languages</span><span class="fragment">, SCIFIO file formats</span><span class="fragment">, TrackMate segmentation algorithms</span><span class="fragment">, TrackMate tracking algorithms</span><span class="fragment">, Trainable Segmentation feature algorithms</span><span class="fragment">, etc</span>
+						</p>
+					</section>
+
+					<section>
+						<p>
+						In ImageJ2 <img src="images/imagej2-icon-64.png" class="icon" />, we invented a plugin mechanism to replace ImageJ 1.x <img src="images/imagej1-icon-64.png" class="icon" /> plugins<span class="fragment"> (called "commands" in ImageJ2 to distinguish from other plugins)<span>.
+						</p>
+						<p class="fragment">
+						SCIFIO<img src="images/scifio-icon-64.png" class="icon" /> -- the same to Bio-Formats <img src="images/bio-formats-icon-64.png" class="icon" /> as ImageJ2 is to ImageJ 1.x -- also needs plugins: file formats!
+						</p>
+						<p class="fragment">
+						Solution: factor out plugin discovery from ImageJ2 into a base library.<span class="fragment">..<br />Habemus SciJava-common <img src="images/scijava-icon-64.png" class="icon" />.</span></p>
+					</section>
+
+					<section>
+						<p>Example:</p>
+
+						<pre>
+						<code lang="java" data-trim contenteditable>
+@Plugin(type = Command.class)
+public class HelloWorld implements Command {
+	@Override
+	public void run() {
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ...
+	}
+}
+						</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>The annotation <code lang="java" style="color: #65a4e3;">@Plugin(type = Command.class)</code> is automatically processed at compile time, accumulating an index in <code style="color: #65a4e3;">META-INF/json/org.scijava.Plugin</code><span class="fragment"> ... except in Eclipse<span class="fragment"> ... but we have a work-around for that problem...</span></span></p>
+					</section>
+
+					<section>
+						<p>Plugin types can be <i>any</i> interface extending the marker interface <code style="color: #65a4e3">SciJavaPlugin</code>:</p>
+
+<pre>
+<code lang="java" data-trim contenteditable>
+public interface HelloPlugin extends SciJavaPlugin {
+	public void sayHello();
+}
+
+@Plugin(type = HelloPlugin.class)
+public class HelloKNIME implements HelloPlugin {
+	@Override
+	public void sayHello() {
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hello!");
+	}
+}
+</code>
+</pre>
+					</section>
+
+					<section>
+						<p>Plugins can be discovered using the <code style="color: #65a4e3">PluginService</code>:</p>
+
+<pre>
+<code lang="java" data-trim contenteditable>
+PluginService pluginService;
+
+List&lt;HelloPlugin&gt; plugins =
+	pluginService.createInstancesOfType(HelloPlugin.class);
+for (final HelloPlugin hello : plugins) {
+	hello.sayHello();
+}
+</code>
+</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<ol>
+							<li>Extensibility</li>
+							<li class="bold">Context awareness</li>
+							<li>Common utilities</li>
+						</ol>
+					</section>
+
+					<section>
+						<p>
+						In ImageJ2, as well as SCIFIO, we realized the need for a state, a <i>context</i> e.g. to keep track of the currently available plugins.
+						</p>
+						<p class="fragment">
+						We also realized the recurrent need for common functionality such as querying available plugins or sending events.
+						</p>
+					</section>
+
+					<section>
+						<p>
+						Therefore, the SciJava context is a container of named services that each hold local state information.
+						</p>
+						<p class="fragment">
+						Common services: PluginService, EventService, LogService, (ImageJ2 &amp; SCIFIO add their own services: CommandService, UIService, FormatService, ...)
+						</p>
+					</section>
+
+					<section>
+						<p>The default constructor will create the SciJava context with all available services:</p>
+
+<pre>
+<code lang="java" data-trim contenteditable>
+final Context context = new Context();
+
+final PluginService pluginService = context.getService(PluginService.class);
+</code>
+</pre>
+					</section>
+
+					<section>
+					<p>
+					Services are -- surprise! -- SciJavaPlugins. Just like plugins, there are service interfaces and implementing classes. This allows a proper separation between the service's public contract and the details of its implementation.
+					</p>
+					</section>
+
+					<section>
+					<p>
+					Example service interface:
+					</p>
+<pre>
+<code lang="java" data-trim contenteditable>
+public interface HelloService extends SciJavaService {
+	public void sayHello();
+}
+</code>
+</pre>
+					</section>
+
+					<section>
+					<p>Example implementation:</p>
+
+<pre>
+<code lang="java" data-trim contenteditable>
+@Plugin(type = Service.class)
+public class DefaultHelloService implements HelloService {
+	@Parameter
+	private StatusService status;
+
+	@Override
+	public void initialize() {
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// initialize as little as possible here
+	}
+
+	@Override
+	public void sayHello() {
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status.showStatus("Howdy!");
+	}
+}
+</code>
+</pre>
+					</section>
+
+					<section>
+					<p>Separating service interfaces from their default implementation makes it possible to override them easily in 3rd-party components:</p>
+
+<pre>
+<code lang="java" data-trim contenteditable>
+@Plugin(type = Service.class, priority = Priority.HIGH_PRIORITY)
+public class SilentHelloService implements HelloService {
+	@Override
+	public void sayHello() {
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Shhhh!
+	}
+}
+</code>
+</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<ol>
+							<li>Extensibility</li>
+							<li>Context awareness</li>
+							<li class="bold">Common utilities</li>
+						</ol>
+					</section>
+
+					<section>
+					<p>
+					Functionality that does not need internal state is provided by static utility functions.
+					</p><br />
+					<p>
+					Examples:
+<ul>
+<li>listing directories recursively given as URLs
+<li>get top-level project directory for an application class
+<li>executing external programs
+<li>...
+</ul>
+					</p>
+					</section>
+
+					<section>
+					<p>
+					Current utility classes: <code style="color: #65a4e3">AppUtils, ArrayUtils, ClassUtils, ConversionUtils, DebugUtils, FileUtils, ListUtils, MiscUtils, NumberUtils, ProcessUtils, PrimitiveArray</code>
+					</p>
+					</section>
+
+					<section>
+					<p>
+					Example usage:
+					</p>
+<pre>
+<code lang="java" data-trim contenteditable>
+// list all files in the class path entry as org/scijava/Context.class
+final URL location = ClassUtils.getLocation(Context.class);
+for (final URL url : FileUtils.listContents(location)) {
+	// ...
+}
+</code>
+</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+					<h3>Bonus track: Plugins &amp; Context in ImageJ2</h3>
+					</section>
+
+					<section>
+					<p>Anatomy of an ImageJ2 command:</p>
+<pre>
+<code lang="java" data-trim contenteditable>
+@Plugin(type = Command.class, headless = true,
+	menuPath = "Help&gt;Hello, World!")
+public class HelloWorld implements Command {
+	@Parameter(label = "What is your name?")
+	private String name = "J. Doe";
+
+	@Parameter(type = ItemIO.OUTPUT)
+	private String greeting;
+
+	@Override
+	public void run() {
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;greeting = "Hello, " + name + "!";
+	}
+}
+</code>
+</pre>
+					</section>
+
+					<section>
+					<p>Commands are executed by the CommandService:</p>
+<pre>
+<code lang="java" data-trim contenteditable>
+@Parameter
+private CommandService commands;
+
+...
+	boolean fillUnsetParameters = true;
+	commands.run(HelloWorld.class, fillUnsetParameters,
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name", "Bugs Bunny");
+</code>
+</pre>
+					</section>
+
+					<section>
+					<p>
+					Unless populated by the <code style="color: #65a4e3">run()</code> method, Parameters are auto-populated by the CommandService (context, services, ...) displaying a dialog to the user if necessary, based on the Parameters' types and annotations.
+					</p>
+					</section>
+
+					<section>
+					<p>
+					<img src="images/widget-demo.png" style="height: 10em; width: auto;" />
+					</p>
+					</section>
+
+					<section>
+					<p>Dialog elements ("widgets") are SciJava plugins, too ...</p>
+					</section>
+
+					<section>
+						<p>
+						ImageJ 1.x plugins vs ImageJ2 commands:
+						</p>
+						<img style="width: auto; height: 15em;" src="images/ij1-vs-ij2-plugins.png" />
+					</section>
+				</section>
+
+				<section>
+					<h3>Summary</h3>
+					<ul>
+					<li>SciJava-common is a lean, versatile library
+					<li class="fragment">A powerful plugin mechanism lies at its core
+					<li class="fragment">ImageJ2/SCIFIO make extensive use of SciJava-common
+					<li class="fragment">You can use SciJava-common, too!
+					</ul>
+				</section>
+
+				<section>
+					<h1>Thank you!</h1>
+					<p>ImageJ2 team:</p>
+					<p class="gallery"><img src="images/kevin-eliceiri.jpg" /><img src="images/curtis.jpg" /><img src="images/dschos-pony.jpg" /><img src="images/mark-hiner.jpg" /></p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
